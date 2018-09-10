@@ -1,0 +1,23 @@
+package com.spaceboyross.gundam.entities;
+
+import net.minecraft.client.model.ModelPlayer;
+
+import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.renderer.entity.RenderLiving;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.util.ResourceLocation;
+
+public class RenderCharAznable extends RenderLiving<EntityCharAznable> {
+
+	private ResourceLocation texture = new ResourceLocation("gundam:textures/entity/char_aznable.png");
+	
+	public RenderCharAznable(RenderManager rendermanagerIn) {
+		super(rendermanagerIn,new ModelPlayer(),0.5F);
+	}
+
+	@Override
+	protected ResourceLocation getEntityTexture(EntityCharAznable entity) {
+		return this.texture;
+	}
+
+}

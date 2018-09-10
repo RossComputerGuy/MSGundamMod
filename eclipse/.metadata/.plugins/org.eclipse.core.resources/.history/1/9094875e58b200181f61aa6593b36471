@@ -1,8 +1,0 @@
-package com.spaceboyross.gundam;
-
-/**
- * This is the base class for items.
- */
-public abstract class AbstractItem {
-
-}

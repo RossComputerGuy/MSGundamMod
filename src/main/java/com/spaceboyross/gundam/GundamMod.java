@@ -11,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.spaceboyross.gundam.proxy.CommonProxy;
 
-@Mod(modid = GundamMod.MODID, name = GundamMod.NAME, version = GundamMod.VERSION)
+@Mod(modid=GundamMod.MODID,name=GundamMod.NAME,version=GundamMod.VERSION,useMetadata=true)
 public class GundamMod {
 	
     public static final String MODID = "gundam";

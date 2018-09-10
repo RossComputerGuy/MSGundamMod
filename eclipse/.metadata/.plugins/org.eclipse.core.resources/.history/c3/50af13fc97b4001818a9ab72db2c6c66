@@ -1,0 +1,7 @@
+package com.spaceboyross.gundam;
+
+public class GundamEntities {
+	
+	public static void init() {
+	}
+}

@@ -1,2 +1,3 @@
-# MSGundamMod
-A MS Gundam Mod for Minecraft 1.12.2
+# MS Gundam Mod
+
+A MS Gundam Mod for Minecraft 1.12.

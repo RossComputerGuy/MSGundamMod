@@ -1,0 +1,20 @@
+package com.spaceboyross.gundam;
+
+import com.spaceboyross.gundam.proxy.CommonProxy;
+
+import net.minecraftforge.common.config.Configuration;
+
+public class Config {
+	
+	public static void readConfig() {
+		Configuration cfg = CommonProxy.config;
+		try {
+			cfg.load();
+			// TODO: load the different categories of configuration.
+		} catch(Exception ex) {
+			GundamMod.logger.error("Problem loading config file",ex);
+		} finally {
+			if(cfg.hasChanged()) cfg.save();
+		}
+	}
+}
