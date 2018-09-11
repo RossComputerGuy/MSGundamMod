@@ -1,0 +1,10 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "gundam:ms_crafting_station"
+	},
+	"variants": {
+		"normal": [{}],
+		"inventory": [{}]
+	}
+}

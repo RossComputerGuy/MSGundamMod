@@ -1,0 +1,27 @@
+package com.spaceboyross.gundam.ms;
+
+public abstract class MobileSuitArmament {
+
+	private String name;
+	private int count;
+	
+	public MobileSuitArmament(int count) {
+		this.count = count;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public int getCount() {
+		return this.count;
+	}
+	
+	public String toString() {
+		return this.getCount()+" × "+this.getName();
+	}
+}

@@ -1,17 +1,22 @@
 package com.spaceboyross.gundam;
 
+import com.spaceboyross.gundam.items.CharAznableMaskItem;
 import com.spaceboyross.gundam.items.GControllerItem;
 import com.spaceboyross.gundam.items.GundariumAlphaIngotItem;
 import com.spaceboyross.gundam.items.GundariumBetaIngotItem;
 import com.spaceboyross.gundam.items.GundariumEpsilonIngotItem;
 import com.spaceboyross.gundam.items.GundariumGammaIngotItem;
 import com.spaceboyross.gundam.items.LunaTitaniumIngotItem;
+import com.spaceboyross.gundam.items.PortableVernierItem;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class GundamItems {
+	
+	@GameRegistry.ObjectHolder("gundam:char_aznable_mask")
+	public static CharAznableMaskItem charAznableMask;
 	
 	@GameRegistry.ObjectHolder("gundam:g_controller")
 	public static GControllerItem gController;
@@ -31,13 +36,18 @@ public class GundamItems {
 	@GameRegistry.ObjectHolder("gundam:luna_titanium_ingot")
 	public static LunaTitaniumIngotItem lunaTitaniumIngot;
 	
+	@GameRegistry.ObjectHolder("gundam:portable_vernier")
+	public static PortableVernierItem portableVernier;
+	
 	@SideOnly(Side.CLIENT)
 	public static void initModels() {
+		GundamItems.charAznableMask.initModel();
 		GundamItems.gController.initModel();
 		GundamItems.gundariumAlphaIngot.initModel();
 		GundamItems.gundariumBetaIngot.initModel();
 		GundamItems.gundariumEpsilonIngot.initModel();
 		GundamItems.gundariumGammaIngot.initModel();
 		GundamItems.lunaTitaniumIngot.initModel();
+		GundamItems.portableVernier.initModel();	
 	}
 }

@@ -11,10 +11,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class KeyBindings {
 	
 	public static KeyBinding callMobileFighter;
+	public static KeyBinding useVernier;
 	
 	public static void init() {
 		KeyBindings.callMobileFighter = new KeyBinding("key.call_mobile_fighter",Keyboard.KEY_M,"key.categories.gundam");
+		KeyBindings.useVernier = new KeyBinding("key.use_vernier",Keyboard.KEY_V,"key.categories.gundam");
 		
 		ClientRegistry.registerKeyBinding(KeyBindings.callMobileFighter);
+		ClientRegistry.registerKeyBinding(KeyBindings.useVernier);
 	}
 }

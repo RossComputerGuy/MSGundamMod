@@ -1,0 +1,18 @@
+{ 
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"AAA",
+		"AAA",
+		"AAA"
+	],
+	"key": {
+		"A": [{
+			"item": "gundam:luna_titanium_ingot",
+			"data": 0
+		}]
+	},
+	"result": {
+		"item": "gundam:luna_titanium_block",
+		"data": 0
+	}
+}

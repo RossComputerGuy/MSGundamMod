@@ -1,10 +1,24 @@
 package com.spaceboyross.gundam;
 
+import com.spaceboyross.gundam.dimension.side1.DimensionSide1ShangriLa;
+
+import net.minecraft.world.DimensionType;
+import net.minecraftforge.common.DimensionManager;
+
 public class GundamDimensions {
 	
-	public static void init() {}
+	public static DimensionType side1ShangriLa;
 	
-	private static void registerDimensionTypes() {}
+	public static void init() {
+		GundamDimensions.registerDimensionTypes();
+		GundamDimensions.registerDimensions();
+	}
 	
-	private static void registerDimensions() {}
+	private static void registerDimensionTypes() {
+		GundamDimensions.side1ShangriLa = DimensionType.register(GundamMod.MODID,"_side1_shangrila",100,DimensionSide1ShangriLa.class,false);
+	}
+	
+	private static void registerDimensions() {
+		DimensionManager.registerDimension(100,GundamDimensions.side1ShangriLa);
+	}
 }

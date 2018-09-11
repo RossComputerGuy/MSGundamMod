@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "gundam:blocks/luna_titanium_block",
+		"up": "minecraft:blocks/crafting_table_top",
+		"down": "gundam:blocks/luna_titanium_block",
+		"east": "gundam:blocks/luna_titanium_block",
+		"west": "gundam:blocks/luna_titanium_block",
+		"north": "gundam:blocks/luna_titanium_block",
+		"south": "gundam:blocks/luna_titanium_block"
+	}
+}
