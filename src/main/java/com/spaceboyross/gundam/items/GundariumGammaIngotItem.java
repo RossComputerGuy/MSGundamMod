@@ -14,7 +14,7 @@ public class GundariumGammaIngotItem extends Item {
 	public GundariumGammaIngotItem() {
 		this.setRegistryName("gundarium_gamma_ingot");
 		this.setUnlocalizedName(GundamMod.MODID+".gundarium_gamma_ingot");
-		this.setCreativeTab(CreativeTabs.MATERIALS);
+		this.setCreativeTab(GundamMod.tab);
 	}
 	
 	@SideOnly(Side.CLIENT)

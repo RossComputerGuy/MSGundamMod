@@ -17,7 +17,7 @@ public class PortableVernierItem extends ItemArmor {
 		super(ArmorMaterial.IRON,10,EntityEquipmentSlot.CHEST);
 		this.setRegistryName("portable_vernier");
 		this.setUnlocalizedName(GundamMod.MODID+".portable_vernier");
-		this.setCreativeTab(CreativeTabs.TOOLS);
+		this.setCreativeTab(GundamMod.tab);
 		this.setMaxStackSize(1);
 		this.canRepair = true;
 	}

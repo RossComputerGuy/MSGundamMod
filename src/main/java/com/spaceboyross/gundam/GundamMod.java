@@ -24,6 +24,8 @@ public class GundamMod {
     @Mod.Instance
     public static GundamMod instance;
     
+    public static final GundamTab tab = new GundamTab("gundam");
+    
     public static Logger logger;
     
     @EventHandler

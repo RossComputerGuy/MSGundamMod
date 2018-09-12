@@ -29,7 +29,7 @@ public class MSCraftingStationBlock extends Block implements ITileEntityProvider
 		super(Material.IRON);
 		this.setUnlocalizedName(GundamMod.MODID+".ms_crafting_station");
 		this.setRegistryName("ms_crafting_station");
-		this.setCreativeTab(CreativeTabs.DECORATIONS);
+		this.setCreativeTab(GundamMod.tab);
 	}
 	
 	@SideOnly(Side.CLIENT)

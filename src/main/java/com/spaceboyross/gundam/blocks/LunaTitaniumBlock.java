@@ -17,7 +17,7 @@ public class LunaTitaniumBlock extends Block {
 		super(Material.IRON);
 		this.setUnlocalizedName(GundamMod.MODID+".luna_titanium_block");
 		this.setRegistryName("luna_titanium_block");
-		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+		this.setCreativeTab(GundamMod.tab);
 	}
 	
 	@SideOnly(Side.CLIENT)

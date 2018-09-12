@@ -14,7 +14,7 @@ public class GundariumBetaIngotItem extends Item {
 	public GundariumBetaIngotItem() {
 		this.setRegistryName("gundarium_beta_ingot");
 		this.setUnlocalizedName(GundamMod.MODID+".gundarium_beta_ingot");
-		this.setCreativeTab(CreativeTabs.MATERIALS);
+		this.setCreativeTab(GundamMod.tab);
 	}
 	
 	@SideOnly(Side.CLIENT)

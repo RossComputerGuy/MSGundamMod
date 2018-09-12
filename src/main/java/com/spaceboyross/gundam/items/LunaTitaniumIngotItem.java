@@ -14,7 +14,7 @@ public class LunaTitaniumIngotItem extends Item {
 	public LunaTitaniumIngotItem() {
 		this.setRegistryName("luna_titanium_ingot");
 		this.setUnlocalizedName(GundamMod.MODID+".luna_titanium_ingot");
-		this.setCreativeTab(CreativeTabs.MATERIALS);
+		this.setCreativeTab(GundamMod.tab);
 	}
 	
 	@SideOnly(Side.CLIENT)

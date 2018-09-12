@@ -16,7 +16,7 @@ public class CharAznableMaskItem extends ItemArmor {
 		super(ArmorMaterial.IRON,10,EntityEquipmentSlot.HEAD);
 		this.setRegistryName("char_aznable_mask");
 		this.setUnlocalizedName(GundamMod.MODID+".char_aznable_mask");
-		this.setCreativeTab(CreativeTabs.COMBAT);
+		this.setCreativeTab(GundamMod.tab);
 		this.setMaxStackSize(1);
 		this.canRepair = true;
 	}

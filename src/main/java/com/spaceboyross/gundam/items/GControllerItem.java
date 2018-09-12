@@ -14,7 +14,7 @@ public class GControllerItem extends Item {
 	public GControllerItem() {
 		this.setRegistryName("g_controller");
 		this.setUnlocalizedName(GundamMod.MODID+".g_controller");
-		this.setCreativeTab(CreativeTabs.TOOLS);
+		this.setCreativeTab(GundamMod.tab);
 	}
 	
 	@SideOnly(Side.CLIENT)

@@ -14,7 +14,7 @@ public class GundariumAlphaIngotItem extends Item {
 	public GundariumAlphaIngotItem() {
 		this.setRegistryName("gundarium_alpha_ingot");
 		this.setUnlocalizedName(GundamMod.MODID+".gundarium_alpha_ingot");
-		this.setCreativeTab(CreativeTabs.MATERIALS);
+		this.setCreativeTab(GundamMod.tab);
 	}
 	
 	@SideOnly(Side.CLIENT)

@@ -14,7 +14,7 @@ public class GundariumEpsilonIngotItem extends Item {
 	public GundariumEpsilonIngotItem() {
 		this.setRegistryName("gundarium_epsilon_ingot");
 		this.setUnlocalizedName(GundamMod.MODID+".gundarium_epsilon_ingot");
-		this.setCreativeTab(CreativeTabs.MATERIALS);
+		this.setCreativeTab(GundamMod.tab);
 	}
 	
 	@SideOnly(Side.CLIENT)
