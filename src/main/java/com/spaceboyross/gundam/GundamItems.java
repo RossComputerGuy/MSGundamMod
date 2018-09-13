@@ -8,6 +8,7 @@ import com.spaceboyross.gundam.items.GundariumEpsilonIngotItem;
 import com.spaceboyross.gundam.items.GundariumGammaIngotItem;
 import com.spaceboyross.gundam.items.LunaTitaniumIngotItem;
 import com.spaceboyross.gundam.items.PortableVernierItem;
+import com.spaceboyross.gundam.items.SuperHardSteelIngotItem;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -39,6 +40,9 @@ public class GundamItems {
 	@GameRegistry.ObjectHolder("gundam:portable_vernier")
 	public static PortableVernierItem portableVernier;
 	
+	@GameRegistry.ObjectHolder("gundam:super_hard_steel_ingot")
+	public static SuperHardSteelIngotItem superHardSteelIngot;
+	
 	@SideOnly(Side.CLIENT)
 	public static void initModels() {
 		GundamItems.charAznableMask.initModel();
@@ -48,6 +52,7 @@ public class GundamItems {
 		GundamItems.gundariumEpsilonIngot.initModel();
 		GundamItems.gundariumGammaIngot.initModel();
 		GundamItems.lunaTitaniumIngot.initModel();
-		GundamItems.portableVernier.initModel();	
+		GundamItems.portableVernier.initModel();
+		GundamItems.superHardSteelIngot.initModel();
 	}
 }

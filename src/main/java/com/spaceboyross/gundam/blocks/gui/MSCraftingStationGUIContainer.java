@@ -1,6 +1,7 @@
 package com.spaceboyross.gundam.blocks.gui;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 
 import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.blocks.container.MSCraftingStationContainer;
@@ -14,6 +15,7 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MSCraftingStationGUIContainer extends GuiContainer {
@@ -108,7 +110,7 @@ public class MSCraftingStationGUIContainer extends GuiContainer {
 		MobileSuit ms = MSRegistry.getMobileSuitFromIndex(this.page);
 		
 		int name_x = ((((this.xSize-this.fontRenderer.getStringWidth(ms.getModel()+" "+ms.getName()))/2)+(this.btnCraft.width+this.btnCraft.x)/2)-this.guiLeft)+this.btnCraft.width;
-		int name_y = (this.ySize/10);
+		int name_y = (this.ySize/6);
 		
 		this.drawString(this.fontRenderer,ms.getModel()+" "+ms.getName(),name_x,name_y,0xFFFFFF);
 		
@@ -144,7 +146,38 @@ public class MSCraftingStationGUIContainer extends GuiContainer {
 	
 	@Override
 	public void actionPerformed(GuiButton button) {
-		if(button.id == this.btnCraft.id) System.out.println("Craft button pressed");
+		if(button.id == this.btnCraft.id) {
+			MobileSuit ms = MSRegistry.getMobileSuitFromIndex(this.page);
+			for(int i = 0;i < ms.getRecipeItemCount();i++) {
+				Integer count = ms.getRecipeItemCount(i);
+				String id = ms.getRecipeItemID(i);
+				String mid = id.split(":")[0];
+				id = id.split(":")[1];
+				Item item = GameRegistry.makeItemStack(mid+":"+id,0,count,"").getItem();
+				this.mc.player.inventory.deleteStack(item.getDefaultInstance());
+				try {
+					MobileSuit.MSMob mob = ms.MOB.getConstructor(World.class).newInstance(this.mc.world);
+					mob.posX = this.mc.player.posX+1.0;
+					mob.posY = this.mc.player.posY+1.0;
+					mob.posZ = this.mc.player.posZ+1.0;
+					mob.isDead = false;
+					mob.deathTime = Integer.MAX_VALUE;
+					if(!this.mc.world.isRemote) this.mc.world.spawnEntity(mob);
+				} catch(InstantiationException e) {
+					e.printStackTrace();
+				} catch(IllegalAccessException e) {
+					e.printStackTrace();
+				} catch(IllegalArgumentException e) {
+					e.printStackTrace();
+				} catch(InvocationTargetException e) {
+					e.printStackTrace();
+				} catch(NoSuchMethodException e) {
+					e.printStackTrace();
+				} catch(SecurityException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 		if(button.id == this.btnPrev.id) {
 			this.page--;
 			this.updateScreen();

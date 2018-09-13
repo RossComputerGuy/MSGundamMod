@@ -19,8 +19,11 @@ import com.spaceboyross.gundam.items.GundariumEpsilonIngotItem;
 import com.spaceboyross.gundam.items.GundariumGammaIngotItem;
 import com.spaceboyross.gundam.items.LunaTitaniumIngotItem;
 import com.spaceboyross.gundam.items.PortableVernierItem;
+import com.spaceboyross.gundam.items.SuperHardSteelIngotItem;
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.gundams.RX782GundamMobileSuit;
+import com.spaceboyross.gundam.ms.zeon.MS04PrototypeZakuMobileSuit;
+import com.spaceboyross.gundam.ms.zeon.MS05AZaku1EarlyTypeMobileSuit;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -47,7 +50,9 @@ public class CommonProxy {
 		
 		GundamEntities.init();
 		GundamDimensions.init();
-		
+
+		MSRegistry.register(new MS04PrototypeZakuMobileSuit());
+		MSRegistry.register(new MS05AZaku1EarlyTypeMobileSuit());
 		MSRegistry.register(new RX782GundamMobileSuit());
 	}
 	
@@ -78,6 +83,7 @@ public class CommonProxy {
 		event.getRegistry().register(new GundariumGammaIngotItem());
 		event.getRegistry().register(new LunaTitaniumIngotItem());
 		event.getRegistry().register(new PortableVernierItem());
+		event.getRegistry().register(new SuperHardSteelIngotItem());
 		
 		event.getRegistry().register(new ItemBlock(GundamBlocks.lunaTitaniumBlock).setRegistryName(GundamBlocks.lunaTitaniumBlock.getRegistryName()));
 		event.getRegistry().register(new ItemBlock(GundamBlocks.msCraftingStation).setRegistryName(GundamBlocks.msCraftingStation.getRegistryName()));
