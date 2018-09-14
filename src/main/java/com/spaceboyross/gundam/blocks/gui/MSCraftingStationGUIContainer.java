@@ -1,23 +1,20 @@
 package com.spaceboyross.gundam.blocks.gui;
 
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-
-import com.spaceboyross.gundam.GundamEntities;
 import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.blocks.container.MSCraftingStationContainer;
 import com.spaceboyross.gundam.blocks.tile.MSCraftingStationTileEntity;
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
 import com.spaceboyross.gundam.ms.MobileSuitArmament;
+import com.spaceboyross.gundam.net.PacketHandler;
+import com.spaceboyross.gundam.net.PacketMobileSuit;
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.common.registry.EntityRegistry;
+import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MSCraftingStationGUIContainer extends GuiContainer {
@@ -157,8 +154,11 @@ public class MSCraftingStationGUIContainer extends GuiContainer {
 				id = id.split(":")[1];
 				Item item = GameRegistry.makeItemStack(mid+":"+id,0,count,"").getItem();
 				if(!this.mc.player.isCreative()) this.mc.player.inventory.deleteStack(item.getDefaultInstance());
-				// TODO: give player spawn egg
 			}
+			PacketMobileSuit packet = new PacketMobileSuit();
+			packet.index = this.page;
+			packet.pos = new Vec3d(this.mc.player.posX,this.mc.player.posY,this.mc.player.posZ);
+			PacketHandler.INSTANCE.sendToServer(packet);
 		}
 		if(button.id == this.btnPrev.id) {
 			this.page--;

@@ -22,6 +22,6 @@ public class PacketHandler {
     }
 
     public static void registerMessages() {
-        PacketHandler.INSTANCE.registerMessage(PacketSendKey.Handler.class,PacketSendKey.class,PacketHandler.nextID(),Side.SERVER);
+        PacketHandler.INSTANCE.registerMessage(PacketMobileSuit.Handler.class,PacketMobileSuit.class,PacketHandler.nextID(),Side.SERVER);
     }
 }

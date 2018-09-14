@@ -16,22 +16,24 @@ public class GUIProxy implements IGuiHandler {
 
 	@Override
 	public Object getServerGuiElement(int ID,EntityPlayer player,World world,int x,int y,int z) {
-		if(ID == MSCraftingStationBlock.GUI_ID) {
-			TileEntity te = world.getTileEntity(new BlockPos(x,y,z));
-			if(te instanceof MSCraftingStationTileEntity) return new MSCraftingStationContainer(player.inventory,(MSCraftingStationTileEntity)te);
+		switch(ID) {
+			case MSCraftingStationBlock.GUI_ID:
+				TileEntity te = world.getTileEntity(new BlockPos(x,y,z));
+				if(te instanceof MSCraftingStationTileEntity) return new MSCraftingStationContainer(player.inventory,(MSCraftingStationTileEntity)te);
+				break;
+			case HumantypeGUI.GUI_ID: return new HumantypeGUI(player);
 		}
 		return null;
 	}
 
 	@Override
 	public Object getClientGuiElement(int ID,EntityPlayer player,World world,int x,int y,int z) {
-		if(ID == MSCraftingStationBlock.GUI_ID) {
-			TileEntity te = world.getTileEntity(new BlockPos(x,y,z));
-        	if(te instanceof MSCraftingStationTileEntity) return new MSCraftingStationGUIContainer((MSCraftingStationTileEntity)te,new MSCraftingStationContainer(player.inventory,(MSCraftingStationTileEntity)te));
-		} else {
-			switch(ID) {
-				case HumantypeGUI.GUI_ID: return new HumantypeGUI(player);
-			}
+		switch(ID) {
+			case MSCraftingStationBlock.GUI_ID:
+				TileEntity te = world.getTileEntity(new BlockPos(x,y,z));
+		       	if(te instanceof MSCraftingStationTileEntity) return new MSCraftingStationGUIContainer((MSCraftingStationTileEntity)te,new MSCraftingStationContainer(player.inventory,(MSCraftingStationTileEntity)te));
+		       	break;
+			case HumantypeGUI.GUI_ID: return new HumantypeGUI(player);
 		}
         return null;
 	}

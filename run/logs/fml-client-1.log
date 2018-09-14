@@ -1,604 +1,605 @@
-[09:16:14] [main/DEBUG] [FML/]: Injecting tracing printstreams for STDOUT/STDERR.
-[09:16:14] [main/INFO] [FML/]: Forge Mod Loader version 14.21.1.2443 for Minecraft 1.12 loading
-[09:16:14] [main/INFO] [FML/]: Java is OpenJDK 64-Bit Server VM, version 1.8.0_181, running on Linux:amd64:4.15.0-34-generic, installed at /usr/lib/jvm/java-8-openjdk-amd64/jre
-[09:16:14] [main/DEBUG] [FML/]: Java classpath at launch is /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar:/usr/share/java/java-atk-wrapper.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar:/home/spaceboyross/MC Mods/MS Gundam/bin:/home/spaceboyross/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2443/snapshot/20170624/forgeSrc-1.12-14.21.1.2443.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.1/f7be08ec23c21485b9b5a1cf1654c2ec8c58168d/jsr305-3.0.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/patchy/1.1/aef610b34a1be37fa851825f12372b78424d8903/patchy-1.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/oshi-project/oshi-core/1.1/9ddf7b048a8d701be231c0f4f95fd986198fd2d8/oshi-core-1.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/4.4.0/cb208278274bf12ebdb56c61bd7407e6f774d65a/jna-4.4.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/platform/3.4.0/e3f70017be8100d3d6923f50b3d2ee17714e9c13/platform-3.4.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.ibm.icu/icu4j-core-mojang/51.2/63d216a9311cca6be337c1e458e587f99d382b84/icu4j-core-mojang-51.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.3/cdd846cfc4e0f7eefafc02c0f5dce32b9303aa2a/jopt-simple-5.0.3.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.9.Final/97860965d6a0a6b98e7f569f3f966727b8db75/netty-all-4.1.9.Final.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/21.0/3a3d111be1be1b745edfa7d91678a12d7ed38709/guava-21.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.5/6c6c702c89bfff3cd9e80b04d668c5e190d588c6/commons-lang3-3.5.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.5/2852e6e05fbb95076fc091f6d1780f1f8fe35e0f/commons-io-2.5.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jutils/jutils/1.0.0/e12fe1fda814bd348c1579329c86943d2cd3c6a6/jutils-1.0.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/authlib/1.5.25/9834cdf236c22e84b946bba989e2f94ef5897c3c/authlib-1.5.25.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/realms/1.10.17/e6a623bf93a230b503b0e3ae18c196fcd5aa3299/realms-1.10.17.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.8.1/a698750c16740fd5b3871425f4cb3bbaa87f529d/commons-compress-1.8.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.3.3/18f4247ff4572a074444572cee34647c43e7c9c7/httpclient-4.3.3.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.3.2/31fbbff1ddbf98f3aa7377c94d33b0447c646b6e/httpcore-4.3.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/7.1.0/9835253257524c1be7ab50c057aa2d418fb72082/fastutil-7.1.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.8.1/e801d13612e22cad62a3f4f3fe7fdbe6334a8e72/log4j-api-2.8.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.8.1/4ac28ff2f1ddf05dae3043a190451e8c46b73c31/log4j-core-2.8.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/text2speech/1.10.3/48fd510879dff266c3815947de66e3d4809f8668/text2speech-1.10.3.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.minecraft/launchwrapper/1.12/111e7bea9c968cdb3d06ef4632bf7ff0824d0f36/launchwrapper-1.12.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/jline/jline/2.13/2d9530d0a25daffaffda7c35037b046b627bb171/jline-2.13.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-debug-all/5.2/3354e11e2b34215f06dab629ab88e06aca477c19/asm-debug-all-5.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-actor_2.11/2.3.3/ed62e9fc709ca0f2ff1a3220daa8b70a2870078e/akka-actor_2.11-2.3.3.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.typesafe/config/1.2.1/f771f71fdae3df231bcd54d5ca2d57f0bf93f467/config-1.2.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-actors-migration_2.11/1.1.0/dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f/scala-actors-migration_2.11-1.1.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-compiler/2.11.1/56ea2e6c025e0821f28d73ca271218b8dd04926a/scala-compiler-2.11.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.plugins/scala-continuations-library_2.11/1.0.2/e517c53a7e9acd6b1668c5a35eccbaa3bab9aac/scala-continuations-library_2.11-1.0.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.plugins/scala-continuations-plugin_2.11.1/1.0.2/f361a3283452c57fa30c1ee69448995de23c60f7/scala-continuations-plugin_2.11.1-1.0.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.1/e11da23da3eabab9f4777b9220e60d44c1aab6a/scala-library-2.11.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-parser-combinators_2.11/1.0.1/f05d7345bf5a58924f2837c6c1f4d73a938e1ff0/scala-parser-combinators_2.11-1.0.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.11.1/6580347e61cc7f8e802941e7fde40fa83b8badeb/scala-reflect-2.11.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-swing_2.11/1.0.1/b1cdd92bd47b1e1837139c1c53020e86bb9112ae/scala-swing_2.11-1.0.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-xml_2.11/1.0.2/820fbca7e524b530fdadc594c39d49a21ea0337e/scala-xml_2.11-1.0.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/lzma/lzma/0.0.1/521616dc7487b42bef0e803bd2fa3faf668101d7/lzma-0.0.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.sf.trove4j/trove4j/3.0.3/42ccaf4761f0dfdfa805c9e340d99a755907e2dd/trove4j-3.0.3.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/codecjorbis/20101023/c73b5636faf089d9f00e8732a829577de25237ee/codecjorbis-20101023.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/codecwav/20101023/12f031cfe88fef5c1dd36c563c0a3a69bd7261da/codecwav-20101023.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/libraryjavasound/20101123/5c5e304366f75f9eaa2e8cca546a1fb6109348b3/libraryjavasound-20101123.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/librarylwjglopenal/20100824/73e80d0794c39665aec3f62eee88ca91676674ef/librarylwjglopenal-20100824.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/soundsystem/20120107/419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6/soundsystem-20120107.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput/2.0.5/39c7796b469a600f72380316f6b1f11db6c2c7c4/jinput-2.0.5.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl/2.9.4-nightly-20150209/697517568c68e78ae0b4544145af031c81082dfe/lwjgl-2.9.4-nightly-20150209.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl_util/2.9.4-nightly-20150209/d51a7c040a721d13efdfbd34f8b257b2df882ad0/lwjgl_util-2.9.4-nightly-20150209.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/java3d/vecmath/1.5.2/79846ba34cbd89e2422d74d53752f993dcc2ccaf/vecmath-1.5.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/ca.weblite/java-objc-bridge/1.0.0/6ef160c3133a78de015830860197602ca1c855d3/java-objc-bridge-1.0.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.fusesource.jansi/jansi/1.11/655c643309c2f45a56a747fda70e3fadf57e9f11/jansi-1.11.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-actors/2.11.0/8ccfb6541de179bb1c4d45cf414acee069b7f78b/scala-actors-2.11.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput-platform/2.0.5/7ff832a6eb9ab6a767f1ade2b548092d0fa64795/jinput-platform-2.0.5-natives-linux.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput-platform/2.0.5/385ee093e01f587f30ee1c8a2ee7d408fd732e16/jinput-platform-2.0.5-natives-windows.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput-platform/2.0.5/53f9c919f34d2ca9de8c51fc4e1e8282029a9232/jinput-platform-2.0.5-natives-osx.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.4-nightly-20150209/b84d5102b9dbfabfeb5e43c7e2828d98a7fc80e0/lwjgl-platform-2.9.4-nightly-20150209-natives-windows.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.4-nightly-20150209/931074f46c795d2f7b30ed6395df5715cfd7675b/lwjgl-platform-2.9.4-nightly-20150209-natives-linux.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.4-nightly-20150209/bcab850f8f487c3f4c4dbabde778bb82bd1a40ed/lwjgl-platform-2.9.4-nightly-20150209-natives-osx.jar:/home/spaceboyross/.gradle/caches/minecraft/deobfedDeps/compileDummy.jar:/home/spaceboyross/.gradle/caches/minecraft/deobfedDeps/providedDummy.jar:/home/spaceboyross/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2443/start
-[09:16:14] [main/DEBUG] [FML/]: Java library path at launch is /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib:/home/spaceboyross/.gradle/caches/minecraft/net/minecraft/natives/1.12
-[09:16:14] [main/INFO] [FML/]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[09:16:14] [main/DEBUG] [FML/]: Instantiating coremod class FMLCorePlugin
-[09:16:14] [main/INFO] [FML/]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
-[09:16:14] [main/DEBUG] [FML/]: Added access transformer class net.minecraftforge.fml.common.asm.transformers.AccessTransformer to enqueued access transformers
-[09:16:14] [main/DEBUG] [FML/]: Enqueued coremod FMLCorePlugin
-[09:16:14] [main/DEBUG] [FML/]: Instantiating coremod class FMLForgePlugin
-[09:16:14] [main/INFO] [FML/]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
-[09:16:14] [main/DEBUG] [FML/]: Enqueued coremod FMLForgePlugin
-[09:16:14] [main/DEBUG] [FML/]: All fundamental core mods are successfully located
-[09:16:14] [main/DEBUG] [FML/]: Attempting to load commandline specified mods, relative to /home/spaceboyross/MC Mods/MS Gundam/run/.
-[09:16:14] [main/DEBUG] [FML/]: Discovering coremods
-[09:16:14] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
-[09:16:14] [main/INFO] [GradleStart/]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
-[09:16:14] [main/INFO] [GradleStart/]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
-[09:16:14] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[09:16:14] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[09:16:14] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
-[09:16:14] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[09:16:14] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[09:16:14] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[09:16:14] [main/DEBUG] [FML/]: Injecting coremod FMLCorePlugin \{net.minecraftforge.fml.relauncher.FMLCorePlugin\} class transformers
-[09:16:14] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.BlamingTransformer
-[09:16:15] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.SideTransformer
-[09:16:15] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriptionTransformer
-[09:16:15] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriberTransformer
-[09:16:15] [main/DEBUG] [FML/]: Injection complete
-[09:16:15] [main/DEBUG] [FML/]: Running coremod plugin for FMLCorePlugin \{net.minecraftforge.fml.relauncher.FMLCorePlugin\}
-[09:16:15] [main/DEBUG] [FML/]: Running coremod plugin FMLCorePlugin
-[09:16:15] [main/DEBUG] [FML/]: Injecting tracing printstreams for STDOUT/STDERR.
-[09:16:15] [main/DEBUG] [FML/]: Loading deobfuscation resource /home/spaceboyross/.gradle/caches/minecraft/de/oceanlabs/mcp/mcp_snapshot/20170624/1.12/srgs/srg-mcp.srg with 36059 records
-[09:16:17] [main/ERROR] [FML/]: FML appears to be missing any signature data. This is not a good thing
-[09:16:17] [main/DEBUG] [FML/]: Coremod plugin class FMLCorePlugin run successfully
-[09:16:17] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[09:16:17] [main/DEBUG] [FML/]: Injecting coremod FMLForgePlugin \{net.minecraftforge.classloading.FMLForgePlugin\} class transformers
-[09:16:17] [main/DEBUG] [FML/]: Injection complete
-[09:16:17] [main/DEBUG] [FML/]: Running coremod plugin for FMLForgePlugin \{net.minecraftforge.classloading.FMLForgePlugin\}
-[09:16:17] [main/DEBUG] [FML/]: Running coremod plugin FMLForgePlugin
-[09:16:17] [main/DEBUG] [FML/]: Coremod plugin class FMLForgePlugin run successfully
-[09:16:17] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[09:16:17] [main/DEBUG] [FML/]: Loaded 206 rules from AccessTransformer config file forge_at.cfg
-[09:16:17] [main/DEBUG] [FML/]: Validating minecraft
-[09:16:18] [main/DEBUG] [FML/]: Minecraft validated, launching...
-[09:16:18] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
-[09:16:18] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
-[09:16:18] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
-[09:16:18] [main/INFO] [LaunchWrapper/]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[09:16:25] [main/DEBUG] [FML/]: Creating vanilla freeze snapshot
-[09:16:26] [main/DEBUG] [FML/]: Vanilla freeze snapshot created
-[09:16:27] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - LanguageManager took 0.001s
-[09:16:27] [main/INFO] [FML/]: -- System Details --
+[12:02:19] [main/DEBUG] [FML/]: Injecting tracing printstreams for STDOUT/STDERR.
+[12:02:19] [main/INFO] [FML/]: Forge Mod Loader version 14.21.1.2443 for Minecraft 1.12 loading
+[12:02:19] [main/INFO] [FML/]: Java is OpenJDK 64-Bit Server VM, version 1.8.0_181, running on Linux:amd64:4.15.0-34-generic, installed at /usr/lib/jvm/java-8-openjdk-amd64/jre
+[12:02:19] [main/DEBUG] [FML/]: Java classpath at launch is /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar:/usr/share/java/java-atk-wrapper.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar:/home/spaceboyross/MC Mods/MS Gundam/bin:/home/spaceboyross/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2443/snapshot/20170624/forgeSrc-1.12-14.21.1.2443.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.1/f7be08ec23c21485b9b5a1cf1654c2ec8c58168d/jsr305-3.0.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/patchy/1.1/aef610b34a1be37fa851825f12372b78424d8903/patchy-1.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/oshi-project/oshi-core/1.1/9ddf7b048a8d701be231c0f4f95fd986198fd2d8/oshi-core-1.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/4.4.0/cb208278274bf12ebdb56c61bd7407e6f774d65a/jna-4.4.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/platform/3.4.0/e3f70017be8100d3d6923f50b3d2ee17714e9c13/platform-3.4.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.ibm.icu/icu4j-core-mojang/51.2/63d216a9311cca6be337c1e458e587f99d382b84/icu4j-core-mojang-51.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.3/cdd846cfc4e0f7eefafc02c0f5dce32b9303aa2a/jopt-simple-5.0.3.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.9.Final/97860965d6a0a6b98e7f569f3f966727b8db75/netty-all-4.1.9.Final.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/21.0/3a3d111be1be1b745edfa7d91678a12d7ed38709/guava-21.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.5/6c6c702c89bfff3cd9e80b04d668c5e190d588c6/commons-lang3-3.5.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.5/2852e6e05fbb95076fc091f6d1780f1f8fe35e0f/commons-io-2.5.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jutils/jutils/1.0.0/e12fe1fda814bd348c1579329c86943d2cd3c6a6/jutils-1.0.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/authlib/1.5.25/9834cdf236c22e84b946bba989e2f94ef5897c3c/authlib-1.5.25.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/realms/1.10.17/e6a623bf93a230b503b0e3ae18c196fcd5aa3299/realms-1.10.17.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.8.1/a698750c16740fd5b3871425f4cb3bbaa87f529d/commons-compress-1.8.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.3.3/18f4247ff4572a074444572cee34647c43e7c9c7/httpclient-4.3.3.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.3.2/31fbbff1ddbf98f3aa7377c94d33b0447c646b6e/httpcore-4.3.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/7.1.0/9835253257524c1be7ab50c057aa2d418fb72082/fastutil-7.1.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.8.1/e801d13612e22cad62a3f4f3fe7fdbe6334a8e72/log4j-api-2.8.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.8.1/4ac28ff2f1ddf05dae3043a190451e8c46b73c31/log4j-core-2.8.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/text2speech/1.10.3/48fd510879dff266c3815947de66e3d4809f8668/text2speech-1.10.3.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.minecraft/launchwrapper/1.12/111e7bea9c968cdb3d06ef4632bf7ff0824d0f36/launchwrapper-1.12.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/jline/jline/2.13/2d9530d0a25daffaffda7c35037b046b627bb171/jline-2.13.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-debug-all/5.2/3354e11e2b34215f06dab629ab88e06aca477c19/asm-debug-all-5.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-actor_2.11/2.3.3/ed62e9fc709ca0f2ff1a3220daa8b70a2870078e/akka-actor_2.11-2.3.3.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.typesafe/config/1.2.1/f771f71fdae3df231bcd54d5ca2d57f0bf93f467/config-1.2.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-actors-migration_2.11/1.1.0/dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f/scala-actors-migration_2.11-1.1.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-compiler/2.11.1/56ea2e6c025e0821f28d73ca271218b8dd04926a/scala-compiler-2.11.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.plugins/scala-continuations-library_2.11/1.0.2/e517c53a7e9acd6b1668c5a35eccbaa3bab9aac/scala-continuations-library_2.11-1.0.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.plugins/scala-continuations-plugin_2.11.1/1.0.2/f361a3283452c57fa30c1ee69448995de23c60f7/scala-continuations-plugin_2.11.1-1.0.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.1/e11da23da3eabab9f4777b9220e60d44c1aab6a/scala-library-2.11.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-parser-combinators_2.11/1.0.1/f05d7345bf5a58924f2837c6c1f4d73a938e1ff0/scala-parser-combinators_2.11-1.0.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.11.1/6580347e61cc7f8e802941e7fde40fa83b8badeb/scala-reflect-2.11.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-swing_2.11/1.0.1/b1cdd92bd47b1e1837139c1c53020e86bb9112ae/scala-swing_2.11-1.0.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-xml_2.11/1.0.2/820fbca7e524b530fdadc594c39d49a21ea0337e/scala-xml_2.11-1.0.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/lzma/lzma/0.0.1/521616dc7487b42bef0e803bd2fa3faf668101d7/lzma-0.0.1.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.sf.trove4j/trove4j/3.0.3/42ccaf4761f0dfdfa805c9e340d99a755907e2dd/trove4j-3.0.3.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/codecjorbis/20101023/c73b5636faf089d9f00e8732a829577de25237ee/codecjorbis-20101023.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/codecwav/20101023/12f031cfe88fef5c1dd36c563c0a3a69bd7261da/codecwav-20101023.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/libraryjavasound/20101123/5c5e304366f75f9eaa2e8cca546a1fb6109348b3/libraryjavasound-20101123.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/librarylwjglopenal/20100824/73e80d0794c39665aec3f62eee88ca91676674ef/librarylwjglopenal-20100824.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/soundsystem/20120107/419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6/soundsystem-20120107.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput/2.0.5/39c7796b469a600f72380316f6b1f11db6c2c7c4/jinput-2.0.5.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl/2.9.4-nightly-20150209/697517568c68e78ae0b4544145af031c81082dfe/lwjgl-2.9.4-nightly-20150209.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl_util/2.9.4-nightly-20150209/d51a7c040a721d13efdfbd34f8b257b2df882ad0/lwjgl_util-2.9.4-nightly-20150209.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/java3d/vecmath/1.5.2/79846ba34cbd89e2422d74d53752f993dcc2ccaf/vecmath-1.5.2.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/ca.weblite/java-objc-bridge/1.0.0/6ef160c3133a78de015830860197602ca1c855d3/java-objc-bridge-1.0.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.fusesource.jansi/jansi/1.11/655c643309c2f45a56a747fda70e3fadf57e9f11/jansi-1.11.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-actors/2.11.0/8ccfb6541de179bb1c4d45cf414acee069b7f78b/scala-actors-2.11.0.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput-platform/2.0.5/7ff832a6eb9ab6a767f1ade2b548092d0fa64795/jinput-platform-2.0.5-natives-linux.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput-platform/2.0.5/385ee093e01f587f30ee1c8a2ee7d408fd732e16/jinput-platform-2.0.5-natives-windows.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput-platform/2.0.5/53f9c919f34d2ca9de8c51fc4e1e8282029a9232/jinput-platform-2.0.5-natives-osx.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.4-nightly-20150209/b84d5102b9dbfabfeb5e43c7e2828d98a7fc80e0/lwjgl-platform-2.9.4-nightly-20150209-natives-windows.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.4-nightly-20150209/931074f46c795d2f7b30ed6395df5715cfd7675b/lwjgl-platform-2.9.4-nightly-20150209-natives-linux.jar:/home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.4-nightly-20150209/bcab850f8f487c3f4c4dbabde778bb82bd1a40ed/lwjgl-platform-2.9.4-nightly-20150209-natives-osx.jar:/home/spaceboyross/.gradle/caches/minecraft/deobfedDeps/compileDummy.jar:/home/spaceboyross/.gradle/caches/minecraft/deobfedDeps/providedDummy.jar:/home/spaceboyross/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2443/start
+[12:02:19] [main/DEBUG] [FML/]: Java library path at launch is /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib:/home/spaceboyross/.gradle/caches/minecraft/net/minecraft/natives/1.12
+[12:02:19] [main/INFO] [FML/]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[12:02:19] [main/DEBUG] [FML/]: Instantiating coremod class FMLCorePlugin
+[12:02:19] [main/INFO] [FML/]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[12:02:19] [main/DEBUG] [FML/]: Added access transformer class net.minecraftforge.fml.common.asm.transformers.AccessTransformer to enqueued access transformers
+[12:02:19] [main/DEBUG] [FML/]: Enqueued coremod FMLCorePlugin
+[12:02:19] [main/DEBUG] [FML/]: Instantiating coremod class FMLForgePlugin
+[12:02:19] [main/INFO] [FML/]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[12:02:19] [main/DEBUG] [FML/]: Enqueued coremod FMLForgePlugin
+[12:02:19] [main/DEBUG] [FML/]: All fundamental core mods are successfully located
+[12:02:19] [main/DEBUG] [FML/]: Attempting to load commandline specified mods, relative to /home/spaceboyross/MC Mods/MS Gundam/run/.
+[12:02:19] [main/DEBUG] [FML/]: Discovering coremods
+[12:02:19] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[12:02:19] [main/INFO] [GradleStart/]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
+[12:02:19] [main/INFO] [GradleStart/]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[12:02:19] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[12:02:19] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[12:02:19] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[12:02:19] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[12:02:19] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[12:02:19] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[12:02:19] [main/DEBUG] [FML/]: Injecting coremod FMLCorePlugin \{net.minecraftforge.fml.relauncher.FMLCorePlugin\} class transformers
+[12:02:19] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.BlamingTransformer
+[12:02:20] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.SideTransformer
+[12:02:20] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriptionTransformer
+[12:02:20] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriberTransformer
+[12:02:20] [main/DEBUG] [FML/]: Injection complete
+[12:02:20] [main/DEBUG] [FML/]: Running coremod plugin for FMLCorePlugin \{net.minecraftforge.fml.relauncher.FMLCorePlugin\}
+[12:02:20] [main/DEBUG] [FML/]: Running coremod plugin FMLCorePlugin
+[12:02:20] [main/DEBUG] [FML/]: Injecting tracing printstreams for STDOUT/STDERR.
+[12:02:20] [main/DEBUG] [FML/]: Loading deobfuscation resource /home/spaceboyross/.gradle/caches/minecraft/de/oceanlabs/mcp/mcp_snapshot/20170624/1.12/srgs/srg-mcp.srg with 36059 records
+[12:02:21] [main/ERROR] [FML/]: FML appears to be missing any signature data. This is not a good thing
+[12:02:21] [main/DEBUG] [FML/]: Coremod plugin class FMLCorePlugin run successfully
+[12:02:21] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[12:02:21] [main/DEBUG] [FML/]: Injecting coremod FMLForgePlugin \{net.minecraftforge.classloading.FMLForgePlugin\} class transformers
+[12:02:21] [main/DEBUG] [FML/]: Injection complete
+[12:02:21] [main/DEBUG] [FML/]: Running coremod plugin for FMLForgePlugin \{net.minecraftforge.classloading.FMLForgePlugin\}
+[12:02:21] [main/DEBUG] [FML/]: Running coremod plugin FMLForgePlugin
+[12:02:21] [main/DEBUG] [FML/]: Coremod plugin class FMLForgePlugin run successfully
+[12:02:21] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[12:02:21] [main/DEBUG] [FML/]: Loaded 206 rules from AccessTransformer config file forge_at.cfg
+[12:02:21] [main/DEBUG] [FML/]: Validating minecraft
+[12:02:22] [main/DEBUG] [FML/]: Minecraft validated, launching...
+[12:02:22] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[12:02:22] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[12:02:22] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[12:02:22] [main/INFO] [LaunchWrapper/]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[12:02:27] [main/DEBUG] [FML/]: Creating vanilla freeze snapshot
+[12:02:27] [main/DEBUG] [FML/]: Vanilla freeze snapshot created
+[12:02:28] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - LanguageManager took 0.002s
+[12:02:28] [main/INFO] [FML/]: -- System Details --
 Details:
 	Minecraft Version: 1.12
 	Operating System: Linux (amd64) version 4.15.0-34-generic
 	Java Version: 1.8.0_181, Oracle Corporation
 	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 801622008 bytes (764 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	Memory: 759441504 bytes (724 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
 	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
 	FML: 
 	Loaded coremods (and transformers): 
 	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 390.48' Renderer: 'NVS 4200M/PCIe/SSE2'
-[09:16:27] [main/INFO] [FML/]: MinecraftForge v14.21.1.2443 Initialized
-[09:16:27] [main/INFO] [FML/]: Replaced 921 ore ingredients
-[09:16:27] [main/DEBUG] [FML/]: File /home/spaceboyross/MC Mods/MS Gundam/run/config/injectedDependencies.json not found. No dependencies injected
-[09:16:28] [main/DEBUG] [FML/]: Building injected Mod Containers [net.minecraftforge.fml.common.FMLContainer, net.minecraftforge.common.ForgeModContainer]
-[09:16:28] [main/DEBUG] [FML/]: Attempting to load mods contained in the minecraft jar file and associated classes
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
-[09:16:28] [main/DEBUG] [FML/]: Found a minecraft related file at /usr/share/java/java-atk-wrapper.jar, examining for mod candidates
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
-[09:16:28] [main/DEBUG] [FML/]: Found a minecraft related directory at /home/spaceboyross/MC Mods/MS Gundam/bin, examining for mod candidates
-[09:16:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2443/snapshot/20170624/forgeSrc-1.12-14.21.1.2443.jar, examining for mod candidates
-[09:16:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.1/f7be08ec23c21485b9b5a1cf1654c2ec8c58168d/jsr305-3.0.1.jar, examining for mod candidates
-[09:16:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/patchy/1.1/aef610b34a1be37fa851825f12372b78424d8903/patchy-1.1.jar, examining for mod candidates
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/oshi-project/oshi-core/1.1/9ddf7b048a8d701be231c0f4f95fd986198fd2d8/oshi-core-1.1.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/4.4.0/cb208278274bf12ebdb56c61bd7407e6f774d65a/jna-4.4.0.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/platform/3.4.0/e3f70017be8100d3d6923f50b3d2ee17714e9c13/platform-3.4.0.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.ibm.icu/icu4j-core-mojang/51.2/63d216a9311cca6be337c1e458e587f99d382b84/icu4j-core-mojang-51.2.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.3/cdd846cfc4e0f7eefafc02c0f5dce32b9303aa2a/jopt-simple-5.0.3.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.9.Final/97860965d6a0a6b98e7f569f3f966727b8db75/netty-all-4.1.9.Final.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/21.0/3a3d111be1be1b745edfa7d91678a12d7ed38709/guava-21.0.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.5/6c6c702c89bfff3cd9e80b04d668c5e190d588c6/commons-lang3-3.5.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.5/2852e6e05fbb95076fc091f6d1780f1f8fe35e0f/commons-io-2.5.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jutils/jutils/1.0.0/e12fe1fda814bd348c1579329c86943d2cd3c6a6/jutils-1.0.0.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/authlib/1.5.25/9834cdf236c22e84b946bba989e2f94ef5897c3c/authlib-1.5.25.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/realms/1.10.17/e6a623bf93a230b503b0e3ae18c196fcd5aa3299/realms-1.10.17.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.8.1/a698750c16740fd5b3871425f4cb3bbaa87f529d/commons-compress-1.8.1.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.3.3/18f4247ff4572a074444572cee34647c43e7c9c7/httpclient-4.3.3.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.3.2/31fbbff1ddbf98f3aa7377c94d33b0447c646b6e/httpcore-4.3.2.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/7.1.0/9835253257524c1be7ab50c057aa2d418fb72082/fastutil-7.1.0.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.8.1/e801d13612e22cad62a3f4f3fe7fdbe6334a8e72/log4j-api-2.8.1.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.8.1/4ac28ff2f1ddf05dae3043a190451e8c46b73c31/log4j-core-2.8.1.jar
-[09:16:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/text2speech/1.10.3/48fd510879dff266c3815947de66e3d4809f8668/text2speech-1.10.3.jar, examining for mod candidates
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.minecraft/launchwrapper/1.12/111e7bea9c968cdb3d06ef4632bf7ff0824d0f36/launchwrapper-1.12.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/jline/jline/2.13/2d9530d0a25daffaffda7c35037b046b627bb171/jline-2.13.jar
-[09:16:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-debug-all/5.2/3354e11e2b34215f06dab629ab88e06aca477c19/asm-debug-all-5.2.jar, examining for mod candidates
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-actor_2.11/2.3.3/ed62e9fc709ca0f2ff1a3220daa8b70a2870078e/akka-actor_2.11-2.3.3.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.typesafe/config/1.2.1/f771f71fdae3df231bcd54d5ca2d57f0bf93f467/config-1.2.1.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-actors-migration_2.11/1.1.0/dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f/scala-actors-migration_2.11-1.1.0.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-compiler/2.11.1/56ea2e6c025e0821f28d73ca271218b8dd04926a/scala-compiler-2.11.1.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.plugins/scala-continuations-library_2.11/1.0.2/e517c53a7e9acd6b1668c5a35eccbaa3bab9aac/scala-continuations-library_2.11-1.0.2.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.plugins/scala-continuations-plugin_2.11.1/1.0.2/f361a3283452c57fa30c1ee69448995de23c60f7/scala-continuations-plugin_2.11.1-1.0.2.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.1/e11da23da3eabab9f4777b9220e60d44c1aab6a/scala-library-2.11.1.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-parser-combinators_2.11/1.0.1/f05d7345bf5a58924f2837c6c1f4d73a938e1ff0/scala-parser-combinators_2.11-1.0.1.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.11.1/6580347e61cc7f8e802941e7fde40fa83b8badeb/scala-reflect-2.11.1.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-swing_2.11/1.0.1/b1cdd92bd47b1e1837139c1c53020e86bb9112ae/scala-swing_2.11-1.0.1.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-xml_2.11/1.0.2/820fbca7e524b530fdadc594c39d49a21ea0337e/scala-xml_2.11-1.0.2.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/lzma/lzma/0.0.1/521616dc7487b42bef0e803bd2fa3faf668101d7/lzma-0.0.1.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.sf.trove4j/trove4j/3.0.3/42ccaf4761f0dfdfa805c9e340d99a755907e2dd/trove4j-3.0.3.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/codecjorbis/20101023/c73b5636faf089d9f00e8732a829577de25237ee/codecjorbis-20101023.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/codecwav/20101023/12f031cfe88fef5c1dd36c563c0a3a69bd7261da/codecwav-20101023.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/libraryjavasound/20101123/5c5e304366f75f9eaa2e8cca546a1fb6109348b3/libraryjavasound-20101123.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/librarylwjglopenal/20100824/73e80d0794c39665aec3f62eee88ca91676674ef/librarylwjglopenal-20100824.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/soundsystem/20120107/419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6/soundsystem-20120107.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput/2.0.5/39c7796b469a600f72380316f6b1f11db6c2c7c4/jinput-2.0.5.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl/2.9.4-nightly-20150209/697517568c68e78ae0b4544145af031c81082dfe/lwjgl-2.9.4-nightly-20150209.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl_util/2.9.4-nightly-20150209/d51a7c040a721d13efdfbd34f8b257b2df882ad0/lwjgl_util-2.9.4-nightly-20150209.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/java3d/vecmath/1.5.2/79846ba34cbd89e2422d74d53752f993dcc2ccaf/vecmath-1.5.2.jar
-[09:16:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/modules-2/files-2.1/ca.weblite/java-objc-bridge/1.0.0/6ef160c3133a78de015830860197602ca1c855d3/java-objc-bridge-1.0.0.jar, examining for mod candidates
-[09:16:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.fusesource.jansi/jansi/1.11/655c643309c2f45a56a747fda70e3fadf57e9f11/jansi-1.11.jar, examining for mod candidates
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-actors/2.11.0/8ccfb6541de179bb1c4d45cf414acee069b7f78b/scala-actors-2.11.0.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput-platform/2.0.5/7ff832a6eb9ab6a767f1ade2b548092d0fa64795/jinput-platform-2.0.5-natives-linux.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput-platform/2.0.5/385ee093e01f587f30ee1c8a2ee7d408fd732e16/jinput-platform-2.0.5-natives-windows.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput-platform/2.0.5/53f9c919f34d2ca9de8c51fc4e1e8282029a9232/jinput-platform-2.0.5-natives-osx.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.4-nightly-20150209/b84d5102b9dbfabfeb5e43c7e2828d98a7fc80e0/lwjgl-platform-2.9.4-nightly-20150209-natives-windows.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.4-nightly-20150209/931074f46c795d2f7b30ed6395df5715cfd7675b/lwjgl-platform-2.9.4-nightly-20150209-natives-linux.jar
-[09:16:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.4-nightly-20150209/bcab850f8f487c3f4c4dbabde778bb82bd1a40ed/lwjgl-platform-2.9.4-nightly-20150209-natives-osx.jar
-[09:16:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/minecraft/deobfedDeps/compileDummy.jar, examining for mod candidates
-[09:16:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/minecraft/deobfedDeps/providedDummy.jar, examining for mod candidates
-[09:16:28] [main/DEBUG] [FML/]: Found a minecraft related directory at /home/spaceboyross/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2443/start, examining for mod candidates
-[09:16:28] [main/DEBUG] [FML/]: Minecraft jar mods loaded successfully
-[09:16:28] [main/INFO] [FML/]: Found 0 mods from the command line. Injecting into mod discoverer
-[09:16:28] [main/INFO] [FML/]: Searching /home/spaceboyross/MC Mods/MS Gundam/run/mods for mods
-[09:16:28] [main/DEBUG] [FML/]: Examining file java-atk-wrapper.jar for potential mods
-[09:16:28] [main/DEBUG] [FML/]: The mod container java-atk-wrapper.jar appears to be missing an mcmod.info file
-[09:16:28] [main/DEBUG] [FML/]: Examining directory bin for potential mods
-[09:16:28] [main/DEBUG] [FML/]: Found an mcmod.info file in directory bin
-[09:16:28] [main/TRACE] [FML/]: Recursing into package assets
-[09:16:28] [main/TRACE] [FML/]: Recursing into package assets/gundam
-[09:16:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/blockstates
-[09:16:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/lang
-[09:16:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/models
-[09:16:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/models/block
-[09:16:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/models/item
-[09:16:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/recipes
-[09:16:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/textures
-[09:16:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/textures/blocks
-[09:16:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/textures/entity
-[09:16:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/textures/gui
-[09:16:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/textures/items
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam
-[09:16:28] [main/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.spaceboyross.gundam.GundamMod) - loading
-[09:16:28] [main/TRACE] [gundam/]: Parsed dependency info : [] [] []
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/blocks
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/blocks/container
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/blocks/gui
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/blocks/tile
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/capabilities
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/capabilities/interfaces
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/capabilities/newtype
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/capabilities/providers
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/dimension
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/dimension/side1
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/entities
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/entities/render
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/gui
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/input
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/items
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/ms
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/ms/armaments
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/ms/gundams
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/ms/zeon
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/net
-[09:16:28] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/proxy
-[09:16:28] [main/DEBUG] [FML/]: Examining file forgeSrc-1.12-14.21.1.2443.jar for potential mods
-[09:16:28] [main/DEBUG] [FML/]: The mod container forgeSrc-1.12-14.21.1.2443.jar appears to be missing an mcmod.info file
-[09:16:29] [main/DEBUG] [FML/]: Examining file jsr305-3.0.1.jar for potential mods
-[09:16:29] [main/DEBUG] [FML/]: The mod container jsr305-3.0.1.jar appears to be missing an mcmod.info file
-[09:16:29] [main/DEBUG] [FML/]: Examining file patchy-1.1.jar for potential mods
-[09:16:29] [main/DEBUG] [FML/]: The mod container patchy-1.1.jar appears to be missing an mcmod.info file
-[09:16:29] [main/DEBUG] [FML/]: Examining file text2speech-1.10.3.jar for potential mods
-[09:16:29] [main/DEBUG] [FML/]: The mod container text2speech-1.10.3.jar appears to be missing an mcmod.info file
-[09:16:29] [main/DEBUG] [FML/]: Examining file asm-debug-all-5.2.jar for potential mods
-[09:16:29] [main/DEBUG] [FML/]: The mod container asm-debug-all-5.2.jar appears to be missing an mcmod.info file
-[09:16:29] [main/DEBUG] [FML/]: Examining file java-objc-bridge-1.0.0.jar for potential mods
-[09:16:29] [main/DEBUG] [FML/]: The mod container java-objc-bridge-1.0.0.jar appears to be missing an mcmod.info file
-[09:16:29] [main/DEBUG] [FML/]: Examining file jansi-1.11.jar for potential mods
-[09:16:29] [main/DEBUG] [FML/]: The mod container jansi-1.11.jar appears to be missing an mcmod.info file
-[09:16:29] [main/DEBUG] [FML/]: Examining file compileDummy.jar for potential mods
-[09:16:29] [main/DEBUG] [FML/]: The mod container compileDummy.jar appears to be missing an mcmod.info file
-[09:16:29] [main/DEBUG] [FML/]: Examining file providedDummy.jar for potential mods
-[09:16:29] [main/DEBUG] [FML/]: The mod container providedDummy.jar appears to be missing an mcmod.info file
-[09:16:29] [main/DEBUG] [FML/]: Examining directory start for potential mods
-[09:16:29] [main/DEBUG] [FML/]: No mcmod.info file found in directory start
-[09:16:29] [main/TRACE] [FML/]: Recursing into package net
-[09:16:29] [main/TRACE] [FML/]: Recursing into package net/minecraftforge
-[09:16:29] [main/TRACE] [FML/]: Recursing into package net/minecraftforge/gradle
-[09:16:29] [main/TRACE] [FML/]: Recursing into package net/minecraftforge/gradle/tweakers
-[09:16:29] [main/INFO] [FML/]: Forge Mod Loader has identified 5 mods to load
-[09:16:29] [main/TRACE] [FML/]: Received a system property request ''
-[09:16:29] [main/TRACE] [FML/]: System property request managing the state of 0 mods
-[09:16:29] [main/DEBUG] [FML/]: After merging, found state information for 0 mods
-[09:16:29] [main/DEBUG] [Forge Mod Loader/]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
-[09:16:29] [main/DEBUG] [Minecraft Forge/]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
-[09:16:29] [main/DEBUG] [gundam/]: Enabling mod gundam
-[09:16:29] [main/DEBUG] [MS Gundam Mod/]: Mod MS Gundam Mod is missing a pack.mcmeta file, substituting a dummy one
-[09:16:29] [main/TRACE] [FML/]: Verifying mod requirements are satisfied
-[09:16:29] [main/TRACE] [FML/]: All mod requirements are satisfied
-[09:16:29] [main/TRACE] [FML/]: Sorting mods into an ordered list
-[09:16:29] [main/TRACE] [FML/]: Mod sorting completed successfully
-[09:16:29] [main/DEBUG] [FML/]: Mod sorting data
-[09:16:29] [main/DEBUG] [FML/]: 	gundam(MS Gundam Mod:1.0): bin ()
-[09:16:29] [main/DEBUG] [FML/]: Loading @Config anotation data
-[09:16:29] [main/TRACE] [minecraft/minecraft]: Sending event FMLConstructionEvent to mod minecraft
-[09:16:29] [main/TRACE] [minecraft/minecraft]: Sent event FMLConstructionEvent to mod minecraft
-[09:16:29] [main/DEBUG] [FML/]: Bar Step: Construction - Minecraft took 0.026s
-[09:16:29] [main/TRACE] [mcp/mcp]: Sending event FMLConstructionEvent to mod mcp
-[09:16:29] [main/TRACE] [mcp/mcp]: Sent event FMLConstructionEvent to mod mcp
-[09:16:29] [main/DEBUG] [FML/]: Bar Step: Construction - Minecraft Coder Pack took 0.001s
-[09:16:29] [main/TRACE] [FML/FML]: Sending event FMLConstructionEvent to mod FML
-[09:16:29] [main/TRACE] [FML/FML]: Mod FML is using network checker : Invoking method checkModLists
-[09:16:29] [main/TRACE] [FML/FML]: Testing mod FML to verify it accepts its own version in a remote connection
-[09:16:29] [main/TRACE] [FML/FML]: The mod FML accepts its own version (8.0.99.99)
-[09:16:29] [main/INFO] [FML/FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, gundam] at CLIENT
-[09:16:29] [main/INFO] [FML/FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, gundam] at SERVER
-[09:16:30] [main/TRACE] [FML/FML]: Sent event FMLConstructionEvent to mod FML
-[09:16:30] [main/DEBUG] [FML/]: Bar Step: Construction - Forge Mod Loader took 0.740s
-[09:16:30] [main/TRACE] [forge/forge]: Sending event FMLConstructionEvent to mod forge
-[09:16:30] [main/DEBUG] [forge/forge]: Preloading CrashReport Classes
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$10
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$11
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$12
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$13
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$14
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$4
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$5
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$6
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$7
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$8
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$9
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/multiplayer/WorldClient$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/multiplayer/WorldClient$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/multiplayer/WorldClient$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/multiplayer/WorldClient$4
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/particle/ParticleManager$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/particle/ParticleManager$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/particle/ParticleManager$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/particle/ParticleManager$4
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/EntityRenderer$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/EntityRenderer$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/EntityRenderer$4
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/RenderGlobal$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/RenderItem$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/RenderItem$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/RenderItem$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/RenderItem$4
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/texture/TextureAtlasSprite$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/texture/TextureManager$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/texture/TextureMap$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/texture/TextureMap$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/texture/TextureMap$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$4
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$5
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$6
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$7
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReportCategory$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReportCategory$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReportCategory$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReportCategory$4
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReportCategory$5
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/entity/Entity$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/entity/Entity$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/entity/Entity$4
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/entity/Entity$5
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/entity/EntityTracker$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/entity/player/InventoryPlayer$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/nbt/NBTTagCompound$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/nbt/NBTTagCompound$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/network/NetHandlerPlayServer$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/network/NetworkSystem$6
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/server/MinecraftServer$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/server/MinecraftServer$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/server/dedicated/DedicatedServer$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/server/dedicated/DedicatedServer$4
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/server/integrated/IntegratedServer$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/server/integrated/IntegratedServer$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/tileentity/CommandBlockBaseLogic$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/tileentity/CommandBlockBaseLogic$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/tileentity/TileEntity$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/tileentity/TileEntity$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/tileentity/TileEntity$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/World$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/World$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/World$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/World$4
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/World$5
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/chunk/Chunk$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/gen/structure/MapGenStructure$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/gen/structure/MapGenStructure$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/gen/structure/MapGenStructure$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$10
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$2
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$3
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$4
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$5
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$6
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$7
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$8
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$9
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraftforge/fml/client/SplashProgress$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraftforge/fml/common/FMLCommonHandler$1
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraftforge/fml/common/ICrashCallable
-[09:16:30] [main/DEBUG] [forge/forge]: 	net/minecraftforge/fml/common/Loader$1
-[09:16:30] [main/TRACE] [FML/forge]: Mod forge is using network checker : No network checking performed
-[09:16:30] [main/TRACE] [FML/forge]: Testing mod forge to verify it accepts its own version in a remote connection
-[09:16:30] [main/TRACE] [FML/forge]: The mod forge accepts its own version (14.21.1.2443)
-[09:16:30] [main/DEBUG] [FML/forge]: Attempting to inject @Config classes into forge for type INSTANCE
-[09:16:30] [main/TRACE] [forge/forge]: Sent event FMLConstructionEvent to mod forge
-[09:16:30] [main/DEBUG] [FML/]: Bar Step: Construction - Minecraft Forge took 0.121s
-[09:16:30] [main/TRACE] [gundam/gundam]: Sending event FMLConstructionEvent to mod gundam
-[09:16:30] [main/TRACE] [FML/gundam]: Mod gundam is using network checker : Accepting version 1.0
-[09:16:30] [main/TRACE] [FML/gundam]: Testing mod gundam to verify it accepts its own version in a remote connection
-[09:16:30] [main/TRACE] [FML/gundam]: The mod gundam accepts its own version (1.0)
-[09:16:30] [main/DEBUG] [FML/gundam]: Attempting to inject @SidedProxy classes into gundam
-[09:16:30] [main/DEBUG] [FML/gundam]: Attempting to inject @EventBusSubscriber classes into the eventbus for gundam
-[09:16:30] [main/DEBUG] [FML/gundam]: Registering @EventBusSubscriber for com.spaceboyross.gundam.proxy.CommonProxy for mod gundam
-[09:16:30] [main/DEBUG] [FML/gundam]: Injected @EventBusSubscriber class com.spaceboyross.gundam.proxy.CommonProxy
-[09:16:30] [main/DEBUG] [FML/gundam]: Registering @EventBusSubscriber for com.spaceboyross.gundam.proxy.ClientProxy for mod gundam
-[09:16:30] [main/DEBUG] [FML/gundam]: Injected @EventBusSubscriber class com.spaceboyross.gundam.proxy.ClientProxy
-[09:16:30] [main/DEBUG] [FML/gundam]: Registering @EventBusSubscriber for com.spaceboyross.gundam.capabilities.newtype.Newtype$EventHandler for mod gundam
-[09:16:30] [main/DEBUG] [FML/gundam]: Injected @EventBusSubscriber class com.spaceboyross.gundam.capabilities.newtype.Newtype$EventHandler
-[09:16:30] [main/DEBUG] [FML/gundam]: Attempting to inject @Config classes into gundam for type INSTANCE
-[09:16:30] [main/TRACE] [gundam/gundam]: Sent event FMLConstructionEvent to mod gundam
-[09:16:30] [main/DEBUG] [FML/]: Bar Step: Construction - MS Gundam Mod took 0.036s
-[09:16:30] [main/DEBUG] [FML/]: Bar Finished: Construction took 0.924s
-[09:16:30] [main/DEBUG] [FML/]: Mod signature data
-[09:16:30] [main/DEBUG] [FML/]:  	Valid Signatures:
-[09:16:30] [main/DEBUG] [FML/]:  	Missing Signatures:
-[09:16:30] [main/DEBUG] [FML/]: 		minecraft	(Minecraft	1.12)	minecraft.jar
-[09:16:30] [main/DEBUG] [FML/]: 		mcp	(Minecraft Coder Pack	9.19)	minecraft.jar
-[09:16:30] [main/DEBUG] [FML/]: 		FML	(Forge Mod Loader	8.0.99.99)	forgeSrc-1.12-14.21.1.2443.jar
-[09:16:30] [main/DEBUG] [FML/]: 		forge	(Minecraft Forge	14.21.1.2443)	forgeSrc-1.12-14.21.1.2443.jar
-[09:16:30] [main/DEBUG] [FML/]: 		gundam	(MS Gundam Mod	1.0)	bin
-[09:16:30] [main/DEBUG] [FML/]: Bar Step: Loading Resources - Default took 0.005s
-[09:16:30] [main/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Forge Mod Loader took 0.018s
-[09:16:30] [main/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Minecraft Forge took 0.017s
-[09:16:30] [main/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:MS Gundam Mod took 0.002s
-[09:16:30] [main/DEBUG] [FML/]: Bar Finished: Reloading - LanguageManager took 0.033s
-[09:16:30] [main/DEBUG] [FML/]: Bar Step: Loading Resources - Reloading listeners took 0.034s
-[09:16:30] [main/DEBUG] [FML/]: Bar Finished: Loading Resources took 0.075s
-[09:16:30] [main/DEBUG] [Forge Mod Loader/]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
-[09:16:30] [main/DEBUG] [Minecraft Forge/]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
-[09:16:30] [main/DEBUG] [MS Gundam Mod/]: Mod MS Gundam Mod is missing a pack.mcmeta file, substituting a dummy one
-[09:16:30] [main/INFO] [FML/]: Processing ObjectHolder annotations
-[09:16:30] [main/INFO] [FML/]: Found 1179 ObjectHolder annotations
-[09:16:30] [main/INFO] [FML/]: Identifying ItemStackHolder annotations
-[09:16:30] [main/INFO] [FML/]: Found 0 ItemStackHolder annotations
-[09:16:30] [main/TRACE] [minecraft/minecraft]: Sending event FMLPreInitializationEvent to mod minecraft
-[09:16:30] [main/TRACE] [minecraft/minecraft]: Sent event FMLPreInitializationEvent to mod minecraft
-[09:16:30] [main/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft took 0.001s
-[09:16:30] [main/TRACE] [mcp/mcp]: Sending event FMLPreInitializationEvent to mod mcp
-[09:16:30] [main/TRACE] [mcp/mcp]: Sent event FMLPreInitializationEvent to mod mcp
-[09:16:30] [main/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Coder Pack took 0.000s
-[09:16:30] [main/TRACE] [FML/FML]: Sending event FMLPreInitializationEvent to mod FML
-[09:16:30] [main/TRACE] [FML/FML]: Sent event FMLPreInitializationEvent to mod FML
-[09:16:30] [main/DEBUG] [FML/]: Bar Step: PreInitialization - Forge Mod Loader took 0.000s
-[09:16:30] [main/TRACE] [forge/forge]: Sending event FMLPreInitializationEvent to mod forge
-[09:16:30] [main/INFO] [FML/forge]: Configured a dormant chunk cache size of 0
-[09:16:30] [main/TRACE] [forge/forge]: Sent event FMLPreInitializationEvent to mod forge
-[09:16:30] [main/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Forge took 0.079s
-[09:16:30] [main/TRACE] [gundam/gundam]: Sending event FMLPreInitializationEvent to mod gundam
-[09:16:30] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity AmuroRay as gundam:amuro_ray
-[09:16:30] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity BrightNoa as gundam:bright_noa
-[09:16:30] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity CharAznable as gundam:char_aznable
-[09:16:30] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity DomonKasshu as gundam:domon_kasshu
-[09:16:30] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity FullFrontal as gundam:full_frontal
-[09:16:30] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity MasterAsia as gundam:master_asia
-[09:16:30] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity QuattroBajeena as gundam:quattro_bajeena
-[09:16:31] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity MS-04_Prototype_Zaku as gundam:ms-04_prototype_zaku
-[09:16:31] [main/WARN] [FML/gundam]: ****************************************
-[09:16:31] [main/WARN] [FML/gundam]: * Attempted to registry a entity egg for entity (gundam:) that is not in the Entity Registry
-[09:16:31] [main/WARN] [FML/gundam]: *  at net.minecraftforge.fml.common.registry.EntityRegistry.registerEgg(EntityRegistry.java:217)
-[09:16:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.ms.MSRegistry.register(MSRegistry.java:22)
-[09:16:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.proxy.CommonProxy.preInit(CommonProxy.java:58)
-[09:16:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.proxy.ClientProxy.preInit(ClientProxy.java:24)
-[09:16:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.GundamMod.preInit(GundamMod.java:34)
-[09:16:31] [main/WARN] [FML/gundam]: *  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)...
-[09:16:31] [main/WARN] [FML/gundam]: ****************************************
-[09:16:31] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity MS-05A_Zaku_I_Early_Type as gundam:ms-05a_zaku_i_early_type
-[09:16:31] [main/WARN] [FML/gundam]: ****************************************
-[09:16:31] [main/WARN] [FML/gundam]: * Attempted to registry a entity egg for entity (gundam:) that is not in the Entity Registry
-[09:16:31] [main/WARN] [FML/gundam]: *  at net.minecraftforge.fml.common.registry.EntityRegistry.registerEgg(EntityRegistry.java:217)
-[09:16:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.ms.MSRegistry.register(MSRegistry.java:22)
-[09:16:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.proxy.CommonProxy.preInit(CommonProxy.java:59)
-[09:16:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.proxy.ClientProxy.preInit(ClientProxy.java:24)
-[09:16:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.GundamMod.preInit(GundamMod.java:34)
-[09:16:31] [main/WARN] [FML/gundam]: *  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)...
-[09:16:31] [main/WARN] [FML/gundam]: ****************************************
-[09:16:31] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity RX-78-2_Gundam as gundam:rx-78-2_gundam
-[09:16:31] [main/WARN] [FML/gundam]: ****************************************
-[09:16:31] [main/WARN] [FML/gundam]: * Attempted to registry a entity egg for entity (gundam:) that is not in the Entity Registry
-[09:16:31] [main/WARN] [FML/gundam]: *  at net.minecraftforge.fml.common.registry.EntityRegistry.registerEgg(EntityRegistry.java:217)
-[09:16:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.ms.MSRegistry.register(MSRegistry.java:22)
-[09:16:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.proxy.CommonProxy.preInit(CommonProxy.java:60)
-[09:16:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.proxy.ClientProxy.preInit(ClientProxy.java:24)
-[09:16:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.GundamMod.preInit(GundamMod.java:34)
-[09:16:31] [main/WARN] [FML/gundam]: *  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)...
-[09:16:31] [main/WARN] [FML/gundam]: ****************************************
-[09:16:31] [main/INFO] [FML/gundam]: OBJLoader: Domain gundam has been added.
-[09:16:31] [main/TRACE] [gundam/gundam]: Sent event FMLPreInitializationEvent to mod gundam
-[09:16:31] [main/DEBUG] [FML/]: Bar Step: PreInitialization - MS Gundam Mod took 0.298s
-[09:16:31] [main/DEBUG] [FML/]: Bar Finished: PreInitialization took 0.379s
-[09:16:31] [main/INFO] [FML/]: Applying holder lookups
-[09:16:31] [main/DEBUG] [FML/]: Unable to lookup gundam:gundarium_beta_ingot for public static com.spaceboyross.gundam.items.GundariumBetaIngotItem com.spaceboyross.gundam.GundamItems.gundariumBetaIngot. This means the object wasn't registered. It's likely just mod options.
-[09:16:31] [main/DEBUG] [FML/]: Unable to lookup gundam:luna_titanium_ingot for public static com.spaceboyross.gundam.items.LunaTitaniumIngotItem com.spaceboyross.gundam.GundamItems.lunaTitaniumIngot. This means the object wasn't registered. It's likely just mod options.
-[09:16:31] [main/DEBUG] [FML/]: Unable to lookup gundam:gundarium_gamma_ingot for public static com.spaceboyross.gundam.items.GundariumGammaIngotItem com.spaceboyross.gundam.GundamItems.gundariumGammaIngot. This means the object wasn't registered. It's likely just mod options.
-[09:16:31] [main/DEBUG] [FML/]: Unable to lookup gundam:gundarium_epsilon_ingot for public static com.spaceboyross.gundam.items.GundariumEpsilonIngotItem com.spaceboyross.gundam.GundamItems.gundariumEpsilonIngot. This means the object wasn't registered. It's likely just mod options.
-[09:16:31] [main/DEBUG] [FML/]: Unable to lookup gundam:super_hard_steel_ingot for public static com.spaceboyross.gundam.items.SuperHardSteelIngotItem com.spaceboyross.gundam.GundamItems.superHardSteelIngot. This means the object wasn't registered. It's likely just mod options.
-[09:16:31] [main/DEBUG] [FML/]: Unable to lookup gundam:g_controller for public static com.spaceboyross.gundam.items.GControllerItem com.spaceboyross.gundam.GundamItems.gController. This means the object wasn't registered. It's likely just mod options.
-[09:16:31] [main/DEBUG] [FML/]: Unable to lookup gundam:gundarium_alpha_ingot for public static com.spaceboyross.gundam.items.GundariumAlphaIngotItem com.spaceboyross.gundam.GundamItems.gundariumAlphaIngot. This means the object wasn't registered. It's likely just mod options.
-[09:16:31] [main/DEBUG] [FML/]: Unable to lookup gundam:portable_vernier for public static com.spaceboyross.gundam.items.PortableVernierItem com.spaceboyross.gundam.GundamItems.portableVernier. This means the object wasn't registered. It's likely just mod options.
-[09:16:31] [main/DEBUG] [FML/]: Unable to lookup gundam:char_aznable_mask for public static com.spaceboyross.gundam.items.CharAznableMaskItem com.spaceboyross.gundam.GundamItems.charAznableMask. This means the object wasn't registered. It's likely just mod options.
-[09:16:31] [main/INFO] [FML/]: Holder lookups applied
-[09:16:31] [main/INFO] [FML/]: Applying holder lookups
-[09:16:31] [main/INFO] [FML/]: Holder lookups applied
-[09:16:31] [main/INFO] [FML/]: Applying holder lookups
-[09:16:31] [main/INFO] [FML/]: Holder lookups applied
-[09:16:31] [main/INFO] [FML/]: Applying holder lookups
-[09:16:31] [main/INFO] [FML/]: Holder lookups applied
-[09:16:31] [main/INFO] [FML/]: Injecting itemstacks
-[09:16:31] [main/INFO] [FML/]: Itemstack injection complete
-[09:16:31] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - TextureManager took 0.010s
-[09:16:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - SoundHandler took 1.472s
-[09:16:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - FontRenderer took 0.004s
-[09:16:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - FontRenderer took 0.024s
-[09:16:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - GrassColorReloadListener took 0.023s
-[09:16:33] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - FoliageColorReloadListener took 0.009s
-[09:16:33] [main/DEBUG] [FML/]: Bar Step: Rendering Setup - GL Setup took 0.002s
-[09:16:33] [main/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Texture Map took 0.010s
-[09:16:33] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - B3DLoader took 0.000s
-[09:16:33] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - OBJLoader took 0.000s
-[09:16:33] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelFluid$FluidLoader took 0.000s
-[09:16:33] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - ItemLayerModel$Loader took 0.000s
-[09:16:33] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - MultiLayerModel$Loader took 0.000s
-[09:16:33] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelDynBucket$LoaderDynBucket took 0.000s
-[09:16:35] [main/DEBUG] [FML/]: Bar Finished: ModelLoader: blocks took 1.914s
-[09:16:35] [main/DEBUG] [FML/]: Item json isn't found for 'gundam:luna_titanium_block#inventory', trying to load the variant from the blockstate json
-[09:16:35] [main/DEBUG] [FML/]: Item json isn't found for 'gundam:ms_crafting_station#inventory', trying to load the variant from the blockstate json
-[09:16:35] [main/DEBUG] [FML/]: Bar Finished: ModelLoader: items took 0.432s
-[09:16:35] [main/INFO] [FML/]: Max texture size: 16384
-[09:16:36] [main/DEBUG] [FML/]: Bar Finished: Texture stitching took 0.470s
-[09:16:36] [main/DEBUG] [FML/]: Bar Finished: Texture stitching took 0.058s
-[09:16:36] [main/DEBUG] [FML/]: Bar Finished: Texture creation took 0.067s
-[09:16:36] [main/DEBUG] [FML/]: Bar Finished: Texture mipmap and upload took 0.023s
-[09:16:37] [main/DEBUG] [FML/]: Bar Finished: ModelLoader: baking took 1.135s
-[09:16:37] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelManager took 4.448s
-[09:16:37] [main/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Model Manager took 4.498s
-[09:16:37] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - RenderItem took 0.003s
-[09:16:37] [main/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Item Renderer took 0.365s
-[09:16:37] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - EntityRenderer took 0.000s
-[09:16:37] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - BlockRendererDispatcher took 0.000s
-[09:16:38] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - RenderGlobal took 0.000s
-[09:16:38] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - SearchTreeManager took 0.140s
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Entity Renderer took 0.676s
-[09:16:38] [main/DEBUG] [FML/]: Bar Finished: Rendering Setup took 5.551s
-[09:16:38] [main/INFO] [FML/]: Applying holder lookups
-[09:16:38] [main/INFO] [FML/]: Holder lookups applied
-[09:16:38] [main/TRACE] [minecraft/minecraft]: Sending event FMLInitializationEvent to mod minecraft
-[09:16:38] [main/TRACE] [minecraft/minecraft]: Sent event FMLInitializationEvent to mod minecraft
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: Initialization - Minecraft took 0.003s
-[09:16:38] [main/TRACE] [mcp/mcp]: Sending event FMLInitializationEvent to mod mcp
-[09:16:38] [main/TRACE] [mcp/mcp]: Sent event FMLInitializationEvent to mod mcp
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Coder Pack took 0.000s
-[09:16:38] [main/TRACE] [FML/FML]: Sending event FMLInitializationEvent to mod FML
-[09:16:38] [main/TRACE] [FML/FML]: Sent event FMLInitializationEvent to mod FML
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: Initialization - Forge Mod Loader took 0.000s
-[09:16:38] [main/TRACE] [forge/forge]: Sending event FMLInitializationEvent to mod forge
-[09:16:38] [main/TRACE] [forge/forge]: Sent event FMLInitializationEvent to mod forge
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Forge took 0.001s
-[09:16:38] [main/TRACE] [gundam/gundam]: Sending event FMLInitializationEvent to mod gundam
-[09:16:38] [main/TRACE] [gundam/gundam]: Sent event FMLInitializationEvent to mod gundam
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: Initialization - MS Gundam Mod took 0.011s
-[09:16:38] [main/DEBUG] [FML/]: Bar Finished: Initialization took 0.016s
-[09:16:38] [main/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod minecraft
-[09:16:38] [main/TRACE] [minecraft/minecraft]: Sending event IMCEvent to mod minecraft
-[09:16:38] [main/TRACE] [minecraft/minecraft]: Sent event IMCEvent to mod minecraft
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft took 0.005s
-[09:16:38] [main/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod mcp
-[09:16:38] [main/TRACE] [mcp/mcp]: Sending event IMCEvent to mod mcp
-[09:16:38] [main/TRACE] [mcp/mcp]: Sent event IMCEvent to mod mcp
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Coder Pack took 0.000s
-[09:16:38] [main/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod FML
-[09:16:38] [main/TRACE] [FML/FML]: Sending event IMCEvent to mod FML
-[09:16:38] [main/TRACE] [FML/FML]: Sent event IMCEvent to mod FML
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Forge Mod Loader took 0.000s
-[09:16:38] [main/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod forge
-[09:16:38] [main/TRACE] [forge/forge]: Sending event IMCEvent to mod forge
-[09:16:38] [main/TRACE] [forge/forge]: Sent event IMCEvent to mod forge
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Forge took 0.004s
-[09:16:38] [main/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod gundam
-[09:16:38] [main/TRACE] [gundam/gundam]: Sending event IMCEvent to mod gundam
-[09:16:38] [main/TRACE] [gundam/gundam]: Sent event IMCEvent to mod gundam
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: InterModComms$IMC - MS Gundam Mod took 0.000s
-[09:16:38] [main/DEBUG] [FML/]: Bar Finished: InterModComms$IMC took 0.010s
-[09:16:38] [main/INFO] [FML/]: Injecting itemstacks
-[09:16:38] [main/INFO] [FML/]: Itemstack injection complete
-[09:16:38] [main/TRACE] [minecraft/minecraft]: Sending event FMLPostInitializationEvent to mod minecraft
-[09:16:38] [main/TRACE] [minecraft/minecraft]: Sent event FMLPostInitializationEvent to mod minecraft
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft took 0.001s
-[09:16:38] [main/TRACE] [mcp/mcp]: Sending event FMLPostInitializationEvent to mod mcp
-[09:16:38] [main/TRACE] [mcp/mcp]: Sent event FMLPostInitializationEvent to mod mcp
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Coder Pack took 0.000s
-[09:16:38] [main/TRACE] [FML/FML]: Sending event FMLPostInitializationEvent to mod FML
-[09:16:38] [main/TRACE] [FML/FML]: Sent event FMLPostInitializationEvent to mod FML
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: PostInitialization - Forge Mod Loader took 0.001s
-[09:16:38] [main/TRACE] [forge/forge]: Sending event FMLPostInitializationEvent to mod forge
-[09:16:38] [main/TRACE] [forge/forge]: Sent event FMLPostInitializationEvent to mod forge
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Forge took 0.024s
-[09:16:38] [main/TRACE] [gundam/gundam]: Sending event FMLPostInitializationEvent to mod gundam
-[09:16:38] [main/TRACE] [gundam/gundam]: Sent event FMLPostInitializationEvent to mod gundam
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: PostInitialization - MS Gundam Mod took 0.000s
-[09:16:38] [main/DEBUG] [FML/]: Bar Finished: PostInitialization took 0.027s
-[09:16:38] [main/TRACE] [minecraft/minecraft]: Sending event FMLLoadCompleteEvent to mod minecraft
-[09:16:38] [main/TRACE] [minecraft/minecraft]: Sent event FMLLoadCompleteEvent to mod minecraft
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft took 0.000s
-[09:16:38] [main/TRACE] [mcp/mcp]: Sending event FMLLoadCompleteEvent to mod mcp
-[09:16:38] [main/TRACE] [mcp/mcp]: Sent event FMLLoadCompleteEvent to mod mcp
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Coder Pack took 0.000s
-[09:16:38] [main/TRACE] [FML/FML]: Sending event FMLLoadCompleteEvent to mod FML
-[09:16:38] [main/TRACE] [FML/FML]: Sent event FMLLoadCompleteEvent to mod FML
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: LoadComplete - Forge Mod Loader took 0.000s
-[09:16:38] [main/TRACE] [forge/forge]: Sending event FMLLoadCompleteEvent to mod forge
-[09:16:38] [main/DEBUG] [FML/forge]: Forge RecipeSorter Baking:
-[09:16:38] [main/DEBUG] [FML/forge]:   16: RecipeEntry("Before", UNKNOWN, )
-[09:16:38] [main/DEBUG] [FML/forge]:   15: RecipeEntry("minecraft:shaped", SHAPED, net.minecraft.item.crafting.ShapedRecipes) Before: minecraft:shapeless
-[09:16:38] [main/DEBUG] [FML/forge]:   14: RecipeEntry("forge:shapedore", SHAPED, net.minecraftforge.oredict.ShapedOreRecipe) Before: minecraft:shapeless After: minecraft:shaped
-[09:16:38] [main/DEBUG] [FML/forge]:   13: RecipeEntry("minecraft:mapextending", SHAPED, net.minecraft.item.crafting.RecipesMapExtending) Before: minecraft:shapeless After: minecraft:shaped
-[09:16:38] [main/DEBUG] [FML/forge]:   12: RecipeEntry("minecraft:shapeless", SHAPELESS, net.minecraft.item.crafting.ShapelessRecipes) After: minecraft:shaped
-[09:16:38] [main/DEBUG] [FML/forge]:   11: RecipeEntry("minecraft:repair", SHAPELESS, net.minecraft.item.crafting.RecipeRepairItem) After: minecraft:shapeless
-[09:16:38] [main/DEBUG] [FML/forge]:   10: RecipeEntry("minecraft:shield_deco", SHAPELESS, net.minecraft.item.crafting.ShieldRecipes$Decoration) After: minecraft:shapeless
-[09:16:38] [main/DEBUG] [FML/forge]:   9: RecipeEntry("minecraft:armordyes", SHAPELESS, net.minecraft.item.crafting.RecipesArmorDyes) After: minecraft:shapeless
-[09:16:38] [main/DEBUG] [FML/forge]:   8: RecipeEntry("minecraft:fireworks", SHAPELESS, net.minecraft.item.crafting.RecipeFireworks) After: minecraft:shapeless
-[09:16:38] [main/DEBUG] [FML/forge]:   7: RecipeEntry("minecraft:pattern_dupe", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeDuplicatePattern) After: minecraft:shapeless
-[09:16:38] [main/DEBUG] [FML/forge]:   6: RecipeEntry("minecraft:tippedarrow", SHAPELESS, net.minecraft.item.crafting.RecipeTippedArrow) After: minecraft:shapeless
-[09:16:38] [main/DEBUG] [FML/forge]:   5: RecipeEntry("minecraft:mapcloning", SHAPELESS, net.minecraft.item.crafting.RecipesMapCloning) After: minecraft:shapeless
-[09:16:38] [main/DEBUG] [FML/forge]:   4: RecipeEntry("forge:shapelessore", SHAPELESS, net.minecraftforge.oredict.ShapelessOreRecipe) After: minecraft:shapeless
-[09:16:38] [main/DEBUG] [FML/forge]:   3: RecipeEntry("minecraft:pattern_add", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeAddPattern) After: minecraft:shapeless
-[09:16:38] [main/DEBUG] [FML/forge]:   2: RecipeEntry("minecraft:bookcloning", SHAPELESS, net.minecraft.item.crafting.RecipeBookCloning) After: minecraft:shapeless
-[09:16:38] [main/DEBUG] [FML/forge]:   1: RecipeEntry("After", UNKNOWN, )
-[09:16:38] [main/DEBUG] [FML/forge]: Sorting recipes
-[09:16:38] [main/TRACE] [forge/forge]: Sent event FMLLoadCompleteEvent to mod forge
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Forge took 0.011s
-[09:16:38] [main/TRACE] [gundam/gundam]: Sending event FMLLoadCompleteEvent to mod gundam
-[09:16:38] [main/TRACE] [gundam/gundam]: Sent event FMLLoadCompleteEvent to mod gundam
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: LoadComplete - MS Gundam Mod took 0.000s
-[09:16:38] [main/DEBUG] [FML/]: Bar Finished: LoadComplete took 0.012s
-[09:16:38] [main/DEBUG] [FML/]: Freezing registries
-[09:16:38] [main/TRACE] [minecraft/minecraft]: Sending event FMLModIdMappingEvent to mod minecraft
-[09:16:38] [main/TRACE] [minecraft/minecraft]: Sent event FMLModIdMappingEvent to mod minecraft
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: ModIdMapping - Minecraft took 0.001s
-[09:16:38] [main/TRACE] [mcp/mcp]: Sending event FMLModIdMappingEvent to mod mcp
-[09:16:38] [main/TRACE] [mcp/mcp]: Sent event FMLModIdMappingEvent to mod mcp
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: ModIdMapping - Minecraft Coder Pack took 0.000s
-[09:16:38] [main/TRACE] [FML/FML]: Sending event FMLModIdMappingEvent to mod FML
-[09:16:38] [main/TRACE] [FML/FML]: Sent event FMLModIdMappingEvent to mod FML
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: ModIdMapping - Forge Mod Loader took 0.000s
-[09:16:38] [main/TRACE] [forge/forge]: Sending event FMLModIdMappingEvent to mod forge
-[09:16:38] [main/TRACE] [forge/forge]: Sent event FMLModIdMappingEvent to mod forge
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: ModIdMapping - Minecraft Forge took 0.175s
-[09:16:38] [main/TRACE] [gundam/gundam]: Sending event FMLModIdMappingEvent to mod gundam
-[09:16:38] [main/TRACE] [gundam/gundam]: Sent event FMLModIdMappingEvent to mod gundam
-[09:16:38] [main/DEBUG] [FML/]: Bar Step: ModIdMapping - MS Gundam Mod took 0.000s
-[09:16:38] [main/DEBUG] [FML/]: Bar Finished: ModIdMapping took 0.177s
-[09:16:38] [main/DEBUG] [FML/]: All registries frozen
-[09:16:38] [main/INFO] [FML/]: Forge Mod Loader has successfully loaded 5 mods
-[09:16:38] [main/DEBUG] [FML/]: Bar Finished: Loading took 11.012s
-[09:16:47] [main/DEBUG] [FML/]: Overriding dimension: using 0
+[12:02:28] [main/INFO] [FML/]: MinecraftForge v14.21.1.2443 Initialized
+[12:02:28] [main/INFO] [FML/]: Replaced 921 ore ingredients
+[12:02:28] [main/DEBUG] [FML/]: File /home/spaceboyross/MC Mods/MS Gundam/run/config/injectedDependencies.json not found. No dependencies injected
+[12:02:28] [main/DEBUG] [FML/]: Building injected Mod Containers [net.minecraftforge.fml.common.FMLContainer, net.minecraftforge.common.ForgeModContainer]
+[12:02:28] [main/DEBUG] [FML/]: Attempting to load mods contained in the minecraft jar file and associated classes
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+[12:02:28] [main/DEBUG] [FML/]: Found a minecraft related file at /usr/share/java/java-atk-wrapper.jar, examining for mod candidates
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+[12:02:28] [main/DEBUG] [FML/]: Found a minecraft related directory at /home/spaceboyross/MC Mods/MS Gundam/bin, examining for mod candidates
+[12:02:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2443/snapshot/20170624/forgeSrc-1.12-14.21.1.2443.jar, examining for mod candidates
+[12:02:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.1/f7be08ec23c21485b9b5a1cf1654c2ec8c58168d/jsr305-3.0.1.jar, examining for mod candidates
+[12:02:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/patchy/1.1/aef610b34a1be37fa851825f12372b78424d8903/patchy-1.1.jar, examining for mod candidates
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/oshi-project/oshi-core/1.1/9ddf7b048a8d701be231c0f4f95fd986198fd2d8/oshi-core-1.1.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/4.4.0/cb208278274bf12ebdb56c61bd7407e6f774d65a/jna-4.4.0.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/platform/3.4.0/e3f70017be8100d3d6923f50b3d2ee17714e9c13/platform-3.4.0.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.ibm.icu/icu4j-core-mojang/51.2/63d216a9311cca6be337c1e458e587f99d382b84/icu4j-core-mojang-51.2.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.3/cdd846cfc4e0f7eefafc02c0f5dce32b9303aa2a/jopt-simple-5.0.3.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.9.Final/97860965d6a0a6b98e7f569f3f966727b8db75/netty-all-4.1.9.Final.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/21.0/3a3d111be1be1b745edfa7d91678a12d7ed38709/guava-21.0.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.5/6c6c702c89bfff3cd9e80b04d668c5e190d588c6/commons-lang3-3.5.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.5/2852e6e05fbb95076fc091f6d1780f1f8fe35e0f/commons-io-2.5.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jutils/jutils/1.0.0/e12fe1fda814bd348c1579329c86943d2cd3c6a6/jutils-1.0.0.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/authlib/1.5.25/9834cdf236c22e84b946bba989e2f94ef5897c3c/authlib-1.5.25.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/realms/1.10.17/e6a623bf93a230b503b0e3ae18c196fcd5aa3299/realms-1.10.17.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.8.1/a698750c16740fd5b3871425f4cb3bbaa87f529d/commons-compress-1.8.1.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.3.3/18f4247ff4572a074444572cee34647c43e7c9c7/httpclient-4.3.3.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.3.2/31fbbff1ddbf98f3aa7377c94d33b0447c646b6e/httpcore-4.3.2.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/7.1.0/9835253257524c1be7ab50c057aa2d418fb72082/fastutil-7.1.0.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.8.1/e801d13612e22cad62a3f4f3fe7fdbe6334a8e72/log4j-api-2.8.1.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.8.1/4ac28ff2f1ddf05dae3043a190451e8c46b73c31/log4j-core-2.8.1.jar
+[12:02:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.mojang/text2speech/1.10.3/48fd510879dff266c3815947de66e3d4809f8668/text2speech-1.10.3.jar, examining for mod candidates
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.minecraft/launchwrapper/1.12/111e7bea9c968cdb3d06ef4632bf7ff0824d0f36/launchwrapper-1.12.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/jline/jline/2.13/2d9530d0a25daffaffda7c35037b046b627bb171/jline-2.13.jar
+[12:02:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-debug-all/5.2/3354e11e2b34215f06dab629ab88e06aca477c19/asm-debug-all-5.2.jar, examining for mod candidates
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-actor_2.11/2.3.3/ed62e9fc709ca0f2ff1a3220daa8b70a2870078e/akka-actor_2.11-2.3.3.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.typesafe/config/1.2.1/f771f71fdae3df231bcd54d5ca2d57f0bf93f467/config-1.2.1.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-actors-migration_2.11/1.1.0/dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f/scala-actors-migration_2.11-1.1.0.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-compiler/2.11.1/56ea2e6c025e0821f28d73ca271218b8dd04926a/scala-compiler-2.11.1.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.plugins/scala-continuations-library_2.11/1.0.2/e517c53a7e9acd6b1668c5a35eccbaa3bab9aac/scala-continuations-library_2.11-1.0.2.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.plugins/scala-continuations-plugin_2.11.1/1.0.2/f361a3283452c57fa30c1ee69448995de23c60f7/scala-continuations-plugin_2.11.1-1.0.2.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.1/e11da23da3eabab9f4777b9220e60d44c1aab6a/scala-library-2.11.1.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-parser-combinators_2.11/1.0.1/f05d7345bf5a58924f2837c6c1f4d73a938e1ff0/scala-parser-combinators_2.11-1.0.1.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.11.1/6580347e61cc7f8e802941e7fde40fa83b8badeb/scala-reflect-2.11.1.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-swing_2.11/1.0.1/b1cdd92bd47b1e1837139c1c53020e86bb9112ae/scala-swing_2.11-1.0.1.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-xml_2.11/1.0.2/820fbca7e524b530fdadc594c39d49a21ea0337e/scala-xml_2.11-1.0.2.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/lzma/lzma/0.0.1/521616dc7487b42bef0e803bd2fa3faf668101d7/lzma-0.0.1.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.sf.trove4j/trove4j/3.0.3/42ccaf4761f0dfdfa805c9e340d99a755907e2dd/trove4j-3.0.3.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/codecjorbis/20101023/c73b5636faf089d9f00e8732a829577de25237ee/codecjorbis-20101023.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/codecwav/20101023/12f031cfe88fef5c1dd36c563c0a3a69bd7261da/codecwav-20101023.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/libraryjavasound/20101123/5c5e304366f75f9eaa2e8cca546a1fb6109348b3/libraryjavasound-20101123.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/librarylwjglopenal/20100824/73e80d0794c39665aec3f62eee88ca91676674ef/librarylwjglopenal-20100824.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/com.paulscode/soundsystem/20120107/419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6/soundsystem-20120107.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput/2.0.5/39c7796b469a600f72380316f6b1f11db6c2c7c4/jinput-2.0.5.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl/2.9.4-nightly-20150209/697517568c68e78ae0b4544145af031c81082dfe/lwjgl-2.9.4-nightly-20150209.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl_util/2.9.4-nightly-20150209/d51a7c040a721d13efdfbd34f8b257b2df882ad0/lwjgl_util-2.9.4-nightly-20150209.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/java3d/vecmath/1.5.2/79846ba34cbd89e2422d74d53752f993dcc2ccaf/vecmath-1.5.2.jar
+[12:02:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/modules-2/files-2.1/ca.weblite/java-objc-bridge/1.0.0/6ef160c3133a78de015830860197602ca1c855d3/java-objc-bridge-1.0.0.jar, examining for mod candidates
+[12:02:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.fusesource.jansi/jansi/1.11/655c643309c2f45a56a747fda70e3fadf57e9f11/jansi-1.11.jar, examining for mod candidates
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-actors/2.11.0/8ccfb6541de179bb1c4d45cf414acee069b7f78b/scala-actors-2.11.0.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput-platform/2.0.5/7ff832a6eb9ab6a767f1ade2b548092d0fa64795/jinput-platform-2.0.5-natives-linux.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput-platform/2.0.5/385ee093e01f587f30ee1c8a2ee7d408fd732e16/jinput-platform-2.0.5-natives-windows.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/net.java.jinput/jinput-platform/2.0.5/53f9c919f34d2ca9de8c51fc4e1e8282029a9232/jinput-platform-2.0.5-natives-osx.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.4-nightly-20150209/b84d5102b9dbfabfeb5e43c7e2828d98a7fc80e0/lwjgl-platform-2.9.4-nightly-20150209-natives-windows.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.4-nightly-20150209/931074f46c795d2f7b30ed6395df5715cfd7675b/lwjgl-platform-2.9.4-nightly-20150209-natives-linux.jar
+[12:02:28] [main/TRACE] [FML/]: Skipping known library file /home/spaceboyross/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.4-nightly-20150209/bcab850f8f487c3f4c4dbabde778bb82bd1a40ed/lwjgl-platform-2.9.4-nightly-20150209-natives-osx.jar
+[12:02:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/minecraft/deobfedDeps/compileDummy.jar, examining for mod candidates
+[12:02:28] [main/DEBUG] [FML/]: Found a minecraft related file at /home/spaceboyross/.gradle/caches/minecraft/deobfedDeps/providedDummy.jar, examining for mod candidates
+[12:02:28] [main/DEBUG] [FML/]: Found a minecraft related directory at /home/spaceboyross/.gradle/caches/minecraft/net/minecraftforge/forge/1.12-14.21.1.2443/start, examining for mod candidates
+[12:02:28] [main/DEBUG] [FML/]: Minecraft jar mods loaded successfully
+[12:02:28] [main/INFO] [FML/]: Found 0 mods from the command line. Injecting into mod discoverer
+[12:02:28] [main/INFO] [FML/]: Searching /home/spaceboyross/MC Mods/MS Gundam/run/mods for mods
+[12:02:28] [main/DEBUG] [FML/]: Examining file java-atk-wrapper.jar for potential mods
+[12:02:28] [main/DEBUG] [FML/]: The mod container java-atk-wrapper.jar appears to be missing an mcmod.info file
+[12:02:28] [main/DEBUG] [FML/]: Examining directory bin for potential mods
+[12:02:28] [main/DEBUG] [FML/]: Found an mcmod.info file in directory bin
+[12:02:28] [main/TRACE] [FML/]: Recursing into package assets
+[12:02:28] [main/TRACE] [FML/]: Recursing into package assets/gundam
+[12:02:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/blockstates
+[12:02:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/lang
+[12:02:28] [main/TRACE] [FML/]: Recursing into package assets/gundam/models
+[12:02:29] [main/TRACE] [FML/]: Recursing into package assets/gundam/models/block
+[12:02:29] [main/TRACE] [FML/]: Recursing into package assets/gundam/models/item
+[12:02:29] [main/TRACE] [FML/]: Recursing into package assets/gundam/recipes
+[12:02:29] [main/TRACE] [FML/]: Recursing into package assets/gundam/textures
+[12:02:29] [main/TRACE] [FML/]: Recursing into package assets/gundam/textures/blocks
+[12:02:29] [main/TRACE] [FML/]: Recursing into package assets/gundam/textures/entity
+[12:02:29] [main/TRACE] [FML/]: Recursing into package assets/gundam/textures/gui
+[12:02:29] [main/TRACE] [FML/]: Recursing into package assets/gundam/textures/items
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam
+[12:02:29] [main/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.spaceboyross.gundam.GundamMod) - loading
+[12:02:29] [main/TRACE] [gundam/]: Parsed dependency info : [] [] []
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/blocks
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/blocks/container
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/blocks/gui
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/blocks/tile
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/capabilities
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/capabilities/interfaces
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/capabilities/newtype
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/capabilities/providers
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/dimension
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/dimension/side1
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/entities
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/entities/render
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/gui
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/input
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/items
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/ms
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/ms/armaments
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/ms/gundams
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/ms/zeon
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/net
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/proxy
+[12:02:29] [main/TRACE] [FML/]: Recursing into package com/spaceboyross/gundam/utils
+[12:02:29] [main/DEBUG] [FML/]: Examining file forgeSrc-1.12-14.21.1.2443.jar for potential mods
+[12:02:29] [main/DEBUG] [FML/]: The mod container forgeSrc-1.12-14.21.1.2443.jar appears to be missing an mcmod.info file
+[12:02:30] [main/DEBUG] [FML/]: Examining file jsr305-3.0.1.jar for potential mods
+[12:02:30] [main/DEBUG] [FML/]: The mod container jsr305-3.0.1.jar appears to be missing an mcmod.info file
+[12:02:30] [main/DEBUG] [FML/]: Examining file patchy-1.1.jar for potential mods
+[12:02:30] [main/DEBUG] [FML/]: The mod container patchy-1.1.jar appears to be missing an mcmod.info file
+[12:02:30] [main/DEBUG] [FML/]: Examining file text2speech-1.10.3.jar for potential mods
+[12:02:30] [main/DEBUG] [FML/]: The mod container text2speech-1.10.3.jar appears to be missing an mcmod.info file
+[12:02:30] [main/DEBUG] [FML/]: Examining file asm-debug-all-5.2.jar for potential mods
+[12:02:30] [main/DEBUG] [FML/]: The mod container asm-debug-all-5.2.jar appears to be missing an mcmod.info file
+[12:02:30] [main/DEBUG] [FML/]: Examining file java-objc-bridge-1.0.0.jar for potential mods
+[12:02:30] [main/DEBUG] [FML/]: The mod container java-objc-bridge-1.0.0.jar appears to be missing an mcmod.info file
+[12:02:30] [main/DEBUG] [FML/]: Examining file jansi-1.11.jar for potential mods
+[12:02:30] [main/DEBUG] [FML/]: The mod container jansi-1.11.jar appears to be missing an mcmod.info file
+[12:02:30] [main/DEBUG] [FML/]: Examining file compileDummy.jar for potential mods
+[12:02:30] [main/DEBUG] [FML/]: The mod container compileDummy.jar appears to be missing an mcmod.info file
+[12:02:30] [main/DEBUG] [FML/]: Examining file providedDummy.jar for potential mods
+[12:02:30] [main/DEBUG] [FML/]: The mod container providedDummy.jar appears to be missing an mcmod.info file
+[12:02:30] [main/DEBUG] [FML/]: Examining directory start for potential mods
+[12:02:30] [main/DEBUG] [FML/]: No mcmod.info file found in directory start
+[12:02:30] [main/TRACE] [FML/]: Recursing into package net
+[12:02:30] [main/TRACE] [FML/]: Recursing into package net/minecraftforge
+[12:02:30] [main/TRACE] [FML/]: Recursing into package net/minecraftforge/gradle
+[12:02:30] [main/TRACE] [FML/]: Recursing into package net/minecraftforge/gradle/tweakers
+[12:02:30] [main/INFO] [FML/]: Forge Mod Loader has identified 5 mods to load
+[12:02:30] [main/TRACE] [FML/]: Received a system property request ''
+[12:02:30] [main/TRACE] [FML/]: System property request managing the state of 0 mods
+[12:02:30] [main/DEBUG] [FML/]: After merging, found state information for 0 mods
+[12:02:30] [main/DEBUG] [Forge Mod Loader/]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
+[12:02:30] [main/DEBUG] [Minecraft Forge/]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
+[12:02:30] [main/DEBUG] [gundam/]: Enabling mod gundam
+[12:02:30] [main/DEBUG] [MS Gundam Mod/]: Mod MS Gundam Mod is missing a pack.mcmeta file, substituting a dummy one
+[12:02:30] [main/TRACE] [FML/]: Verifying mod requirements are satisfied
+[12:02:30] [main/TRACE] [FML/]: All mod requirements are satisfied
+[12:02:30] [main/TRACE] [FML/]: Sorting mods into an ordered list
+[12:02:30] [main/TRACE] [FML/]: Mod sorting completed successfully
+[12:02:30] [main/DEBUG] [FML/]: Mod sorting data
+[12:02:30] [main/DEBUG] [FML/]: 	gundam(MS Gundam Mod:1.0): bin ()
+[12:02:30] [main/DEBUG] [FML/]: Loading @Config anotation data
+[12:02:30] [main/TRACE] [minecraft/minecraft]: Sending event FMLConstructionEvent to mod minecraft
+[12:02:30] [main/TRACE] [minecraft/minecraft]: Sent event FMLConstructionEvent to mod minecraft
+[12:02:30] [main/DEBUG] [FML/]: Bar Step: Construction - Minecraft took 0.006s
+[12:02:30] [main/TRACE] [mcp/mcp]: Sending event FMLConstructionEvent to mod mcp
+[12:02:30] [main/TRACE] [mcp/mcp]: Sent event FMLConstructionEvent to mod mcp
+[12:02:30] [main/DEBUG] [FML/]: Bar Step: Construction - Minecraft Coder Pack took 0.001s
+[12:02:30] [main/TRACE] [FML/FML]: Sending event FMLConstructionEvent to mod FML
+[12:02:30] [main/TRACE] [FML/FML]: Mod FML is using network checker : Invoking method checkModLists
+[12:02:30] [main/TRACE] [FML/FML]: Testing mod FML to verify it accepts its own version in a remote connection
+[12:02:30] [main/TRACE] [FML/FML]: The mod FML accepts its own version (8.0.99.99)
+[12:02:30] [main/INFO] [FML/FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, gundam] at CLIENT
+[12:02:30] [main/INFO] [FML/FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, gundam] at SERVER
+[12:02:30] [main/TRACE] [FML/FML]: Sent event FMLConstructionEvent to mod FML
+[12:02:30] [main/DEBUG] [FML/]: Bar Step: Construction - Forge Mod Loader took 0.613s
+[12:02:30] [main/TRACE] [forge/forge]: Sending event FMLConstructionEvent to mod forge
+[12:02:30] [main/DEBUG] [forge/forge]: Preloading CrashReport Classes
+[12:02:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$10
+[12:02:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$11
+[12:02:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$12
+[12:02:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$13
+[12:02:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$14
+[12:02:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$2
+[12:02:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$3
+[12:02:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$4
+[12:02:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$5
+[12:02:30] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$6
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$7
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$8
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/Minecraft$9
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/multiplayer/WorldClient$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/multiplayer/WorldClient$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/multiplayer/WorldClient$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/multiplayer/WorldClient$4
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/particle/ParticleManager$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/particle/ParticleManager$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/particle/ParticleManager$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/particle/ParticleManager$4
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/EntityRenderer$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/EntityRenderer$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/EntityRenderer$4
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/RenderGlobal$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/RenderItem$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/RenderItem$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/RenderItem$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/RenderItem$4
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/texture/TextureAtlasSprite$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/texture/TextureManager$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/texture/TextureMap$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/texture/TextureMap$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/client/renderer/texture/TextureMap$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$4
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$5
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$6
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReport$7
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReportCategory$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReportCategory$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReportCategory$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReportCategory$4
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/crash/CrashReportCategory$5
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/entity/Entity$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/entity/Entity$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/entity/Entity$4
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/entity/Entity$5
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/entity/EntityTracker$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/entity/player/InventoryPlayer$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/nbt/NBTTagCompound$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/nbt/NBTTagCompound$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/network/NetHandlerPlayServer$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/network/NetworkSystem$6
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/server/MinecraftServer$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/server/MinecraftServer$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/server/dedicated/DedicatedServer$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/server/dedicated/DedicatedServer$4
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/server/integrated/IntegratedServer$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/server/integrated/IntegratedServer$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/tileentity/CommandBlockBaseLogic$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/tileentity/CommandBlockBaseLogic$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/tileentity/TileEntity$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/tileentity/TileEntity$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/tileentity/TileEntity$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/World$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/World$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/World$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/World$4
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/World$5
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/chunk/Chunk$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/gen/structure/MapGenStructure$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/gen/structure/MapGenStructure$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/gen/structure/MapGenStructure$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$10
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$2
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$3
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$4
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$5
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$6
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$7
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$8
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraft/world/storage/WorldInfo$9
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraftforge/fml/client/SplashProgress$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraftforge/fml/common/FMLCommonHandler$1
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraftforge/fml/common/ICrashCallable
+[12:02:31] [main/DEBUG] [forge/forge]: 	net/minecraftforge/fml/common/Loader$1
+[12:02:31] [main/TRACE] [FML/forge]: Mod forge is using network checker : No network checking performed
+[12:02:31] [main/TRACE] [FML/forge]: Testing mod forge to verify it accepts its own version in a remote connection
+[12:02:31] [main/TRACE] [FML/forge]: The mod forge accepts its own version (14.21.1.2443)
+[12:02:31] [main/DEBUG] [FML/forge]: Attempting to inject @Config classes into forge for type INSTANCE
+[12:02:31] [main/TRACE] [forge/forge]: Sent event FMLConstructionEvent to mod forge
+[12:02:31] [main/DEBUG] [FML/]: Bar Step: Construction - Minecraft Forge took 0.108s
+[12:02:31] [main/TRACE] [gundam/gundam]: Sending event FMLConstructionEvent to mod gundam
+[12:02:31] [main/TRACE] [FML/gundam]: Mod gundam is using network checker : Accepting version 1.0
+[12:02:31] [main/TRACE] [FML/gundam]: Testing mod gundam to verify it accepts its own version in a remote connection
+[12:02:31] [main/TRACE] [FML/gundam]: The mod gundam accepts its own version (1.0)
+[12:02:31] [main/DEBUG] [FML/gundam]: Attempting to inject @SidedProxy classes into gundam
+[12:02:31] [main/DEBUG] [FML/gundam]: Attempting to inject @EventBusSubscriber classes into the eventbus for gundam
+[12:02:31] [main/DEBUG] [FML/gundam]: Registering @EventBusSubscriber for com.spaceboyross.gundam.proxy.CommonProxy for mod gundam
+[12:02:31] [main/DEBUG] [FML/gundam]: Injected @EventBusSubscriber class com.spaceboyross.gundam.proxy.CommonProxy
+[12:02:31] [main/DEBUG] [FML/gundam]: Registering @EventBusSubscriber for com.spaceboyross.gundam.proxy.ClientProxy for mod gundam
+[12:02:31] [main/DEBUG] [FML/gundam]: Injected @EventBusSubscriber class com.spaceboyross.gundam.proxy.ClientProxy
+[12:02:31] [main/DEBUG] [FML/gundam]: Registering @EventBusSubscriber for com.spaceboyross.gundam.capabilities.newtype.Newtype$EventHandler for mod gundam
+[12:02:31] [main/DEBUG] [FML/gundam]: Injected @EventBusSubscriber class com.spaceboyross.gundam.capabilities.newtype.Newtype$EventHandler
+[12:02:31] [main/DEBUG] [FML/gundam]: Attempting to inject @Config classes into gundam for type INSTANCE
+[12:02:31] [main/TRACE] [gundam/gundam]: Sent event FMLConstructionEvent to mod gundam
+[12:02:31] [main/DEBUG] [FML/]: Bar Step: Construction - MS Gundam Mod took 0.045s
+[12:02:31] [main/DEBUG] [FML/]: Bar Finished: Construction took 0.773s
+[12:02:31] [main/DEBUG] [FML/]: Mod signature data
+[12:02:31] [main/DEBUG] [FML/]:  	Valid Signatures:
+[12:02:31] [main/DEBUG] [FML/]:  	Missing Signatures:
+[12:02:31] [main/DEBUG] [FML/]: 		minecraft	(Minecraft	1.12)	minecraft.jar
+[12:02:31] [main/DEBUG] [FML/]: 		mcp	(Minecraft Coder Pack	9.19)	minecraft.jar
+[12:02:31] [main/DEBUG] [FML/]: 		FML	(Forge Mod Loader	8.0.99.99)	forgeSrc-1.12-14.21.1.2443.jar
+[12:02:31] [main/DEBUG] [FML/]: 		forge	(Minecraft Forge	14.21.1.2443)	forgeSrc-1.12-14.21.1.2443.jar
+[12:02:31] [main/DEBUG] [FML/]: 		gundam	(MS Gundam Mod	1.0)	bin
+[12:02:31] [main/DEBUG] [FML/]: Bar Step: Loading Resources - Default took 0.004s
+[12:02:31] [main/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Forge Mod Loader took 0.011s
+[12:02:31] [main/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Minecraft Forge took 0.009s
+[12:02:31] [main/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:MS Gundam Mod took 0.002s
+[12:02:31] [main/DEBUG] [FML/]: Bar Finished: Reloading - LanguageManager took 0.019s
+[12:02:31] [main/DEBUG] [FML/]: Bar Step: Loading Resources - Reloading listeners took 0.020s
+[12:02:31] [main/DEBUG] [FML/]: Bar Finished: Loading Resources took 0.046s
+[12:02:31] [main/DEBUG] [Forge Mod Loader/]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
+[12:02:31] [main/DEBUG] [Minecraft Forge/]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
+[12:02:31] [main/DEBUG] [MS Gundam Mod/]: Mod MS Gundam Mod is missing a pack.mcmeta file, substituting a dummy one
+[12:02:31] [main/INFO] [FML/]: Processing ObjectHolder annotations
+[12:02:31] [main/INFO] [FML/]: Found 1179 ObjectHolder annotations
+[12:02:31] [main/INFO] [FML/]: Identifying ItemStackHolder annotations
+[12:02:31] [main/INFO] [FML/]: Found 0 ItemStackHolder annotations
+[12:02:31] [main/TRACE] [minecraft/minecraft]: Sending event FMLPreInitializationEvent to mod minecraft
+[12:02:31] [main/TRACE] [minecraft/minecraft]: Sent event FMLPreInitializationEvent to mod minecraft
+[12:02:31] [main/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft took 0.001s
+[12:02:31] [main/TRACE] [mcp/mcp]: Sending event FMLPreInitializationEvent to mod mcp
+[12:02:31] [main/TRACE] [mcp/mcp]: Sent event FMLPreInitializationEvent to mod mcp
+[12:02:31] [main/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Coder Pack took 0.001s
+[12:02:31] [main/TRACE] [FML/FML]: Sending event FMLPreInitializationEvent to mod FML
+[12:02:31] [main/TRACE] [FML/FML]: Sent event FMLPreInitializationEvent to mod FML
+[12:02:31] [main/DEBUG] [FML/]: Bar Step: PreInitialization - Forge Mod Loader took 0.001s
+[12:02:31] [main/TRACE] [forge/forge]: Sending event FMLPreInitializationEvent to mod forge
+[12:02:31] [main/INFO] [FML/forge]: Configured a dormant chunk cache size of 0
+[12:02:31] [main/TRACE] [forge/forge]: Sent event FMLPreInitializationEvent to mod forge
+[12:02:31] [main/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Forge took 0.070s
+[12:02:31] [main/TRACE] [gundam/gundam]: Sending event FMLPreInitializationEvent to mod gundam
+[12:02:31] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity AmuroRay as gundam:amuro_ray
+[12:02:31] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity BrightNoa as gundam:bright_noa
+[12:02:31] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity CharAznable as gundam:char_aznable
+[12:02:31] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity DomonKasshu as gundam:domon_kasshu
+[12:02:31] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity FullFrontal as gundam:full_frontal
+[12:02:31] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity MasterAsia as gundam:master_asia
+[12:02:31] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity QuattroBajeena as gundam:quattro_bajeena
+[12:02:31] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity MS-04_Prototype_Zaku as gundam:ms-04_prototype_zaku
+[12:02:31] [main/WARN] [FML/gundam]: ****************************************
+[12:02:31] [main/WARN] [FML/gundam]: * Attempted to registry a entity egg for entity (gundam:) that is not in the Entity Registry
+[12:02:31] [main/WARN] [FML/gundam]: *  at net.minecraftforge.fml.common.registry.EntityRegistry.registerEgg(EntityRegistry.java:217)
+[12:02:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.ms.MSRegistry.register(MSRegistry.java:22)
+[12:02:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.proxy.CommonProxy.preInit(CommonProxy.java:61)
+[12:02:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.proxy.ClientProxy.preInit(ClientProxy.java:24)
+[12:02:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.GundamMod.preInit(GundamMod.java:34)
+[12:02:31] [main/WARN] [FML/gundam]: *  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)...
+[12:02:31] [main/WARN] [FML/gundam]: ****************************************
+[12:02:31] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity MS-05A_Zaku_I_Early_Type as gundam:ms-05a_zaku_i_early_type
+[12:02:31] [main/WARN] [FML/gundam]: ****************************************
+[12:02:31] [main/WARN] [FML/gundam]: * Attempted to registry a entity egg for entity (gundam:) that is not in the Entity Registry
+[12:02:31] [main/WARN] [FML/gundam]: *  at net.minecraftforge.fml.common.registry.EntityRegistry.registerEgg(EntityRegistry.java:217)
+[12:02:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.ms.MSRegistry.register(MSRegistry.java:22)
+[12:02:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.proxy.CommonProxy.preInit(CommonProxy.java:62)
+[12:02:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.proxy.ClientProxy.preInit(ClientProxy.java:24)
+[12:02:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.GundamMod.preInit(GundamMod.java:34)
+[12:02:31] [main/WARN] [FML/gundam]: *  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)...
+[12:02:31] [main/WARN] [FML/gundam]: ****************************************
+[12:02:31] [main/TRACE] [FML/gundam]: Automatically registered mod gundam entity RX-78-2_Gundam as gundam:rx-78-2_gundam
+[12:02:31] [main/WARN] [FML/gundam]: ****************************************
+[12:02:31] [main/WARN] [FML/gundam]: * Attempted to registry a entity egg for entity (gundam:) that is not in the Entity Registry
+[12:02:31] [main/WARN] [FML/gundam]: *  at net.minecraftforge.fml.common.registry.EntityRegistry.registerEgg(EntityRegistry.java:217)
+[12:02:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.ms.MSRegistry.register(MSRegistry.java:22)
+[12:02:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.proxy.CommonProxy.preInit(CommonProxy.java:63)
+[12:02:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.proxy.ClientProxy.preInit(ClientProxy.java:24)
+[12:02:31] [main/WARN] [FML/gundam]: *  at com.spaceboyross.gundam.GundamMod.preInit(GundamMod.java:34)
+[12:02:31] [main/WARN] [FML/gundam]: *  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)...
+[12:02:31] [main/WARN] [FML/gundam]: ****************************************
+[12:02:31] [main/INFO] [FML/gundam]: OBJLoader: Domain gundam has been added.
+[12:02:31] [main/TRACE] [gundam/gundam]: Sent event FMLPreInitializationEvent to mod gundam
+[12:02:31] [main/DEBUG] [FML/]: Bar Step: PreInitialization - MS Gundam Mod took 0.131s
+[12:02:31] [main/DEBUG] [FML/]: Bar Finished: PreInitialization took 0.203s
+[12:02:31] [main/INFO] [FML/]: Applying holder lookups
+[12:02:31] [main/DEBUG] [FML/]: Unable to lookup gundam:gundarium_beta_ingot for public static com.spaceboyross.gundam.items.GundariumBetaIngotItem com.spaceboyross.gundam.GundamItems.gundariumBetaIngot. This means the object wasn't registered. It's likely just mod options.
+[12:02:31] [main/DEBUG] [FML/]: Unable to lookup gundam:luna_titanium_ingot for public static com.spaceboyross.gundam.items.LunaTitaniumIngotItem com.spaceboyross.gundam.GundamItems.lunaTitaniumIngot. This means the object wasn't registered. It's likely just mod options.
+[12:02:31] [main/DEBUG] [FML/]: Unable to lookup gundam:gundarium_gamma_ingot for public static com.spaceboyross.gundam.items.GundariumGammaIngotItem com.spaceboyross.gundam.GundamItems.gundariumGammaIngot. This means the object wasn't registered. It's likely just mod options.
+[12:02:31] [main/DEBUG] [FML/]: Unable to lookup gundam:gundarium_epsilon_ingot for public static com.spaceboyross.gundam.items.GundariumEpsilonIngotItem com.spaceboyross.gundam.GundamItems.gundariumEpsilonIngot. This means the object wasn't registered. It's likely just mod options.
+[12:02:31] [main/DEBUG] [FML/]: Unable to lookup gundam:super_hard_steel_ingot for public static com.spaceboyross.gundam.items.SuperHardSteelIngotItem com.spaceboyross.gundam.GundamItems.superHardSteelIngot. This means the object wasn't registered. It's likely just mod options.
+[12:02:31] [main/DEBUG] [FML/]: Unable to lookup gundam:g_controller for public static com.spaceboyross.gundam.items.GControllerItem com.spaceboyross.gundam.GundamItems.gController. This means the object wasn't registered. It's likely just mod options.
+[12:02:31] [main/DEBUG] [FML/]: Unable to lookup gundam:gundarium_alpha_ingot for public static com.spaceboyross.gundam.items.GundariumAlphaIngotItem com.spaceboyross.gundam.GundamItems.gundariumAlphaIngot. This means the object wasn't registered. It's likely just mod options.
+[12:02:31] [main/DEBUG] [FML/]: Unable to lookup gundam:portable_vernier for public static com.spaceboyross.gundam.items.PortableVernierItem com.spaceboyross.gundam.GundamItems.portableVernier. This means the object wasn't registered. It's likely just mod options.
+[12:02:31] [main/DEBUG] [FML/]: Unable to lookup gundam:char_aznable_mask for public static com.spaceboyross.gundam.items.CharAznableMaskItem com.spaceboyross.gundam.GundamItems.charAznableMask. This means the object wasn't registered. It's likely just mod options.
+[12:02:31] [main/INFO] [FML/]: Holder lookups applied
+[12:02:31] [main/INFO] [FML/]: Applying holder lookups
+[12:02:31] [main/INFO] [FML/]: Holder lookups applied
+[12:02:31] [main/INFO] [FML/]: Applying holder lookups
+[12:02:31] [main/INFO] [FML/]: Holder lookups applied
+[12:02:31] [main/INFO] [FML/]: Applying holder lookups
+[12:02:31] [main/INFO] [FML/]: Holder lookups applied
+[12:02:31] [main/INFO] [FML/]: Injecting itemstacks
+[12:02:31] [main/INFO] [FML/]: Itemstack injection complete
+[12:02:31] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - TextureManager took 0.000s
+[12:02:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - SoundHandler took 1.000s
+[12:02:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - FontRenderer took 0.008s
+[12:02:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - FontRenderer took 0.009s
+[12:02:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - GrassColorReloadListener took 0.023s
+[12:02:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - FoliageColorReloadListener took 0.017s
+[12:02:32] [main/DEBUG] [FML/]: Bar Step: Rendering Setup - GL Setup took 0.002s
+[12:02:32] [main/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Texture Map took 0.008s
+[12:02:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - B3DLoader took 0.000s
+[12:02:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - OBJLoader took 0.000s
+[12:02:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelFluid$FluidLoader took 0.000s
+[12:02:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - ItemLayerModel$Loader took 0.000s
+[12:02:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - MultiLayerModel$Loader took 0.000s
+[12:02:32] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelDynBucket$LoaderDynBucket took 0.000s
+[12:02:35] [main/DEBUG] [FML/]: Bar Finished: ModelLoader: blocks took 2.171s
+[12:02:35] [main/DEBUG] [FML/]: Item json isn't found for 'gundam:luna_titanium_block#inventory', trying to load the variant from the blockstate json
+[12:02:35] [main/DEBUG] [FML/]: Item json isn't found for 'gundam:ms_crafting_station#inventory', trying to load the variant from the blockstate json
+[12:02:35] [main/DEBUG] [FML/]: Bar Finished: ModelLoader: items took 0.493s
+[12:02:35] [main/INFO] [FML/]: Max texture size: 16384
+[12:02:35] [main/DEBUG] [FML/]: Bar Finished: Texture stitching took 0.430s
+[12:02:36] [main/DEBUG] [FML/]: Bar Finished: Texture stitching took 0.030s
+[12:02:36] [main/DEBUG] [FML/]: Bar Finished: Texture creation took 0.036s
+[12:02:36] [main/DEBUG] [FML/]: Bar Finished: Texture mipmap and upload took 0.025s
+[12:02:37] [main/DEBUG] [FML/]: Bar Finished: ModelLoader: baking took 1.140s
+[12:02:37] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelManager took 4.669s
+[12:02:37] [main/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Model Manager took 4.717s
+[12:02:37] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - RenderItem took 0.004s
+[12:02:37] [main/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Item Renderer took 0.401s
+[12:02:37] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - EntityRenderer took 0.000s
+[12:02:37] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - BlockRendererDispatcher took 0.000s
+[12:02:37] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - RenderGlobal took 0.000s
+[12:02:38] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - SearchTreeManager took 0.180s
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Entity Renderer took 0.559s
+[12:02:38] [main/DEBUG] [FML/]: Bar Finished: Rendering Setup took 5.688s
+[12:02:38] [main/INFO] [FML/]: Applying holder lookups
+[12:02:38] [main/INFO] [FML/]: Holder lookups applied
+[12:02:38] [main/TRACE] [minecraft/minecraft]: Sending event FMLInitializationEvent to mod minecraft
+[12:02:38] [main/TRACE] [minecraft/minecraft]: Sent event FMLInitializationEvent to mod minecraft
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: Initialization - Minecraft took 0.000s
+[12:02:38] [main/TRACE] [mcp/mcp]: Sending event FMLInitializationEvent to mod mcp
+[12:02:38] [main/TRACE] [mcp/mcp]: Sent event FMLInitializationEvent to mod mcp
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Coder Pack took 0.000s
+[12:02:38] [main/TRACE] [FML/FML]: Sending event FMLInitializationEvent to mod FML
+[12:02:38] [main/TRACE] [FML/FML]: Sent event FMLInitializationEvent to mod FML
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: Initialization - Forge Mod Loader took 0.000s
+[12:02:38] [main/TRACE] [forge/forge]: Sending event FMLInitializationEvent to mod forge
+[12:02:38] [main/TRACE] [forge/forge]: Sent event FMLInitializationEvent to mod forge
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Forge took 0.000s
+[12:02:38] [main/TRACE] [gundam/gundam]: Sending event FMLInitializationEvent to mod gundam
+[12:02:38] [main/TRACE] [gundam/gundam]: Sent event FMLInitializationEvent to mod gundam
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: Initialization - MS Gundam Mod took 0.007s
+[12:02:38] [main/DEBUG] [FML/]: Bar Finished: Initialization took 0.008s
+[12:02:38] [main/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod minecraft
+[12:02:38] [main/TRACE] [minecraft/minecraft]: Sending event IMCEvent to mod minecraft
+[12:02:38] [main/TRACE] [minecraft/minecraft]: Sent event IMCEvent to mod minecraft
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft took 0.005s
+[12:02:38] [main/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod mcp
+[12:02:38] [main/TRACE] [mcp/mcp]: Sending event IMCEvent to mod mcp
+[12:02:38] [main/TRACE] [mcp/mcp]: Sent event IMCEvent to mod mcp
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Coder Pack took 0.000s
+[12:02:38] [main/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod FML
+[12:02:38] [main/TRACE] [FML/FML]: Sending event IMCEvent to mod FML
+[12:02:38] [main/TRACE] [FML/FML]: Sent event IMCEvent to mod FML
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Forge Mod Loader took 0.000s
+[12:02:38] [main/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod forge
+[12:02:38] [main/TRACE] [forge/forge]: Sending event IMCEvent to mod forge
+[12:02:38] [main/TRACE] [forge/forge]: Sent event IMCEvent to mod forge
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Forge took 0.001s
+[12:02:38] [main/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod gundam
+[12:02:38] [main/TRACE] [gundam/gundam]: Sending event IMCEvent to mod gundam
+[12:02:38] [main/TRACE] [gundam/gundam]: Sent event IMCEvent to mod gundam
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: InterModComms$IMC - MS Gundam Mod took 0.000s
+[12:02:38] [main/DEBUG] [FML/]: Bar Finished: InterModComms$IMC took 0.006s
+[12:02:38] [main/INFO] [FML/]: Injecting itemstacks
+[12:02:38] [main/INFO] [FML/]: Itemstack injection complete
+[12:02:38] [main/TRACE] [minecraft/minecraft]: Sending event FMLPostInitializationEvent to mod minecraft
+[12:02:38] [main/TRACE] [minecraft/minecraft]: Sent event FMLPostInitializationEvent to mod minecraft
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft took 0.000s
+[12:02:38] [main/TRACE] [mcp/mcp]: Sending event FMLPostInitializationEvent to mod mcp
+[12:02:38] [main/TRACE] [mcp/mcp]: Sent event FMLPostInitializationEvent to mod mcp
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Coder Pack took 0.000s
+[12:02:38] [main/TRACE] [FML/FML]: Sending event FMLPostInitializationEvent to mod FML
+[12:02:38] [main/TRACE] [FML/FML]: Sent event FMLPostInitializationEvent to mod FML
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: PostInitialization - Forge Mod Loader took 0.000s
+[12:02:38] [main/TRACE] [forge/forge]: Sending event FMLPostInitializationEvent to mod forge
+[12:02:38] [main/TRACE] [forge/forge]: Sent event FMLPostInitializationEvent to mod forge
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Forge took 0.017s
+[12:02:38] [main/TRACE] [gundam/gundam]: Sending event FMLPostInitializationEvent to mod gundam
+[12:02:38] [main/TRACE] [gundam/gundam]: Sent event FMLPostInitializationEvent to mod gundam
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: PostInitialization - MS Gundam Mod took 0.000s
+[12:02:38] [main/DEBUG] [FML/]: Bar Finished: PostInitialization took 0.019s
+[12:02:38] [main/TRACE] [minecraft/minecraft]: Sending event FMLLoadCompleteEvent to mod minecraft
+[12:02:38] [main/TRACE] [minecraft/minecraft]: Sent event FMLLoadCompleteEvent to mod minecraft
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft took 0.000s
+[12:02:38] [main/TRACE] [mcp/mcp]: Sending event FMLLoadCompleteEvent to mod mcp
+[12:02:38] [main/TRACE] [mcp/mcp]: Sent event FMLLoadCompleteEvent to mod mcp
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Coder Pack took 0.000s
+[12:02:38] [main/TRACE] [FML/FML]: Sending event FMLLoadCompleteEvent to mod FML
+[12:02:38] [main/TRACE] [FML/FML]: Sent event FMLLoadCompleteEvent to mod FML
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: LoadComplete - Forge Mod Loader took 0.000s
+[12:02:38] [main/TRACE] [forge/forge]: Sending event FMLLoadCompleteEvent to mod forge
+[12:02:38] [main/DEBUG] [FML/forge]: Forge RecipeSorter Baking:
+[12:02:38] [main/DEBUG] [FML/forge]:   16: RecipeEntry("Before", UNKNOWN, )
+[12:02:38] [main/DEBUG] [FML/forge]:   15: RecipeEntry("minecraft:shaped", SHAPED, net.minecraft.item.crafting.ShapedRecipes) Before: minecraft:shapeless
+[12:02:38] [main/DEBUG] [FML/forge]:   14: RecipeEntry("forge:shapedore", SHAPED, net.minecraftforge.oredict.ShapedOreRecipe) Before: minecraft:shapeless After: minecraft:shaped
+[12:02:38] [main/DEBUG] [FML/forge]:   13: RecipeEntry("minecraft:mapextending", SHAPED, net.minecraft.item.crafting.RecipesMapExtending) Before: minecraft:shapeless After: minecraft:shaped
+[12:02:38] [main/DEBUG] [FML/forge]:   12: RecipeEntry("minecraft:shapeless", SHAPELESS, net.minecraft.item.crafting.ShapelessRecipes) After: minecraft:shaped
+[12:02:38] [main/DEBUG] [FML/forge]:   11: RecipeEntry("minecraft:repair", SHAPELESS, net.minecraft.item.crafting.RecipeRepairItem) After: minecraft:shapeless
+[12:02:38] [main/DEBUG] [FML/forge]:   10: RecipeEntry("minecraft:shield_deco", SHAPELESS, net.minecraft.item.crafting.ShieldRecipes$Decoration) After: minecraft:shapeless
+[12:02:38] [main/DEBUG] [FML/forge]:   9: RecipeEntry("minecraft:armordyes", SHAPELESS, net.minecraft.item.crafting.RecipesArmorDyes) After: minecraft:shapeless
+[12:02:38] [main/DEBUG] [FML/forge]:   8: RecipeEntry("minecraft:fireworks", SHAPELESS, net.minecraft.item.crafting.RecipeFireworks) After: minecraft:shapeless
+[12:02:38] [main/DEBUG] [FML/forge]:   7: RecipeEntry("minecraft:pattern_dupe", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeDuplicatePattern) After: minecraft:shapeless
+[12:02:38] [main/DEBUG] [FML/forge]:   6: RecipeEntry("minecraft:tippedarrow", SHAPELESS, net.minecraft.item.crafting.RecipeTippedArrow) After: minecraft:shapeless
+[12:02:38] [main/DEBUG] [FML/forge]:   5: RecipeEntry("minecraft:mapcloning", SHAPELESS, net.minecraft.item.crafting.RecipesMapCloning) After: minecraft:shapeless
+[12:02:38] [main/DEBUG] [FML/forge]:   4: RecipeEntry("forge:shapelessore", SHAPELESS, net.minecraftforge.oredict.ShapelessOreRecipe) After: minecraft:shapeless
+[12:02:38] [main/DEBUG] [FML/forge]:   3: RecipeEntry("minecraft:pattern_add", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeAddPattern) After: minecraft:shapeless
+[12:02:38] [main/DEBUG] [FML/forge]:   2: RecipeEntry("minecraft:bookcloning", SHAPELESS, net.minecraft.item.crafting.RecipeBookCloning) After: minecraft:shapeless
+[12:02:38] [main/DEBUG] [FML/forge]:   1: RecipeEntry("After", UNKNOWN, )
+[12:02:38] [main/DEBUG] [FML/forge]: Sorting recipes
+[12:02:38] [main/TRACE] [forge/forge]: Sent event FMLLoadCompleteEvent to mod forge
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Forge took 0.011s
+[12:02:38] [main/TRACE] [gundam/gundam]: Sending event FMLLoadCompleteEvent to mod gundam
+[12:02:38] [main/TRACE] [gundam/gundam]: Sent event FMLLoadCompleteEvent to mod gundam
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: LoadComplete - MS Gundam Mod took 0.000s
+[12:02:38] [main/DEBUG] [FML/]: Bar Finished: LoadComplete took 0.012s
+[12:02:38] [main/DEBUG] [FML/]: Freezing registries
+[12:02:38] [main/TRACE] [minecraft/minecraft]: Sending event FMLModIdMappingEvent to mod minecraft
+[12:02:38] [main/TRACE] [minecraft/minecraft]: Sent event FMLModIdMappingEvent to mod minecraft
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: ModIdMapping - Minecraft took 0.000s
+[12:02:38] [main/TRACE] [mcp/mcp]: Sending event FMLModIdMappingEvent to mod mcp
+[12:02:38] [main/TRACE] [mcp/mcp]: Sent event FMLModIdMappingEvent to mod mcp
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: ModIdMapping - Minecraft Coder Pack took 0.000s
+[12:02:38] [main/TRACE] [FML/FML]: Sending event FMLModIdMappingEvent to mod FML
+[12:02:38] [main/TRACE] [FML/FML]: Sent event FMLModIdMappingEvent to mod FML
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: ModIdMapping - Forge Mod Loader took 0.000s
+[12:02:38] [main/TRACE] [forge/forge]: Sending event FMLModIdMappingEvent to mod forge
+[12:02:38] [main/TRACE] [forge/forge]: Sent event FMLModIdMappingEvent to mod forge
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: ModIdMapping - Minecraft Forge took 0.225s
+[12:02:38] [main/TRACE] [gundam/gundam]: Sending event FMLModIdMappingEvent to mod gundam
+[12:02:38] [main/TRACE] [gundam/gundam]: Sent event FMLModIdMappingEvent to mod gundam
+[12:02:38] [main/DEBUG] [FML/]: Bar Step: ModIdMapping - MS Gundam Mod took 0.001s
+[12:02:38] [main/DEBUG] [FML/]: Bar Finished: ModIdMapping took 0.228s
+[12:02:38] [main/DEBUG] [FML/]: All registries frozen
+[12:02:38] [main/INFO] [FML/]: Forge Mod Loader has successfully loaded 5 mods
+[12:02:38] [main/DEBUG] [FML/]: Bar Finished: Loading took 10.011s
+[12:02:48] [main/DEBUG] [FML/]: Overriding dimension: using 0

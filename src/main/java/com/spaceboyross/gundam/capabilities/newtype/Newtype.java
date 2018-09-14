@@ -7,6 +7,7 @@ import com.spaceboyross.gundam.gui.HumantypeGUI;
 import com.spaceboyross.gundam.utils.CapabilityUtils;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTBase;
@@ -65,7 +66,8 @@ public class Newtype {
 		public static void hasConnected(PlayerEvent.PlayerLoggedInEvent event) {
 			INewtypeCapability nt = CapabilityUtils.getCapability(event.player,MAX_NEWTYPE_CAPABILITY,DEFAULT_FACING);
 			if(!nt.hasShownHumantypeMenu()) {
-				event.player.showGui(GundamMod.instance,HumantypeGUI.GUI_ID,event.player.getEntityWorld(),event.player.getPosition().getX(),event.player.getPosition().getY(),event.player.getPosition().getZ());
+				GuiScreen screen = new HumantypeGUI(event.player);
+				Minecraft.getMinecraft().displayGuiScreen(screen);
 			}
 		}
 	}

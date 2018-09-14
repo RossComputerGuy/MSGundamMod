@@ -27,6 +27,7 @@ import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.gundams.RX782GundamMobileSuit;
 import com.spaceboyross.gundam.ms.zeon.MS04PrototypeZakuMobileSuit;
 import com.spaceboyross.gundam.ms.zeon.MS05AZaku1EarlyTypeMobileSuit;
+import com.spaceboyross.gundam.net.PacketHandler;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -51,6 +52,8 @@ public class CommonProxy {
 		File directory = e.getModConfigurationDirectory();
 		CommonProxy.config = new Configuration(new File(directory.getPath(),"gundam.cfg"));
 		Config.readConfig();
+		
+		PacketHandler.registerMessages("gundam");
 		
 		GundamEntities.init();
 		GundamDimensions.init();
