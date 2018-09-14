@@ -11,6 +11,9 @@ import com.spaceboyross.gundam.GundamRecipes;
 import com.spaceboyross.gundam.blocks.LunaTitaniumBlock;
 import com.spaceboyross.gundam.blocks.MSCraftingStationBlock;
 import com.spaceboyross.gundam.blocks.tile.MSCraftingStationTileEntity;
+import com.spaceboyross.gundam.capabilities.interfaces.INewtypeCapability;
+import com.spaceboyross.gundam.capabilities.newtype.Newtype;
+import com.spaceboyross.gundam.capabilities.newtype.NewtypeCapability;
 import com.spaceboyross.gundam.items.CharAznableMaskItem;
 import com.spaceboyross.gundam.items.GControllerItem;
 import com.spaceboyross.gundam.items.GundariumAlphaIngotItem;
@@ -28,6 +31,7 @@ import com.spaceboyross.gundam.ms.zeon.MS05AZaku1EarlyTypeMobileSuit;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -54,6 +58,8 @@ public class CommonProxy {
 		MSRegistry.register(new MS04PrototypeZakuMobileSuit());
 		MSRegistry.register(new MS05AZaku1EarlyTypeMobileSuit());
 		MSRegistry.register(new RX782GundamMobileSuit());
+		
+		Newtype.register();
 	}
 	
 	public void init(FMLInitializationEvent e) {

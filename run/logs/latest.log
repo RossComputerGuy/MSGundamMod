@@ -1,32 +1,30 @@
-[09:19:55] [main/INFO]: Setting user: Player748
-[09:19:59] [main/WARN]: Skipping bad option: lastServer:
-[09:19:59] [main/INFO]: LWJGL Version: 2.9.4
-[09:20:03] [main/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MS Gundam Mod
-[09:20:05] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[09:20:05] [Thread-4/INFO]: Initializing LWJGL OpenAL
-[09:20:05] [Thread-4/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[09:20:05] [Thread-4/INFO]: OpenAL initialized.
-[09:20:05] [Sound Library Loader/INFO]: Sound engine started
-[09:20:08] [main/INFO]: Created: 512x512 textures-atlas
-[09:20:10] [main/WARN]: Skipping bad option: lastServer:
-[09:20:11] [main/INFO]: Narrator library successfully loaded
-[09:20:12] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
-[09:20:15] [Server thread/INFO]: Starting integrated minecraft server version 1.12
-[09:20:15] [Server thread/INFO]: Generating keypair
-[09:20:16] [Server thread/INFO]: Loaded 488 advancements
-[09:20:16] [Server thread/INFO]: Preparing start region for level 0
-[09:20:17] [Server thread/INFO]: Changing view distance to 12, from 10
-[09:20:18] [Server thread/INFO]: Player748[local:E:9ad6089c] logged in with entity id 56 at (-6.9196091403025735, 4.0, 394.2323745372985)
-[09:20:18] [Server thread/INFO]: Player748 joined the game
-[09:20:19] [Server thread/INFO]: Saving and pausing game...
-[09:20:19] [Server thread/INFO]: Saving chunks for level 'Development Testing'/overworld
-[09:20:19] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_nether
-[09:20:19] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_end
-[09:20:19] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
-[09:20:19] [main/INFO]: Loaded 2 advancements
-[09:20:20] [main/WARN]: Unable to play empty soundEvent: minecraft:entity.small_slime.squish
-[09:20:20] [main/WARN]: Unable to play empty soundEvent: minecraft:entity.small_slime.jump
-[09:20:20] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@3ccd3952[id=05d2e66a-903f-3232-a8b0-3899ccc17800,name=Player748,properties={},legacy=false]
+[09:45:14] [main/INFO]: Setting user: Player69
+[09:45:19] [main/WARN]: Skipping bad option: lastServer:
+[09:45:19] [main/INFO]: LWJGL Version: 2.9.4
+[09:45:22] [main/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MS Gundam Mod
+[09:45:24] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[09:45:24] [Thread-4/INFO]: Initializing LWJGL OpenAL
+[09:45:24] [Thread-4/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[09:45:24] [Thread-4/INFO]: OpenAL initialized.
+[09:45:25] [Sound Library Loader/INFO]: Sound engine started
+[09:45:27] [main/INFO]: Created: 512x512 textures-atlas
+[09:45:30] [main/WARN]: Skipping bad option: lastServer:
+[09:45:31] [main/INFO]: Narrator library successfully loaded
+[09:45:31] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[09:45:37] [Server thread/INFO]: Starting integrated minecraft server version 1.12
+[09:45:37] [Server thread/INFO]: Generating keypair
+[09:45:38] [Server thread/INFO]: Loaded 488 advancements
+[09:45:38] [Server thread/INFO]: Preparing start region for level 0
+[09:45:39] [Server thread/INFO]: Changing view distance to 12, from 10
+[09:45:40] [Server thread/INFO]: Player69[local:E:04cf669b] logged in with entity id 59 at (-5.472444653468023, 5.0, 395.74299895142224)
+[09:45:40] [Server thread/INFO]: Player69 joined the game
+[09:45:41] [Server thread/INFO]: Saving and pausing game...
+[09:45:41] [Server thread/INFO]: Saving chunks for level 'Development Testing'/overworld
+[09:45:42] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_nether
+[09:45:42] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_end
+[09:45:42] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
+[09:45:42] [main/INFO]: Loaded 2 advancements
+[09:45:42] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@196da880[id=eee10812-13cd-3f90-b77f-2195c9c5b71e,name=Player69,properties={},legacy=false]
 com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:79) ~[YggdrasilAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:180) [YggdrasilMinecraftSessionService.class:?]
@@ -48,21 +46,23 @@ com.mojang.authlib.exceptions.AuthenticationException: The client has sent too m
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_181]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_181]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
-[09:20:53] [Server thread/INFO]: Saving and pausing game...
-[09:20:53] [Server thread/INFO]: Saving chunks for level 'Development Testing'/overworld
-[09:20:53] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_nether
-[09:20:53] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_end
-[09:20:53] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
-[09:20:53] [Server thread/INFO]: Stopping server
-[09:20:53] [Server thread/INFO]: Saving players
-[09:20:53] [Server thread/INFO]: Player748 lost connection: Disconnected
-[09:20:53] [Server thread/INFO]: Player748 left the game
-[09:20:53] [Server thread/INFO]: Stopping singleplayer server as player logged out
-[09:20:53] [Server thread/INFO]: Saving worlds
-[09:20:53] [Server thread/INFO]: Saving chunks for level 'Development Testing'/overworld
-[09:20:53] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_nether
-[09:20:53] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_end
-[09:20:53] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
-[09:20:55] [main/INFO]: Stopping!
-[09:20:55] [main/INFO]: SoundSystem shutting down...
-[09:20:55] [main/WARN]: Author: Paul Lamb, www.paulscode.com
+[09:45:42] [main/WARN]: Unable to play empty soundEvent: minecraft:entity.small_slime.jump
+[09:45:42] [main/WARN]: Unable to play empty soundEvent: minecraft:entity.small_slime.squish
+[09:45:46] [Server thread/INFO]: Saving and pausing game...
+[09:45:46] [Server thread/INFO]: Saving chunks for level 'Development Testing'/overworld
+[09:45:46] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_nether
+[09:45:46] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_end
+[09:45:46] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
+[09:45:48] [Server thread/INFO]: Stopping server
+[09:45:48] [Server thread/INFO]: Saving players
+[09:45:48] [Server thread/INFO]: Player69 lost connection: Disconnected
+[09:45:48] [Server thread/INFO]: Player69 left the game
+[09:45:48] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[09:45:48] [Server thread/INFO]: Saving worlds
+[09:45:48] [Server thread/INFO]: Saving chunks for level 'Development Testing'/overworld
+[09:45:48] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_nether
+[09:45:48] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_end
+[09:45:48] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
+[09:45:50] [main/INFO]: Stopping!
+[09:45:50] [main/INFO]: SoundSystem shutting down...
+[09:45:50] [main/WARN]: Author: Paul Lamb, www.paulscode.com

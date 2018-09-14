@@ -3,6 +3,7 @@ package com.spaceboyross.gundam.blocks.gui;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
+import com.spaceboyross.gundam.GundamEntities;
 import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.blocks.container.MSCraftingStationContainer;
 import com.spaceboyross.gundam.blocks.tile.MSCraftingStationTileEntity;
@@ -16,6 +17,7 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MSCraftingStationGUIContainer extends GuiContainer {
@@ -154,28 +156,8 @@ public class MSCraftingStationGUIContainer extends GuiContainer {
 				String mid = id.split(":")[0];
 				id = id.split(":")[1];
 				Item item = GameRegistry.makeItemStack(mid+":"+id,0,count,"").getItem();
-				this.mc.player.inventory.deleteStack(item.getDefaultInstance());
-				try {
-					MobileSuit.MSMob mob = ms.MOB.getConstructor(World.class).newInstance(this.mc.world);
-					mob.posX = this.mc.player.posX+1.0;
-					mob.posY = this.mc.player.posY+1.0;
-					mob.posZ = this.mc.player.posZ+1.0;
-					mob.isDead = false;
-					mob.deathTime = Integer.MAX_VALUE;
-					if(!this.mc.world.isRemote) this.mc.world.spawnEntity(mob);
-				} catch(InstantiationException e) {
-					e.printStackTrace();
-				} catch(IllegalAccessException e) {
-					e.printStackTrace();
-				} catch(IllegalArgumentException e) {
-					e.printStackTrace();
-				} catch(InvocationTargetException e) {
-					e.printStackTrace();
-				} catch(NoSuchMethodException e) {
-					e.printStackTrace();
-				} catch(SecurityException e) {
-					e.printStackTrace();
-				}
+				if(!this.mc.player.isCreative()) this.mc.player.inventory.deleteStack(item.getDefaultInstance());
+				// TODO: give player spawn egg
 			}
 		}
 		if(button.id == this.btnPrev.id) {

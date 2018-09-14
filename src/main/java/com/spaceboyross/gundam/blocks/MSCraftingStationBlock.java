@@ -23,7 +23,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class MSCraftingStationBlock extends Block implements ITileEntityProvider {
 	
-	public static int GUI_ID = 1;
+	public static final int GUI_ID = 1;
 
 	public MSCraftingStationBlock() {
 		super(Material.IRON);

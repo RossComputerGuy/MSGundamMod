@@ -17,12 +17,23 @@ public class MSRegistry {
 	public static void register(MobileSuit ms) {
 		if(MSRegistry.registry.containsKey(ms.getModel())) return;
 		MSRegistry.registry.put(ms.getModel(),ms);
-		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,(ms.getModel()+" "+ms.getName()).replaceAll(" ","_").toLowerCase()),ms.MOB,(ms.getModel()+"_"+ms.getName()).replaceAll(" ","_"),GundamEntities.ID++,GundamMod.instance,64,3,true,0x996600,0x00ff00);
+		
+		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,(ms.getModel()+" "+ms.getName()).replaceAll(" ","_").toLowerCase()),ms.MOB,(ms.getModel()+"_"+ms.getName()).replaceAll(" ","_"),GundamEntities.ID++,GundamMod.instance,64,3,true,0x996600+(GundamEntities.ID-1),0x00ff00+(GundamEntities.ID-1));
+		EntityRegistry.registerEgg(new ResourceLocation(GundamMod.MODID,""),0x996600+(GundamEntities.ID-1),0x00ff00+(GundamEntities.ID-1));
 		RenderingRegistry.registerEntityRenderingHandler(ms.MOB,ms.FACTORY);
 	}
 	
 	public static MobileSuit getMobileSuit(String name) {
 		return MSRegistry.registry.get(name);
+	}
+	
+	public static int getMobileSuitIndex(MobileSuit ms) {
+		String keys[] = new String[MSRegistry.registry.keySet().size()];
+		keys = MSRegistry.registry.keySet().toArray(keys);
+		for(int i = 0;i < MSRegistry.registry.size();i++) {
+			if(keys[i].equals(ms.getModel())) return i;
+		}
+		return -1;
 	}
 	
 	public static MobileSuit getMobileSuitFromIndex(int i) {

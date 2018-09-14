@@ -22,6 +22,13 @@ public class PortableVernierItem extends ItemArmor {
 		this.canRepair = true;
 	}
 	
+	@Override
+	public CreativeTabs[] getCreativeTabs() {
+		return new CreativeTabs[] {
+			GundamMod.tab,CreativeTabs.TOOLS,CreativeTabs.TRANSPORTATION
+		};
+	}
+	
 	@SideOnly(Side.CLIENT)
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(this,0,new ModelResourceLocation(getRegistryName(), "inventory"));
