@@ -1,0 +1,21 @@
+{
+  "minecraft:story/obtain_armor": {
+    "criteria": {
+      "iron_boots": "2018-09-10 10:35:09 -0700",
+      "iron_leggings": "2018-09-10 10:35:09 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2018-09-10 10:35:09 -0700"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "plains": "2018-09-10 10:35:09 -0700"
+    },
+    "done": false
+  }
+}

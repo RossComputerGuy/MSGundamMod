@@ -1,0 +1,212 @@
+package com.spaceboyross.gundam.blocks.gui;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+
+import com.spaceboyross.gundam.GundamMod;
+import com.spaceboyross.gundam.blocks.container.MSCraftingStationContainer;
+import com.spaceboyross.gundam.blocks.tile.MSCraftingStationTileEntity;
+import com.spaceboyross.gundam.ms.MSRegistry;
+import com.spaceboyross.gundam.ms.MobileSuit;
+import com.spaceboyross.gundam.ms.MobileSuitArmament;
+
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+public class MSCraftingStationGUIContainer extends GuiContainer {
+	
+	public static final int WIDTH = 180;
+    public static final int HEIGHT = 152;
+    
+    private static final ResourceLocation background = new ResourceLocation(GundamMod.MODID,"textures/gui/ms_crafting_station_background.png");
+
+    private int page = 0;
+    private GuiButton btnCraft;
+    private GuiButton btnPrev;
+    private GuiButton btnNext;
+    private float partialTicks = 0.0f;
+    
+	public MSCraftingStationGUIContainer(MSCraftingStationTileEntity te,MSCraftingStationContainer inventorySlotsIn) {
+		super(inventorySlotsIn);
+		
+		this.xSize = MSCraftingStationGUIContainer.WIDTH;
+		this.ySize = MSCraftingStationGUIContainer.HEIGHT;
+		
+		this.allowUserInput = true;
+		
+		this.btnCraft = new GuiButton(0,this.guiLeft+(this.xSize/30),this.guiTop+(this.ySize/30),0,0,I18n.format("gui.gundam.ms_crafting_station.craft"));
+		this.btnPrev = new GuiButton(1,this.guiLeft+(this.xSize/20),0,0,0,I18n.format("gui.gundam.ms_crafting_station.prev"));
+		this.btnNext = new GuiButton(2,0,0,0,0,I18n.format("gui.gundam.ms_crafting_station.next"));
+		
+		if(!this.buttonList.contains(this.btnCraft)) this.buttonList.add(this.btnCraft);
+		if(!this.buttonList.contains(this.btnPrev)) this.buttonList.add(this.btnPrev);
+		if(!this.buttonList.contains(this.btnNext)) this.buttonList.add(this.btnNext);
+	}
+	
+	private void updateUIElements() {
+		/* Size and position */
+		this.btnCraft.x = this.guiLeft+(this.xSize/30);
+		this.btnCraft.y = this.guiTop+(this.ySize/30);
+		this.btnCraft.width = 20+this.fontRenderer.getStringWidth(I18n.format("gui.gundam.ms_crafting_station.craft"));
+		this.btnCraft.height = this.btnPrev.height = this.btnNext.height = 10+this.fontRenderer.FONT_HEIGHT;
+		
+		this.btnPrev.x = this.guiLeft+(this.xSize/20);
+		this.btnPrev.y = this.guiTop+(this.ySize-(this.ySize/20)-(this.fontRenderer.FONT_HEIGHT*2));
+		this.btnPrev.width = 20+this.fontRenderer.getStringWidth(I18n.format("gui.gundam.ms_crafting_station.prev"));
+
+		this.btnNext.x = this.guiLeft+(this.xSize-(this.xSize/20)-this.fontRenderer.getStringWidth(I18n.format("gui.gundam.ms_crafting_station.next"))-20);
+		this.btnNext.y = this.guiTop+(this.ySize-(this.ySize/20)-(this.fontRenderer.FONT_HEIGHT*2));
+		this.btnNext.width = 20+this.fontRenderer.getStringWidth(I18n.format("gui.gundam.ms_crafting_station.next"));
+		
+		/* Enabled states */
+		this.btnCraft.enabled = this.doesPlayerMeetRequiredAmountCount();
+		
+		this.btnPrev.enabled = this.page > 0;
+		this.btnNext.enabled = this.page < MSRegistry.getCount()-1;
+		
+		if(!this.buttonList.contains(this.btnCraft)) this.buttonList.add(this.btnCraft);
+		if(!this.buttonList.contains(this.btnPrev)) this.buttonList.add(this.btnPrev);
+		if(!this.buttonList.contains(this.btnNext)) this.buttonList.add(this.btnNext);
+		
+		this.buttonList.get(0).enabled = this.btnCraft.enabled;
+		this.buttonList.get(0).x = this.btnCraft.x;
+		this.buttonList.get(0).y = this.btnCraft.y;
+		this.buttonList.get(0).width = this.btnCraft.width;
+		this.buttonList.get(0).height = this.btnCraft.height;
+
+		this.buttonList.get(1).enabled = this.btnPrev.enabled;
+		this.buttonList.get(1).x = this.btnPrev.x;
+		this.buttonList.get(1).y = this.btnPrev.y;
+		this.buttonList.get(1).width = this.btnPrev.width;
+		this.buttonList.get(1).height = this.btnPrev.height;
+
+		this.buttonList.get(2).enabled = this.btnNext.enabled;
+		this.buttonList.get(2).x = this.btnNext.x;
+		this.buttonList.get(2).y = this.btnNext.y;
+		this.buttonList.get(2).width = this.btnNext.width;
+		this.buttonList.get(2).height = this.btnNext.height;
+	}
+	
+	private boolean doesPlayerMeetRequiredAmountCount() {
+		MobileSuit ms = MSRegistry.getMobileSuitFromIndex(this.page);
+		int meet_required_amount_count = 0;
+		for(int i = 0;i < ms.getRecipeItemCount();i++) {
+			Integer count = ms.getRecipeItemCount(i);
+			String id = ms.getRecipeItemID(i);
+			String mid = id.split(":")[0];
+			id = id.split(":")[1];
+			Item item = GameRegistry.makeItemStack(mid+":"+id,0,count,"").getItem();
+			if(this.mc.player.inventory.hasItemStack(item.getDefaultInstance())) meet_required_amount_count++;
+		}
+		return meet_required_amount_count == ms.getRecipeItemCount();
+	}
+	
+	private void drawGuiMobileSuit(int mouseX,int mouseY) {
+		MobileSuit ms = MSRegistry.getMobileSuitFromIndex(this.page);
+		
+		int name_x = ((((this.xSize-this.fontRenderer.getStringWidth(ms.getModel()+" "+ms.getName()))/2)+(this.btnCraft.width+this.btnCraft.x)/2)-this.guiLeft)+this.btnCraft.width;
+		int name_y = (this.ySize/6);
+		
+		this.drawString(this.fontRenderer,ms.getModel()+" "+ms.getName(),name_x,name_y,0xFFFFFF);
+		
+		int armaments_x = (this.xSize/10);
+		int armaments_y = name_y+(this.ySize/20)+this.fontRenderer.FONT_HEIGHT;
+		
+		this.drawString(this.fontRenderer,"Armaments:",armaments_x,armaments_y,0xFFFFFF);
+		
+		for(int i = 0;i < ms.getArmamentCount();i++) {
+			MobileSuitArmament armament = ms.getArmament(i);
+			armaments_y += (this.ySize/20)+this.fontRenderer.FONT_HEIGHT;
+			this.drawString(this.fontRenderer,(i+1)+". "+armament.toString(),armaments_x,armaments_y,0xFFFFFF);
+		}
+		
+		int recipe_x = (this.xSize/10);
+		int recipe_y = armaments_y+(this.ySize/10)+this.fontRenderer.FONT_HEIGHT;
+		
+		this.drawString(this.fontRenderer,"Required Items:",recipe_x,recipe_y,0xFFFFFF);
+		
+		int meet_required_amount_count = 0;
+		
+		for(int i = 0;i < ms.getRecipeItemCount();i++) {
+			Integer count = ms.getRecipeItemCount(i);
+			String id = ms.getRecipeItemID(i);
+			String mid = id.split(":")[0];
+			id = id.split(":")[1];
+			recipe_y += (this.ySize/20)+this.fontRenderer.FONT_HEIGHT;
+			Item item = GameRegistry.makeItemStack(mid+":"+id,0,count,"").getItem();
+			if(this.mc.player.inventory.hasItemStack(item.getDefaultInstance())) meet_required_amount_count++;
+			this.drawString(this.fontRenderer,count.toString()+" × "+item.getDefaultInstance().getDisplayName(),recipe_x,recipe_y,this.mc.player.inventory.hasItemStack(item.getDefaultInstance()) ? 0x00FF00 : 0xFF0000);
+		}
+	}
+	
+	@Override
+	public void actionPerformed(GuiButton button) {
+		if(button.id == this.btnCraft.id) {
+			MobileSuit ms = MSRegistry.getMobileSuitFromIndex(this.page);
+			for(int i = 0;i < ms.getRecipeItemCount();i++) {
+				Integer count = ms.getRecipeItemCount(i);
+				String id = ms.getRecipeItemID(i);
+				String mid = id.split(":")[0];
+				id = id.split(":")[1];
+				Item item = GameRegistry.makeItemStack(mid+":"+id,0,count,"").getItem();
+				this.mc.player.inventory.deleteStack(item.getDefaultInstance());
+				try {
+					MobileSuit.MSMob mob = ms.MOB.getConstructor(World.class).newInstance(this.mc.world);
+					mob.posX = this.mc.player.posX+1.0;
+					mob.posY = this.mc.player.posY+1.0;
+					mob.posZ = this.mc.player.posZ+1.0;
+					this.mc.world.spawnEntity(mob);
+				} catch(InstantiationException e) {
+					e.printStackTrace();
+				} catch(IllegalAccessException e) {
+					e.printStackTrace();
+				} catch(IllegalArgumentException e) {
+					e.printStackTrace();
+				} catch(InvocationTargetException e) {
+					e.printStackTrace();
+				} catch(NoSuchMethodException e) {
+					e.printStackTrace();
+				} catch(SecurityException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		if(button.id == this.btnPrev.id) {
+			this.page--;
+			this.updateScreen();
+		}
+		if(button.id == this.btnNext.id) {
+			this.page++;
+			this.updateScreen();
+		}
+	}
+
+	@Override
+	protected void drawGuiContainerBackgroundLayer(float partialTicks,int mouseX,int mouseY) {
+		this.mc.getTextureManager().bindTexture(MSCraftingStationGUIContainer.background);
+		this.drawTexturedModalRect(guiLeft,guiTop,0,0,this.xSize,this.ySize);
+		
+		this.partialTicks = partialTicks;
+		this.updateUIElements();
+		/*this.btnCraft.drawButtonForegroundLayer(mouseX,mouseY);
+		this.btnPrev.drawButtonForegroundLayer(mouseX,mouseY);
+		this.btnNext.drawButtonForegroundLayer(mouseX,mouseY);*/
+	}
+	
+	@Override
+	public void drawGuiContainerForegroundLayer(int mouseX,int mouseY) {
+		this.drawGuiMobileSuit(mouseX,mouseY);
+	}
+	
+	@Override
+    public void drawScreen(int mouseX,int mouseY,float partialTicks) {
+        super.drawDefaultBackground();
+        super.drawScreen(mouseX,mouseY,partialTicks);
+        super.renderHoveredToolTip(mouseX,mouseY);
+	}
+}

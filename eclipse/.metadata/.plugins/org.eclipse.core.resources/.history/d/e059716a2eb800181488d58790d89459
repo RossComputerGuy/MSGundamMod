@@ -1,0 +1,13 @@
+package com.spaceboyross.gundam.capabilities;
+
+import com.spaceboyross.gundam.capabilities.interfaces.INewtypeCapability;
+
+import net.minecraftforge.fml.common.Mod;
+
+public class NewtypeCapability implements INewtypeCapability {
+	
+	@Mod.EventBusSubscriber
+	public static class EventHandler {
+		
+	}
+}

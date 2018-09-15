@@ -1,0 +1,12 @@
+package com.spaceboyross.gundam.ms.armaments;
+
+import com.spaceboyross.gundam.MobileSuitArmament;
+
+public class VulcanGunMSArmament extends MobileSuitArmament {
+	
+	private int mm; // Vulcan ammo size
+	
+	public VulcanGunMSArmament(int count,int mm) {
+		super(count);
+	}
+}

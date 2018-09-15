@@ -1,0 +1,13 @@
+package com.spaceboyross.gundam.capabilities;
+
+import com.spaceboyross.gundam.capabilities.interfaces.INewtypeCapability;
+
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityInject;
+
+public class Newtype {
+	@CapabilityInject(INewtypeCapability.class)
+	public static final Capability<INewtypeCapability> MAX_NEWTYPE_CAPABILITY = null;
+	
+	public static final EnumFacing DEFAULT_FACING = null;
+}

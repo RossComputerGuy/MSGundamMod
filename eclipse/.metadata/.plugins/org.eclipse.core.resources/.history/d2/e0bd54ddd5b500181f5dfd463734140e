@@ -1,0 +1,23 @@
+package com.spaceboyross.gundam;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MSRegistry {
+	
+	private static Map<String,MobileSuit> registry = new HashMap<>();
+	
+	public void register(MobileSuit ms) throws Exception {
+		if(MSRegistry.registry.containsKey(ms.getModel())) throw new Exception("MobileSuit already exists");
+	}
+	
+	public MobileSuit getMobileSuit(String name) {
+		return MSRegistry.registry.get(name);
+	}
+	
+	public MobileSuit getMobileSuitFromIndex(int i) {
+		MobileSuit ms[] = new MobileSuit[MSRegistry.registry.values().size()];
+		ms = MSRegistry.registry.values().toArray(ms);
+		return ms[i];
+	}
+}

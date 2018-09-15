@@ -1,0 +1,7 @@
+package com.spaceboyross.gundam.ms;
+
+import com.spaceboyross.gundam.MobileSuit;
+
+public class RX782GundamMobileSuit extends MobileSuit {
+
+}

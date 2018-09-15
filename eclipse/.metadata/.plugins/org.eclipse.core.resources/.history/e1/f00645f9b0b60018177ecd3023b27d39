@@ -1,0 +1,124 @@
+---- Minecraft Crash Report ----
+// I feel sad now :(
+
+Time: 9/11/18 11:00 AM
+Description: Rendering screen
+
+java.lang.ArrayStoreException: java.lang.Integer
+	at java.util.AbstractCollection.toArray(AbstractCollection.java:196)
+	at com.spaceboyross.gundam.ms.MobileSuit.getRecipeItemID(MobileSuit.java:30)
+	at com.spaceboyross.gundam.ms.MobileSuit.getRecipeItemCount(MobileSuit.java:39)
+	at com.spaceboyross.gundam.blocks.gui.MSCraftingStationGUIContainer.drawGuiMobileSuit(MSCraftingStationGUIContainer.java:54)
+	at com.spaceboyross.gundam.blocks.gui.MSCraftingStationGUIContainer.drawGuiContainerForegroundLayer(MSCraftingStationGUIContainer.java:75)
+	at net.minecraft.client.gui.inventory.GuiContainer.drawScreen(GuiContainer.java:135)
+	at com.spaceboyross.gundam.blocks.gui.MSCraftingStationGUIContainer.drawScreen(MSCraftingStationGUIContainer.java:81)
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:349)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1168)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1192)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:436)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:25)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at java.util.AbstractCollection.toArray(AbstractCollection.java:196)
+	at com.spaceboyross.gundam.ms.MobileSuit.getRecipeItemID(MobileSuit.java:30)
+	at com.spaceboyross.gundam.ms.MobileSuit.getRecipeItemCount(MobileSuit.java:39)
+	at com.spaceboyross.gundam.blocks.gui.MSCraftingStationGUIContainer.drawGuiMobileSuit(MSCraftingStationGUIContainer.java:54)
+	at com.spaceboyross.gundam.blocks.gui.MSCraftingStationGUIContainer.drawGuiContainerForegroundLayer(MSCraftingStationGUIContainer.java:75)
+	at net.minecraft.client.gui.inventory.GuiContainer.drawScreen(GuiContainer.java:135)
+	at com.spaceboyross.gundam.blocks.gui.MSCraftingStationGUIContainer.drawScreen(MSCraftingStationGUIContainer.java:81)
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:349)
+
+-- Screen render details --
+Details:
+	Screen name: com.spaceboyross.gundam.blocks.gui.MSCraftingStationGUIContainer
+	Mouse location: Scaled: (213, 119). Absolute: (427, 240)
+	Screen size: Scaled: (427, 240). Absolute: (854, 480). Scale factor of 2
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player803'/60, l='MpServer', x=-7.52, y=4.00, z=395.34]]
+	Chunk stats: MultiplayerChunkCache: 588, 588
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-494,4,59), Chunk: (at 2,0,11 in -31,3; contains blocks -496,0,48 to -481,255,63), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 48110 game time, 4354 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 48 total; [EntitySlime['Slime'/128, l='MpServer', x=57.09, y=4.00, z=379.20], EntitySlime['Slime'/65, l='MpServer', x=-72.86, y=4.00, z=425.39], EntitySlime['Slime'/129, l='MpServer', x=41.19, y=4.58, z=385.40], EntitySlime['Slime'/66, l='MpServer', x=-79.04, y=4.00, z=436.07], EntitySlime['Slime'/130, l='MpServer', x=43.22, y=4.00, z=384.27], EntitySlime['Slime'/67, l='MpServer', x=-71.63, y=4.00, z=450.65], EntitySlime['Slime'/131, l='MpServer', x=-12.04, y=4.00, z=440.82], EntitySlime['Slime'/72, l='MpServer', x=-66.35, y=4.00, z=349.66], EntitySlime['Slime'/73, l='MpServer', x=-80.82, y=4.00, z=352.48], EntityPlayerSP['Player803'/60, l='MpServer', x=-7.52, y=4.00, z=395.34], EntitySlime['Slime'/76, l='MpServer', x=-50.64, y=4.92, z=342.48], EntitySlime['Slime'/78, l='MpServer', x=-86.29, y=4.00, z=392.44], EntitySlime['Slime'/80, l='MpServer', x=0.04, y=4.00, z=452.47], EntitySlime['Slime'/81, l='MpServer', x=-20.67, y=4.00, z=463.53], EntitySlime['Slime'/83, l='MpServer', x=33.30, y=4.00, z=438.61], EntitySlime['Slime'/92, l='MpServer', x=36.12, y=4.14, z=474.03], EntitySlime['Slime'/94, l='MpServer', x=-50.52, y=4.00, z=386.31], EntitySlime['Slime'/96, l='MpServer', x=-25.25, y=4.00, z=384.53], EntitySlime['Slime'/97, l='MpServer', x=-23.61, y=4.00, z=377.27], EntitySlime['Slime'/98, l='MpServer', x=-53.39, y=4.81, z=411.49], EntitySlime['Slime'/99, l='MpServer', x=-3.86, y=4.00, z=377.71], EntitySlime['Slime'/100, l='MpServer', x=-34.72, y=4.00, z=401.86], EntitySlime['Slime'/101, l='MpServer', x=-35.84, y=4.00, z=414.65], EntitySlime['Slime'/102, l='MpServer', x=-55.83, y=4.00, z=422.99], EntitySlime['Slime'/103, l='MpServer', x=-51.06, y=4.00, z=422.07], EntitySlime['Slime'/104, l='MpServer', x=23.70, y=4.34, z=352.66], EntitySlime['Slime'/105, l='MpServer', x=6.80, y=4.00, z=378.91], EntitySlime['Slime'/106, l='MpServer', x=-20.47, y=4.00, z=417.02], EntitySlime['Slime'/107, l='MpServer', x=-26.79, y=4.00, z=412.28], EntitySlime['Slime'/108, l='MpServer', x=-44.64, y=4.00, z=418.46], EntitySlime['Slime'/109, l='MpServer', x=61.31, y=4.00, z=339.79], EntitySlime['Slime'/110, l='MpServer', x=34.36, y=4.00, z=364.26], EntitySlime['Slime'/111, l='MpServer', x=5.88, y=4.00, z=395.55], EntityDomonKasshu['entity.DomonKasshu.name'/112, l='MpServer', x=-5.89, y=4.00, z=403.49], EntityFullFrontal['entity.FullFrontal.name'/113, l='MpServer', x=-6.96, y=4.00, z=403.31], EntityMasterAsia['entity.MasterAsia.name'/114, l='MpServer', x=-3.22, y=4.00, z=405.90], EntityQuattroBajeena['entity.QuattroBajeena.name'/115, l='MpServer', x=-3.21, y=4.00, z=406.90], EntitySlime['Slime'/116, l='MpServer', x=-7.16, y=4.00, z=413.86], EntitySlime['Slime'/117, l='MpServer', x=-0.75, y=4.58, z=406.79], EntitySlime['Slime'/118, l='MpServer', x=-34.10, y=4.34, z=431.96], EntitySlime['Slime'/119, l='MpServer', x=-57.35, y=4.00, z=460.07], EntitySlime['Slime'/123, l='MpServer', x=61.20, y=4.00, z=366.69], EntitySlime['Slime'/124, l='MpServer', x=11.77, y=4.00, z=412.63], EntityAmuroRay['entity.AmuroRay.name'/61, l='MpServer', x=-1.01, y=4.00, z=398.91], EntitySlime['Slime'/125, l='MpServer', x=-14.37, y=4.14, z=415.58], EntityCharAznable['entity.CharAznable.name'/62, l='MpServer', x=-2.06, y=4.00, z=399.20], EntitySlime['Slime'/126, l='MpServer', x=-39.35, y=4.00, z=463.69], EntityBrightNoa['entity.BrightNoa.name'/63, l='MpServer', x=-2.79, y=4.00, z=394.70]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:456)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2878)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:457)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:25)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12
+	Operating System: Linux (amd64) version 4.15.0-33-generic
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 664801024 bytes (634 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.40 Powered by Forge 14.21.1.2443 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	minecraft{1.12} [Minecraft] (minecraft.jar) 
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.12-14.21.1.2443.jar) 
+	UCHIJAAAA	forge{14.21.1.2443} [Minecraft Forge] (forgeSrc-1.12-14.21.1.2443.jar) 
+	UCHIJAAAA	gundam{1.0} [MS Gundam Mod] (bin) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 390.48' Renderer: 'NVS 4200M/PCIe/SSE2'
+	Launched Version: 1.12
+	LWJGL: 2.9.4
+	OpenGL: NVS 4200M/PCIe/SSE2 GL version 4.6.0 NVIDIA 390.48, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i7-2640M CPU @ 2.80GHz

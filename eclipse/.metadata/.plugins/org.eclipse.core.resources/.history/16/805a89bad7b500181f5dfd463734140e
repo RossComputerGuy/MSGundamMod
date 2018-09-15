@@ -1,0 +1,12 @@
+package com.spaceboyross.gundam.ms.gundam;
+
+import com.spaceboyross.gundam.MobileSuit;
+
+public class RX782GundamMobileSuit extends MobileSuit {
+	
+	public RX782GundamMobileSuit() {
+		super();
+		this.setModel("RX-78-2");
+		this.setName("Gundam");
+	}
+}

@@ -1,0 +1,110 @@
+package com.spaceboyross.gundam.ms;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.spaceboyross.gundam.GundamMod;
+
+import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderLiving;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.entity.monster.EntityMob;
+import net.minecraftforge.client.model.b3d.B3DLoader;
+import net.minecraftforge.client.model.obj.OBJLoader;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.client.registry.IRenderFactory;
+
+public abstract class MobileSuit {
+
+	private List<MobileSuitArmament> armaments;
+	private String name;
+	private String model;
+	private Map<String,Integer> recipeIDs;
+	
+	public MobileSuit() {
+		this.armaments = new ArrayList<>();
+		this.recipeIDs = new HashMap<>();
+	}
+	
+	public ResourceLocation getBaseResourceLocation() {
+		return new ResourceLocation(GundamMod.MODID,"models/entity/"+(this.model+"_"+this.name).replaceAll(" ","_"));
+	}
+	
+	public void addRecipeItem(String id,int count) {
+		this.recipeIDs.put(id,new Integer(count));
+	}
+	
+	public int getRecipeItemCount() {
+		return this.recipeIDs.size();
+	}
+	
+	public String getRecipeItemID(int i) {
+		String ids[] = new String[this.recipeIDs.keySet().size()];
+		ids = this.recipeIDs.keySet().toArray(ids);
+		return ids[i];
+	}
+	
+	public Integer getRecipeItemCount(String id) {
+		return this.recipeIDs.get(id);
+	}
+	
+	public Integer getRecipeItemCount(int i) {
+		return this.getRecipeItemCount(this.getRecipeItemID(i));
+	}
+	
+	public void addArmament(MobileSuitArmament armament) {
+		this.armaments.add(armament);
+	}
+	
+	public MobileSuitArmament getArmament(int i) {
+		return this.armaments.get(i);
+	}
+	
+	public int getArmamentCount() {
+		return this.armaments.size();
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public void setModel(String model) {
+		this.model = model;
+	}
+	
+	public String getModel() {
+		return this.model;
+	}
+	
+	public static class MSMob extends EntityMob {
+		public MSMob(World worldIn) {
+			super(worldIn);
+		}
+	}
+	
+	private static class MSRender extends RenderLiving<MSMob> {
+		public MSRender(RenderManager rendermanagerIn) {
+			super(rendermanagerIn,null,1.0f);
+		}
+
+		@Override
+		protected ResourceLocation getEntityTexture(MSMob entity) {
+			return null;
+		}
+		
+		private static class Factory implements IRenderFactory<MSMob> {
+			@Override
+			public Render<? super MSMob> createRenderFor(RenderManager manager) {
+				return new MSRender(manager);
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+package com.spaceboyross.gundam.blocks.gui;
+
+import net.minecraft.client.gui.inventory.GuiContainer;
+
+public class MSCraftingStationGUIContainer extends GuiContainer {
+
+	@Override
+	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
+	}
+
+}

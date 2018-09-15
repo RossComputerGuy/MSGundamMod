@@ -1,0 +1,20 @@
+package com.spaceboyross.gundam.capabilities;
+
+import com.spaceboyross.gundam.capabilities.interfaces.INewtypeCapability;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.event.AttachCapabilitiesEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+public class NewtypeCapability implements INewtypeCapability {
+	
+	@Mod.EventBusSubscriber
+	public static class EventHandler {
+		@SubscribeEvent
+		public static void attachCapabilities(AttachCapabilitiesEvent<Entity> event) {
+			if(event.getObject() instanceof EntityPlayer) {}
+		}
+	}
+}

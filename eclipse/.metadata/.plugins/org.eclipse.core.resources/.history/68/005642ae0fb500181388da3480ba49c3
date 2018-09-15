@@ -1,0 +1,13 @@
+package com.spaceboyross.gundam.items;
+
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
+
+public class PortableVernierItem extends ItemArmor {
+
+	public PortableVernierItem() {
+		super(ArmorMaterial.IRON,10,EntityEquipmentSlot.CHEST);
+	}
+
+}

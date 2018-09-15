@@ -1,0 +1,21 @@
+package com.spaceboyross.gundam.items;
+
+import com.spaceboyross.gundam.GundamMod;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
+
+public class PortableVernierItem extends ItemArmor {
+
+	public PortableVernierItem() {
+		super(ArmorMaterial.IRON,10,EntityEquipmentSlot.CHEST);
+		this.setRegistryName("char_aznable_mask");
+		this.setUnlocalizedName(GundamMod.MODID+".char_aznable_mask");
+		this.setCreativeTab(CreativeTabs.TOOLS);
+		this.setMaxStackSize(1);
+		this.canRepair = true;
+	}
+
+}

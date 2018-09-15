@@ -1,0 +1,6 @@
+package com.spaceboyross.gundam.blocks.tile;
+
+import net.minecraft.tileentity.TileEntity;
+
+public class MSCraftingStationTileEntity extends TileEntity {
+}

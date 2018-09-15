@@ -1,0 +1,13 @@
+package com.spaceboyross.gundam.ms.armaments;
+
+import com.spaceboyross.gundam.ms.MobileSuitArmament;
+
+public class BeamSaberMSArmament extends MobileSuitArmament {
+
+	public BeamSaberMSArmament(int count) {
+		super(count);
+		
+		this.setName("Beam Saber");
+	}
+
+}

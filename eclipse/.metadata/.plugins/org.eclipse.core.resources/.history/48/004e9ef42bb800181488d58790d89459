@@ -1,0 +1,5 @@
+package com.spaceboyross.gundam.capabilities;
+
+public interface NewtypeCapability {
+
+}

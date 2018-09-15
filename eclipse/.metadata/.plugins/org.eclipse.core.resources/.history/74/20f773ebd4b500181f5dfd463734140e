@@ -1,0 +1,10 @@
+package com.spaceboyross.gundam;
+
+import java.util.Map;
+
+public class MSRegistry {
+	
+	private static Map<String,MSInfo> registry;
+	
+	public static class MSInfo {}
+}
