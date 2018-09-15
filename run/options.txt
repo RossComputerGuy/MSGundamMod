@@ -4,12 +4,12 @@ mouseSensitivity:0.5
 fov:0.0
 gamma:0.0
 saturation:0.0
-renderDistance:12
+renderDistance:8
 guiScale:0
-particles:0
-bobView:true
+particles:2
+bobView:false
 anaglyph3d:false
-maxFps:120
+maxFps:60
 fboEnable:true
 difficulty:2
 fancyGraphics:false
@@ -43,7 +43,7 @@ mipmapLevels:4
 forceUnicodeFont:false
 reducedDebugInfo:false
 useNativeTransport:true
-entityShadows:true
+entityShadows:false
 mainHand:right
 attackIndicator:1
 showSubtitles:false

@@ -1,7 +1,10 @@
 package com.spaceboyross.gundam.ms.zeon;
 
 import com.spaceboyross.gundam.ms.MobileSuit;
+import com.spaceboyross.gundam.ms.gundams.RX782GundamMobileSuit;
+import com.spaceboyross.gundam.ms.gundams.RX782GundamMobileSuit.MSMob;
 
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class MS04PrototypeZakuMobileSuit extends MobileSuit {
@@ -12,8 +15,13 @@ public class MS04PrototypeZakuMobileSuit extends MobileSuit {
 		this.setName("Prototype Zaku");
 		
 		this.addRecipeItem("gundam:super_hard_steel_ingot",20);
-		
-		this.MOB = MS04PrototypeZakuMobileSuit.MSMob.class;
+	}
+	
+	@Override
+	public MSMob createEntity(World worldIn,Vec3d pos) {
+		MSMob mob = new MS04PrototypeZakuMobileSuit.MSMob(worldIn);
+		mob.setPosition(pos.x,pos.y,pos.z);
+		return mob;
 	}
 	
 	public static class MSMob extends MobileSuit.MSMob {

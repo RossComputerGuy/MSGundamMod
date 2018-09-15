@@ -1,10 +1,12 @@
 package com.spaceboyross.gundam.ms.gundams;
 
 import com.spaceboyross.gundam.ms.MobileSuit;
+import com.spaceboyross.gundam.ms.MobileSuit.MSMob;
 import com.spaceboyross.gundam.ms.armaments.BeamSaberMSArmament;
 import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
 
 import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class RX782GundamMobileSuit extends MobileSuit {
@@ -18,8 +20,13 @@ public class RX782GundamMobileSuit extends MobileSuit {
 		this.addArmament(new BeamSaberMSArmament(2));
 		
 		this.addRecipeItem("gundam:luna_titanium_ingot",20);
-		
-		this.MOB = RX782GundamMobileSuit.MSMob.class;
+	}
+	
+	@Override
+	public MSMob createEntity(World worldIn,Vec3d pos) {
+		MSMob mob = new RX782GundamMobileSuit.MSMob(worldIn);
+		mob.setPosition(pos.x,pos.y,pos.z);
+		return mob;
 	}
 	
 	public static class MSMob extends MobileSuit.MSMob {

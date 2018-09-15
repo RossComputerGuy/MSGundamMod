@@ -15,8 +15,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class HumantypeGUI extends GuiScreen {
 	
 	public static final int GUI_ID = 2;
-
-    private static final ResourceLocation background = new ResourceLocation(GundamMod.MODID,"textures/gui/ms_crafting_station_background.png");
 	
 	private EntityPlayer player;
 	
@@ -36,9 +34,6 @@ public class HumantypeGUI extends GuiScreen {
 	@Override
 	public void initGui() {
 		this.buttonList.clear();
-		
-		this.btnNewtype = new GuiButton(0,0,0,200,100,"Newtype");
-		this.buttonList.add(this.btnNewtype);
 	}
 	
 	@Override
@@ -48,7 +43,6 @@ public class HumantypeGUI extends GuiScreen {
 	
 	@Override
 	public void drawScreen(int mouseX,int mouseY,float partialTicks) {
-		System.out.println("Hello, world");
 		super.drawScreen(mouseX,mouseY,partialTicks);
 	}
 }

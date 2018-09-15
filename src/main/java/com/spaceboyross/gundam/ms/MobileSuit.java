@@ -9,16 +9,14 @@ import org.lwjgl.opengl.GL11;
 
 import com.spaceboyross.gundam.GundamMod;
 
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraftforge.client.model.b3d.B3DLoader;
-import net.minecraftforge.client.model.obj.OBJLoader;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 
@@ -30,7 +28,6 @@ public abstract class MobileSuit {
 	private Map<String,Integer> recipeIDs;
 	private float height;
 	
-	public Class<? extends MSMob> MOB = MSMob.class;
 	public MobileSuit.MSRender.Factory FACTORY = new MobileSuit.MSRender.Factory(this);
 	
 	public MobileSuit() {
@@ -49,6 +46,12 @@ public abstract class MobileSuit {
 	
 	public ResourceLocation getBaseResourceLocation() {
 		return new ResourceLocation(GundamMod.MODID,"textures/entity/"+(this.model+"_"+this.name).replaceAll(" ","_"));
+	}
+	
+	public MSMob createEntity(World worldIn,Vec3d pos) {
+		MSMob mob = new MSMob(worldIn);
+		mob.setPosition(pos.x,pos.y,pos.z);
+		return mob;
 	}
 	
 	public void addRecipeItem(String id,int count) {
