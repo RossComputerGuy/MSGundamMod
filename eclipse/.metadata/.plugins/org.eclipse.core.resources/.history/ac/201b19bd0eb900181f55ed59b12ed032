@@ -1,0 +1,11 @@
+package com.spaceboyross.gundam.utils;
+
+import net.minecraft.client.gui.FontRenderer;
+
+public class UIUtils {
+	public static int calculateButtonWidth(FontRenderer fontRenderer,String name) {
+		return 20+fontRenderer.getStringWidth(name);
+	}
+	
+	public static int calculateButtonHeight(FontRenderer fontRenderer,String name) {}
+}

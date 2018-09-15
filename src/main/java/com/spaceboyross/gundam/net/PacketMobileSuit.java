@@ -19,6 +19,9 @@ public class PacketMobileSuit implements IMessage {
 	public int index = 0;
 	public Vec3d pos = new Vec3d(0.0,0.0,0.0);
 
+    public PacketMobileSuit() {
+    }
+
     @Override
     public void fromBytes(ByteBuf buf) {
     	this.index = buf.readInt();
@@ -33,9 +36,6 @@ public class PacketMobileSuit implements IMessage {
     	buf.writeDouble(this.pos.x);
     	buf.writeDouble(this.pos.y);
     	buf.writeDouble(this.pos.z);
-    }
-
-    public PacketMobileSuit() {
     }
 
     public static class Handler implements IMessageHandler<PacketMobileSuit,IMessage> {

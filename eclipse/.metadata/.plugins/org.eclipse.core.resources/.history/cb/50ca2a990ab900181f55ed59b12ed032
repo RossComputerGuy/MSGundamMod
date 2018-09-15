@@ -1,0 +1,10 @@
+package com.spaceboyross.gundam.net;
+
+import io.netty.buffer.ByteBuf;
+import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+
+public class PacketHumantype implements IMessage {
+	@Override
+    public void fromBytes(ByteBuf buf) {
+	}
+}

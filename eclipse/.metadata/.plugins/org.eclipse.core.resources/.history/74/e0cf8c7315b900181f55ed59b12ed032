@@ -1,0 +1,5 @@
+package com.spaceboyross.gundam.enums;
+
+public enum EHumantypes {
+
+}

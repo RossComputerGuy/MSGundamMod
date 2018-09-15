@@ -8,6 +8,7 @@ import com.spaceboyross.gundam.ms.MobileSuit;
 import com.spaceboyross.gundam.ms.MobileSuitArmament;
 import com.spaceboyross.gundam.net.PacketHandler;
 import com.spaceboyross.gundam.net.PacketMobileSuit;
+import com.spaceboyross.gundam.utils.UIUtils;
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -29,9 +30,11 @@ public class MSCraftingStationGUIContainer extends GuiContainer {
     private GuiButton btnPrev;
     private GuiButton btnNext;
     private float partialTicks = 0.0f;
+    private MSCraftingStationTileEntity te;
     
 	public MSCraftingStationGUIContainer(MSCraftingStationTileEntity te,MSCraftingStationContainer inventorySlotsIn) {
 		super(inventorySlotsIn);
+		this.te = te;
 		
 		this.xSize = MSCraftingStationGUIContainer.WIDTH;
 		this.ySize = MSCraftingStationGUIContainer.HEIGHT;
@@ -51,16 +54,16 @@ public class MSCraftingStationGUIContainer extends GuiContainer {
 		/* Size and position */
 		this.btnCraft.x = this.guiLeft+(this.xSize/30);
 		this.btnCraft.y = this.guiTop+(this.ySize/30);
-		this.btnCraft.width = 20+this.fontRenderer.getStringWidth(I18n.format("gui.gundam.ms_crafting_station.craft"));
-		this.btnCraft.height = this.btnPrev.height = this.btnNext.height = 10+this.fontRenderer.FONT_HEIGHT;
+		this.btnCraft.width = UIUtils.calculateButtonWidthI18N(this.fontRenderer,"gui.gundam.ms_crafting_station.craft");
+		this.btnCraft.height = this.btnPrev.height = this.btnNext.height = UIUtils.calculateButtonHeight(this.fontRenderer);
 		
 		this.btnPrev.x = this.guiLeft+(this.xSize/20);
 		this.btnPrev.y = this.guiTop+(this.ySize-(this.ySize/20)-(this.fontRenderer.FONT_HEIGHT*2));
-		this.btnPrev.width = 20+this.fontRenderer.getStringWidth(I18n.format("gui.gundam.ms_crafting_station.prev"));
+		this.btnPrev.width = UIUtils.calculateButtonWidthI18N(this.fontRenderer,"gui.gundam.ms_crafting_station.prev");
 
 		this.btnNext.x = this.guiLeft+(this.xSize-(this.xSize/20)-this.fontRenderer.getStringWidth(I18n.format("gui.gundam.ms_crafting_station.next"))-20);
 		this.btnNext.y = this.guiTop+(this.ySize-(this.ySize/20)-(this.fontRenderer.FONT_HEIGHT*2));
-		this.btnNext.width = 20+this.fontRenderer.getStringWidth(I18n.format("gui.gundam.ms_crafting_station.next"));
+		this.btnNext.width = UIUtils.calculateButtonWidthI18N(this.fontRenderer,"gui.gundam.ms_crafting_station.next");
 		
 		/* Enabled states */
 		this.btnCraft.enabled = this.doesPlayerMeetRequiredAmountCount();
@@ -157,7 +160,7 @@ public class MSCraftingStationGUIContainer extends GuiContainer {
 			}
 			PacketMobileSuit packet = new PacketMobileSuit();
 			packet.index = this.page;
-			packet.pos = new Vec3d(this.mc.player.posX,this.mc.player.posY,this.mc.player.posZ);
+			packet.pos = new Vec3d(this.te.getPos().getX()+this.mc.player.getLookVec().x*2,this.te.getPos().getY(),this.te.getPos().getZ()+this.mc.player.getLookVec().z*2);
 			PacketHandler.INSTANCE.sendToServer(packet);
 		}
 		if(button.id == this.btnPrev.id) {

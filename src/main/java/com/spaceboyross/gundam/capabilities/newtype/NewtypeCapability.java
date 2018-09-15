@@ -2,6 +2,7 @@ package com.spaceboyross.gundam.capabilities.newtype;
 
 import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.capabilities.interfaces.INewtypeCapability;
+import com.spaceboyross.gundam.enums.EHumantypes;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,6 +14,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class NewtypeCapability implements INewtypeCapability {
 	
 	private boolean shownHumantypeMenu = false;
+	private EHumantypes humantype = EHumantypes.OLDTYPE;
 	
 	private EntityPlayer player;
 	
@@ -33,5 +35,15 @@ public class NewtypeCapability implements INewtypeCapability {
 	@Override
 	public void setHasShownHumantypeMenu(boolean v) {
 		this.shownHumantypeMenu = v;
+	}
+
+	@Override
+	public EHumantypes getHumantype() {
+		return this.humantype;
+	}
+
+	@Override
+	public void setHumantype(EHumantypes v) {
+		this.humantype = v;
 	}
 }

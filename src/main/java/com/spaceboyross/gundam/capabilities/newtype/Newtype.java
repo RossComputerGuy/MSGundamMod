@@ -3,11 +3,11 @@ package com.spaceboyross.gundam.capabilities.newtype;
 import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.capabilities.interfaces.INewtypeCapability;
 import com.spaceboyross.gundam.capabilities.providers.NewtypeProvider;
-import com.spaceboyross.gundam.gui.HumantypeGUI;
+import com.spaceboyross.gundam.enums.EHumantypes;
+import com.spaceboyross.gundam.net.PacketHandler;
+import com.spaceboyross.gundam.net.PacketHumantype;
 import com.spaceboyross.gundam.utils.CapabilityUtils;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTBase;
@@ -37,6 +37,7 @@ public class Newtype {
 			public NBTBase writeNBT(Capability<INewtypeCapability> capability,INewtypeCapability instance,EnumFacing side) {
 				NBTTagCompound root = new NBTTagCompound();
 				root.setBoolean("shownHumantypeMenu",instance.hasShownHumantypeMenu());
+				root.setInteger("humantype",instance.getHumantype() == EHumantypes.OLDTYPE ? 0 : (instance.getHumantype() == EHumantypes.CYBER_NEWTYPE ? 1 : 2));
 				return root;
 			}
 
@@ -44,6 +45,12 @@ public class Newtype {
 			public void readNBT(Capability<INewtypeCapability> capability,INewtypeCapability instance,EnumFacing side,NBTBase nbt) {
 				NBTTagCompound root = (NBTTagCompound)nbt;
 				instance.setHasShownHumantypeMenu(root.getBoolean("shownHumantypeMenu"));
+				instance.setHumantype((new EHumantypes[] {
+					EHumantypes.OLDTYPE,
+					EHumantypes.CYBER_NEWTYPE,
+					EHumantypes.NEWTYPE
+				})[root.getInteger("humantype")]);
+				System.out.println(root.getBoolean("shownHumantypeMenu"));
 			}
 		},() -> new NewtypeCapability(null));
 	}
@@ -65,10 +72,7 @@ public class Newtype {
 		@SubscribeEvent
 		public static void hasConnected(PlayerEvent.PlayerLoggedInEvent event) {
 			INewtypeCapability nt = CapabilityUtils.getCapability(event.player,MAX_NEWTYPE_CAPABILITY,DEFAULT_FACING);
-			if(!nt.hasShownHumantypeMenu()) {
-				GuiScreen screen = new HumantypeGUI(event.player);
-				Minecraft.getMinecraft().displayGuiScreen(screen);
-			}
+			if(!nt.hasShownHumantypeMenu()) PacketHandler.INSTANCE.sendToAll(new PacketHumantype());
 		}
 	}
 }

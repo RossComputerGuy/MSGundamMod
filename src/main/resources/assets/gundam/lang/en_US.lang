@@ -10,6 +10,10 @@ gui.gundam.ms_crafting_station.craft=Craft
 gui.gundam.ms_crafting_station.prev=Prev
 gui.gundam.ms_crafting_station.next=Next
 
+gui.gundam.humantype.select=Select your Humantype
+gui.gundam.humantype.newtype=Newtype
+gui.gundam.humantype.oldtype=Oldtype
+
 itemGroup.gundam=MS Gundam Mod
 
 item.gundam.char_aznable_mask.name=Char Aznable's Mask

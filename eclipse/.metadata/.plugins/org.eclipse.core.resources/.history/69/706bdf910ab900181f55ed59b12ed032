@@ -1,0 +1,7 @@
+package com.spaceboyross.gundam.net;
+
+import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+
+public class PacketHumantype implements IMessage {
+
+}

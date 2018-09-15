@@ -1,5 +1,7 @@
 package com.spaceboyross.gundam.capabilities.interfaces;
 
+import com.spaceboyross.gundam.enums.EHumantypes;
+
 import net.minecraft.entity.player.EntityPlayer;
 
 public interface INewtypeCapability {
@@ -9,4 +11,7 @@ public interface INewtypeCapability {
 	
 	boolean hasShownHumantypeMenu();
 	void setHasShownHumantypeMenu(boolean v);
+	
+	EHumantypes getHumantype();
+	void setHumantype(EHumantypes v);
 }
