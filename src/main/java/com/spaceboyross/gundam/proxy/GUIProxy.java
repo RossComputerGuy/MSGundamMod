@@ -21,7 +21,6 @@ public class GUIProxy implements IGuiHandler {
 				TileEntity te = world.getTileEntity(new BlockPos(x,y,z));
 				if(te instanceof MSCraftingStationTileEntity) return new MSCraftingStationContainer(player.inventory,(MSCraftingStationTileEntity)te);
 				break;
-			case HumantypeGUI.GUI_ID: return new HumantypeGUI(player);
 		}
 		return null;
 	}

@@ -1,0 +1,10 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "gundam:luna_titanium_ore"
+	},
+	"variants": {
+		"normal": [{}],
+		"inventory": [{}]
+	}
+}

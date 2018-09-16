@@ -24,13 +24,13 @@ public class GundamEntities {
 	public static void init() {
 		int id = 1;
 
-		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"amuro_ray"),EntityAmuroRay.class,"AmuroRay",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
-		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"bright_noa"),EntityBrightNoa.class,"BrightNoa",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
-		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"char_aznable"),EntityCharAznable.class,"CharAznable",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
-		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"domon_kasshu"),EntityDomonKasshu.class,"DomonKasshu",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
-		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"full_frontal"),EntityFullFrontal.class,"FullFrontal",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
-		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"master_asia"),EntityMasterAsia.class,"MasterAsia",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
-		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"quattro_bajeena"),EntityQuattroBajeena.class,"QuattroBajeena",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
+		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"amuro_ray"),EntityAmuroRay.class,GundamMod.MODID+".AmuroRay",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
+		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"bright_noa"),EntityBrightNoa.class,GundamMod.MODID+".BrightNoa",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
+		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"char_aznable"),EntityCharAznable.class,GundamMod.MODID+".CharAznable",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
+		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"domon_kasshu"),EntityDomonKasshu.class,GundamMod.MODID+".DomonKasshu",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
+		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"full_frontal"),EntityFullFrontal.class,GundamMod.MODID+".FullFrontal",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
+		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"master_asia"),EntityMasterAsia.class,GundamMod.MODID+".MasterAsia",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
+		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,"quattro_bajeena"),EntityQuattroBajeena.class,GundamMod.MODID+".QuattroBajeena",id++,GundamMod.instance,64,3,true,0x996600+(id-1),0x00ff00+(id-1));
 		GundamEntities.ID = id;
 	}
 	

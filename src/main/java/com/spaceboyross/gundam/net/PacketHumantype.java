@@ -21,8 +21,12 @@ public class PacketHumantype implements IMessage {
     public static class Handler implements IMessageHandler<PacketHumantype,IMessage> {
         @Override
         public IMessage onMessage(PacketHumantype message,MessageContext ctx) {
-        	Minecraft.getMinecraft().displayGuiScreen(new HumantypeGUI(Minecraft.getMinecraft().player));
+        	Minecraft.getMinecraft().addScheduledTask(() -> handle(message,ctx));
         	return null;
+        }
+        
+        private void handle(PacketHumantype message,MessageContext ctx) {
+        	Minecraft.getMinecraft().displayGuiScreen(new HumantypeGUI(Minecraft.getMinecraft().player));
         }
     }
 }

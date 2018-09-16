@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.spaceboyross.gundam.dimension.DimensionSide1ShangriLa"/>
-<fullyQualifiedTypeName name="net.minecraftforge.common.DimensionManager"/>
-<fullyQualifiedTypeName name="net.minecraft.item.ItemArmor"/>
 <fullyQualifiedTypeName name="net.minecraft.inventory.EntityEquipmentSlot"/>
-<fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.items.PortableVernierItem"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.network.NetworkRegistry"/>
@@ -24,7 +20,6 @@
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.registry.GameRegistry"/>
-<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiControls"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiButton"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiScreen"/>
@@ -34,7 +29,6 @@
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.entities.render.SkinRender"/>
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.entities.render.SkinRender.Factory"/>
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.zeon.MS05AZaku1EarlyTypeMobileSuit"/>
-<fullyQualifiedTypeName name="net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder"/>
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.zeon.MS04PrototypeZakuMobileSuit"/>
 <fullyQualifiedTypeName name="net.minecraft.world.World"/>
 <fullyQualifiedTypeName name="java.lang.Float"/>
@@ -52,8 +46,18 @@
 <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.utils.UIUtils"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiLabel"/>
-<fullyQualifiedTypeName name="net.minecraft.client.resources.I18n"/>
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.capabilities.newtype.Newtype"/>
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.capabilities.interfaces.INewtypeCapability"/>
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.enums.EHumantypes"/>
+<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
+<fullyQualifiedTypeName name="com.spaceboyross.gundam.items.SteelIngotItem"/>
+<fullyQualifiedTypeName name="net.minecraft.client.resources.I18n"/>
+<fullyQualifiedTypeName name="akka.japi.Predicate"/>
+<fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
+<fullyQualifiedTypeName name="net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder"/>
+<fullyQualifiedTypeName name="net.minecraft.util.EnumActionResult"/>
+<fullyQualifiedTypeName name="com.spaceboyross.gundam.GundamBlocks"/>
+<fullyQualifiedTypeName name="net.minecraft.block.state.pattern.BlockMatcher"/>
+<fullyQualifiedTypeName name="com.google.common.base.Predicate"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
 </qualifiedTypeNameHistroy>

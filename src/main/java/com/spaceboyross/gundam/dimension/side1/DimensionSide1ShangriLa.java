@@ -14,7 +14,7 @@ public class DimensionSide1ShangriLa extends WorldProvider {
 	
 	@Override
 	public String getSaveFolder() {
-		return "SIDE1_SHANGRILA";
+		return "GUNDAM_SIDE1_SHANGRILA";
 	}
 
 }

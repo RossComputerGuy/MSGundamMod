@@ -9,11 +9,11 @@ import com.spaceboyross.gundam.GundamEntities;
 import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.GundamRecipes;
 import com.spaceboyross.gundam.blocks.LunaTitaniumBlock;
+import com.spaceboyross.gundam.blocks.LunaTitaniumOreBlock;
 import com.spaceboyross.gundam.blocks.MSCraftingStationBlock;
+import com.spaceboyross.gundam.blocks.MoonRockBlock;
 import com.spaceboyross.gundam.blocks.tile.MSCraftingStationTileEntity;
-import com.spaceboyross.gundam.capabilities.interfaces.INewtypeCapability;
 import com.spaceboyross.gundam.capabilities.newtype.Newtype;
-import com.spaceboyross.gundam.capabilities.newtype.NewtypeCapability;
 import com.spaceboyross.gundam.items.CharAznableMaskItem;
 import com.spaceboyross.gundam.items.GControllerItem;
 import com.spaceboyross.gundam.items.GundariumAlphaIngotItem;
@@ -22,17 +22,19 @@ import com.spaceboyross.gundam.items.GundariumEpsilonIngotItem;
 import com.spaceboyross.gundam.items.GundariumGammaIngotItem;
 import com.spaceboyross.gundam.items.LunaTitaniumIngotItem;
 import com.spaceboyross.gundam.items.PortableVernierItem;
+import com.spaceboyross.gundam.items.SteelIngotItem;
 import com.spaceboyross.gundam.items.SuperHardSteelIngotItem;
+import com.spaceboyross.gundam.items.WrenchItem;
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.gundams.RX782GundamMobileSuit;
 import com.spaceboyross.gundam.ms.zeon.MS04PrototypeZakuMobileSuit;
 import com.spaceboyross.gundam.ms.zeon.MS05AZaku1EarlyTypeMobileSuit;
 import com.spaceboyross.gundam.net.PacketHandler;
+import com.spaceboyross.gundam.world.OreGen;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -67,6 +69,7 @@ public class CommonProxy {
 	
 	public void init(FMLInitializationEvent e) {
 		NetworkRegistry.INSTANCE.registerGuiHandler(GundamMod.instance,new GUIProxy());
+		GameRegistry.registerWorldGenerator(new OreGen(),0);
 		GundamRecipes.init();
 	}
 	
@@ -77,6 +80,8 @@ public class CommonProxy {
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		event.getRegistry().register(new LunaTitaniumBlock());
+		event.getRegistry().register(new LunaTitaniumOreBlock());
+		event.getRegistry().register(new MoonRockBlock());
 		event.getRegistry().register(new MSCraftingStationBlock());
 		
 		GameRegistry.registerTileEntity(MSCraftingStationTileEntity.class,GundamMod.MODID+"_ms_crafting_station");
@@ -92,9 +97,13 @@ public class CommonProxy {
 		event.getRegistry().register(new GundariumGammaIngotItem());
 		event.getRegistry().register(new LunaTitaniumIngotItem());
 		event.getRegistry().register(new PortableVernierItem());
+		event.getRegistry().register(new SteelIngotItem());
 		event.getRegistry().register(new SuperHardSteelIngotItem());
+		event.getRegistry().register(new WrenchItem());
 		
 		event.getRegistry().register(new ItemBlock(GundamBlocks.lunaTitaniumBlock).setRegistryName(GundamBlocks.lunaTitaniumBlock.getRegistryName()));
+		event.getRegistry().register(new ItemBlock(GundamBlocks.lunaTitaniumOre).setRegistryName(GundamBlocks.lunaTitaniumOre.getRegistryName()));
+		event.getRegistry().register(new ItemBlock(GundamBlocks.moonRock).setRegistryName(GundamBlocks.moonRock.getRegistryName()));
 		event.getRegistry().register(new ItemBlock(GundamBlocks.msCraftingStation).setRegistryName(GundamBlocks.msCraftingStation.getRegistryName()));
 	}
 }

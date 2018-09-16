@@ -50,6 +50,7 @@ public class Newtype {
 					EHumantypes.CYBER_NEWTYPE,
 					EHumantypes.NEWTYPE
 				})[root.getInteger("humantype")]);
+				System.out.println(root.getInteger("humantype"));
 				System.out.println(root.getBoolean("shownHumantypeMenu"));
 			}
 		},() -> new NewtypeCapability(null));

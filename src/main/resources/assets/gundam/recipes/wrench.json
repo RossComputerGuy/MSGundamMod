@@ -1,0 +1,22 @@
+{ 
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" I ",
+		" SI",
+		"S  "
+	],
+	"key": {
+		"I": [{
+			"item": "minecraft:iron_ingot",
+			"data": 0
+		}],
+		"S": [{
+			"item": "minecraft:stick",
+			"data": 0
+		}]
+	},
+	"result": {
+		"item": "gundam:wrench",
+		"data": 0
+	}
+}

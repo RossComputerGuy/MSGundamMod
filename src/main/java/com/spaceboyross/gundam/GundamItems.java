@@ -8,7 +8,9 @@ import com.spaceboyross.gundam.items.GundariumEpsilonIngotItem;
 import com.spaceboyross.gundam.items.GundariumGammaIngotItem;
 import com.spaceboyross.gundam.items.LunaTitaniumIngotItem;
 import com.spaceboyross.gundam.items.PortableVernierItem;
+import com.spaceboyross.gundam.items.SteelIngotItem;
 import com.spaceboyross.gundam.items.SuperHardSteelIngotItem;
+import com.spaceboyross.gundam.items.WrenchItem;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -40,8 +42,14 @@ public class GundamItems {
 	@GameRegistry.ObjectHolder("gundam:portable_vernier")
 	public static PortableVernierItem portableVernier;
 	
+	@GameRegistry.ObjectHolder("gundam:steel_ingot")
+	public static SteelIngotItem steelIngot;
+	
 	@GameRegistry.ObjectHolder("gundam:super_hard_steel_ingot")
 	public static SuperHardSteelIngotItem superHardSteelIngot;
+	
+	@GameRegistry.ObjectHolder("gundam:wrench")
+	public static WrenchItem wrench;
 	
 	@SideOnly(Side.CLIENT)
 	public static void initModels() {
@@ -53,6 +61,8 @@ public class GundamItems {
 		GundamItems.gundariumGammaIngot.initModel();
 		GundamItems.lunaTitaniumIngot.initModel();
 		GundamItems.portableVernier.initModel();
+		GundamItems.steelIngot.initModel();
 		GundamItems.superHardSteelIngot.initModel();
+		GundamItems.wrench.initModel();
 	}
 }

@@ -1,0 +1,7 @@
+package com.spaceboyross.gundam;
+
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+
+@EventBusSubscriber
+public class OreGenEventHandler {
+}
