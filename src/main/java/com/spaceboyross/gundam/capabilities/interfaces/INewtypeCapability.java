@@ -14,4 +14,6 @@ public interface INewtypeCapability {
 	
 	EHumantypes getHumantype();
 	void setHumantype(EHumantypes v);
+	
+	void syncToServer();
 }

@@ -1,15 +1,11 @@
 package com.spaceboyross.gundam.capabilities.newtype;
 
-import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.capabilities.interfaces.INewtypeCapability;
 import com.spaceboyross.gundam.enums.EHumantypes;
+import com.spaceboyross.gundam.net.PacketHandler;
+import com.spaceboyross.gundam.net.PacketNewtype;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.event.AttachCapabilitiesEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class NewtypeCapability implements INewtypeCapability {
 	
@@ -45,5 +41,10 @@ public class NewtypeCapability implements INewtypeCapability {
 	@Override
 	public void setHumantype(EHumantypes v) {
 		this.humantype = v;
+	}
+	
+	@Override
+	public void syncToServer() {
+		PacketHandler.INSTANCE.sendToServer(new PacketNewtype(this));
 	}
 }

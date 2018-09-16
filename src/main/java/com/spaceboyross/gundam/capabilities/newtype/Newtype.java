@@ -37,7 +37,7 @@ public class Newtype {
 			public NBTBase writeNBT(Capability<INewtypeCapability> capability,INewtypeCapability instance,EnumFacing side) {
 				NBTTagCompound root = new NBTTagCompound();
 				root.setBoolean("shownHumantypeMenu",instance.hasShownHumantypeMenu());
-				root.setInteger("humantype",instance.getHumantype() == EHumantypes.OLDTYPE ? 0 : (instance.getHumantype() == EHumantypes.CYBER_NEWTYPE ? 1 : 2));
+				root.setInteger("humantype",instance.getHumantype().ordinal());
 				return root;
 			}
 
@@ -45,11 +45,7 @@ public class Newtype {
 			public void readNBT(Capability<INewtypeCapability> capability,INewtypeCapability instance,EnumFacing side,NBTBase nbt) {
 				NBTTagCompound root = (NBTTagCompound)nbt;
 				instance.setHasShownHumantypeMenu(root.getBoolean("shownHumantypeMenu"));
-				instance.setHumantype((new EHumantypes[] {
-					EHumantypes.OLDTYPE,
-					EHumantypes.CYBER_NEWTYPE,
-					EHumantypes.NEWTYPE
-				})[root.getInteger("humantype")]);
+				instance.setHumantype(EHumantypes.values()[root.getInteger("humantype")]);
 				System.out.println(root.getInteger("humantype"));
 				System.out.println(root.getBoolean("shownHumantypeMenu"));
 			}
@@ -58,6 +54,10 @@ public class Newtype {
 	
 	public static ICapabilityProvider createProvider(INewtypeCapability nc) {
 		return new NewtypeProvider(MAX_NEWTYPE_CAPABILITY,DEFAULT_FACING,nc);
+	}
+	
+	public static INewtypeCapability getNewtype(EntityPlayer entity) {
+		return CapabilityUtils.getCapability(entity,MAX_NEWTYPE_CAPABILITY,DEFAULT_FACING);
 	}
 	
 	@Mod.EventBusSubscriber
@@ -74,6 +74,17 @@ public class Newtype {
 		public static void hasConnected(PlayerEvent.PlayerLoggedInEvent event) {
 			INewtypeCapability nt = CapabilityUtils.getCapability(event.player,MAX_NEWTYPE_CAPABILITY,DEFAULT_FACING);
 			if(!nt.hasShownHumantypeMenu()) PacketHandler.INSTANCE.sendToAll(new PacketHumantype());
+		}
+		
+		@SubscribeEvent
+		public static void playerClone(net.minecraftforge.event.entity.player.PlayerEvent.Clone event) {
+			INewtypeCapability original = getNewtype(event.getOriginal());
+			INewtypeCapability nt = getNewtype(event.getEntityPlayer());
+			
+			if(original != null && nt != null) {
+				nt.setHasShownHumantypeMenu(original.hasShownHumantypeMenu());
+				nt.setHumantype(original.getHumantype());
+			}
 		}
 	}
 }

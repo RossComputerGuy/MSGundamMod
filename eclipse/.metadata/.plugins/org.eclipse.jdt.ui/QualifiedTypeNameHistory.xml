@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="net.minecraft.inventory.EntityEquipmentSlot"/>
-<fullyQualifiedTypeName name="com.spaceboyross.gundam.items.PortableVernierItem"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.network.NetworkRegistry"/>
 <fullyQualifiedTypeName name="net.minecraft.block.Block"/>
@@ -35,7 +33,6 @@
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.registry.EntityRegistry"/>
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.GundamEntities"/>
 <fullyQualifiedTypeName name="javax.annotation.Nullable"/>
-<fullyQualifiedTypeName name="com.spaceboyross.gundam.utils.CapabilityUtils"/>
 <fullyQualifiedTypeName name="net.minecraft.nbt.NBTPrimitive"/>
 <fullyQualifiedTypeName name="net.minecraft.nbt.NBTTagCompound"/>
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.gui.HumantypeGUI"/>
@@ -46,9 +43,7 @@
 <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.utils.UIUtils"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiLabel"/>
-<fullyQualifiedTypeName name="com.spaceboyross.gundam.capabilities.newtype.Newtype"/>
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.capabilities.interfaces.INewtypeCapability"/>
-<fullyQualifiedTypeName name="com.spaceboyross.gundam.enums.EHumantypes"/>
 <fullyQualifiedTypeName name="net.minecraft.item.Item"/>
 <fullyQualifiedTypeName name="com.spaceboyross.gundam.items.SteelIngotItem"/>
 <fullyQualifiedTypeName name="net.minecraft.client.resources.I18n"/>
@@ -60,4 +55,9 @@
 <fullyQualifiedTypeName name="net.minecraft.block.state.pattern.BlockMatcher"/>
 <fullyQualifiedTypeName name="com.google.common.base.Predicate"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.PlayerEvent"/>
+<fullyQualifiedTypeName name="net.minecraftforge.fml.common.gameevent.PlayerEvent"/>
+<fullyQualifiedTypeName name="com.spaceboyross.gundam.utils.CapabilityUtils"/>
+<fullyQualifiedTypeName name="com.spaceboyross.gundam.capabilities.newtype.Newtype"/>
+<fullyQualifiedTypeName name="com.spaceboyross.gundam.enums.EHumantypes"/>
 </qualifiedTypeNameHistroy>
