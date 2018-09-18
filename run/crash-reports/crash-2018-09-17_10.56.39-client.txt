@@ -1,0 +1,143 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 9/17/18 10:56 AM
+Description: Rendering entity in world
+
+java.lang.NullPointerException: Rendering entity in world
+	at com.spaceboyross.gundam.capabilities.human.Human$EventHandler.onRenderPlayer(Human.java:93)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_6_EventHandler_onRenderPlayer_Post.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:179)
+	at net.minecraft.client.renderer.entity.RenderPlayer.doRender(RenderPlayer.java:78)
+	at net.minecraft.client.renderer.entity.RenderPlayer.doRender(RenderPlayer.java:28)
+	at net.minecraft.client.renderer.entity.RenderManager.doRenderEntity(RenderManager.java:390)
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntityStatic(RenderManager.java:374)
+	at net.minecraft.client.renderer.RenderGlobal.renderEntities(RenderGlobal.java:654)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorldPass(EntityRenderer.java:1389)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1303)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1106)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1192)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:436)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:25)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at com.spaceboyross.gundam.capabilities.human.Human$EventHandler.onRenderPlayer(Human.java:93)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_6_EventHandler_onRenderPlayer_Post.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:179)
+	at net.minecraft.client.renderer.entity.RenderPlayer.doRender(RenderPlayer.java:78)
+	at net.minecraft.client.renderer.entity.RenderPlayer.doRender(RenderPlayer.java:28)
+
+-- Entity being rendered --
+Details:
+	Entity Type: null (net.minecraft.client.entity.EntityPlayerSP)
+	Entity ID: 30
+	Entity Name: Player200
+	Entity's Exact location: 189.51, 4.00, -186.42
+	Entity's Block location: World: (189,4,-187), Chunk: (at 13,0,5 in 11,-12; contains blocks 176,0,-192 to 191,255,-177), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+
+-- Renderer details --
+Details:
+	Assigned renderer: net.minecraft.client.renderer.entity.RenderPlayer@303a8f98
+	Location: 0.00,0.00,0.00 - World: (0,0,0), Chunk: (at 0,0,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Rotation: -261.6013
+	Delta: 0.24000311
+Stacktrace:
+	at net.minecraft.client.renderer.entity.RenderManager.doRenderEntity(RenderManager.java:390)
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntityStatic(RenderManager.java:374)
+	at net.minecraft.client.renderer.RenderGlobal.renderEntities(RenderGlobal.java:654)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorldPass(EntityRenderer.java:1389)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1303)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player200'/30, l='MpServer', x=189.51, y=4.00, z=-186.42]]
+	Chunk stats: MultiplayerChunkCache: 289, 289
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (194,4,-189), Chunk: (at 2,0,3 in 12,-12; contains blocks 192,0,-192 to 207,255,-177), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Level time: 39658 game time, 1845 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 3 total; [MSMob['MSZ-006 Zeta Gundam'/14, l='MpServer', x=186.26, y=4.00, z=-188.45], EntityPlayerSP['Player200'/30, l='MpServer', x=189.51, y=4.00, z=-186.42], MSMob['RX-78-2 Gundam'/15, l='MpServer', x=201.90, y=4.00, z=-191.64]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:456)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2878)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:457)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:25)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12
+	Operating System: Linux (amd64) version 4.15.0-34-generic
+	Java Version: 1.8.0_181, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 609035200 bytes (580 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.40 Powered by Forge 14.21.1.2443 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	minecraft{1.12} [Minecraft] (minecraft.jar) 
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.12-14.21.1.2443.jar) 
+	UCHIJAAAA	forge{14.21.1.2443} [Minecraft Forge] (forgeSrc-1.12-14.21.1.2443.jar) 
+	UCHIJAAAA	gundam{1.0} [MS Gundam Mod] (bin) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 390.48' Renderer: 'NVS 4200M/PCIe/SSE2'
+	Launched Version: 1.12
+	LWJGL: 2.9.4
+	OpenGL: NVS 4200M/PCIe/SSE2 GL version 4.6.0 NVIDIA 390.48, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i7-2640M CPU @ 2.80GHz

@@ -1,0 +1,11 @@
+package com.spaceboyross.gundam.utils;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+
+public class NetworkUtils {
+	
+	public static void sendToClient(IMessage message,EntityPlayer player) {
+		
+	}
+}

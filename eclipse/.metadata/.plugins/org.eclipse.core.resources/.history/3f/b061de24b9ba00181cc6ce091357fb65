@@ -1,0 +1,50 @@
+package com.spaceboyross.gundam.net;
+
+import com.spaceboyross.gundam.gui.HumantypeGUI;
+import com.spaceboyross.gundam.gui.NewtypeGUI;
+
+import io.netty.buffer.ByteBuf;
+import net.minecraft.client.Minecraft;
+import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
+import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+
+public class PacketGUI implements IMessage {
+	
+	private int ID;
+	private UUID uuid;
+	
+	public PacketGUI(int ID,UUID uuid) {
+		this.ID = ID;
+		this.uuid = uuid;
+	}
+	
+	@Override
+    public void fromBytes(ByteBuf buf) {
+		this.ID = buf.readInt();
+	}
+
+    @Override
+    public void toBytes(ByteBuf buf) {
+    	buf.writeInt(this.ID);
+    }
+    
+    public static class Handler implements IMessageHandler<PacketGUI,IMessage> {
+        @Override
+        public IMessage onMessage(PacketGUI message,MessageContext ctx) {
+        	Minecraft.getMinecraft().addScheduledTask(() -> handle(message,ctx));
+        	return null;
+        }
+        
+        private void handle(PacketGUI message,MessageContext ctx) {
+        	if(message.uuid != null && Minecraft.getMinecraft().player.getUniqueID().equals(message.uuid)) {}
+        	switch(message.ID) {
+        		case 0: Minecraft.getMinecraft().displayGuiScreen(new HumantypeGUI(Minecraft.getMinecraft().player));
+        			break;
+        		case 1: Minecraft.getMinecraft().displayGuiScreen(new NewtypeGUI(Minecraft.getMinecraft().player));
+    				break;
+        	}
+        	
+        }
+    }
+}

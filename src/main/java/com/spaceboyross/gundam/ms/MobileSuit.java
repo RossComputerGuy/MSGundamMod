@@ -8,6 +8,8 @@ import java.util.Map;
 import org.lwjgl.opengl.GL11;
 
 import com.spaceboyross.gundam.GundamMod;
+import com.spaceboyross.gundam.capabilities.human.Human;
+import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
 
 import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.client.renderer.entity.Render;
@@ -15,6 +17,8 @@ import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -107,11 +111,72 @@ public abstract class MobileSuit {
 	public static class MSMob extends EntityMob {
 		
 		public float scale = 1.0f;
+		private EntityPlayer pilot;
 		
 		public MSMob(World worldIn) {
 			super(worldIn);
 			this.heal(Float.MAX_VALUE);
 		}
+		
+		@Override
+		public boolean processInteract(EntityPlayer player,EnumHand hand) {
+			if(player.inventory.getStackInSlot(player.inventory.currentItem).getItem().getUnlocalizedName().equals("item."+GundamMod.MODID+".wrench")) {
+				// TODO: show customization interface
+			} else {
+				this.setPilot(player);
+			}
+			return true;
+		}
+		
+		public void setPilot(EntityPlayer player) {
+			if(player == null) {
+				IHumanCapability human = Human.getHuman(this.pilot);
+				human.setMS(null);
+				this.pilot = null;
+			} else {
+				this.pilot = player;
+				IHumanCapability human = Human.getHuman(this.pilot);
+				human.setMS(this);
+			}
+		}
+		
+		public EntityPlayer getPilot() {
+			return this.pilot;
+		}
+		
+		public MobileSuit getMSRegistryEntry() {
+			return MSRegistry.getMobileSuit(this.getName());
+		}
+		
+		/*@Override
+		public boolean canRiderInteract() {
+			return true;
+		}
+		
+		@Override
+		public boolean canBeSteered() {
+			return true;
+		}
+		
+		private void updateRiderPosition(Entity entity) {
+			if(entity != null) {
+				entity.setPosition(this.posX,this.posY+getMountedYOffset()+entity.getYOffset(),this.posZ+2.0);
+				this.rotationPitch = entity.rotationPitch;
+			}
+		}
+		
+		@Override
+		public void updatePassenger(Entity passenger) {
+			this.updateRiderPosition(passenger);
+			passenger.setInvisible(true);
+		}
+		
+		@Override
+		public void removePassenger(Entity passenger) {
+			if(passenger != null) passenger.setPosition(this.posX,this.posY,this.posZ);
+			super.removePassenger(passenger);
+			passenger.setInvisible(false);
+		}*/
 	}
 	
 	public static class MSRender extends RenderLiving<MSMob> {

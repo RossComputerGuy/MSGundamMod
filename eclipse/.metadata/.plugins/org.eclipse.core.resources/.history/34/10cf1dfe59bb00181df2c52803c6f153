@@ -1,0 +1,22 @@
+package com.spaceboyross.gundam.capabilities.interfaces;
+
+import com.spaceboyross.gundam.enums.EHumantypes;
+import com.spaceboyross.gundam.ms.MobileSuit;
+
+import net.minecraft.entity.player.EntityPlayer;
+
+public interface IHumanCapability {
+	// Newtype
+	// TODO: add newtype events
+	
+	EntityPlayer getPlayer();
+	
+	boolean hasShownHumantypeMenu();
+	void setHasShownHumantypeMenu(boolean v);
+	
+	EHumantypes getHumantype();
+	void setHumantype(EHumantypes v);
+	
+	void syncToServer();
+	void syncToClient();
+}

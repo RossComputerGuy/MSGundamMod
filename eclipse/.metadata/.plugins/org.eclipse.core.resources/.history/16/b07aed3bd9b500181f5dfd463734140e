@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.ms.armaments;
-
-import com.spaceboyross.gundam.ms.MobileSuitArmament;
-
-public class BeamSaberMSArmament extends MobileSuitArmament {
-
-}

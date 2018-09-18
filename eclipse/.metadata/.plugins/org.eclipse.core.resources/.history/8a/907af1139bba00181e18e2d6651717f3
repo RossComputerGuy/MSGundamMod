@@ -1,0 +1,22 @@
+package com.spaceboyross.gundam.capabilities.mobilesuitpilot;
+
+import com.spaceboyross.gundam.capabilities.interfaces.IMobileSuitPilotCapability;
+import com.spaceboyross.gundam.ms.MobileSuit.MSMob;
+
+public class MobileSuitPilotCapability implements IMobileSuitPilotCapability {
+	
+	private MSMob ms = null;
+	
+	public MobileSuitPilotCapability() {}
+
+	@Override
+	public MSMob getMS() {
+		return this.ms;
+	}
+
+	@Override
+	public void setMS(MSMob ms) {
+		this.ms = ms;
+	}
+
+}

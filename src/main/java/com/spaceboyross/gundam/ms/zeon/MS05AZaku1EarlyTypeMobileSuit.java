@@ -1,5 +1,6 @@
 package com.spaceboyross.gundam.ms.zeon;
 
+import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
 import com.spaceboyross.gundam.ms.zeon.MS04PrototypeZakuMobileSuit.MSMob;
 
@@ -28,6 +29,11 @@ public class MS05AZaku1EarlyTypeMobileSuit extends MobileSuit {
 			super(worldIn);
 			this.scale = 4.8f;
 			this.setSize(1.0f*this.scale,2.0f*this.scale);
+		}
+		
+		@Override
+		public MobileSuit getMSRegistryEntry() {
+			return MSRegistry.getMobileSuit("MS-05A Zaku I Early Type");
 		}
 	}
 }

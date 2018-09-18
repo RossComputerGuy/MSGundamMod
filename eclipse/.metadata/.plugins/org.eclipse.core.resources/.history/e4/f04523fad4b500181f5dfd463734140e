@@ -1,8 +1,0 @@
-package com.spaceboyross.gundam;
-
-import java.util.Map;
-
-public class MSRegistry {
-	
-	private static Map<String,MobileSuit> registry = new HashMap<>();
-}

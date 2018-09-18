@@ -19,8 +19,12 @@ public class OreGen implements IWorldGenerator {
 
 	@Override
 	public void generate(Random random,int chunkX,int chunkZ,World world,IChunkGenerator chunkGenerator,IChunkProvider chunkProvider) {
-		if(world.provider.getDimension() == GundamDimensions.moonID) {
-			this.runGenerator(GundamBlocks.lunaTitaniumOre.getDefaultState(),7,10,12,50,BlockMatcher.forBlock(GundamBlocks.moonRock),world,random,chunkX,chunkZ);
+		switch(world.provider.getDimension()) {
+			default:
+				if(world.provider.getDimension() == GundamDimensions.moonID) {
+					this.runGenerator(GundamBlocks.lunaTitaniumOre.getDefaultState(),7,10,12,50,BlockMatcher.forBlock(GundamBlocks.moonRock),world,random,chunkX,chunkZ);
+				}
+				break;
 		}
 	}
 	

@@ -6,6 +6,7 @@ entity.gundam.FullFrontal.name=Full Frontal
 entity.gundam.MasterAsia.name=Master Asia
 entity.gundam.MS-04_Prototype_Zaku.name=MS-04 Prototype Zaku
 entity.gundam.MS-05A_Zaku_I_Early_Type.name=MS-05A Zaku I Early Type
+entity.gundam.MSZ-006_Zeta_Gundam.name=MSZ-006 Zeta Gundam
 entity.gundam.QuattroBajeena.name=Quattro Bajeena
 entity.gundam.RX-78-2_Gundam.name=RX-78-2 Gundam
 
@@ -16,6 +17,9 @@ gui.gundam.ms_crafting_station.next=Next
 gui.gundam.humantype.select=Select your Humantype
 gui.gundam.humantype.newtype=Newtype
 gui.gundam.humantype.oldtype=Oldtype
+
+hud.gundam.newtype.name=Newtype Information
+hud.gundam.newtype.mob=%s (Health=%f) (X=%d, Y=%d, Z=%d)
 
 itemGroup.gundam=MS Gundam Mod
 

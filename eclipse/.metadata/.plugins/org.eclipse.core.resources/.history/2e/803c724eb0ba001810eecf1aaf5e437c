@@ -1,0 +1,53 @@
+package com.spaceboyross.gundam;
+
+import javax.annotation.Nullable;
+
+import com.spaceboyross.gundam.entities.EntityAmuroRay;
+import com.spaceboyross.gundam.entities.EntityBrightNoa;
+import com.spaceboyross.gundam.entities.EntityCharAznable;
+import com.spaceboyross.gundam.entities.EntityDomonKasshu;
+import com.spaceboyross.gundam.entities.EntityFullFrontal;
+import com.spaceboyross.gundam.entities.EntityHeeroYuy;
+import com.spaceboyross.gundam.entities.EntityMasterAsia;
+import com.spaceboyross.gundam.entities.EntityQuattroBajeena;
+import com.spaceboyross.gundam.entities.render.SkinRender;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+public class GundamEntities {
+	
+	public static int ID = 1;
+	
+	private static void registerCharacter(Class<? extends Entity> entity,String name,String id) {
+		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,id),entity,GundamMod.MODID+"."+name,GundamEntities.ID++,GundamMod.instance,64,3,true,0x996600+(GundamEntities.ID-1),0x00ff00+(GundamEntities.ID-1));
+	}
+	
+	public static void init() {
+		
+		registerCharacter(EntityAmuroRay.class,"AmuroRay","amuro_ray");
+		registerCharacter(EntityBrightNoa.class,"BrightNoa","bright_noa");
+		registerCharacter(EntityCharAznable.class,"CharAznable","char_aznable");
+		registerCharacter(EntityDomonKasshu.class,"DomonKasshu","domon_kasshu");
+		registerCharacter(EntityFullFrontal.class,"FullFrontal","full_frontal");
+		registerCharacter(EntityHeeroYuy.class,"HeeroYuy","heero_yuy");
+		registerCharacter(EntityMasterAsia.class,"MasterAsia","master_asia");
+		registerCharacter(EntityQuattroBajeena.class,"QuattroBajeena","quattro_bajeena");
+	}
+	
+	@SideOnly(Side.CLIENT)
+	public static void initModels() {
+		RenderingRegistry.registerEntityRenderingHandler(EntityAmuroRay.class,new SkinRender.Factory(new ResourceLocation(GundamMod.MODID,"textures/entity/amuro_ray.png")));
+		RenderingRegistry.registerEntityRenderingHandler(EntityBrightNoa.class,new SkinRender.Factory(new ResourceLocation(GundamMod.MODID,"textures/entity/bright_noa.png")));
+		RenderingRegistry.registerEntityRenderingHandler(EntityCharAznable.class,new SkinRender.Factory(new ResourceLocation(GundamMod.MODID,"textures/entity/char_aznable.png")));
+		RenderingRegistry.registerEntityRenderingHandler(EntityDomonKasshu.class,new SkinRender.Factory(new ResourceLocation(GundamMod.MODID,"textures/entity/domon_kasshu.png")));
+		RenderingRegistry.registerEntityRenderingHandler(EntityFullFrontal.class,new SkinRender.Factory(new ResourceLocation(GundamMod.MODID,"textures/entity/full_frontal.png")));
+		RenderingRegistry.registerEntityRenderingHandler(EntityHeeroYuy.class,new SkinRender.Factory(new ResourceLocation(GundamMod.MODID,"textures/entity/heero_yuy.png")));
+		RenderingRegistry.registerEntityRenderingHandler(EntityMasterAsia.class,new SkinRender.Factory(new ResourceLocation(GundamMod.MODID,"textures/entity/master_asia.png")));
+		RenderingRegistry.registerEntityRenderingHandler(EntityQuattroBajeena.class,new SkinRender.Factory(new ResourceLocation(GundamMod.MODID,"textures/entity/quattro_bajeena.png")));
+	}
+}

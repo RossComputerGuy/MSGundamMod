@@ -1,5 +1,10 @@
 package com.spaceboyross.gundam.net;
 
+import com.spaceboyross.gundam.net.client.PacketGUI;
+import com.spaceboyross.gundam.net.client.PacketHumanClient;
+import com.spaceboyross.gundam.net.server.PacketHumanServer;
+import com.spaceboyross.gundam.net.server.PacketMobileSuit;
+
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
@@ -23,7 +28,9 @@ public class PacketHandler {
 
     public static void registerMessages() {
         PacketHandler.INSTANCE.registerMessage(PacketMobileSuit.Handler.class,PacketMobileSuit.class,PacketHandler.nextID(),Side.SERVER);
-        PacketHandler.INSTANCE.registerMessage(PacketHumantype.Handler.class,PacketHumantype.class,PacketHandler.nextID(),Side.CLIENT);
-        PacketHandler.INSTANCE.registerMessage(PacketNewtype.Handler.class,PacketNewtype.class,PacketHandler.nextID(),Side.SERVER);
+        PacketHandler.INSTANCE.registerMessage(PacketHumanServer.Handler.class,PacketHumanServer.class,PacketHandler.nextID(),Side.SERVER);
+        
+        PacketHandler.INSTANCE.registerMessage(PacketGUI.Handler.class,PacketGUI.class,PacketHandler.nextID(),Side.CLIENT);
+        PacketHandler.INSTANCE.registerMessage(PacketHumanClient.Handler.class,PacketHumanClient.class,PacketHandler.nextID(),Side.CLIENT);
     }
 }

@@ -1,5 +1,6 @@
 package com.spaceboyross.gundam.ms.gundams;
 
+import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
 import com.spaceboyross.gundam.ms.MobileSuit.MSMob;
 import com.spaceboyross.gundam.ms.armaments.BeamSaberMSArmament;
@@ -34,6 +35,11 @@ public class RX782GundamMobileSuit extends MobileSuit {
 			super(worldIn);
 			this.scale = 5.0f;
 			this.setSize(1.0f*this.scale,2.0f*this.scale);
+		}
+		
+		@Override
+		public MobileSuit getMSRegistryEntry() {
+			return MSRegistry.getMobileSuit("RX-78-2 Gundam");
 		}
 	}
 }

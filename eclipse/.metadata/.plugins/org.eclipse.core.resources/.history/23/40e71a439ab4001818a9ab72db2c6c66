@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.entities;
-
-import net.minecraft.client.renderer.entity.RenderLiving;
-
-public class RenderCharAznable extends RenderLiving<EntityCharAznable> {
-
-}

@@ -7,7 +7,7 @@ import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
 import com.spaceboyross.gundam.ms.MobileSuitArmament;
 import com.spaceboyross.gundam.net.PacketHandler;
-import com.spaceboyross.gundam.net.PacketMobileSuit;
+import com.spaceboyross.gundam.net.server.PacketMobileSuit;
 import com.spaceboyross.gundam.utils.UIUtils;
 
 import net.minecraft.client.gui.GuiButton;

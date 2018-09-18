@@ -1,8 +1,0 @@
-package com.spaceboyross.gundam;
-
-public class Config {
-	
-	public static void readConfig() {
-		Configuration cfg = CommonProxy.config;
-	}
-}

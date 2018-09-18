@@ -10,7 +10,8 @@ public class InputHandler {
 	@SubscribeEvent
 	public void onKeyInput(InputEvent.KeyInputEvent event) {
 		if(KeyBindings.useVernier.isPressed() && Minecraft.getMinecraft().player.inventory.armorItemInSlot(2).getItem().getUnlocalizedName().equals("item."+GundamMod.MODID+".portable_vernier") && Minecraft.getMinecraft().player.motionY <= 0.0) {
-			Minecraft.getMinecraft().player.addVelocity(Minecraft.getMinecraft().player.getLookVec().x,1/4+Minecraft.getMinecraft().player.getLookVec().y,Minecraft.getMinecraft().player.getLookVec().z);
+			if(!Minecraft.getMinecraft().player.capabilities.isCreativeMode) Minecraft.getMinecraft().player.capabilities.allowFlying = !Minecraft.getMinecraft().player.capabilities.allowFlying;
+			Minecraft.getMinecraft().player.capabilities.isFlying = !Minecraft.getMinecraft().player.capabilities.isFlying;
 		}
 	}
 }

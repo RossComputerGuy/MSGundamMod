@@ -1,0 +1,5 @@
+package com.spaceboyross.gundam.capabilities.interfaces;
+
+public interface IMobileSuitPilotCapability {
+
+}

@@ -1,0 +1,63 @@
+package com.spaceboyross.gundam.capabilities.human;
+
+import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
+import com.spaceboyross.gundam.enums.EHumantypes;
+import com.spaceboyross.gundam.ms.MobileSuit.MSMob;
+import com.spaceboyross.gundam.net.PacketHandler;
+import com.spaceboyross.gundam.net.PacketHuman;
+
+import net.minecraft.entity.player.EntityPlayer;
+
+public class HumanCapability implements IHumanCapability {
+	
+	private MSMob ms = null;
+	
+	private boolean shownHumantypeMenu = false;
+	private EHumantypes humantype = EHumantypes.OLDTYPE;
+	private EntityPlayer player;
+	
+	public HumanCapability(EntityPlayer player) {
+		this.player = player;
+	}
+
+	@Override
+	public EntityPlayer getPlayer() {
+		return this.player;
+	}
+
+	@Override
+	public boolean hasShownHumantypeMenu() {
+		return this.shownHumantypeMenu;
+	}
+
+	@Override
+	public void setHasShownHumantypeMenu(boolean v) {
+		this.shownHumantypeMenu = v;
+	}
+
+	@Override
+	public EHumantypes getHumantype() {
+		return this.humantype;
+	}
+
+	@Override
+	public void setHumantype(EHumantypes v) {
+		this.humantype = v;
+	}
+	
+	@Override
+	public void syncToServer() {
+		PacketHandler.INSTANCE.sendToServer(new PacketHuman(this));
+	}
+
+	@Override
+	public MSMob getMS() {
+		return this.ms;
+	}
+
+	@Override
+	public void setMS(MSMob ms) {
+		this.ms = ms;
+	}
+
+}
