@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="net.minecraft.world.World"/>
-    <fullyQualifiedTypeName name="java.lang.Float"/>
-    <fullyQualifiedTypeName name="net.minecraftforge.fml.common.registry.EntityRegistry"/>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.GundamEntities"/>
-    <fullyQualifiedTypeName name="javax.annotation.Nullable"/>
-    <fullyQualifiedTypeName name="net.minecraft.nbt.NBTPrimitive"/>
     <fullyQualifiedTypeName name="net.minecraft.nbt.NBTTagCompound"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.gui.HumantypeGUI"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.net.PacketMobileSuit"/>
@@ -49,7 +43,6 @@
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.net.client.PacketHumanClient"/>
     <fullyQualifiedTypeName name="net.minecraft.client.resources.I18n"/>
     <fullyQualifiedTypeName name="net.minecraftforge.event.entity.living.LivingEvent"/>
-    <fullyQualifiedTypeName name="net.minecraft.util.math.AxisAlignedBB"/>
     <fullyQualifiedTypeName name="net.minecraft.util.math.Vec3d"/>
     <fullyQualifiedTypeName name="net.minecraft.entity.Entity"/>
     <fullyQualifiedTypeName name="java.util.List"/>
@@ -60,4 +53,11 @@
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.MobileSuit"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.MobileSuit.MSMob"/>
     <fullyQualifiedTypeName name="net.minecraftforge.client.event.RenderPlayerEvent.Post"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.network.NetworkPlayerInfo"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="net.minecraftforge.fml.relauncher.ReflectionHelper"/>
+    <fullyQualifiedTypeName name="net.minecraftforge.client.event.RenderPlayerEvent.Specials"/>
+    <fullyQualifiedTypeName name="net.minecraftforge.client.event.RenderPlayerEvent.Specials.Post"/>
+    <fullyQualifiedTypeName name="net.minecraft.util.math.AxisAlignedBB"/>
+    <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.MobileSuit.MSRender"/>
 </qualifiedTypeNameHistroy>

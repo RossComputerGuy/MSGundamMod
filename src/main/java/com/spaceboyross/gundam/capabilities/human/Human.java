@@ -6,22 +6,19 @@ import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
 import com.spaceboyross.gundam.capabilities.providers.SimpleProvider;
 import com.spaceboyross.gundam.enums.EHumantypes;
-import com.spaceboyross.gundam.gui.hud.NewtypeHUD;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.net.PacketHandler;
 import com.spaceboyross.gundam.net.client.PacketGUI;
 import com.spaceboyross.gundam.net.client.PacketHumanClient;
 import com.spaceboyross.gundam.utils.CapabilityUtils;
 import com.spaceboyross.gundam.utils.NetworkUtils;
 
-import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityInject;
@@ -96,15 +93,22 @@ public class Human {
 		}
 		
 		@SubscribeEvent
-		public static void onRenderPlayer(RenderPlayerEvent.Post event) {
+		public static void onRenderPlayer(RenderPlayerEvent.Pre event) {
 			EntityPlayer player = event.getEntityPlayer();
 			IHumanCapability nt = Human.getHuman(player);
 			MobileSuit.MSMob msmob = nt.getMS();
 			if(msmob != null) {
 				MobileSuit ms = msmob.getMSRegistryEntry();
-				ResourceLocation texture = new ResourceLocation(ms.getBaseResourceLocation()+".png");
-				event.getRenderer().bindTexture(texture);
-				GL11.glScalef(msmob.scale,msmob.scale,msmob.scale);
+				event.getRenderer().bindTexture(new ResourceLocation(ms.getBaseResourceLocation()+".png"));
+				event.setCanceled(true);
+				GlStateManager.pushMatrix();
+				event.getRenderer().getMainModel().bipedHead.render(0.0625F*msmob.scale);
+				event.getRenderer().getMainModel().bipedBody.render(0.0625F*msmob.scale);
+				event.getRenderer().getMainModel().bipedLeftLeg.render(0.0625F*msmob.scale);
+				event.getRenderer().getMainModel().bipedRightLeg.render(0.0625F*msmob.scale);
+				event.getRenderer().getMainModel().bipedLeftArm.render(0.0625F*msmob.scale);
+				event.getRenderer().getMainModel().bipedRightArm.render(0.0625F*msmob.scale);
+				GlStateManager.popMatrix();
 			}
 		}
 	}

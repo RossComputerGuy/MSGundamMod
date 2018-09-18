@@ -1,30 +1,30 @@
-[09:52:33] [main/INFO]: Setting user: Player351
-[09:52:38] [main/WARN]: Skipping bad option: lastServer:
-[09:52:38] [main/INFO]: LWJGL Version: 2.9.4
-[09:52:42] [main/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MS Gundam Mod
-[09:52:44] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[09:52:44] [Thread-4/INFO]: Initializing LWJGL OpenAL
-[09:52:44] [Thread-4/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[09:52:44] [Thread-4/INFO]: OpenAL initialized.
-[09:52:44] [Sound Library Loader/INFO]: Sound engine started
-[09:52:47] [main/INFO]: Created: 1024x512 textures-atlas
-[09:52:50] [main/WARN]: Skipping bad option: lastServer:
-[09:52:50] [main/INFO]: Narrator library successfully loaded
-[09:52:51] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
-[09:52:55] [Server thread/INFO]: Starting integrated minecraft server version 1.12
-[09:52:55] [Server thread/INFO]: Generating keypair
-[09:52:56] [Server thread/INFO]: Loaded 488 advancements
-[09:52:56] [Server thread/INFO]: Preparing start region for level 0
-[09:52:57] [Server thread/INFO]: Changing view distance to 8, from 10
-[09:52:59] [Server thread/INFO]: Player351[local:E:c5dcd86e] logged in with entity id 102 at (631.218408507805, 4.0, -803.5138092250261)
-[09:52:59] [Server thread/INFO]: Player351 joined the game
-[09:53:00] [Server thread/INFO]: Saving and pausing game...
-[09:53:00] [Server thread/INFO]: Saving chunks for level 'Development Testing'/overworld
-[09:53:00] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_nether
-[09:53:00] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_end
-[09:53:00] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
-[09:53:00] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
-[09:53:00] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@24f42f9b[id=3f18158e-f2c1-3129-a134-25632e6b98da,name=Player351,properties={},legacy=false]
+[13:56:15] [main/INFO]: Setting user: Player155
+[13:56:20] [main/WARN]: Skipping bad option: lastServer:
+[13:56:20] [main/INFO]: LWJGL Version: 2.9.4
+[13:56:25] [main/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MS Gundam Mod
+[13:56:27] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[13:56:27] [Thread-4/INFO]: Initializing LWJGL OpenAL
+[13:56:27] [Thread-4/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[13:56:27] [Thread-4/INFO]: OpenAL initialized.
+[13:56:27] [Sound Library Loader/INFO]: Sound engine started
+[13:56:30] [main/INFO]: Created: 1024x512 textures-atlas
+[13:56:33] [main/WARN]: Skipping bad option: lastServer:
+[13:56:34] [main/INFO]: Narrator library successfully loaded
+[13:56:35] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[13:56:39] [Server thread/INFO]: Starting integrated minecraft server version 1.12
+[13:56:39] [Server thread/INFO]: Generating keypair
+[13:56:41] [Server thread/INFO]: Loaded 488 advancements
+[13:56:41] [Server thread/INFO]: Preparing start region for level 0
+[13:56:42] [Server thread/INFO]: Changing view distance to 8, from 10
+[13:56:43] [Server thread/INFO]: Player155[local:E:367d53c7] logged in with entity id 94 at (636.0406318214708, 4.0, -796.1978995484696)
+[13:56:43] [Server thread/INFO]: Player155 joined the game
+[13:56:44] [Server thread/INFO]: Saving and pausing game...
+[13:56:44] [Server thread/INFO]: Saving chunks for level 'Development Testing'/overworld
+[13:56:44] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_nether
+[13:56:44] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_end
+[13:56:44] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
+[13:56:44] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
+[13:56:44] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@19c38943[id=60d19c6d-8381-348f-9d23-cb28708609fc,name=Player155,properties={},legacy=false]
 com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:79) ~[YggdrasilAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:180) [YggdrasilMinecraftSessionService.class:?]
@@ -46,43 +46,23 @@ com.mojang.authlib.exceptions.AuthenticationException: The client has sent too m
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_181]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_181]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
-[09:53:05] [Server thread/INFO]: Stopping server
-[09:53:05] [Server thread/INFO]: Saving players
-[09:53:05] [Server thread/INFO]: Saving worlds
-[09:53:05] [Server thread/INFO]: Saving chunks for level 'Development Testing'/overworld
-[09:53:05] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_nether
-[09:53:05] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_end
-[09:53:05] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
-[09:53:05] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
-[09:53:06] [main/FATAL]: Reported exception thrown!
-net.minecraft.util.ReportedException: Rendering entity in world
-	at net.minecraft.client.renderer.entity.RenderManager.doRenderEntity(RenderManager.java:432) ~[RenderManager.class:?]
-	at net.minecraft.client.renderer.entity.RenderManager.renderEntityStatic(RenderManager.java:374) ~[RenderManager.class:?]
-	at net.minecraft.client.renderer.RenderGlobal.renderEntities(RenderGlobal.java:654) ~[RenderGlobal.class:?]
-	at net.minecraft.client.renderer.EntityRenderer.renderWorldPass(EntityRenderer.java:1389) ~[EntityRenderer.class:?]
-	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1303) ~[EntityRenderer.class:?]
-	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1106) ~[EntityRenderer.class:?]
-	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1192) ~[Minecraft.class:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:436) [Minecraft.class:?]
-	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
-	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
-	at GradleStart.main(GradleStart.java:25) [start/:?]
-Caused by: java.lang.NullPointerException
-	at com.spaceboyross.gundam.capabilities.human.Human$EventHandler.onRenderPlayer(Human.java:105) ~[Human$EventHandler.class:?]
-	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_7_EventHandler_onRenderPlayer_Post.invoke(.dynamic) ~[?:?]
-	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90) ~[ASMEventHandler.class:?]
-	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:179) ~[EventBus.class:?]
-	at net.minecraft.client.renderer.entity.RenderPlayer.doRender(RenderPlayer.java:78) ~[RenderPlayer.class:?]
-	at net.minecraft.client.renderer.entity.RenderPlayer.doRender(RenderPlayer.java:28) ~[RenderPlayer.class:?]
-	at net.minecraft.client.renderer.entity.RenderManager.doRenderEntity(RenderManager.java:390) ~[RenderManager.class:?]
-	... 20 more
+[13:57:03] [Server thread/INFO]: Saving and pausing game...
+[13:57:03] [Server thread/INFO]: Saving chunks for level 'Development Testing'/overworld
+[13:57:03] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_nether
+[13:57:03] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_end
+[13:57:03] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
+[13:57:03] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
+[13:57:04] [Server thread/INFO]: Stopping server
+[13:57:04] [Server thread/INFO]: Saving players
+[13:57:04] [Server thread/INFO]: Player155 lost connection: Disconnected
+[13:57:04] [Server thread/INFO]: Player155 left the game
+[13:57:04] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[13:57:04] [Server thread/INFO]: Saving worlds
+[13:57:04] [Server thread/INFO]: Saving chunks for level 'Development Testing'/overworld
+[13:57:04] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_nether
+[13:57:04] [Server thread/INFO]: Saving chunks for level 'Development Testing'/the_end
+[13:57:04] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
+[13:57:04] [Server thread/INFO]: Saving chunks for level 'Development Testing'/gundam
+[13:57:05] [main/INFO]: Stopping!
+[13:57:05] [main/INFO]: SoundSystem shutting down...
+[13:57:05] [main/WARN]: Author: Paul Lamb, www.paulscode.com

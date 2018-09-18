@@ -16,8 +16,8 @@ public class MSRegistry {
 	private static Map<String,MobileSuit> registry = new HashMap<>();
 	
 	public static void register(MobileSuit ms) {
-		if(MSRegistry.registry.containsKey(ms.getModel())) return;
-		MSRegistry.registry.put(ms.getModel(),ms);
+		if(MSRegistry.registry.containsKey(ms.getModel()+" "+ms.getName())) return;
+		MSRegistry.registry.put(ms.getModel()+" "+ms.getName(),ms);
 		
 		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,(ms.getModel()+" "+ms.getName()).replaceAll(" ","_").toLowerCase()),ms.createEntity(null,new Vec3d(0.0,0.0,0.0)).getClass(),GundamMod.MODID+"."+(ms.getModel()+"_"+ms.getName()).replaceAll(" ","_"),GundamEntities.ID++,GundamMod.instance,64,3,true,0x996600+(GundamEntities.ID-1),0x00ff00+(GundamEntities.ID-1));
 		RenderingRegistry.registerEntityRenderingHandler(ms.createEntity(null,new Vec3d(0.0,0.0,0.0)).getClass(),ms.FACTORY);
@@ -31,7 +31,7 @@ public class MSRegistry {
 		String keys[] = new String[MSRegistry.registry.keySet().size()];
 		keys = MSRegistry.registry.keySet().toArray(keys);
 		for(int i = 0;i < MSRegistry.registry.size();i++) {
-			if(keys[i].equals(ms.getModel())) return i;
+			if(keys[i].equals(ms.getModel()+" "+ms.getName())) return i;
 		}
 		return -1;
 	}
