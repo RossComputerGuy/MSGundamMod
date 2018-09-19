@@ -91,25 +91,5 @@ public class Human {
 				nt.setHumantype(original.getHumantype());
 			}
 		}
-		
-		@SubscribeEvent
-		public static void onRenderPlayer(RenderPlayerEvent.Pre event) {
-			EntityPlayer player = event.getEntityPlayer();
-			IHumanCapability nt = Human.getHuman(player);
-			MobileSuit.MSMob msmob = nt.getMS();
-			if(msmob != null) {
-				MobileSuit ms = msmob.getMSRegistryEntry();
-				event.getRenderer().bindTexture(new ResourceLocation(ms.getBaseResourceLocation()+".png"));
-				event.setCanceled(true);
-				GlStateManager.pushMatrix();
-				event.getRenderer().getMainModel().bipedHead.render(0.0625F*msmob.scale);
-				event.getRenderer().getMainModel().bipedBody.render(0.0625F*msmob.scale);
-				event.getRenderer().getMainModel().bipedLeftLeg.render(0.0625F*msmob.scale);
-				event.getRenderer().getMainModel().bipedRightLeg.render(0.0625F*msmob.scale);
-				event.getRenderer().getMainModel().bipedLeftArm.render(0.0625F*msmob.scale);
-				event.getRenderer().getMainModel().bipedRightArm.render(0.0625F*msmob.scale);
-				GlStateManager.popMatrix();
-			}
-		}
 	}
 }

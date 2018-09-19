@@ -34,6 +34,7 @@ public class HumanCapability implements IHumanCapability {
 	
 	@Override
 	public MobileSuit.MSMob getMS() {
+		if(this.ms == null && this.player != null && this.player.getRidingEntity() != null && this.player.getRidingEntity() instanceof MobileSuit.MSMob) return (MobileSuit.MSMob)this.player.getRidingEntity();
 		return this.ms;
 	}
 	

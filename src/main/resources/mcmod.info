@@ -9,7 +9,7 @@
   "updateUrl": "",
   "authorList": ["Spaceboy Ross"],
   "credits": "The Gundam community",
-  "logoFile": "",
+  "logoFile": "assets/gundam/logo.png",
   "screenshots": [],
   "dependencies": []
 }
