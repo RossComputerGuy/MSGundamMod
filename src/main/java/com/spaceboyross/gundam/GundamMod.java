@@ -11,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.spaceboyross.gundam.proxy.CommonProxy;
 
-@Mod(modid=GundamMod.MODID,name=GundamMod.NAME,version=GundamMod.VERSION,useMetadata=true,guiFactory="com.spaceboyross.gundam.gui.GUIFactory",updateJSON="https://github.com/SpaceboyRoss01/MSGundamMod/raw/master/src/main/resources/assets/gundam/versionUpdater.json")
+@Mod(modid=GundamMod.MODID,name=GundamMod.NAME,version=GundamMod.VERSION,useMetadata=true,guiFactory="com.spaceboyross.gundam.gui.GUIFactory",updateJSON="https://github.com/SpaceboyRoss01/MSGundamMod/raw/master/versionUpdater.json")
 public class GundamMod {
 	
     public static final String MODID = "gundam";
