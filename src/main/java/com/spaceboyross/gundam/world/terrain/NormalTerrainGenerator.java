@@ -13,21 +13,21 @@ import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
 public class NormalTerrainGenerator {
 	
-	private World world;
-    private Random random;
-    private final double[] heightMap;
-    private double[] mainNoiseRegion;
-    private double[] minLimitRegion;
-    private double[] maxLimitRegion;
-    private double[] depthRegion;
-    private NoiseGeneratorOctaves minLimitPerlinNoise;
-    private NoiseGeneratorOctaves maxLimitPerlinNoise;
-    private NoiseGeneratorOctaves mainPerlinNoise;
-    private NoiseGeneratorPerlin surfaceNoise;
-    private NoiseGeneratorOctaves depthNoise;
-    private final float[] biomeWeights;
-    private double[] depthBuffer = new double[256];
-    private Biome[] biomesForGeneration;
+	protected World world;
+	protected Random random;
+	protected final double[] heightMap;
+	protected double[] mainNoiseRegion;
+	protected double[] minLimitRegion;
+	protected double[] maxLimitRegion;
+    protected double[] depthRegion;
+    protected NoiseGeneratorOctaves minLimitPerlinNoise;
+    protected NoiseGeneratorOctaves maxLimitPerlinNoise;
+    protected NoiseGeneratorOctaves mainPerlinNoise;
+    protected NoiseGeneratorPerlin surfaceNoise;
+    protected NoiseGeneratorOctaves depthNoise;
+    protected final float[] biomeWeights;
+    protected double[] depthBuffer = new double[256];
+    protected Biome[] biomesForGeneration;
 
     public NormalTerrainGenerator() {
         this.heightMap = new double[825];
@@ -65,7 +65,7 @@ public class NormalTerrainGenerator {
         this.depthNoise = ctx.getDepth();
     }
 
-    private void generateHeightmap(int chunkX4,int chunkY4,int chunkZ4) {
+    protected void generateHeightmap(int chunkX4,int chunkY4,int chunkZ4) {
         this.depthRegion = this.depthNoise.generateNoiseOctaves(this.depthRegion,chunkX4,chunkZ4,5,5,200.0D,200.0D,0.5D);
         this.mainNoiseRegion = this.mainPerlinNoise.generateNoiseOctaves(this.mainNoiseRegion,chunkX4,chunkY4,chunkZ4,5,33,5,8.55515D,4.277575D,8.55515D);
         this.minLimitRegion = this.minLimitPerlinNoise.generateNoiseOctaves(this.minLimitRegion,chunkX4,chunkY4,chunkZ4,5,33,5,684.412D,684.412D,684.412D);

@@ -8,7 +8,7 @@ public class Config {
 	
 	public static final String CATEGORY_GENERAL = "general";
 	
-	public static boolean use3DMSHud = true;
+	public static boolean use3DMSHud = false;
 	
 	public static void readConfig() {
 		Configuration cfg = CommonProxy.config;
@@ -24,7 +24,6 @@ public class Config {
 	
 	private static void initGeneralConfig(Configuration cfg) {
 		cfg.addCustomCategoryComment(Config.CATEGORY_GENERAL,"General configuration");
-		Config.use3DMSHud = cfg.get(Config.CATEGORY_GENERAL,"Use 3D MS HUD",Config.use3DMSHud,"Enables a more advanced design of the HUD for Mobile Suits").getBoolean(true);
 		cfg.save();
 	}
 }

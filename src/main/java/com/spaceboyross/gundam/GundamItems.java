@@ -1,22 +1,26 @@
 package com.spaceboyross.gundam;
 
-import com.spaceboyross.gundam.items.CharAznableMaskItem;
-import com.spaceboyross.gundam.items.GControllerItem;
-import com.spaceboyross.gundam.items.GundariumAlphaIngotItem;
-import com.spaceboyross.gundam.items.GundariumBetaIngotItem;
-import com.spaceboyross.gundam.items.GundariumEpsilonIngotItem;
-import com.spaceboyross.gundam.items.GundariumGammaIngotItem;
-import com.spaceboyross.gundam.items.LunaTitaniumIngotItem;
-import com.spaceboyross.gundam.items.PortableVernierItem;
-import com.spaceboyross.gundam.items.SteelIngotItem;
-import com.spaceboyross.gundam.items.SuperHardSteelIngotItem;
-import com.spaceboyross.gundam.items.WrenchItem;
+import com.spaceboyross.gundam.items.armor.CharAznableMaskItem;
+import com.spaceboyross.gundam.items.materials.GundariumAlphaIngotItem;
+import com.spaceboyross.gundam.items.materials.GundariumBetaIngotItem;
+import com.spaceboyross.gundam.items.materials.GundariumEpsilonIngotItem;
+import com.spaceboyross.gundam.items.materials.GundariumGammaIngotItem;
+import com.spaceboyross.gundam.items.materials.LunaTitaniumIngotItem;
+import com.spaceboyross.gundam.items.materials.PortableVernierItem;
+import com.spaceboyross.gundam.items.materials.SteelIngotItem;
+import com.spaceboyross.gundam.items.materials.SuperHardSteelIngotItem;
+import com.spaceboyross.gundam.items.music.AnimeJaNaiMusicItem;
+import com.spaceboyross.gundam.items.tools.GControllerItem;
+import com.spaceboyross.gundam.items.tools.WrenchItem;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class GundamItems {
+
+	@GameRegistry.ObjectHolder("gundam:music_anime_ja_nai")
+	public static AnimeJaNaiMusicItem animeJaNaiMusic;
 	
 	@GameRegistry.ObjectHolder("gundam:char_aznable_mask")
 	public static CharAznableMaskItem charAznableMask;
@@ -53,6 +57,7 @@ public class GundamItems {
 	
 	@SideOnly(Side.CLIENT)
 	public static void initModels() {
+		GundamItems.animeJaNaiMusic.initModel();
 		GundamItems.charAznableMask.initModel();
 		GundamItems.gController.initModel();
 		GundamItems.gundariumAlphaIngot.initModel();

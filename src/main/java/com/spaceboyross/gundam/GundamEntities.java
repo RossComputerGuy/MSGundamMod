@@ -11,10 +11,13 @@ import com.spaceboyross.gundam.entities.EntityMasterAsia;
 import com.spaceboyross.gundam.entities.EntityQuattroBajeena;
 import com.spaceboyross.gundam.entities.EntityTreizeKhushrenada;
 import com.spaceboyross.gundam.entities.EntityUsoEwin;
+import com.spaceboyross.gundam.entities.EntityZechsMarquise;
 import com.spaceboyross.gundam.entities.render.SkinRender;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.init.Biomes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
@@ -27,6 +30,10 @@ public class GundamEntities {
 	
 	private static void registerCharacter(Class<? extends Entity> entity,String name,String id) {
 		EntityRegistry.registerModEntity(new ResourceLocation(GundamMod.MODID,id),entity,GundamMod.MODID+"."+name,GundamEntities.ID++,GundamMod.instance,64,3,true,0x996600+(GundamEntities.ID-1),0x00ff00+(GundamEntities.ID-1));
+	}
+	
+	private static void registerCharacterModel(Class<? extends EntityMob> entity,String name,float scale) {
+		RenderingRegistry.registerEntityRenderingHandler(entity,new SkinRender.Factory(new ResourceLocation(GundamMod.MODID,"textures/entity/"+name+".png"),scale));
 	}
 	
 	private static void registerCharacterModel(Class<? extends EntityMob> entity,String name) {
@@ -45,6 +52,10 @@ public class GundamEntities {
 		registerCharacter(EntityQuattroBajeena.class,"QuattroBajeena","quattro_bajeena");
 		registerCharacter(EntityTreizeKhushrenada.class,"TreizeKhushrenada","treize_khushrenada");
 		registerCharacter(EntityUsoEwin.class,"UsoEwin","uso_ewin");
+		registerCharacter(EntityZechsMarquise.class,"ZechsMarquise","zechs_marquise");
+		
+		EntityRegistry.addSpawn(EntityHeeroYuy.class,100,3,5,EnumCreatureType.CREATURE,Biomes.PLAINS,Biomes.ICE_PLAINS,Biomes.COLD_BEACH,Biomes.OCEAN);
+		EntityRegistry.addSpawn(EntityZechsMarquise.class,100,3,5,EnumCreatureType.CREATURE,Biomes.PLAINS,Biomes.ICE_PLAINS,Biomes.COLD_BEACH);
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -59,6 +70,7 @@ public class GundamEntities {
 		registerCharacterModel(EntityMasterAsia.class,"master_asia");
 		registerCharacterModel(EntityQuattroBajeena.class,"quattro_bajeena");
 		registerCharacterModel(EntityTreizeKhushrenada.class,"treize_khushrenada");
-		registerCharacterModel(EntityUsoEwin.class,"uso_ewin");
+		registerCharacterModel(EntityUsoEwin.class,"uso_ewin",0.66F);
+		registerCharacterModel(EntityZechsMarquise.class,"zechs_marquise");
 	}
 }

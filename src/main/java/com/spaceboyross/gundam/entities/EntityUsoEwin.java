@@ -10,7 +10,7 @@ public class EntityUsoEwin extends EntityMob {
 	
 	public EntityUsoEwin(World worldIn) {
 		super(worldIn);
-		this.setSize(1.0F,2.0F);
+		this.setSize(1.0F,1.3F);
 	}
 	
 	@Override

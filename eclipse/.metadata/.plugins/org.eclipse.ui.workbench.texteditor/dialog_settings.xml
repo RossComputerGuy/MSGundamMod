@@ -2,12 +2,18 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="0.0625F*msmob.scale" key="selection"/>
+		<item value="updateInputs" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="updateInputs"/>
+			<item value="controlBoat"/>
+			<item value="backInputDown"/>
+			<item value="leftInputDown"/>
+			<item value="travel"/>
+			<item value="updateMotion"/>
 			<item value="0.0625F/msmob.scale"/>
 			<item value="msmob.scale/0.0625F"/>
 			<item value="createEntity"/>

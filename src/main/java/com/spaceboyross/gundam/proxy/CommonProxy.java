@@ -12,21 +12,24 @@ import com.spaceboyross.gundam.blocks.LunaTitaniumBlock;
 import com.spaceboyross.gundam.blocks.LunaTitaniumOreBlock;
 import com.spaceboyross.gundam.blocks.MSCraftingStationBlock;
 import com.spaceboyross.gundam.blocks.MoonRockBlock;
+import com.spaceboyross.gundam.blocks.TitaniumBlock;
 import com.spaceboyross.gundam.blocks.tile.MSCraftingStationTileEntity;
 import com.spaceboyross.gundam.capabilities.human.Human;
 import com.spaceboyross.gundam.events.RenderGuiHandler;
-import com.spaceboyross.gundam.items.CharAznableMaskItem;
-import com.spaceboyross.gundam.items.GControllerItem;
-import com.spaceboyross.gundam.items.GundariumAlphaIngotItem;
-import com.spaceboyross.gundam.items.GundariumBetaIngotItem;
-import com.spaceboyross.gundam.items.GundariumEpsilonIngotItem;
-import com.spaceboyross.gundam.items.GundariumGammaIngotItem;
-import com.spaceboyross.gundam.items.LunaTitaniumIngotItem;
-import com.spaceboyross.gundam.items.PortableVernierItem;
-import com.spaceboyross.gundam.items.SteelIngotItem;
-import com.spaceboyross.gundam.items.SuperHardSteelIngotItem;
-import com.spaceboyross.gundam.items.WrenchItem;
+import com.spaceboyross.gundam.items.armor.CharAznableMaskItem;
+import com.spaceboyross.gundam.items.materials.GundariumAlphaIngotItem;
+import com.spaceboyross.gundam.items.materials.GundariumBetaIngotItem;
+import com.spaceboyross.gundam.items.materials.GundariumEpsilonIngotItem;
+import com.spaceboyross.gundam.items.materials.GundariumGammaIngotItem;
+import com.spaceboyross.gundam.items.materials.LunaTitaniumIngotItem;
+import com.spaceboyross.gundam.items.materials.PortableVernierItem;
+import com.spaceboyross.gundam.items.materials.SteelIngotItem;
+import com.spaceboyross.gundam.items.materials.SuperHardSteelIngotItem;
+import com.spaceboyross.gundam.items.music.AnimeJaNaiMusicItem;
+import com.spaceboyross.gundam.items.tools.GControllerItem;
+import com.spaceboyross.gundam.items.tools.WrenchItem;
 import com.spaceboyross.gundam.ms.MSRegistry;
+import com.spaceboyross.gundam.ms.eff.RGM79GGMGroundTypeMobileSuit;
 import com.spaceboyross.gundam.ms.gundams.MSZ006ZetaGundamMobileSuit;
 import com.spaceboyross.gundam.ms.gundams.RX782GundamMobileSuit;
 import com.spaceboyross.gundam.ms.zeon.MS04PrototypeZakuMobileSuit;
@@ -37,6 +40,8 @@ import com.spaceboyross.gundam.world.OreGen;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
@@ -67,6 +72,7 @@ public class CommonProxy {
 		MSRegistry.register(new MS05AZaku1EarlyTypeMobileSuit());
 		MSRegistry.register(new RX782GundamMobileSuit());
 		MSRegistry.register(new MSZ006ZetaGundamMobileSuit());
+		MSRegistry.register(new RGM79GGMGroundTypeMobileSuit());
 		
 		Human.register();
 	}
@@ -88,12 +94,14 @@ public class CommonProxy {
 		event.getRegistry().register(new LunaTitaniumOreBlock());
 		event.getRegistry().register(new MoonRockBlock());
 		event.getRegistry().register(new MSCraftingStationBlock());
+		event.getRegistry().register(new TitaniumBlock());
 		
 		GameRegistry.registerTileEntity(MSCraftingStationTileEntity.class,GundamMod.MODID+"_ms_crafting_station");
 	}
 	
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
+		event.getRegistry().register(new AnimeJaNaiMusicItem());
 		event.getRegistry().register(new CharAznableMaskItem());
 		event.getRegistry().register(new GControllerItem());
 		event.getRegistry().register(new GundariumAlphaIngotItem());
@@ -110,5 +118,6 @@ public class CommonProxy {
 		event.getRegistry().register(new ItemBlock(GundamBlocks.lunaTitaniumOre).setRegistryName(GundamBlocks.lunaTitaniumOre.getRegistryName()));
 		event.getRegistry().register(new ItemBlock(GundamBlocks.moonRock).setRegistryName(GundamBlocks.moonRock.getRegistryName()));
 		event.getRegistry().register(new ItemBlock(GundamBlocks.msCraftingStation).setRegistryName(GundamBlocks.msCraftingStation.getRegistryName()));
+		event.getRegistry().register(new ItemBlock(GundamBlocks.titaniumBlock).setRegistryName(GundamBlocks.titaniumBlock.getRegistryName()));
 	}
 }

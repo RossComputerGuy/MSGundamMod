@@ -5,34 +5,41 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.annotation.Nullable;
+
 import org.lwjgl.opengl.GL11;
-import org.lwjgl.util.glu.GLU;
 
 import com.spaceboyross.gundam.Config;
+import com.spaceboyross.gundam.GundamItems;
 import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.capabilities.human.Human;
 import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
 import com.spaceboyross.gundam.gui.hud.MobileSuitHUD;
+import com.spaceboyross.gundam.models.WavefrontObject;
+import com.spaceboyross.gundam.utils.Model3DUtils;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelPlayer;
-import net.minecraft.client.renderer.RenderItem;
-import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.shader.Framebuffer;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.MoverType;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import net.minecraftforge.client.model.IModel;
-import net.minecraftforge.client.model.b3d.B3DModel;
-import net.minecraftforge.client.model.obj.OBJLoader;
-import net.minecraftforge.client.model.obj.OBJModel;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public abstract class MobileSuit {
 
@@ -42,9 +49,6 @@ public abstract class MobileSuit {
 	private Map<String,Integer> recipeIDs;
 	private float height;
 	
-	private boolean initedHUD3D = false;
-	private OBJModel hud3DModel;
-	
 	public MobileSuit.MSRender.Factory FACTORY = new MobileSuit.MSRender.Factory(this);
 	
 	public MobileSuit() {
@@ -53,23 +57,13 @@ public abstract class MobileSuit {
 		this.height = 0.0f;
 	}
 	
-	private void initHUD3D() {
-		try {
-			this.hud3DModel = (OBJModel)OBJLoader.INSTANCE.loadModel(new ResourceLocation(GundamMod.MODID,"model/gui/ms_hud.obj"));
-			this.initedHUD3D = true;
-		} catch(Exception e) {
-			e.printStackTrace();
-			Config.use3DMSHud = false;
-			this.initedHUD3D = false;
-		}
+	public int getCameraCount() {
+		return 2;
 	}
 	
 	public void drawHUD(MobileSuitHUD hud) {
-		Config.readConfig();
-		if(Config.use3DMSHud) {
-			if(!this.initedHUD3D) this.initHUD3D();
-		} else {
-		}
+		MobileSuit.MSMob mob = (MSMob)hud.human.getPlayer().getRidingEntity();
+		Minecraft.getMinecraft().setRenderViewEntity(mob);
 	}
 	
 	public void setHeight(float height) {
@@ -145,7 +139,13 @@ public abstract class MobileSuit {
 		public float scale = 1.0f;
 		private EntityPlayer pilot;
 		
-		public List<Framebuffer> cameras = new ArrayList<>();
+		public int armamentLeftHand = -1;
+		public int armamentRightHand = -1;
+		
+		private boolean leftInputDown = false;
+		private boolean rightInputDown = false;
+		private boolean forwardInputDown = false;
+		private boolean backInputDown = false;
 		
 		public MSMob(World worldIn) {
 			super(worldIn);
@@ -153,14 +153,74 @@ public abstract class MobileSuit {
 		}
 		
 		@Override
+		public boolean canBreatheUnderwater() {
+			return true;
+		}
+		
+		@Override
+		public NBTTagCompound writeToNBT(NBTTagCompound root) {
+			root = super.writeToNBT(root);
+			NBTTagCompound ms = new NBTTagCompound();
+			ms.setInteger("armamentLeftHand",this.armamentLeftHand);
+			ms.setInteger("armamentRightHand",this.armamentRightHand);
+			NBTTagList armaments = new NBTTagList();
+			for(int i = 0;i < this.getMSRegistryEntry().getArmamentCount();i++) {
+				MobileSuitArmament armament = this.getMSRegistryEntry().getArmament(i);
+				armaments.appendTag(armament.saveNBT());
+			}
+			ms.setTag("armaments",armaments);
+			root.setTag("mobileSuit",ms);
+			return root;
+		}
+		
+		@Override
+		public void readFromNBT(NBTTagCompound root) {
+			super.readFromNBT(root);
+			if(root.hasKey("mobileSuit")) {
+				NBTTagCompound ms = root.getCompoundTag("mobileSuit");
+				this.armamentLeftHand = ms.getInteger("armamentLeftHand");
+				this.armamentRightHand = ms.getInteger("armamentRightHand");
+				if(ms.hasKey("armaments")) {
+					NBTTagList armaments = ms.getTagList("armaments",10);
+					for(int i = 0;i < armaments.tagCount();i++) {
+						MobileSuitArmament armament = this.getMSRegistryEntry().getArmament(i);
+						armament.loadNBT(armaments.getCompoundTagAt(i));
+					}
+				}
+			}
+		}
+		
+		@Override
+		public void onEntityUpdate() {
+			super.onEntityUpdate();
+			if(this.isBeingRidden() && this.canBeSteered() && this.getControllingPassenger() instanceof EntityLivingBase) {
+				EntityLivingBase driver = (EntityLivingBase)this.getControllingPassenger();
+				this.rotationYaw = driver.rotationYaw;
+				this.rotationPitch = driver.rotationPitch;
+				this.setRotation(this.rotationYaw,this.rotationPitch);
+				this.renderYawOffset = this.rotationYaw;
+	            this.rotationYawHead = this.renderYawOffset;
+	            System.out.println(driver.motionX+", "+driver.motionY+", "+driver.motionZ);
+				this.move(MoverType.SELF,driver.motionX,driver.motionY,driver.motionZ);
+			}
+		}
+		
+	    @Nullable
+	    public Entity getControllingPassenger() {
+	        return this.getPassengers().isEmpty() ? null : (Entity)this.getPassengers().get(0);
+	    }
+		
+		@Override
 		public boolean processInteract(EntityPlayer player,EnumHand hand) {
-			if(player.inventory.getStackInSlot(player.inventory.currentItem).getItem().getUnlocalizedName().equals("item."+GundamMod.MODID+".wrench")) {
+			if(player.inventory.getStackInSlot(player.inventory.currentItem).getItem() == GundamItems.wrench) {
 				// TODO: show customization interface
 			} else {
+				if(this.pilot != null) return false;
 				this.pilot = player;
 				this.pilot.startRiding(this);
 				IHumanCapability human = Human.getHuman(this.pilot);
 				human.setMS(this);
+				if(this.pilot.world.isRemote) Minecraft.getMinecraft().setRenderViewEntity(this);
 			}
 			return true;
 		}
@@ -174,13 +234,18 @@ public abstract class MobileSuit {
 		}
 		
 		@Override
+		public boolean canPassengerSteer() {
+			return true;
+		}
+		
+		@Override
 		public boolean canRiderInteract() {
 			return true;
 		}
 		
 		@Override
 		public boolean canBeSteered() {
-			return true;
+			return this.getControllingPassenger() instanceof EntityLivingBase;
 		}
 		
 		private void updateRiderPosition(Entity entity) {
@@ -200,10 +265,13 @@ public abstract class MobileSuit {
 			if(passenger != null) passenger.setPosition(this.posX,this.posY,this.posZ);
 			super.removePassenger(passenger);
 			passenger.setInvisible(false);
-			IHumanCapability human = Human.getHuman((EntityPlayer)passenger);
-			human.setMS(null);
-			this.pilot = null;
-			human.syncToServer();
+			if(passenger instanceof EntityPlayer) {
+				IHumanCapability human = Human.getHuman((EntityPlayer)passenger);
+				human.setMS(null);
+				this.pilot = null;
+				human.syncToServer();
+				Minecraft.getMinecraft().setRenderViewEntity(passenger);
+			}
 		}
 	}
 	

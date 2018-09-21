@@ -27,7 +27,7 @@ public class MS05AZaku1EarlyTypeMobileSuit extends MobileSuit {
 	public static class MSMob extends MobileSuit.MSMob {
 		public MSMob(World worldIn) {
 			super(worldIn);
-			this.scale = 4.8f;
+			this.scale = 6.4f;
 			this.setSize(1.0f*this.scale,2.0f*this.scale);
 		}
 		

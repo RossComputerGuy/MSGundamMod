@@ -2,7 +2,7 @@ package com.spaceboyross.gundam.entities.render;
 
 import javax.annotation.Nonnull;
 
-import com.spaceboyross.gundam.entities.EntityAmuroRay;
+import org.lwjgl.opengl.GL11;
 
 import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.client.renderer.entity.Render;
@@ -15,10 +15,27 @@ import net.minecraftforge.fml.client.registry.IRenderFactory;
 public class SkinRender extends RenderLiving<EntityLiving> {
 	
 	private ResourceLocation texture;
+	public float scale = 1.0f;
+	
+	public SkinRender(RenderManager rendermanagerIn,ResourceLocation texture,float scale) {
+		super(rendermanagerIn,new ModelPlayer(1.0f,false),0.5F);
+		this.texture = texture;
+		this.scale = scale;
+	}
 	
 	public SkinRender(RenderManager rendermanagerIn,ResourceLocation texture) {
 		super(rendermanagerIn,new ModelPlayer(1.0f,false),0.5F);
 		this.texture = texture;
+	}
+	
+	@Override
+	public void preRenderCallback(EntityLiving mob,float par2) {
+		this.scale(mob,par2);
+	}
+	
+	protected void scale(EntityLiving mob,float par2) {
+		this.shadowSize = this.scale/2.0f;
+		GL11.glScalef(this.scale,this.scale,this.scale);
 	}
 
 	@Override
@@ -30,14 +47,20 @@ public class SkinRender extends RenderLiving<EntityLiving> {
 	public static class Factory implements IRenderFactory<EntityLiving> {
 		
 		private ResourceLocation texture;
+		private float scale = 1.0f;
 		
 		public Factory(ResourceLocation texture) {
 			this.texture = texture;
 		}
 		
+		public Factory(ResourceLocation texture,float scale) {
+			this.texture = texture;
+			this.scale = scale;
+		}
+		
 		@Override
 		public Render<? super EntityLiving> createRenderFor(RenderManager manager) {
-			return new SkinRender(manager,this.texture);
+			return new SkinRender(manager,this.texture,this.scale);
 		}
 	}
 }

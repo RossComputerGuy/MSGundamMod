@@ -2,6 +2,7 @@ package com.spaceboyross.gundam.net;
 
 import com.spaceboyross.gundam.net.client.PacketGUI;
 import com.spaceboyross.gundam.net.client.PacketHumanClient;
+import com.spaceboyross.gundam.net.server.PacketDimensionServer;
 import com.spaceboyross.gundam.net.server.PacketHumanServer;
 import com.spaceboyross.gundam.net.server.PacketMobileSuit;
 
@@ -27,6 +28,7 @@ public class PacketHandler {
     }
 
     public static void registerMessages() {
+        PacketHandler.INSTANCE.registerMessage(PacketDimensionServer.Handler.class,PacketDimensionServer.class,PacketHandler.nextID(),Side.SERVER);
         PacketHandler.INSTANCE.registerMessage(PacketMobileSuit.Handler.class,PacketMobileSuit.class,PacketHandler.nextID(),Side.SERVER);
         PacketHandler.INSTANCE.registerMessage(PacketHumanServer.Handler.class,PacketHumanServer.class,PacketHandler.nextID(),Side.SERVER);
         

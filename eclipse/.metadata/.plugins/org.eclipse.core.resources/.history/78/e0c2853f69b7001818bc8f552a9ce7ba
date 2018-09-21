@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.entities.render;
-
-import net.minecraft.client.renderer.entity.RenderLiving;
-import net.minecraft.entity.Entity;
-
-public class SkinRender extends RenderLiving<Entity> {
-}

@@ -1,8 +1,0 @@
-package com.spaceboyross.gundam.ms.zeon;
-
-import com.spaceboyross.gundam.ms.MobileSuit;
-
-public class MS05AZaku1EarlyTypeMobileSuit extends MobileSuit {
-	
-	public MS05AZaku1EarlyTypeMobileSuit() {}
-}
