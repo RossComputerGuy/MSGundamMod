@@ -1,0 +1,11 @@
+package com.spaceboyross.gundam.gui.hud;
+
+import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Gui;
+
+public class MobileSuitHUD extends Gui {
+	
+	public MobileSuitHUD(Minecraft mc,IHumanCapability human) {}
+}

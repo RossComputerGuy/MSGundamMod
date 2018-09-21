@@ -1,0 +1,20 @@
+package com.spaceboyross.gundam.utils;
+
+import org.lwjgl.opengl.GL11;
+
+import net.minecraft.client.Minecraft;
+import net.minecraftforge.client.model.obj.OBJModel;
+import net.minecraftforge.client.model.obj.OBJModel.Group;
+
+public class Model3DUtils {
+	
+	public static int renderObjModel(OBJModel model) {
+		int list = GL11.glGenLists(1);
+		GL11.glNewList(list,GL11.GL_COMPILE);
+		for(Group group : model.getMatLib().getGroups().values()) {
+			GL11.glRectf(group.minUVBounds[0],group.minUVBounds[1],group.maxUVBounds[0],group.maxUVBounds[1]);
+		}
+		GL11.glEndList();
+		return list;
+	}
+}

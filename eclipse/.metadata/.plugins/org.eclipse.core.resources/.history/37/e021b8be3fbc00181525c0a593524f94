@@ -1,0 +1,5 @@
+package com.spaceboyross.gundam.models;
+
+/* A port of https://github.com/V0idWa1k3r/Factory0-Resources/blob/master/src/main/java/v0id/api/f0resources/client/model/WavefrontObject.java to this mod */
+public class WavefrontObject {
+}

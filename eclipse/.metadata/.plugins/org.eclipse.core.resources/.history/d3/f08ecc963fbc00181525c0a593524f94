@@ -1,0 +1,5 @@
+package com.spaceboyross.gundam.models;
+
+public class WavefrontObject {
+
+}

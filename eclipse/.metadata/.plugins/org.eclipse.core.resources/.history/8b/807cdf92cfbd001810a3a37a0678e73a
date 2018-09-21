@@ -1,0 +1,15 @@
+package com.spaceboyross.gundam.items.music;
+
+import com.spaceboyross.gundam.GundamMod;
+
+import net.minecraft.item.ItemRecord;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
+
+public class ItemMusicAnimeJaNai extends ItemRecord {
+
+	protected ItemMusicAnimeJaNai() {
+		super("anime-ja-nai",new SoundEvent(new ResourceLocation(GundamMod.MODID,"anime-ja-nai")));
+	}
+
+}

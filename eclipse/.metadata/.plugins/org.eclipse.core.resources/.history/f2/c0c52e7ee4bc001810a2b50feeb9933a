@@ -1,0 +1,17 @@
+package com.spaceboyross.gundam.utils;
+
+import org.lwjgl.opengl.GL11;
+
+import com.spaceboyross.gundam.models.WavefrontObject;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.BufferBuilder;
+import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+
+public class Model3DUtils {
+	
+	public static void render(WavefrontObject obj) {
+		BufferBuilder buff = obj.getBufferBuilder();
+		buff.begin(7,DefaultVertexFormats.POSITION_TEX_NORMAL);
+	}
+}

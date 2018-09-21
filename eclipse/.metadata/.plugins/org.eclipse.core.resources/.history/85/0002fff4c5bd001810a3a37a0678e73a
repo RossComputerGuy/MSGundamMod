@@ -1,0 +1,5 @@
+package com.spaceboyross.gundam.net.client;
+
+public class PacketDimensionClient {
+
+}

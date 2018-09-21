@@ -1,0 +1,6 @@
+{
+	"anime_ja_nai": {
+		"category": "record",
+		"sounds": [{ "name": "gundam:music/anime_ja_nai", "stream": true }]
+	}
+}

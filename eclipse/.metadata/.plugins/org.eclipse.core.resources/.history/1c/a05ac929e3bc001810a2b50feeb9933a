@@ -1,0 +1,15 @@
+package com.spaceboyross.gundam.utils;
+
+import org.lwjgl.opengl.GL11;
+
+import com.spaceboyross.gundam.models.WavefrontObject;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.BufferBuilder;
+
+public class Model3DUtils {
+	
+	public static void render(WavefrontObject obj) {
+		BufferBuilder buff = new BufferBuilder(obj.getVertices().size());
+	}
+}

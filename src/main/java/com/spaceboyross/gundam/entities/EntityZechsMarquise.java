@@ -1,0 +1,39 @@
+package com.spaceboyross.gundam.entities;
+
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIAttackMelee;
+import net.minecraft.entity.ai.EntityAILookIdle;
+import net.minecraft.entity.ai.EntityAIMoveThroughVillage;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
+import net.minecraft.entity.ai.EntityAISwimming;
+import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.world.World;
+
+public class EntityZechsMarquise extends EntityMob {
+	
+	public EntityZechsMarquise(World worldIn) {
+		super(worldIn);
+		this.setSize(1.0F,2.0F);
+	}
+	
+	@Override
+    protected void applyEntityAttributes() {
+        super.applyEntityAttributes();
+        this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(35.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.13D);
+        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(3.0D);
+	}
+	
+	@Override
+	protected void initEntityAI() {
+		this.tasks.addTask(0,new EntityAISwimming(this));
+		this.tasks.addTask(2,new EntityAIAttackMelee(this,1.0D,false));
+		this.tasks.addTask(8,new EntityAILookIdle(this));
+		this.applyEntityAI();
+	}
+	
+	private void applyEntityAI() {
+		this.tasks.addTask(6,new EntityAIMoveThroughVillage(this,1.0D,false));
+		this.targetTasks.addTask(3,new EntityAINearestAttackableTarget(this,EntityHeeroYuy.class,true));
+	}
+}
