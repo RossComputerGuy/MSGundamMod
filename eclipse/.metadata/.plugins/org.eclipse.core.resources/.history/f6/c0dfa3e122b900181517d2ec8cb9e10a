@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.blocks;
-
-import net.minecraft.block.Block;
-
-public class LunaTitaniumOreBlock extends Block {
-
-}

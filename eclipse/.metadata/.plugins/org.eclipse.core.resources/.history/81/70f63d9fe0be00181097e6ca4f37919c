@@ -1,0 +1,7 @@
+package com.spaceboyross.gundam.items.music;
+
+import net.minecraft.item.ItemRecord;
+
+public class GundamMusicItem extends ItemRecord {
+
+}

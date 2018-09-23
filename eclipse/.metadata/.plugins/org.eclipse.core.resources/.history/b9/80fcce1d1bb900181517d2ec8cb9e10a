@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.items;
-
-import net.minecraft.item.Item;
-
-public class WrenchItem extends Item {
-
-}

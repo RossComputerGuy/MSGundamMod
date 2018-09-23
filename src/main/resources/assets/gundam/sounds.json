@@ -2,5 +2,57 @@
 	"anime_ja_nai": {
 		"category": "record",
 		"sounds": [{ "name": "gundam:music/anime_ja_nai", "stream": true }]
+	},
+	"beyond_the_time": {
+		"category": "record",
+		"sounds": [{ "name": "gundam:music/beyond_the_time", "stream": true }]
+	},
+    "dreams": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/dreams", "stream": true }]
+    },
+	"flying_in_the_sky": {
+	   "category": "record",
+	   "sounds": [{ "name": "gundam:music/flying_in_the_sky", "stream": true }]
+	},
+    "godfinger": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/godfinger", "stream": true }]
+    },
+	"just_communication": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/just_communication", "stream": true }]
+	},
+    "last_impression": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/last_impression", "stream": true }]
+    },
+    "rhythm_emotion": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/rhythm_emotion", "stream": true }]
+    },
+    "shine_through_the_storm": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/shine_through_the_storm", "stream": true }]
+    },
+    "the_wings_of_a_boy_that_killed_adolescence": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/the_wings_of_a_boy_that_killed_adolescence", "stream": true }]
+    },
+    "the_winner": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/the_winner", "stream": true }]
+    },
+    "tobe_gundam": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/tobe_gundam", "stream": true }]
+    },
+    "white_reflection": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/white_reflection", "stream": true }]
+    },
+	"z_toki_wo_koete": {
+		"category": "record",
+		"sounds": [{ "name": "gundam:music/z_toki_wo_koete", "stream": true }]
 	}
 }

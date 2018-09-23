@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.capabilities;
-
-import com.spaceboyross.gundam.capabilities.interfaces.INewtypeCapability;
-
-public class NewtypeCapability implements INewtypeCapability {
-
-}

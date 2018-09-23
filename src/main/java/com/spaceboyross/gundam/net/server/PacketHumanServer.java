@@ -21,12 +21,14 @@ public class PacketHumanServer implements IMessage {
 	private boolean shownHumantypeMenu = false;
 	private int humantype = 0;
 	private int msID = -1;
+	private int mobileFighterID = -1;
 	
 	public PacketHumanServer() {}
 	
 	public PacketHumanServer(IHumanCapability nt) {
 		this.shownHumantypeMenu = nt.hasShownHumantypeMenu();
 		this.humantype = nt.getHumantype().ordinal();
+		this.mobileFighterID = nt.getMobileFighterID();
 		if(nt.getMS() != null) this.msID = nt.getMS().getEntityId();
 	}
 
@@ -35,6 +37,7 @@ public class PacketHumanServer implements IMessage {
     	this.shownHumantypeMenu = buf.readBoolean();
     	this.humantype = buf.readInt();
     	this.msID = buf.readInt();
+    	this.mobileFighterID = buf.readInt();
     }
 
     @Override
@@ -42,6 +45,7 @@ public class PacketHumanServer implements IMessage {
     	buf.writeBoolean(this.shownHumantypeMenu);
     	buf.writeInt(this.humantype);
     	buf.writeInt(this.msID);
+    	buf.writeInt(this.mobileFighterID);
     }
 
     public static class Handler implements IMessageHandler<PacketHumanServer,IMessage> {
@@ -58,6 +62,7 @@ public class PacketHumanServer implements IMessage {
             nt.setHasShownHumantypeMenu(message.shownHumantypeMenu);
             nt.setHumantype(EHumantypes.values()[message.humantype]);
             if(message.msID != -1) nt.setMS((MobileSuit.MSMob)world.getEntityByID(message.msID));
+            nt.setMobileFighterID(message.mobileFighterID);
         }
     }
 }

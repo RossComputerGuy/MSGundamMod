@@ -1,0 +1,17 @@
+[
+{
+  "modid": "gundam",
+  "name": "MS Gundam Mod",
+  "description": "Adds everything from the anime series Mobile Suit Gundam.",
+  "version": "1.0-week2-dev",
+  "mcversion": "${mcversion}",
+  "url": "http://ms-gundam-mod.wikia.com",
+  "updateUrl": "https://minecraft.curseforge.com/projects/ms-gundam-mod",
+  "updateJSON": "https://github.com/SpaceboyRoss01/MSGundamMod/raw/master/versionUpdater.json",
+  "authorList": ["Spaceboy Ross"],
+  "credits": "The Gundam community",
+  "logoFile": "assets/gundam/logo.png",
+  "screenshots": ["assets/gundam/screenshots/2018-09-13_08.55.41.png"],
+  "dependencies": []
+}
+]

@@ -1,0 +1,16 @@
+package com.spaceboyross.gundam.ms;
+
+import java.util.UUID;
+
+import net.minecraft.world.World;
+
+public abstract class MobileFighter extends MobileSuit {
+	public static class MSMob extends MobileSuit.MSMob {
+		
+		private UUID ownerUUID;
+		
+		public MSMob(World worldIn) {
+			super(worldIn);
+		}
+	}
+}

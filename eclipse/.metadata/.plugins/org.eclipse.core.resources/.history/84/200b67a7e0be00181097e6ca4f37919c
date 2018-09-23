@@ -1,0 +1,16 @@
+package com.spaceboyross.gundam.items.music;
+
+import com.spaceboyross.gundam.GundamMod;
+
+import net.minecraft.item.ItemRecord;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
+
+public class GundamMusicItem extends ItemRecord {
+
+	protected GundamMusicItem(String name) {
+		super(name,new SoundEvent(new ResourceLocation(GundamMod.MODID,name)));
+		
+	}
+
+}

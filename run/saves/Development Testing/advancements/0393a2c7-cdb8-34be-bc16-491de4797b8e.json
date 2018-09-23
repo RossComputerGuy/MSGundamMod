@@ -1,0 +1,26 @@
+{
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2018-09-21 14:12:29 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2018-09-21 14:09:16 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/redstone_lamp": {
+    "criteria": {
+      "has_glowstone": "2018-09-21 14:09:16 -0700"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "plains": "2018-09-21 14:09:16 -0700"
+    },
+    "done": false
+  }
+}

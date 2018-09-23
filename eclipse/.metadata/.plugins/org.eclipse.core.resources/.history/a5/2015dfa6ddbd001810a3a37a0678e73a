@@ -1,0 +1,7 @@
+package com.spaceboyross.gundam.ms.fighters;
+
+import com.spaceboyross.gundam.ms.MobileFighter;
+
+public class GodGundamMobileFighter extends MobileFighter {
+
+}

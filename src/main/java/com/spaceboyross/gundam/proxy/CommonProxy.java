@@ -25,23 +25,25 @@ import com.spaceboyross.gundam.items.materials.LunaTitaniumIngotItem;
 import com.spaceboyross.gundam.items.materials.PortableVernierItem;
 import com.spaceboyross.gundam.items.materials.SteelIngotItem;
 import com.spaceboyross.gundam.items.materials.SuperHardSteelIngotItem;
-import com.spaceboyross.gundam.items.music.AnimeJaNaiMusicItem;
+import com.spaceboyross.gundam.items.music.GundamMusicItem;
 import com.spaceboyross.gundam.items.tools.GControllerItem;
 import com.spaceboyross.gundam.items.tools.WrenchItem;
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.eff.RGM79GGMGroundTypeMobileSuit;
+import com.spaceboyross.gundam.ms.eff.RGM79GMMobileSuit;
+import com.spaceboyross.gundam.ms.fighters.GF13017NJIIGodGundamMobileFighter;
+import com.spaceboyross.gundam.ms.fighters.GF13017NJShiningGundamMobileFighter;
 import com.spaceboyross.gundam.ms.gundams.MSZ006ZetaGundamMobileSuit;
 import com.spaceboyross.gundam.ms.gundams.RX782GundamMobileSuit;
 import com.spaceboyross.gundam.ms.zeon.MS04PrototypeZakuMobileSuit;
 import com.spaceboyross.gundam.ms.zeon.MS05AZaku1EarlyTypeMobileSuit;
+import com.spaceboyross.gundam.ms.zeon.MS09RRickDomMobileSuit;
 import com.spaceboyross.gundam.net.PacketHandler;
 import com.spaceboyross.gundam.world.OreGen;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
@@ -70,9 +72,14 @@ public class CommonProxy {
 
 		MSRegistry.register(new MS04PrototypeZakuMobileSuit());
 		MSRegistry.register(new MS05AZaku1EarlyTypeMobileSuit());
+		MSRegistry.register(new MS09RRickDomMobileSuit());
 		MSRegistry.register(new RX782GundamMobileSuit());
 		MSRegistry.register(new MSZ006ZetaGundamMobileSuit());
 		MSRegistry.register(new RGM79GGMGroundTypeMobileSuit());
+		MSRegistry.register(new RGM79GMMobileSuit());
+		
+		MSRegistry.register(new GF13017NJShiningGundamMobileFighter());
+		MSRegistry.register(new GF13017NJIIGodGundamMobileFighter());
 		
 		Human.register();
 	}
@@ -101,18 +108,31 @@ public class CommonProxy {
 	
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
-		event.getRegistry().register(new AnimeJaNaiMusicItem());
+		event.getRegistry().register(new GundamMusicItem("anime_ja_nai"));
+		event.getRegistry().register(new GundamMusicItem("beyond_the_time"));
 		event.getRegistry().register(new CharAznableMaskItem());
+		event.getRegistry().register(new GundamMusicItem("dreams"));
+		event.getRegistry().register(new GundamMusicItem("flying_in_the_sky"));
 		event.getRegistry().register(new GControllerItem());
+		event.getRegistry().register(new GundamMusicItem("godfinger"));
 		event.getRegistry().register(new GundariumAlphaIngotItem());
 		event.getRegistry().register(new GundariumBetaIngotItem());
 		event.getRegistry().register(new GundariumEpsilonIngotItem());
 		event.getRegistry().register(new GundariumGammaIngotItem());
+		event.getRegistry().register(new GundamMusicItem("just_communication"));
+		event.getRegistry().register(new GundamMusicItem("last_impression"));
 		event.getRegistry().register(new LunaTitaniumIngotItem());
 		event.getRegistry().register(new PortableVernierItem());
+		event.getRegistry().register(new GundamMusicItem("rhythm_emotion"));
+		event.getRegistry().register(new GundamMusicItem("shine_through_the_storm"));
+		event.getRegistry().register(new GundamMusicItem("the_wings_of_a_boy_that_killed_adolescence"));
+		event.getRegistry().register(new GundamMusicItem("the_winner"));
 		event.getRegistry().register(new SteelIngotItem());
 		event.getRegistry().register(new SuperHardSteelIngotItem());
+		event.getRegistry().register(new GundamMusicItem("tobe_gundam"));
+		event.getRegistry().register(new GundamMusicItem("white_reflection"));
 		event.getRegistry().register(new WrenchItem());
+		event.getRegistry().register(new GundamMusicItem("z_toki_wo_koete"));
 		
 		event.getRegistry().register(new ItemBlock(GundamBlocks.lunaTitaniumBlock).setRegistryName(GundamBlocks.lunaTitaniumBlock.getRegistryName()));
 		event.getRegistry().register(new ItemBlock(GundamBlocks.lunaTitaniumOre).setRegistryName(GundamBlocks.lunaTitaniumOre.getRegistryName()));

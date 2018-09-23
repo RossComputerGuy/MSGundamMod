@@ -9,6 +9,10 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 
 public interface IHumanCapability {
+	// Mobile Fighter stuff
+	void setMobileFighterID(int id);
+	int getMobileFighterID();
+	
 	// MS Pilot
 	void setMS(MobileSuit.MSMob ms);
 	MobileSuit.MSMob getMS();

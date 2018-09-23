@@ -4,6 +4,11 @@
 		<item value="87" key="DIALOG_X_ORIGIN"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
+	<section name="EditorSelectionDialog">
+		<item value="false" key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL"/>
+		<item value=".json" key="EditorSelectionDialog.STORE_ID_FILE_EXTENSION"/>
+		<item value="org.eclipse.ui.genericeditor.GenericEditor" key="EditorSelectionDialog.STORE_ID_DESCR"/>
+	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="-1" key="dialogHeight"/>
 		<item value="-1" key="dialogWidth"/>

@@ -44,6 +44,7 @@ public class Human {
 				NBTTagCompound root = new NBTTagCompound();
 				root.setBoolean("shownHumantypeMenu",instance.hasShownHumantypeMenu());
 				root.setInteger("humantype",instance.getHumantype().ordinal());
+				root.setInteger("mobileFighter",instance.getMobileFighterID());
 				return root;
 			}
 
@@ -52,6 +53,7 @@ public class Human {
 				NBTTagCompound root = (NBTTagCompound)nbt;
 				instance.setHasShownHumantypeMenu(root.getBoolean("shownHumantypeMenu"));
 				instance.setHumantype(EHumantypes.values()[root.getInteger("humantype")]);
+				instance.setMobileFighterID(root.getInteger("mobileFighter"));
 			}
 		},() -> new HumanCapability(null));
 	}
@@ -89,6 +91,7 @@ public class Human {
 			if(original != null && nt != null) {
 				nt.setHasShownHumantypeMenu(original.hasShownHumantypeMenu());
 				nt.setHumantype(original.getHumantype());
+				nt.setMobileFighterID(original.getMobileFighterID());
 			}
 		}
 	}

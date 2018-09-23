@@ -1,5 +1,0 @@
-package com.spaceboyross.gundam.net;
-
-public class PacketNewtype {
-
-}

@@ -1,5 +1,0 @@
-package com.spaceboyross.gundam.capabilities.interfaces;
-
-public interface INewtypeCapability {
-	// TODO: add newtype events
-}

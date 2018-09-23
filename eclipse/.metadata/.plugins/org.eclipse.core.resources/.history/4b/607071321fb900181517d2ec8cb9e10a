@@ -1,9 +1,0 @@
-package com.spaceboyross.gundam;
-
-import net.minecraftforge.fml.common.registry.GameRegistry;
-
-public class GundamRecipes {
-	public static void init() {
-		GameRegistry.addSmelting(GundamItems.steelIngot.getDefaultInstance(),GundamItems.superHardSteelIngot,0.2f);
-	}
-}

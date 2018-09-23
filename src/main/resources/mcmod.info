@@ -6,11 +6,12 @@
   "version": "1.0-week2-dev",
   "mcversion": "${mcversion}",
   "url": "http://ms-gundam-mod.wikia.com",
-  "updateUrl": "",
+  "updateUrl": "https://minecraft.curseforge.com/projects/ms-gundam-mod",
+  "updateJSON": "https://github.com/SpaceboyRoss01/MSGundamMod/raw/master/versionUpdater.json",
   "authorList": ["Spaceboy Ross"],
-  "credits": "The Gundam community",
+  "credits": "The MS Gundam Mod team, The Gundam community",
   "logoFile": "assets/gundam/logo.png",
-  "screenshots": [],
+  "screenshots": ["assets/gundam/screenshots/2018-09-13_08.55.41.png"],
   "dependencies": []
 }
 ]

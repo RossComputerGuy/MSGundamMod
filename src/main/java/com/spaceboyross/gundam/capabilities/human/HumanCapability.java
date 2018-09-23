@@ -22,9 +22,20 @@ public class HumanCapability implements IHumanCapability {
 	private EHumantypes humantype = EHumantypes.OLDTYPE;
 	private EntityPlayer player;
 	private MobileSuit.MSMob ms;
+	private int mobileFighterID = -1;
 	
 	public HumanCapability(EntityPlayer player) {
 		this.player = player;
+	}
+	
+	@Override
+	public void setMobileFighterID(int id) {
+		this.mobileFighterID = id;
+	}
+	
+	@Override
+	public int getMobileFighterID() {
+		return this.mobileFighterID;
 	}
 	
 	@Override

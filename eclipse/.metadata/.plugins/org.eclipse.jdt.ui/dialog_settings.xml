@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="0" key="CallHierarchyViewPart.call_mode"/>
+	<item value="2" key="CallHierarchyViewPart.field_mode"/>
+	<item value="3" key="CallHierarchyViewPart.orientation"/>
+	<item value="500" key="CallHierarchyViewPart.ratio0"/>
+	<item value="1" key="SearchScopeActionGroup.search_scope_type"/>
+	<item value="500" key="CallHierarchyViewPart.ratio3"/>
+	<list key="SearchScopeActionGroup.working_set">
+	</list>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item value="false" key="renameSubpackages"/>
 		<item value="false" key="updateQualifiedNames"/>
@@ -14,6 +22,12 @@
 		<item value="663" key="DIALOG_HEIGHT"/>
 		<item value="101" key="DIALOG_X_ORIGIN"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="SearchInDialog">
+		<item value="true" key="SearchInProjects"/>
+		<item value="true" key="SearchInAppLibs"/>
+		<item value="true" key="SearchInJRE"/>
+		<item value="true" key="SearchInSources"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="1" key="layout"/>
@@ -48,6 +62,10 @@
 		<item value="600" key="width"/>
 		<item value="400" key="height"/>
 	</section>
+	<section name="CallHierarchySearchScope">
+	</section>
+	<section name="RenameInformationPopup">
+	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
 	<section name="BuildPathsPropertyPage">
@@ -78,6 +96,7 @@
 		<item value="false" key="JarManifestWizardPage.SAVE_MANIFEST"/>
 		<item value="false" key="JarPackageWizardPage.EXPORT_OUTPUT_FOLDER"/>
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/home/spaceboyross/unstable-1.0.2.jar"/>
 			<item value="MS Gundam Mod/v1.0-week1-dev.jar"/>
 		</list>
 	</section>
