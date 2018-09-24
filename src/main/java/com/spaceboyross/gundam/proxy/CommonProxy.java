@@ -15,8 +15,15 @@ import com.spaceboyross.gundam.blocks.MoonRockBlock;
 import com.spaceboyross.gundam.blocks.TitaniumBlock;
 import com.spaceboyross.gundam.blocks.tile.MSCraftingStationTileEntity;
 import com.spaceboyross.gundam.capabilities.human.Human;
+import com.spaceboyross.gundam.events.BlockHandler;
+import com.spaceboyross.gundam.events.EntityHandler;
 import com.spaceboyross.gundam.events.RenderGuiHandler;
 import com.spaceboyross.gundam.items.armor.CharAznableMaskItem;
+import com.spaceboyross.gundam.items.armor.SpaceSuitHelmetItem;
+import com.spaceboyross.gundam.items.armor.SpaceSuitPantsItem;
+import com.spaceboyross.gundam.items.armor.SpaceSuitShoesItem;
+import com.spaceboyross.gundam.items.armor.SpaceSuitTorsoItem;
+import com.spaceboyross.gundam.items.materials.ECarbonIngotItem;
 import com.spaceboyross.gundam.items.materials.GundariumAlphaIngotItem;
 import com.spaceboyross.gundam.items.materials.GundariumBetaIngotItem;
 import com.spaceboyross.gundam.items.materials.GundariumEpsilonIngotItem;
@@ -33,10 +40,17 @@ import com.spaceboyross.gundam.ms.eff.RGM79GGMGroundTypeMobileSuit;
 import com.spaceboyross.gundam.ms.eff.RGM79GMMobileSuit;
 import com.spaceboyross.gundam.ms.fighters.GF13017NJIIGodGundamMobileFighter;
 import com.spaceboyross.gundam.ms.fighters.GF13017NJShiningGundamMobileFighter;
+import com.spaceboyross.gundam.ms.gundams.AGE1GundamAGE1NormalMobileSuit;
+import com.spaceboyross.gundam.ms.gundams.GN001GundamExiaMobileSuit;
 import com.spaceboyross.gundam.ms.gundams.MSZ006ZetaGundamMobileSuit;
 import com.spaceboyross.gundam.ms.gundams.RX782GundamMobileSuit;
+import com.spaceboyross.gundam.ms.gundams.RX78NT1GundamAlexMobileSuit;
+import com.spaceboyross.gundam.ms.gundams.XXXG01DGundamDeathscytheMobileSuit;
+import com.spaceboyross.gundam.ms.gundams.XXXG01HGundamHeavyarmsMobileSuit;
+import com.spaceboyross.gundam.ms.gundams.XXXG01WWingGundamMobileSuit;
 import com.spaceboyross.gundam.ms.zeon.MS04PrototypeZakuMobileSuit;
 import com.spaceboyross.gundam.ms.zeon.MS05AZaku1EarlyTypeMobileSuit;
+import com.spaceboyross.gundam.ms.zeon.MS07BGoufMobileSuit;
 import com.spaceboyross.gundam.ms.zeon.MS09RRickDomMobileSuit;
 import com.spaceboyross.gundam.net.PacketHandler;
 import com.spaceboyross.gundam.world.OreGen;
@@ -74,9 +88,16 @@ public class CommonProxy {
 		MSRegistry.register(new MS05AZaku1EarlyTypeMobileSuit());
 		MSRegistry.register(new MS09RRickDomMobileSuit());
 		MSRegistry.register(new RX782GundamMobileSuit());
+		MSRegistry.register(new RGM79GMMobileSuit());
+		MSRegistry.register(new MS07BGoufMobileSuit());
+		MSRegistry.register(new RX78NT1GundamAlexMobileSuit());
 		MSRegistry.register(new MSZ006ZetaGundamMobileSuit());
 		MSRegistry.register(new RGM79GGMGroundTypeMobileSuit());
-		MSRegistry.register(new RGM79GMMobileSuit());
+		MSRegistry.register(new XXXG01DGundamDeathscytheMobileSuit());
+		MSRegistry.register(new XXXG01HGundamHeavyarmsMobileSuit());
+		MSRegistry.register(new XXXG01WWingGundamMobileSuit());
+		MSRegistry.register(new GN001GundamExiaMobileSuit());
+		MSRegistry.register(new AGE1GundamAGE1NormalMobileSuit());
 		
 		MSRegistry.register(new GF13017NJShiningGundamMobileFighter());
 		MSRegistry.register(new GF13017NJIIGodGundamMobileFighter());
@@ -92,6 +113,8 @@ public class CommonProxy {
 	
 	public void postInit(FMLPostInitializationEvent e) {
 		if(CommonProxy.config.hasChanged()) CommonProxy.config.save();
+		MinecraftForge.EVENT_BUS.register(new BlockHandler());
+		MinecraftForge.EVENT_BUS.register(new EntityHandler());
 		MinecraftForge.EVENT_BUS.register(new RenderGuiHandler());
 	}
 	
@@ -112,6 +135,7 @@ public class CommonProxy {
 		event.getRegistry().register(new GundamMusicItem("beyond_the_time"));
 		event.getRegistry().register(new CharAznableMaskItem());
 		event.getRegistry().register(new GundamMusicItem("dreams"));
+		event.getRegistry().register(new ECarbonIngotItem());
 		event.getRegistry().register(new GundamMusicItem("flying_in_the_sky"));
 		event.getRegistry().register(new GControllerItem());
 		event.getRegistry().register(new GundamMusicItem("godfinger"));
@@ -127,9 +151,13 @@ public class CommonProxy {
 		event.getRegistry().register(new GundamMusicItem("shine_through_the_storm"));
 		event.getRegistry().register(new GundamMusicItem("the_wings_of_a_boy_that_killed_adolescence"));
 		event.getRegistry().register(new GundamMusicItem("the_winner"));
+		event.getRegistry().register(new GundamMusicItem("tobe_gundam"));
+		event.getRegistry().register(new SpaceSuitHelmetItem());
+		event.getRegistry().register(new SpaceSuitPantsItem());
+		event.getRegistry().register(new SpaceSuitShoesItem());
+		event.getRegistry().register(new SpaceSuitTorsoItem());
 		event.getRegistry().register(new SteelIngotItem());
 		event.getRegistry().register(new SuperHardSteelIngotItem());
-		event.getRegistry().register(new GundamMusicItem("tobe_gundam"));
 		event.getRegistry().register(new GundamMusicItem("white_reflection"));
 		event.getRegistry().register(new WrenchItem());
 		event.getRegistry().register(new GundamMusicItem("z_toki_wo_koete"));

@@ -1,0 +1,26 @@
+{ 
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"III",
+		"IHI",
+		"IGI"
+	],
+	"key": {
+		"I": [{
+			"item": "minecraft:iron_ingot",
+			"data": 0
+		}],
+		"H": [{
+			"item": "minecraft:iron_helmet",
+			"data": 0
+		}],
+		"G": [{
+			"item": "minecraft:glass_pane",
+			"data": 0
+		}]
+	},
+	"result": {
+		"item": "gundam:spacesuit_helmet",
+		"data": 0
+	}
+}

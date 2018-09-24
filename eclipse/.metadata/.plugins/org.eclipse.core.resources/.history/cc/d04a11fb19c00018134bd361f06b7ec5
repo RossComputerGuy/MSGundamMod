@@ -1,0 +1,92 @@
+entity.gundam.AGE-1_Gundam_AGE-1_Normal.name=AGE-1 Gundam AGE-1 Normal
+entity.gundam.AmuroRay.name=Amuro Ray
+entity.gundam.BrightNoa.name=Bright Noa
+entity.gundam.CharAznable.name=Char Aznable
+entity.gundam.DomonKassu.name=Domon Kassu
+entity.gundam.FullFrontal.name=Full Frontal
+entity.gundam.GF13-017NJ_Shining_Gundam.name=GF13-017NJ Shining Gundam
+entity.gundam.GF13-017NJII_God_Gundam.name=GF13-017NJII God Gundam
+entity.gundam.GN-001_Gundam_Exia.name=GN-001 Gundam Exia
+entity.gundam.HeeroYuy.name=Heero Yuy
+entity.gundam.KamilleBidan.name=Kamille Bidan
+entity.gundam.MasterAsia.name=Master Asia
+entity.gundam.MS-04_Prototype_Zaku.name=MS-04 Prototype Zaku
+entity.gundam.MS-05A_Zaku_I_Early_Type.name=MS-05A Zaku I Early Type
+entity.gundam.MS-07B_Gouf.name=MS-07B Gouf
+entity.gundam.MS-09R_Rick_Dom.name=MS-09R Rick Dom
+entity.gundam.MSZ-006_Zeta_Gundam.name=MSZ-006 Zeta Gundam
+entity.gundam.QuattroBajeena.name=Quattro Bajeena
+entity.gundam.RGM-79_GM.name=RGM-79 GM
+entity.gundam.RGM-79_[G]_GM_Ground_Type.name=RGM-79 [G] GM Ground Type
+entity.gundam.RX-78-2_Gundam.name=RX-78-2 Gundam
+entity.gundam.RX-78NT-1_Gundam_Alex.name=RX-78NT-1 Gundam "Alex"
+entity.gundam.SetsunaFSeiei.name=Setsuna F. Seiei
+entity.gundam.TreizeKhushrenada.name=Treize Khushrenada
+entity.gundam.UsoEwin.name=Uso Ewin
+entity.gundam.XXXG-01D_Gundam_Deathsycthe.name=XXXG-01D Gundam Deathsycthe
+entity.gundam.XXXG-01H_Gundam_Heavyarms.name=XXXG-01H Gundam Heavyarms
+entity.gundam.XXXG-01W_Wing_Gundam.name=XXXG-01W Wing Gundam
+entity.gundam.ZechsMarquise.name=Zechs Marquise
+
+gui.gundam.ms_crafting_station.craft=Craft
+gui.gundam.ms_crafting_station.prev=Prev
+gui.gundam.ms_crafting_station.next=Next
+
+gui.gundam.humantype.select=Select your Humantype
+gui.gundam.humantype.newtype=Newtype
+gui.gundam.humantype.oldtype=Oldtype
+
+hud.gundam.newtype.name=Newtype Information
+hud.gundam.newtype.mob=%s (Health=%f) (X=%d, Y=%d, Z=%d)
+
+itemGroup.gundam=MS Gundam Mod
+
+item.gundam.char_aznable_mask.name=Char Aznable's Mask
+item.gundam.ecarbon_ingot.name=ECarbon Ingot
+item.gundam.g_controller.name=G-Controller
+item.gundam.gundarium_alpha_ingot.name=Gundarium α
+item.gundam.gundarium_beta_ingot.name=Gundarium β
+item.gundam.gundarium_epsilon_ingot.name=Gundarium ε
+item.gundam.gundarium_gamma_ingot.name=Gundarium γ
+item.gundam.luna_titanium_ingot.name=Luna Titanium Ingot
+item.gundam.music_anime_ja_nai.name=Music Disc
+item.gundam.music_beyond_the_time.name=Music Disc
+item.gundam.music_dreams.name=Music Disc
+item.gundam.music_flying_in_the_sky.name=Music Disc
+item.gundam.music_godfinger.name=Music Disc
+item.gundam.music_just_communication.name=Music Disc
+item.gundam.music_last_impression.name=Music Disc
+item.gundam.music_rhythm_emotion.name=Music Disc
+item.gundam.music_shine_through_the_storm.name=Music Disc
+item.gundam.music_the_wings_of_a_boy_that_killed_adolescence.name=Music Disc
+item.gundam.music_tobe_gundam.name=Music Disc
+item.gundam.music_white_reflection.name=Music Disc
+item.gundam.music_z_toki_wo_koete.name=Music Disc
+item.gundam.portable_vernier.name=Portable Vernier
+item.gundam.steel_ingot.name=Steel Ingot
+item.gundam.super_hard_steel_ingot.name=Super-hard Steel Ingot
+item.gundam.wrench.name=Wrench
+
+item.record.anime_ja_nai.desc=It's not anime
+item.record.beyond_the_time.desc=Beyond The Time
+item.record.dreams.desc=Dreams
+item.record.flying_in_the_sky.desc=Flying In The Sky
+item.record.godfinger.desc=Godfinger
+item.record.just_communication.desc=Just Communication
+item.record.last_impression.desc=Last Impression
+item.record.rhythm_emotion.desc=Rhythm Emotion
+item.record.shine_through_the_storm.desc=Shine Through The Storm
+item.record.the_wings_of_a_boy_that_killed_adolescence.desc=The Wings Of A Boy That Killed Adolescence
+item.record.tobe_gundam.desc=Fly Gundam
+item.record.white_reflection.desc=White Reflection
+item.record.z_toki_wo_koete.desc=Go Beyond The Time
+
+key.categories.gundam=MS Gundam Mod
+key.call_mobile_fighter=Call Mobile Fighter
+key.use_vernier=Use Vernier
+
+tile.gundam.luna_titanium_block.name=Luna Titanium Block
+tile.gundam.luna_titanium_ore.name=Luna Titanium Ore
+tile.gundam.moon_rock.name=Moon Rock
+tile.gundam.ms_crafting_station.name=MS Crafting Station
+tile.gundam.titanium_block.name=Titanium Block

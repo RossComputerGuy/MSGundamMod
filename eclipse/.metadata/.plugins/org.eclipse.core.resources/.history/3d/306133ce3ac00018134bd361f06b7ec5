@@ -1,0 +1,47 @@
+package com.spaceboyross.gundam.events;
+
+import com.spaceboyross.gundam.GundamDimensions;
+import com.spaceboyross.gundam.GundamItems;
+import com.spaceboyross.gundam.ms.MobileSuit;
+import com.spaceboyross.gundam.net.PacketHandler;
+import com.spaceboyross.gundam.net.server.PacketEntitySyncServer;
+
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.util.DamageSource;
+import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.entity.living.LivingSpawnEvent;
+import net.minecraftforge.event.entity.living.LivingDestroyBlockEvent;
+import net.minecraftforge.event.entity.EntityEvent;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+@Mod.EventBusSubscriber
+public class EntityHandler {
+	
+	@SubscribeEvent
+	public static void onLivingEntitySpawn(LivingSpawnEvent event) {
+		if(event.getEntity().dimension == GundamDimensions.moonID) {
+			event.getEntityLiving().jumpMovementFactor *= 4.0f;
+			event.getEntityLiving().fallDistance *= 4.0f;
+			event.getEntityLiving().setNoGravity(true);
+		}
+	}
+	
+	@SubscribeEvent
+	public static void onLivingEntityUpdate(LivingEvent.LivingUpdateEvent event) {
+		if(event.getEntity().ticksExisted % 1 == 0) {
+			if(event.getEntity().dimension == GundamDimensions.moonID) {
+				if(!(event.getEntityLiving() instanceof MobileSuit.MSMob)) {
+					if(event.getEntityLiving().getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() != GundamItems.spacesuitHelmet
+							&& event.getEntityLiving().getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() != GundamItems.spacesuitTorso
+							&& event.getEntityLiving().getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() != GundamItems.spacesuitPants
+							&& event.getEntityLiving().getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() != GundamItems.spacesuitShoes) {
+						event.getEntity().attackEntityFrom(DamageSource.DROWN,2.0f);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+package com.spaceboyross.gundam.dimension.side1;
+
+import com.spaceboyross.gundam.GundamDimensions;
+import com.spaceboyross.gundam.dimension.DimensionMoon.MoonChunkGenerator;
+import com.spaceboyross.gundam.world.gen.ColonyChunkGenerator;
+
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.DimensionType;
+import net.minecraft.world.WorldProvider;
+import net.minecraft.world.chunk.Chunk;
+import net.minecraft.world.gen.IChunkGenerator;
+
+public class DimensionSide1ShangriLa extends WorldProvider {
+	
+	@Override
+	public void init() {
+		super.init();
+		this.doesWaterVaporize = true;
+		this.hasSkyLight = false;
+	}
+	
+	@Override
+	public void updateWeather() {
+		this.world.getWorldInfo().setRainTime(0);
+        this.world.getWorldInfo().setRaining(false);
+        this.world.getWorldInfo().setThunderTime(0);
+        this.world.getWorldInfo().setThundering(false);
+        this.world.rainingStrength = 0.0F;
+        this.world.thunderingStrength = 0.0F;
+	}
+	
+	@Override
+	public Vec3d getCloudColor(float partialTicks) {
+		return Vec3d.ZERO;
+	}
+	
+	@Override
+	public DimensionType getDimensionType() {
+		return GundamDimensions.side1ShangriLa;
+	}
+	
+	@Override
+	public boolean canSnowAt(BlockPos pos,boolean checkLight) {
+		return false;
+	}
+	
+	@Override
+	public boolean isDaytime() {
+		return false;
+	}
+	
+	@Override
+    public boolean canDoLightning(Chunk chunk) {
+        return false;
+    }
+	
+	@Override
+    public boolean canDoRainSnowIce(Chunk chunk) {
+        return false;
+	}
+	
+	@Override
+	public String getSaveFolder() {
+		return "GUNDAM_SIDE1_SHANGRILA";
+	}
+	
+	@Override
+	public IChunkGenerator createChunkGenerator() {
+		return new ColonyChunkGenerator(this.world);
+	}
+
+}

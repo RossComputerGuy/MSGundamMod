@@ -41,7 +41,6 @@ public class PacketDimensionServer implements IMessage {
 
         private void handle(PacketDimensionServer message,MessageContext ctx) {
             EntityPlayerMP playerEntity = ctx.getServerHandler().player;
-            World world = playerEntity.getEntityWorld();
             playerEntity.changeDimension(message.id);
         }
     }

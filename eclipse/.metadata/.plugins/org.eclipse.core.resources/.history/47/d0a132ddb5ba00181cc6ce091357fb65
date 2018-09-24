@@ -1,9 +1,0 @@
-package com.spaceboyross.gundam.gui;
-
-import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.entity.player.EntityPlayer;
-
-public class NewtypeGUI extends GuiScreen {
-	private EntityPlayer player;
-
-}

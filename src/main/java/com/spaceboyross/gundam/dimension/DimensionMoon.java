@@ -56,11 +56,6 @@ public class DimensionMoon extends WorldProvider {
 	}
 	
 	@Override
-	public void onPlayerAdded(EntityPlayerMP player) {
-		player.setAir(0);
-	}
-	
-	@Override
 	public boolean canSnowAt(BlockPos pos,boolean checkLight) {
 		return false;
 	}

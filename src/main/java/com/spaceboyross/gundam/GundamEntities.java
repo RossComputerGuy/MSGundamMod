@@ -9,6 +9,7 @@ import com.spaceboyross.gundam.entities.EntityHeeroYuy;
 import com.spaceboyross.gundam.entities.EntityKamilleBidan;
 import com.spaceboyross.gundam.entities.EntityMasterAsia;
 import com.spaceboyross.gundam.entities.EntityQuattroBajeena;
+import com.spaceboyross.gundam.entities.EntitySetsunaFSeiei;
 import com.spaceboyross.gundam.entities.EntityTreizeKhushrenada;
 import com.spaceboyross.gundam.entities.EntityUsoEwin;
 import com.spaceboyross.gundam.entities.EntityZechsMarquise;
@@ -50,6 +51,7 @@ public class GundamEntities {
 		registerCharacter(EntityKamilleBidan.class,"KamilleBidan","kamille_bidan");
 		registerCharacter(EntityMasterAsia.class,"MasterAsia","master_asia");
 		registerCharacter(EntityQuattroBajeena.class,"QuattroBajeena","quattro_bajeena");
+		registerCharacter(EntitySetsunaFSeiei.class,"SetsunaFSeiei","setsuna_f_seiei");
 		registerCharacter(EntityTreizeKhushrenada.class,"TreizeKhushrenada","treize_khushrenada");
 		registerCharacter(EntityUsoEwin.class,"UsoEwin","uso_ewin");
 		registerCharacter(EntityZechsMarquise.class,"ZechsMarquise","zechs_marquise");
@@ -69,6 +71,7 @@ public class GundamEntities {
 		registerCharacterModel(EntityKamilleBidan.class,"kamille_bidan");
 		registerCharacterModel(EntityMasterAsia.class,"master_asia");
 		registerCharacterModel(EntityQuattroBajeena.class,"quattro_bajeena");
+		registerCharacterModel(EntitySetsunaFSeiei.class,"setsuna_f_seiei");
 		registerCharacterModel(EntityTreizeKhushrenada.class,"treize_khushrenada");
 		registerCharacterModel(EntityUsoEwin.class,"uso_ewin",0.66F);
 		registerCharacterModel(EntityZechsMarquise.class,"zechs_marquise");

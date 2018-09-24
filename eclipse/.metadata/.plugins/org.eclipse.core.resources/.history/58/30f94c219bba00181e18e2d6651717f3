@@ -1,8 +1,0 @@
-package com.spaceboyross.gundam.capabilities.interfaces;
-
-import com.spaceboyross.gundam.ms.MobileSuit;
-
-public interface IMobileSuitPilotCapability {	
-	MobileSuit.MSMob getMS();
-	void setMS(MobileSuit.MSMob ms);
-}

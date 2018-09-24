@@ -20,7 +20,7 @@ public class GF13017NJIIGodGundamMobileFighter extends MobileFighter {
 		
 		this.addArmament(new VulcanGunMSArmament(4,60));
 		
-		this.addRecipeItem("gundam:luna_titanium_ingot",20);
+		this.addRecipeItem("gundam:gundarium_beta_ingot",20);
 	}
 	
 	@Override

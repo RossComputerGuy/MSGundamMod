@@ -1,0 +1,24 @@
+package com.spaceboyross.gundam.events;
+
+import com.spaceboyross.gundam.GundamDimensions;
+import com.spaceboyross.gundam.net.PacketHandler;
+import com.spaceboyross.gundam.net.server.PacketEntitySyncServer;
+
+import net.minecraft.util.DamageSource;
+import net.minecraftforge.event.entity.EntityEvent;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+@Mod.EventBusSubscriber
+public class EntityHandler {
+	
+	@SubscribeEvent
+	public static void onEntitySpawn(EntityJoinWorldEvent event) {
+		if(event.getEntity().dimension == GundamDimensions.moonID) {
+			event.getEntity().setAir(0);
+			event.getEntity().attackEntityFrom(DamageSource.DROWN,2.0f);
+			PacketHandler.INSTANCE.sendToServer(new PacketEntitySyncServer(event.getEntity()));
+		}
+	}
+}

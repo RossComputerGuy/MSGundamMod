@@ -1,5 +1,7 @@
 package com.spaceboyross.gundam.ms;
 
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
 public abstract class MobileSuitArmament {
@@ -11,20 +13,8 @@ public abstract class MobileSuitArmament {
 		this.count = count;
 	}
 	
-	public void onSwitch(MobileSuit.MSMob mob) {}
-	
-	public void onGrab(MobileSuit.MSMob mob) {}
-	
-	public void onUse(MobileSuit.MSMob mob) {}
-	
-	public NBTTagCompound saveNBT() {
-		NBTTagCompound root = new NBTTagCompound();
-		root.setString("name",this.getName());
-		root.setInteger("count",this.getCount());
-		return root;
-	}
-	
-	public void loadNBT(NBTTagCompound root) {
+	public ItemStack createItem() {
+		return null;
 	}
 	
 	public void setName(String name) {

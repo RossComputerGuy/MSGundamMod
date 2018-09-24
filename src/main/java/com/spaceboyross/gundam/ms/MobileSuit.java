@@ -9,37 +9,28 @@ import javax.annotation.Nullable;
 
 import org.lwjgl.opengl.GL11;
 
-import com.spaceboyross.gundam.Config;
 import com.spaceboyross.gundam.GundamItems;
 import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.capabilities.human.Human;
 import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
 import com.spaceboyross.gundam.gui.hud.MobileSuitHUD;
-import com.spaceboyross.gundam.models.WavefrontObject;
-import com.spaceboyross.gundam.utils.Model3DUtils;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.shader.Framebuffer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.MoverType;
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 public abstract class MobileSuit {
 
@@ -139,9 +130,6 @@ public abstract class MobileSuit {
 		public float scale = 1.0f;
 		private EntityPlayer pilot;
 		
-		public int armamentLeftHand = -1;
-		public int armamentRightHand = -1;
-		
 		private boolean leftInputDown = false;
 		private boolean rightInputDown = false;
 		private boolean forwardInputDown = false;
@@ -161,14 +149,6 @@ public abstract class MobileSuit {
 		public NBTTagCompound writeToNBT(NBTTagCompound root) {
 			root = super.writeToNBT(root);
 			NBTTagCompound ms = new NBTTagCompound();
-			ms.setInteger("armamentLeftHand",this.armamentLeftHand);
-			ms.setInteger("armamentRightHand",this.armamentRightHand);
-			NBTTagList armaments = new NBTTagList();
-			for(int i = 0;i < this.getMSRegistryEntry().getArmamentCount();i++) {
-				MobileSuitArmament armament = this.getMSRegistryEntry().getArmament(i);
-				armaments.appendTag(armament.saveNBT());
-			}
-			ms.setTag("armaments",armaments);
 			root.setTag("mobileSuit",ms);
 			return root;
 		}
@@ -178,15 +158,6 @@ public abstract class MobileSuit {
 			super.readFromNBT(root);
 			if(root.hasKey("mobileSuit")) {
 				NBTTagCompound ms = root.getCompoundTag("mobileSuit");
-				this.armamentLeftHand = ms.getInteger("armamentLeftHand");
-				this.armamentRightHand = ms.getInteger("armamentRightHand");
-				if(ms.hasKey("armaments")) {
-					NBTTagList armaments = ms.getTagList("armaments",10);
-					for(int i = 0;i < armaments.tagCount();i++) {
-						MobileSuitArmament armament = this.getMSRegistryEntry().getArmament(i);
-						armament.loadNBT(armaments.getCompoundTagAt(i));
-					}
-				}
 			}
 		}
 		
@@ -200,7 +171,7 @@ public abstract class MobileSuit {
 				this.setRotation(this.rotationYaw,this.rotationPitch);
 				this.renderYawOffset = this.rotationYaw;
 	            this.rotationYawHead = this.renderYawOffset;
-	            System.out.println(driver.motionX+", "+driver.motionY+", "+driver.motionZ);
+	            //System.out.println(driver.motionX+", "+driver.motionY+", "+driver.motionZ);
 				this.move(MoverType.SELF,driver.motionX,driver.motionY,driver.motionZ);
 			}
 		}
@@ -220,6 +191,10 @@ public abstract class MobileSuit {
 				this.pilot.startRiding(this);
 				IHumanCapability human = Human.getHuman(this.pilot);
 				human.setMS(this);
+				for(int i = 0;i < this.getMSRegistryEntry().getArmamentCount();i++) {
+					if(this.getMSRegistryEntry().getArmament(i).createItem() == null) continue;
+					player.addItemStackToInventory(this.getMSRegistryEntry().getArmament(i).createItem());
+				}
 				if(this.pilot.world.isRemote) Minecraft.getMinecraft().setRenderViewEntity(this);
 			}
 			return true;
@@ -270,6 +245,10 @@ public abstract class MobileSuit {
 				human.setMS(null);
 				this.pilot = null;
 				human.syncToServer();
+				for(int i = 0;i < this.getMSRegistryEntry().getArmamentCount();i++) {
+					if(this.getMSRegistryEntry().getArmament(i).createItem() == null) continue;
+					((EntityPlayer)passenger).inventory.removeStackFromSlot(((EntityPlayer)passenger).inventory.getSlotFor(this.getMSRegistryEntry().getArmament(i).createItem()));
+				}
 				Minecraft.getMinecraft().setRenderViewEntity(passenger);
 			}
 		}

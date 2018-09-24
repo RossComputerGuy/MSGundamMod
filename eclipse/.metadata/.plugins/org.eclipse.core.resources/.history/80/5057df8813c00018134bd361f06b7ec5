@@ -1,0 +1,44 @@
+package com.spaceboyross.gundam.input;
+
+import org.lwjgl.input.Keyboard;
+
+import net.minecraft.client.settings.KeyBinding;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+@SideOnly(Side.CLIENT)
+public class KeyBindings {
+	
+	public static KeyBinding callMobileFighter;
+	public static KeyBinding msGrabWeaponLeftIncrease;
+	public static KeyBinding msGrabWeaponLeftDecrease;
+	public static KeyBinding msGrabWeaponRightIncrease;
+	public static KeyBinding msGrabWeaponRightDecrease;
+	public static KeyBinding msLeftWeapon;
+	public static KeyBinding msRightWeapon;
+	public static KeyBinding useVernier;
+	public static KeyBinding runTestFN;
+	
+	public static void init() {
+		KeyBindings.callMobileFighter = new KeyBinding("key.call_mobile_fighter",Keyboard.KEY_M,"key.categories.gundam");
+		KeyBindings.msGrabWeaponLeftIncrease = new KeyBinding("key.ms_grab_weapon_left_inc",Keyboard.KEY_4,"key.categories.gundam");
+		KeyBindings.msGrabWeaponLeftDecrease = new KeyBinding("key.ms_grab_weapon_left_dec",Keyboard.KEY_3,"key.categories.gundam");
+		KeyBindings.msGrabWeaponRightIncrease = new KeyBinding("key.ms_grab_weapon_right_inc",Keyboard.KEY_6,"key.categories.gundam");
+		KeyBindings.msGrabWeaponRightDecrease = new KeyBinding("key.ms_grab_weapon_right_dec",Keyboard.KEY_5,"key.categories.gundam");
+		KeyBindings.msLeftWeapon = new KeyBinding("key.ms_left_weapon",Keyboard.KEY_1,"key.categories.gundam");
+		KeyBindings.msRightWeapon = new KeyBinding("key.ms_right_weapon",Keyboard.KEY_2,"key.categories.gundam");
+		KeyBindings.useVernier = new KeyBinding("key.use_vernier",Keyboard.KEY_V,"key.categories.gundam");
+		KeyBindings.runTestFN = new KeyBinding("key.run_test_fn",Keyboard.KEY_BACKSLASH,"key.categories.gundam");
+		
+		ClientRegistry.registerKeyBinding(KeyBindings.callMobileFighter);
+		ClientRegistry.registerKeyBinding(KeyBindings.msGrabWeaponLeftIncrease);
+		ClientRegistry.registerKeyBinding(KeyBindings.msGrabWeaponLeftDecrease);
+		ClientRegistry.registerKeyBinding(KeyBindings.msGrabWeaponRightIncrease);
+		ClientRegistry.registerKeyBinding(KeyBindings.msGrabWeaponRightDecrease);
+		ClientRegistry.registerKeyBinding(KeyBindings.msLeftWeapon);
+		ClientRegistry.registerKeyBinding(KeyBindings.msRightWeapon);
+		ClientRegistry.registerKeyBinding(KeyBindings.useVernier);
+		ClientRegistry.registerKeyBinding(KeyBindings.runTestFN);
+	}
+}

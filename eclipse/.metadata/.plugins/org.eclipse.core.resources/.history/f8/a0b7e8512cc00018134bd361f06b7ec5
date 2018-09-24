@@ -1,0 +1,9 @@
+package com.spaceboyross.gundam.events;
+
+import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.fml.common.Mod;
+
+@Mod.EventBusSubscriber
+public class BlockHandler {
+
+}

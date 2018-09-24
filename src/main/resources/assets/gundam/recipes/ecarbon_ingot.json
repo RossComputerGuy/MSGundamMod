@@ -1,0 +1,22 @@
+{ 
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ICI",
+		"CCC",
+		"ICI"
+	],
+	"key": {
+		"I": [{
+			"item": "minecraft:iron_ingot",
+			"data": 0
+		}],
+		"C": [{
+			"item": "minecraft:coal",
+			"data": 0
+		}]
+	},
+	"result": {
+		"item": "gundam:ecarbon_ingot",
+		"data": 0
+	}
+}

@@ -162,8 +162,9 @@ public class NormalTerrainGenerator {
                             double d16 = (d11-d10)*d14;
                             double d15 = d10-d16;
                             for(int z = 0;z < 4;z++) {
-                                if(height < 2) primer.setBlockState(x4*4+x,height32*8+h,z4*4+z,Blocks.BEDROCK.getDefaultState());
-                                else if((d15 += d16) > 0.0D) primer.setBlockState(x4*4+x,height32*8+h,z4*4+z,Blocks.STONE.getDefaultState());
+                            	double val = (d15 += d16);
+                                if(height < 3 || val <= 0.0D) primer.setBlockState(x4*4+x,height32*8+h,z4*4+z,Blocks.BEDROCK.getDefaultState());
+                                else if(val > 0.0D) primer.setBlockState(x4*4+x,height32*8+h,z4*4+z,Blocks.STONE.getDefaultState());
                             }
                             d10 += d12;
                             d11 += d13;
@@ -184,7 +185,7 @@ public class NormalTerrainGenerator {
         for(int i = 0;i < 16;i++) {
             for(int j = 0;j < 16;j++) {
                 Biome biome = biomes[j+i*16];
-                biome.genTerrainBlocks(this.world,this.random, primer,x*16+i,z*16+j,this.depthBuffer[j+i*16]);
+                biome.genTerrainBlocks(this.world,this.random,primer,x*16+i,z*16+j,this.depthBuffer[j+i*16]);
             }
         }
     }

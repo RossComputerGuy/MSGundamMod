@@ -18,7 +18,7 @@ public class RenderGuiHandler {
 	@SubscribeEvent
 	public static void pre(RenderGameOverlayEvent.Pre event) {
 		IHumanCapability human = Human.getHuman(Minecraft.getMinecraft().player);
-		if(human.getPlayer().getRidingEntity() != null && human.getPlayer().getRidingEntity() instanceof MobileSuit.MSMob && event.getType() == ElementType.HOTBAR) event.setCanceled(true);
+		if(human.getPlayer().getRidingEntity() != null && human.getPlayer().getRidingEntity() instanceof MobileSuit.MSMob && event.getType() == ElementType.CHAT) event.setCanceled(true);
 	}
 	
 	@SubscribeEvent

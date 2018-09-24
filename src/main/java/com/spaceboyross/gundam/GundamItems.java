@@ -1,6 +1,11 @@
 package com.spaceboyross.gundam;
 
 import com.spaceboyross.gundam.items.armor.CharAznableMaskItem;
+import com.spaceboyross.gundam.items.armor.SpaceSuitHelmetItem;
+import com.spaceboyross.gundam.items.armor.SpaceSuitPantsItem;
+import com.spaceboyross.gundam.items.armor.SpaceSuitShoesItem;
+import com.spaceboyross.gundam.items.armor.SpaceSuitTorsoItem;
+import com.spaceboyross.gundam.items.materials.ECarbonIngotItem;
 import com.spaceboyross.gundam.items.materials.GundariumAlphaIngotItem;
 import com.spaceboyross.gundam.items.materials.GundariumBetaIngotItem;
 import com.spaceboyross.gundam.items.materials.GundariumEpsilonIngotItem;
@@ -33,6 +38,9 @@ public class GundamItems {
 	
 	@GameRegistry.ObjectHolder("gundam:music_flying_in_the_sky")
 	public static GundamMusicItem flyingInTheSkyMusic;
+	
+	@GameRegistry.ObjectHolder("gundam:ecarbon_ingot")
+	public static ECarbonIngotItem ecarbonIngot;
 	
 	@GameRegistry.ObjectHolder("gundam:g_controller")
 	public static GControllerItem gController;
@@ -76,6 +84,18 @@ public class GundamItems {
 	@GameRegistry.ObjectHolder("gundam:music_the_winner")
 	public static GundamMusicItem theWinnerMusic;
 	
+	@GameRegistry.ObjectHolder("gundam:spacesuit_helmet")
+	public static SpaceSuitHelmetItem spacesuitHelmet;
+	
+	@GameRegistry.ObjectHolder("gundam:spacesuit_pants")
+	public static SpaceSuitPantsItem spacesuitPants;
+	
+	@GameRegistry.ObjectHolder("gundam:spacesuit_shoes")
+	public static SpaceSuitShoesItem spacesuitShoes;
+	
+	@GameRegistry.ObjectHolder("gundam:spacesuit_torso")
+	public static SpaceSuitTorsoItem spacesuitTorso;
+	
 	@GameRegistry.ObjectHolder("gundam:steel_ingot")
 	public static SteelIngotItem steelIngot;
 	
@@ -100,6 +120,7 @@ public class GundamItems {
 		GundamItems.beyondTheTimeMusic.initModel();
 		GundamItems.charAznableMask.initModel();
 		GundamItems.dreamsMusic.initModel();
+		GundamItems.ecarbonIngot.initModel();
 		GundamItems.flyingInTheSkyMusic.initModel();
 		GundamItems.gController.initModel();
 		GundamItems.godfingerMusic.initModel();
@@ -115,6 +136,10 @@ public class GundamItems {
 		GundamItems.shineThroughTheStormMusic.initModel();
 		GundamItems.theWingsOfABoyThatKilledAdolescenceMusic.initModel();
 		GundamItems.theWinnerMusic.initModel();
+		GundamItems.spacesuitHelmet.initModel();
+		GundamItems.spacesuitPants.initModel();
+		GundamItems.spacesuitShoes.initModel();
+		GundamItems.spacesuitTorso.initModel();
 		GundamItems.steelIngot.initModel();
 		GundamItems.superHardSteelIngot.initModel();
 		GundamItems.tobeGundamMusic.initModel();

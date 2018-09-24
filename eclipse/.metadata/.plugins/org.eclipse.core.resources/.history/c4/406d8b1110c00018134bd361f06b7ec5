@@ -1,0 +1,7 @@
+package com.spaceboyross.gundam.ms.gundams;
+
+import com.spaceboyross.gundam.ms.MobileSuit;
+
+public class GN001GundamExiaMobileSuit extends MobileSuit {
+
+}
