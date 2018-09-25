@@ -1,0 +1,11 @@
+package com.spaceboyross.gundam.enums;
+
+public enum EnumColonyMaintenanceTunnelType {
+	X,
+	Z,
+	NX,
+	NZ,
+	ALLWAY,
+	AIRLOCK,
+	STORAGE
+}

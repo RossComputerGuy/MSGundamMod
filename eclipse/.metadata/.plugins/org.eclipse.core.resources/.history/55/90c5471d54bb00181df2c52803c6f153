@@ -1,6 +1,0 @@
-package com.spaceboyross.gundam.utils;
-
-public class NetworkUtils {
-	
-	public static void sendToClient(EntityPlayer player) {}
-}

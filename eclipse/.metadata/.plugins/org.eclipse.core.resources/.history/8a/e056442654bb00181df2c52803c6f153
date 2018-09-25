@@ -1,8 +1,0 @@
-package com.spaceboyross.gundam.utils;
-
-import net.minecraft.entity.player.EntityPlayer;
-
-public class NetworkUtils {
-	
-	public static void sendToClient(EntityPlayer player) {}
-}

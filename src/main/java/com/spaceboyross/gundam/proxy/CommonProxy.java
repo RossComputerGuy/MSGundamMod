@@ -53,7 +53,8 @@ import com.spaceboyross.gundam.ms.zeon.MS05AZaku1EarlyTypeMobileSuit;
 import com.spaceboyross.gundam.ms.zeon.MS07BGoufMobileSuit;
 import com.spaceboyross.gundam.ms.zeon.MS09RRickDomMobileSuit;
 import com.spaceboyross.gundam.net.PacketHandler;
-import com.spaceboyross.gundam.world.OreGen;
+import com.spaceboyross.gundam.world.gen.GundamWorldGenerator;
+import com.spaceboyross.gundam.world.gen.OreGen;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -107,6 +108,7 @@ public class CommonProxy {
 	
 	public void init(FMLInitializationEvent e) {
 		NetworkRegistry.INSTANCE.registerGuiHandler(GundamMod.instance,new GUIProxy());
+		GameRegistry.registerWorldGenerator(new GundamWorldGenerator(),0);
 		GameRegistry.registerWorldGenerator(new OreGen(),0);
 		GundamRecipes.init();
 	}

@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.net.client;
-
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
-
-public class PacketHumanClient implements IMessage {
-
-}

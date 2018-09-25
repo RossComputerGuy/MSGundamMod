@@ -2,7 +2,7 @@ package com.spaceboyross.gundam.net.server;
 
 import com.spaceboyross.gundam.capabilities.human.Human;
 import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
-import com.spaceboyross.gundam.enums.EHumantypes;
+import com.spaceboyross.gundam.enums.EnumHumantypes;
 import com.spaceboyross.gundam.ms.MobileSuit;
 
 import io.netty.buffer.ByteBuf;

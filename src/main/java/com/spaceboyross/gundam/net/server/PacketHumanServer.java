@@ -4,7 +4,7 @@ import java.util.UUID;
 
 import com.spaceboyross.gundam.capabilities.human.Human;
 import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
-import com.spaceboyross.gundam.enums.EHumantypes;
+import com.spaceboyross.gundam.enums.EnumHumantypes;
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
 
@@ -60,7 +60,7 @@ public class PacketHumanServer implements IMessage {
             World world = playerEntity.getEntityWorld();
             IHumanCapability nt = Human.getHuman(playerEntity);
             nt.setHasShownHumantypeMenu(message.shownHumantypeMenu);
-            nt.setHumantype(EHumantypes.values()[message.humantype]);
+            nt.setHumantype(EnumHumantypes.values()[message.humantype]);
             if(message.msID != -1) nt.setMS((MobileSuit.MSMob)world.getEntityByID(message.msID));
             nt.setMobileFighterID(message.mobileFighterID);
         }

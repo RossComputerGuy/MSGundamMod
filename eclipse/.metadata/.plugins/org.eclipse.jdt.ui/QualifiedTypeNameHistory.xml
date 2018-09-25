@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="net.minecraft.world.WorldEntitySpawner"/>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.net.server.PacketDimensionServer"/>
-    <fullyQualifiedTypeName name="net.minecraftforge.common.capabilities.ICapabilityProvider"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayerMP"/>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.GundamMod"/>
-    <fullyQualifiedTypeName name="net.minecraft.util.ResourceLocation"/>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.items.music.AnimeJaNaiMusicItem"/>
-    <fullyQualifiedTypeName name="net.minecraftforge.client.event.sound.SoundEvent"/>
-    <fullyQualifiedTypeName name="net.minecraft.util.SoundEvent"/>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.blocks.TitaniumBlock"/>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.fighters.GF13017NJIIGodGundamMobileFighter"/>
-    <fullyQualifiedTypeName name="java.util.UUID"/>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.capabilities.human.Human"/>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability"/>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.MobileFighter"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.MobileFighter.MSMob"/>
     <fullyQualifiedTypeName name="net.minecraft.util.EnumHand"/>
     <fullyQualifiedTypeName name="net.minecraft.util.math.Vec3d"/>
@@ -50,14 +34,30 @@
     <fullyQualifiedTypeName name="net.minecraftforge.event.entity.living.LivingSpawnEvent"/>
     <fullyQualifiedTypeName name="net.minecraftforge.event.world.BlockEvent"/>
     <fullyQualifiedTypeName name="net.minecraftforge.event.world.BlockEvent.PlaceEvent"/>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.GundamDimensions"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.world.gen.ColonyChunkGenerator"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.world.terrain.ColonyTerrainGenerator"/>
     <fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.GundamBlocks"/>
     <fullyQualifiedTypeName name="net.minecraftforge.event.entity.living.LivingDestroyBlockEvent"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.dimension.DimensionSpace"/>
     <fullyQualifiedTypeName name="net.minecraft.client.entity.EntityPlayerSP"/>
     <fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.PlayerEvent"/>
     <fullyQualifiedTypeName name="net.minecraftforge.event.entity.living.LivingEvent"/>
+    <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+    <fullyQualifiedTypeName name="net.minecraft.nbt.NBTTagCompound"/>
+    <fullyQualifiedTypeName name="net.minecraft.world.gen.structure.StructureMineshaftPieces"/>
+    <fullyQualifiedTypeName name="net.minecraft.world.gen.structure.StructureMineshaftPieces.Corridor"/>
+    <fullyQualifiedTypeName name="net.minecraft.world.gen.structure.StructureMineshaftStart"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="com.spaceboyross.gundam.GundamBlocks"/>
+    <fullyQualifiedTypeName name="com.spaceboyross.gundam.GundamDimensions"/>
+    <fullyQualifiedTypeName name="com.spaceboyross.gundam.world.gen.GundamWorldGenerator"/>
+    <fullyQualifiedTypeName name="net.minecraft.world.WorldServer"/>
+    <fullyQualifiedTypeName name="net.minecraft.world.gen.structure.template.Template"/>
+    <fullyQualifiedTypeName name="net.minecraft.block.state.IBlockState"/>
+    <fullyQualifiedTypeName name="net.minecraft.util.Mirror"/>
+    <fullyQualifiedTypeName name="net.minecraft.block.Block"/>
+    <fullyQualifiedTypeName name="net.minecraft.world.gen.structure.template.PlacementSettings"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="net.minecraft.util.math.ChunkPos"/>
+    <fullyQualifiedTypeName name="net.minecraft.util.Rotation"/>
 </qualifiedTypeNameHistroy>

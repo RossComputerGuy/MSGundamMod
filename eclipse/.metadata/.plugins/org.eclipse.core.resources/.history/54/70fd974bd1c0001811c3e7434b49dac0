@@ -1,0 +1,34 @@
+package com.spaceboyross.gundam.world.structures.mapgen;
+
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.structure.MapGenStructure;
+import net.minecraft.world.gen.structure.StructureStart;
+
+public class ColonyMaintenanceTunnelMapGenStructure extends MapGenStructure {
+
+	@Override
+	public String getStructureName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BlockPos getNearestStructurePos(World worldIn, BlockPos pos, boolean findUnexplored) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected boolean canSpawnStructureAtCoords(int chunkX, int chunkZ) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	protected StructureStart getStructureStart(int chunkX, int chunkZ) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

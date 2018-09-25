@@ -2,7 +2,7 @@ package com.spaceboyross.gundam.capabilities.interfaces;
 
 import java.util.List;
 
-import com.spaceboyross.gundam.enums.EHumantypes;
+import com.spaceboyross.gundam.enums.EnumHumantypes;
 import com.spaceboyross.gundam.ms.MobileSuit;
 
 import net.minecraft.entity.Entity;
@@ -27,8 +27,8 @@ public interface IHumanCapability {
 	boolean hasShownHumantypeMenu();
 	void setHasShownHumantypeMenu(boolean v);
 	
-	EHumantypes getHumantype();
-	void setHumantype(EHumantypes v);
+	EnumHumantypes getHumantype();
+	void setHumantype(EnumHumantypes v);
 	
 	void syncToServer();
 	void syncToClient();

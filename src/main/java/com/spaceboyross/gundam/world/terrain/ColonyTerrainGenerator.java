@@ -46,9 +46,7 @@ public class ColonyTerrainGenerator extends NormalTerrainGenerator {
                             double d15 = d10-d16;
                             for(int z = 0;z < 4;z++) {
                             	double val = (d15 += d16);
-                                if(height < 6 || height == 10) primer.setBlockState(x4*4+x,height32*8+h,z4*4+z,GundamBlocks.titaniumBlock.getDefaultState());
-                                else if(height > 6 && height <= 9) primer.setBlockState(x4*4+x,height32*8+h,z4*4+z,Blocks.AIR.getDefaultState());
-                                else if(height == 10) primer.setBlockState(x4*4+x,height32*8+h,z4*4+z,GundamBlocks.titaniumBlock.getDefaultState());
+                                if(height >= 0 && height <= 6) primer.setBlockState(x4*4+x,height32*8+h,z4*4+z,Blocks.AIR.getDefaultState());
                                 else if(val > 0.0D) primer.setBlockState(x4*4+x,height32*8+h,z4*4+z,Blocks.STONE.getDefaultState());
                             }
                             d10 += d12;

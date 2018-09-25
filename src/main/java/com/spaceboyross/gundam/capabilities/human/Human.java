@@ -5,7 +5,7 @@ import org.lwjgl.opengl.GL11;
 import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
 import com.spaceboyross.gundam.capabilities.providers.SimpleProvider;
-import com.spaceboyross.gundam.enums.EHumantypes;
+import com.spaceboyross.gundam.enums.EnumHumantypes;
 import com.spaceboyross.gundam.ms.MobileSuit;
 import com.spaceboyross.gundam.net.client.PacketGUI;
 import com.spaceboyross.gundam.net.client.PacketHumanClient;
@@ -52,7 +52,7 @@ public class Human {
 			public void readNBT(Capability<IHumanCapability> capability,IHumanCapability instance,EnumFacing side,NBTBase nbt) {
 				NBTTagCompound root = (NBTTagCompound)nbt;
 				instance.setHasShownHumantypeMenu(root.getBoolean("shownHumantypeMenu"));
-				instance.setHumantype(EHumantypes.values()[root.getInteger("humantype")]);
+				instance.setHumantype(EnumHumantypes.values()[root.getInteger("humantype")]);
 				instance.setMobileFighterID(root.getInteger("mobileFighter"));
 			}
 		},() -> new HumanCapability(null));

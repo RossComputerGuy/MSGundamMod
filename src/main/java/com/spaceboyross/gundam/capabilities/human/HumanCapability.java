@@ -3,7 +3,7 @@ package com.spaceboyross.gundam.capabilities.human;
 import java.util.List;
 
 import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
-import com.spaceboyross.gundam.enums.EHumantypes;
+import com.spaceboyross.gundam.enums.EnumHumantypes;
 import com.spaceboyross.gundam.ms.MobileSuit;
 import com.spaceboyross.gundam.ms.MobileSuit.MSMob;
 import com.spaceboyross.gundam.net.PacketHandler;
@@ -19,7 +19,7 @@ import net.minecraft.util.math.Vec3d;
 public class HumanCapability implements IHumanCapability {
 	
 	private boolean shownHumantypeMenu = false;
-	private EHumantypes humantype = EHumantypes.OLDTYPE;
+	private EnumHumantypes humantype = EnumHumantypes.OLDTYPE;
 	private EntityPlayer player;
 	private MobileSuit.MSMob ms;
 	private int mobileFighterID = -1;
@@ -73,12 +73,12 @@ public class HumanCapability implements IHumanCapability {
 	}
 
 	@Override
-	public EHumantypes getHumantype() {
+	public EnumHumantypes getHumantype() {
 		return this.humantype;
 	}
 
 	@Override
-	public void setHumantype(EHumantypes v) {
+	public void setHumantype(EnumHumantypes v) {
 		this.humantype = v;
 	}
 	

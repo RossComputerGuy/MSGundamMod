@@ -4,7 +4,7 @@ import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.blocks.gui.MSCraftingStationGUIContainer;
 import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
 import com.spaceboyross.gundam.capabilities.human.Human;
-import com.spaceboyross.gundam.enums.EHumantypes;
+import com.spaceboyross.gundam.enums.EnumHumantypes;
 import com.spaceboyross.gundam.utils.CapabilityUtils;
 import com.spaceboyross.gundam.utils.UIUtils;
 
@@ -54,8 +54,8 @@ public class HumantypeGUI extends GuiScreen {
 	@Override
 	public void actionPerformed(GuiButton button) {
 		if(button.id >= this.btnNewtype.id && button.id <= this.btnOldtype.id) {
-			if(button.id == this.btnNewtype.id) this.nt.setHumantype(EHumantypes.NEWTYPE);
-			if(button.id == this.btnOldtype.id) this.nt.setHumantype(EHumantypes.OLDTYPE);
+			if(button.id == this.btnNewtype.id) this.nt.setHumantype(EnumHumantypes.NEWTYPE);
+			if(button.id == this.btnOldtype.id) this.nt.setHumantype(EnumHumantypes.OLDTYPE);
 			this.nt.setHasShownHumantypeMenu(true);
 			this.nt.syncToServer();
 			this.mc.displayGuiScreen(null);

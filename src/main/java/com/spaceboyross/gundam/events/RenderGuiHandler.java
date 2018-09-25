@@ -2,7 +2,7 @@ package com.spaceboyross.gundam.events;
 
 import com.spaceboyross.gundam.capabilities.human.Human;
 import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
-import com.spaceboyross.gundam.enums.EHumantypes;
+import com.spaceboyross.gundam.enums.EnumHumantypes;
 import com.spaceboyross.gundam.gui.hud.MobileSuitHUD;
 import com.spaceboyross.gundam.gui.hud.NewtypeHUD;
 import com.spaceboyross.gundam.ms.MobileSuit;
@@ -24,7 +24,7 @@ public class RenderGuiHandler {
 	@SubscribeEvent
 	public static void post(RenderGameOverlayEvent.Post event) {
 		IHumanCapability human = Human.getHuman(Minecraft.getMinecraft().player);
-		if(human.getHumantype() == EHumantypes.NEWTYPE) new NewtypeHUD(Minecraft.getMinecraft(),human);
+		if(human.getHumantype() == EnumHumantypes.NEWTYPE) new NewtypeHUD(Minecraft.getMinecraft(),human);
 		if(human.getPlayer().getRidingEntity() != null && human.getPlayer().getRidingEntity() instanceof MobileSuit.MSMob) new MobileSuitHUD(Minecraft.getMinecraft(),human);
 	}
 }
