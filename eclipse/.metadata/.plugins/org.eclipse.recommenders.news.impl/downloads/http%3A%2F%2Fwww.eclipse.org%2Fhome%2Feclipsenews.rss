@@ -10,6 +10,22 @@
       <link>http://www.eclipse.org</link>
     </image>
     <item>
+    <title><![CDATA[K8s at the Edge - Some Context on the New Kubernetes IoT Working Group]]></title>
+      <link><![CDATA[http://bit.ly/2Du9i4p]]></link>
+      <description><![CDATA[The Eclipse Foundation is excited to be part of today's announcement of a new Kubernetes IoT Edge Working Group.]]></description>
+      <pubDate>Wed, 26 Sep 2018 08:30:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+    <title><![CDATA[Welcoming GlassFish to the Eclipse Foundation]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/tanja-obradovic/welcoming-glassfish-eclipse-foundation]]></link>
+      <description><![CDATA[A major milestone was achieved yesterday! The GlassFish code from Oracle made its home in the Eclipse Foundation's Git repositories, starting a new era of Eclipse GlassFish. ]]></description>
+      <pubDate>Wed, 19 Sep 2018 14:30:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
     <title><![CDATA[An $8.7 Billion Shared Investment: Sizing the Economic Value of Eclipse Community Collaboration]]></title>
       <link><![CDATA[https://blogs.eclipse.org/post/thabang-mashologu/87-billion-shared-investment-sizing-economic-value-eclipse-community]]></link>
       <description><![CDATA[What is the value of the code contributed by the Eclipse community? We estimate that the roughly 162 million total physical source lines of code in Eclipse repositories represent a $8.7 billion USD shared technology investment by our community.]]></description>

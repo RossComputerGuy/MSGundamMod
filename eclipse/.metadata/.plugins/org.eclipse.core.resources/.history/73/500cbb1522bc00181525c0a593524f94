@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.gui;
-
-import net.minecraftforge.fml.client.config.GuiConfig;
-
-public class ModConfig extends GuiConfig {
-
-}

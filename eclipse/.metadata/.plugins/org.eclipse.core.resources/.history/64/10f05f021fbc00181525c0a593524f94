@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.gui.hud;
-
-import net.minecraft.client.gui.Gui;
-
-public class MobileSuitHUD extends Gui {
-
-}

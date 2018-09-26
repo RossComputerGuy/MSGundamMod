@@ -20,13 +20,13 @@ import net.minecraft.world.gen.structure.template.PlacementSettings;
 import net.minecraft.world.gen.structure.template.Template;
 import net.minecraft.world.gen.structure.template.TemplateManager;
 
-public class ColonyMaintenance﻿TunnelWorldGenerator extends WorldGenerator {
+public class ColonyMaintenanceTunnelWorldGenerator extends WorldGenerator {
 	@Override
 	public boolean generate(World world,Random rand,BlockPos position) {
 		WorldServer worldserver = (WorldServer)world;
 		MinecraftServer minecraftserver = world.getMinecraftServer();
 		TemplateManager templatemanager = worldserver.getStructureTemplateManager();
-		Template template = templatemanager.getTemplate(minecraftserver,new ResourceLocation(GundamMod.MODID+":colony_maintenance_tunnel"+rand.nextInt(5)));
+		Template template = templatemanager.getTemplate(minecraftserver,new ResourceLocation(GundamMod.MODID+":colony_maintenance_tunnel"+rand.nextInt(7)));
 		if(template == null) return false;
 		IBlockState iblockstate = world.getBlockState(position);
 		world.notifyBlockUpdate(position,iblockstate,iblockstate,3);
