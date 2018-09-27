@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.MobileFighter.MSMob"/>
-    <fullyQualifiedTypeName name="net.minecraft.util.EnumHand"/>
-    <fullyQualifiedTypeName name="net.minecraft.util.math.Vec3d"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.fighters.GF13017NJShiningGundamMobileFighter"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.eff.RGM79GMMobileSuit"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.zeon.MS09RRickDomMobileSuit"/>
@@ -13,10 +10,8 @@
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.gundams.AGE1GundamAGE1NormalMobileSuit"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.zeon.MS07BGoufMobileSuit"/>
     <fullyQualifiedTypeName name="net.minecraft.item.Item"/>
-    <fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.items.armor.SpaceSuitHelmetItem"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.items.armor.SpaceSuitTorsoItem"/>
-    <fullyQualifiedTypeName name="net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder"/>
     <fullyQualifiedTypeName name="net.minecraftforge.event.entity.EntityJoinWorldEvent"/>
     <fullyQualifiedTypeName name="net.minecraftforge.fml.common.eventhandler.SubscribeEvent"/>
     <fullyQualifiedTypeName name="net.minecraftforge.event.entity.EntityEvent"/>
@@ -28,9 +23,7 @@
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.events.EntityHandler"/>
     <fullyQualifiedTypeName name="net.minecraft.entity.EntityLivingBase"/>
     <fullyQualifiedTypeName name="net.minecraft.inventory.EntityEquipmentSlot"/>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.GundamItems"/>
     <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.MobileSuit"/>
-    <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.MobileSuit.MSMob"/>
     <fullyQualifiedTypeName name="net.minecraftforge.event.entity.living.LivingSpawnEvent"/>
     <fullyQualifiedTypeName name="net.minecraftforge.event.world.BlockEvent"/>
     <fullyQualifiedTypeName name="net.minecraftforge.event.world.BlockEvent.PlaceEvent"/>
@@ -60,4 +53,11 @@
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="net.minecraft.util.math.ChunkPos"/>
     <fullyQualifiedTypeName name="net.minecraft.util.Rotation"/>
+    <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.gundams.RX178GundamMkIIMobileSuit"/>
+    <fullyQualifiedTypeName name="net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder"/>
+    <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.MSRegistry"/>
+    <fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
+    <fullyQualifiedTypeName name="com.spaceboyross.gundam.GundamItems"/>
+    <fullyQualifiedTypeName name="com.spaceboyross.gundam.ms.MobileSuit.MSMob"/>
+    <fullyQualifiedTypeName name="com.spaceboyross.gundam.utils.PlayerUtils"/>
 </qualifiedTypeNameHistroy>

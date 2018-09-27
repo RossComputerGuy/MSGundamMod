@@ -1,0 +1,7 @@
+package com.spaceboyross.gundam.items.materials;
+
+import net.minecraft.item.Item;
+
+public class VariablePhaseShiftArmorItem extends Item {
+
+}

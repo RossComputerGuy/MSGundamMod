@@ -15,8 +15,6 @@ import net.minecraft.world.gen.structure.template.Template;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class GundamWorldGenerator extends WorldGenerator implements IWorldGenerator {
-	
-	static Random rand2 = new Random();
 
 	@Override
 	public void generate(Random random,int chunkX,int chunkZ,World world,IChunkGenerator chunkGenerator,IChunkProvider chunkProvider) {
@@ -24,14 +22,14 @@ public class GundamWorldGenerator extends WorldGenerator implements IWorldGenera
 		int blockZ = chunkZ*16;
 		switch(world.provider.getDimension()) {
 			default:
-				if(world.provider.getDimension() == GundamDimensions.side1ShangriLaID) this.generateSide1(world,random,blockX+8,blockZ+8);
+				if(world.provider.getDimension() == GundamDimensions.side1ShangriLaID || world.provider.getDimension() == GundamDimensions.side2IslandIffishID) this.generateSide1(world,random,blockX+8,blockZ+8);
 				break;
 		}
 	}
 	
 	private void generateSide1(World world,Random random,int blockX,int blockZ) {
 		BlockPos pos = new BlockPos(blockX,0,blockZ);
-		WorldGenerator structure = new ColonyMaintenance﻿TunnelWorldGenerator();
+		WorldGenerator structure = new ColonyMaintenanceTunnelWorldGenerator();
 		structure.generate(world,random,pos);
 	}
 	

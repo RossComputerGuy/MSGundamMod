@@ -3,7 +3,7 @@
   "modid": "gundam",
   "name": "MS Gundam Mod",
   "description": "Adds everything from the anime series Mobile Suit Gundam.",
-  "version": "1.0-week2-dev",
+  "version": "1.0-week3-dev",
   "mcversion": "${mcversion}",
   "url": "http://ms-gundam-mod.wikia.com",
   "updateUrl": "https://minecraft.curseforge.com/projects/ms-gundam-mod",
@@ -11,7 +11,13 @@
   "authorList": ["Spaceboy Ross"],
   "credits": "The MS Gundam Mod team, The Gundam community",
   "logoFile": "assets/gundam/logo.png",
-  "screenshots": ["assets/gundam/screenshots/2018-09-13_08.55.41.png"],
+  "screenshots": [
+    "assets/gundam/screenshots/double_x.png",
+    "assets/gundam/screenshots/newtype_vs_oldtype.png",
+    "assets/gundam/screenshots/rx-78-2.png",
+    "assets/gundam/screenshots/rx-78-2_moon.png",
+    "assets/gundam/screenshots/zechs_vs_heero.png"
+  ],
   "dependencies": []
 }
 ]

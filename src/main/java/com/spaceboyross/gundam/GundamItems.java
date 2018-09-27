@@ -11,9 +11,13 @@ import com.spaceboyross.gundam.items.materials.GundariumBetaIngotItem;
 import com.spaceboyross.gundam.items.materials.GundariumEpsilonIngotItem;
 import com.spaceboyross.gundam.items.materials.GundariumGammaIngotItem;
 import com.spaceboyross.gundam.items.materials.LunaTitaniumIngotItem;
+import com.spaceboyross.gundam.items.materials.NanolaminateArmorItem;
+import com.spaceboyross.gundam.items.materials.PhaseShiftArmorItem;
 import com.spaceboyross.gundam.items.materials.PortableVernierItem;
 import com.spaceboyross.gundam.items.materials.SteelIngotItem;
 import com.spaceboyross.gundam.items.materials.SuperHardSteelIngotItem;
+import com.spaceboyross.gundam.items.materials.TransPhaseArmorItem;
+import com.spaceboyross.gundam.items.materials.VariablePhaseShiftArmorItem;
 import com.spaceboyross.gundam.items.music.GundamMusicItem;
 import com.spaceboyross.gundam.items.tools.GControllerItem;
 import com.spaceboyross.gundam.items.tools.WrenchItem;
@@ -69,6 +73,12 @@ public class GundamItems {
 	@GameRegistry.ObjectHolder("gundam:luna_titanium_ingot")
 	public static LunaTitaniumIngotItem lunaTitaniumIngot;
 	
+	@GameRegistry.ObjectHolder("gundam:nanolaminate_armor")
+	public static NanolaminateArmorItem nanolaminateArmor;
+	
+	@GameRegistry.ObjectHolder("gundam:phase_shift_armor")
+	public static PhaseShiftArmorItem phaseShiftArmor;
+	
 	@GameRegistry.ObjectHolder("gundam:portable_vernier")
 	public static PortableVernierItem portableVernier;
 	
@@ -105,11 +115,17 @@ public class GundamItems {
 	@GameRegistry.ObjectHolder("gundam:music_tobe_gundam")
 	public static GundamMusicItem tobeGundamMusic;
 	
+	@GameRegistry.ObjectHolder("gundam:trans_phase_armor")
+	public static TransPhaseArmorItem transPhaseArmor;
+	
 	@GameRegistry.ObjectHolder("gundam:music_white_reflection")
 	public static GundamMusicItem whiteReflectionMusic;
 	
 	@GameRegistry.ObjectHolder("gundam:wrench")
 	public static WrenchItem wrench;
+	
+	@GameRegistry.ObjectHolder("gundam:variable_phase_shift_armor")
+	public static VariablePhaseShiftArmorItem variablePhaseShiftArmor;
 	
 	@GameRegistry.ObjectHolder("gundam:music_z_toki_wo_koete")
 	public static GundamMusicItem zTokiWoKoeteMusic;
@@ -131,6 +147,8 @@ public class GundamItems {
 		GundamItems.justCommunicationMusic.initModel();
 		GundamItems.lastImpressionMusic.initModel();
 		GundamItems.lunaTitaniumIngot.initModel();
+		GundamItems.nanolaminateArmor.initModel();
+		GundamItems.phaseShiftArmor.initModel();
 		GundamItems.portableVernier.initModel();
 		GundamItems.rhythmEmotionMusic.initModel();
 		GundamItems.shineThroughTheStormMusic.initModel();
@@ -143,8 +161,10 @@ public class GundamItems {
 		GundamItems.steelIngot.initModel();
 		GundamItems.superHardSteelIngot.initModel();
 		GundamItems.tobeGundamMusic.initModel();
+		GundamItems.transPhaseArmor.initModel();
 		GundamItems.whiteReflectionMusic.initModel();
 		GundamItems.wrench.initModel();
+		GundamItems.variablePhaseShiftArmor.initModel();
 		GundamItems.zTokiWoKoeteMusic.initModel();
 	}
 }

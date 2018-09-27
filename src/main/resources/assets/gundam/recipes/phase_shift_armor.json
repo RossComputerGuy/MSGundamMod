@@ -1,0 +1,22 @@
+{ 
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ICI",
+		"CIC",
+		"ICI"
+	],
+	"key": {
+		"I": [{
+			"item": "minecraft:iron_ingot",
+			"data": 0
+		}],
+		"C": [{
+			"item": "minecraft:redstone",
+			"data": 0
+		}]
+	},
+	"result": {
+		"item": "gundam:phase_shift_armor",
+		"data": 0
+	}
+}

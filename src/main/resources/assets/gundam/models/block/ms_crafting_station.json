@@ -1,12 +1,80 @@
 {
-	"parent": "block/cube",
+	"credit": "Made with Blockbench",
 	"textures": {
-		"particle": "gundam:blocks/luna_titanium_block",
-		"up": "minecraft:blocks/crafting_table_top",
-		"down": "gundam:blocks/luna_titanium_block",
-		"east": "gundam:blocks/luna_titanium_block",
-		"west": "gundam:blocks/luna_titanium_block",
-		"north": "gundam:blocks/luna_titanium_block",
-		"south": "gundam:blocks/luna_titanium_block"
+		"0": "gundam:blocks/luna_titanium_block",
+		"1": "gundam:blocks/ms_crafting_station_display",
+		"particle": "gundam:blocks/luna_titanium_block"
+	},
+	"elements": [
+		{
+			"name": "back",
+			"from": [0, 16, 14],
+			"to": [16, 30, 15],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 14], "texture": "#0"},
+				"east": {"uv": [0, 0, 1, 14], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 14], "texture": "#0"},
+				"west": {"uv": [0, 0, 1, 14], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 1], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 1], "texture": "#0"}
+			}
+		},
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"name": "display",
+			"from": [1, 13, 6],
+			"to": [15, 31, 7],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 20, 6.5]},
+			"faces": {
+				"north": {"uv": [0, 0, 14, 16], "texture": "#1"},
+				"east": {"uv": [0, 0, 1, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 14, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 1, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 14, 1], "texture": "#0"},
+				"down": {"uv": [0, 0, 14, 1], "texture": "#0"}
+			}
+		},
+		{
+			"name": "left",
+			"from": [15, 16, 1],
+			"to": [16, 30, 14],
+			"faces": {
+				"north": {"uv": [0, 0, 1, 14], "texture": "#0"},
+				"east": {"uv": [0, 0, 13, 14], "texture": "#0"},
+				"south": {"uv": [0, 0, 1, 14], "texture": "#0"},
+				"west": {"uv": [0, 0, 13, 14], "texture": "#0"},
+				"up": {"uv": [0, 0, 1, 13], "texture": "#0"},
+				"down": {"uv": [0, 0, 1, 13], "texture": "#0"}
+			}
+		},
+		{
+			"name": "right",
+			"from": [0, 16, 1],
+			"to": [1, 30, 14],
+			"faces": {
+				"north": {"uv": [0, 0, 1, 14], "texture": "#0"},
+				"east": {"uv": [0, 0, 13, 14], "texture": "#0"},
+				"south": {"uv": [0, 0, 1, 14], "texture": "#0"},
+				"west": {"uv": [0, 0, 13, 14], "texture": "#0"},
+				"up": {"uv": [0, 0, 1, 13], "texture": "#0"},
+				"down": {"uv": [0, 0, 1, 13], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 0, 0]
+		}
 	}
 }

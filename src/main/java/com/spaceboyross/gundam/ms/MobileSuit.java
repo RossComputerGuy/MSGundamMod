@@ -14,6 +14,7 @@ import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.capabilities.human.Human;
 import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
 import com.spaceboyross.gundam.gui.hud.MobileSuitHUD;
+import com.spaceboyross.gundam.utils.PlayerUtils;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelPlayer;
@@ -25,6 +26,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.MoverType;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
@@ -125,6 +127,10 @@ public abstract class MobileSuit {
 		return this.model;
 	}
 	
+	public ItemStack getRequiredItemToPilot() {
+		return null;
+	}
+	
 	public static class MSMob extends EntityMob {
 		
 		public float scale = 1.0f;
@@ -186,6 +192,7 @@ public abstract class MobileSuit {
 			if(player.inventory.getStackInSlot(player.inventory.currentItem).getItem() == GundamItems.wrench) {
 				// TODO: show customization interface
 			} else {
+				if(this.getMSRegistryEntry().getRequiredItemToPilot() != null && !player.inventory.hasItemStack(this.getMSRegistryEntry().getRequiredItemToPilot())) return false;
 				if(this.pilot != null) return false;
 				this.pilot = player;
 				this.pilot.startRiding(this);
@@ -195,7 +202,7 @@ public abstract class MobileSuit {
 					if(this.getMSRegistryEntry().getArmament(i).createItem() == null) continue;
 					player.addItemStackToInventory(this.getMSRegistryEntry().getArmament(i).createItem());
 				}
-				if(this.pilot.world.isRemote) Minecraft.getMinecraft().setRenderViewEntity(this);
+				if(PlayerUtils.isSinglePlayer(player)) Minecraft.getMinecraft().setRenderViewEntity(this);
 			}
 			return true;
 		}

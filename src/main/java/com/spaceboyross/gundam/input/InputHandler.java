@@ -20,7 +20,7 @@ public class InputHandler {
 	@SubscribeEvent
 	public void onKeyInput(InputEvent.KeyInputEvent event) {
 		if(KeyBindings.runTestFN.isPressed()) {
-			if(Minecraft.getMinecraft().player.dimension != GundamDimensions.side1ShangriLaID) PacketHandler.INSTANCE.sendToServer(new PacketDimensionServer(GundamDimensions.side1ShangriLaID));
+			if(Minecraft.getMinecraft().player.dimension != GundamDimensions.side2IslandIffishID) PacketHandler.INSTANCE.sendToServer(new PacketDimensionServer(GundamDimensions.side2IslandIffishID));
 			else PacketHandler.INSTANCE.sendToServer(new PacketDimensionServer(0));
 		}
 		if(KeyBindings.callMobileFighter.isPressed()) {
@@ -31,8 +31,6 @@ public class InputHandler {
 				mobileFighter.applyPlayerInteraction(human.getPlayer(),new Vec3d(human.getPlayer().posX,human.getPlayer().posY,human.getPlayer().posZ),EnumHand.MAIN_HAND);
 			}
 		}
-		if(KeyBindings.useVernier.isPressed() && !Minecraft.getMinecraft().player.isRiding() && Minecraft.getMinecraft().player.inventory.armorItemInSlot(2).getItem() == GundamItems.portableVernier && Minecraft.getMinecraft().player.motionY <= 0.0) {
-			Minecraft.getMinecraft().player.addVelocity(0.0,0.5,0.0);
-		}
+		if(KeyBindings.useVernier.isPressed() && Minecraft.getMinecraft().player.inventory.armorItemInSlot(2).getItem() == GundamItems.portableVernier && !Minecraft.getMinecraft().player.isRiding()) Minecraft.getMinecraft().player.addVelocity(0.0,0.5,0.0);
 	}
 }
