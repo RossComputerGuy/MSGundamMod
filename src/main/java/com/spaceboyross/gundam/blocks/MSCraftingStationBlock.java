@@ -1,5 +1,7 @@
 package com.spaceboyross.gundam.blocks;
 
+import java.util.List;
+
 import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.blocks.tile.MSCraftingStationTileEntity;
 
@@ -8,6 +10,8 @@ import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -30,6 +34,11 @@ public class MSCraftingStationBlock extends Block implements ITileEntityProvider
 		this.setUnlocalizedName(GundamMod.MODID+".ms_crafting_station");
 		this.setRegistryName("ms_crafting_station");
 		this.setCreativeTab(GundamMod.tab);
+	}
+	
+	@Override
+	public void addInformation(ItemStack stack,World world,List<String> tooltip,ITooltipFlag flag) {
+		tooltip.add(I18n.format("tile.gundam.ms_crafting_station.desc"));
 	}
 	
 	@SideOnly(Side.CLIENT)

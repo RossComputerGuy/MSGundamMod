@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.ms.zeon;
-
-import com.spaceboyross.gundam.ms.MobileSuit;
-
-public class MS07BGoufMobileSuit extends MobileSuit {
-
-}

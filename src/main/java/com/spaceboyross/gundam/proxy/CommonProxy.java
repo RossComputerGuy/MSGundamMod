@@ -155,7 +155,9 @@ public class CommonProxy {
 	
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
+		event.getRegistry().register(new GundamMusicItem("ai_senshi"));
 		event.getRegistry().register(new GundamMusicItem("anime_ja_nai"));
+		event.getRegistry().register(new GundamMusicItem("beleive"));
 		event.getRegistry().register(new GundamMusicItem("beyond_the_time"));
 		event.getRegistry().register(new CharAznableMaskItem());
 		event.getRegistry().register(new GundamMusicItem("dreams"));
@@ -167,17 +169,22 @@ public class CommonProxy {
 		event.getRegistry().register(new GundariumBetaIngotItem());
 		event.getRegistry().register(new GundariumEpsilonIngotItem());
 		event.getRegistry().register(new GundariumGammaIngotItem());
+		event.getRegistry().register(new GundamMusicItem("invoke"));
 		event.getRegistry().register(new GundamMusicItem("just_communication"));
 		event.getRegistry().register(new GundamMusicItem("last_impression"));
 		event.getRegistry().register(new LunaTitaniumIngotItem());
+		event.getRegistry().register(new GundamMusicItem("moment"));
 		event.getRegistry().register(new NanolaminateArmorItem());
 		event.getRegistry().register(new PhaseShiftArmorItem());
 		event.getRegistry().register(new PortableVernierItem());
+		event.getRegistry().register(new GundamMusicItem("realize"));
 		event.getRegistry().register(new GundamMusicItem("rhythm_emotion"));
 		event.getRegistry().register(new GundamMusicItem("shine_through_the_storm"));
+		event.getRegistry().register(new GundamMusicItem("stand_up_to_the_victory"));
 		event.getRegistry().register(new GundamMusicItem("the_wings_of_a_boy_that_killed_adolescence"));
 		event.getRegistry().register(new GundamMusicItem("the_winner"));
 		event.getRegistry().register(new GundamMusicItem("tobe_gundam"));
+		event.getRegistry().register(new GundamMusicItem("turn_a_turn"));
 		event.getRegistry().register(new SpaceSuitHelmetItem());
 		event.getRegistry().register(new SpaceSuitPantsItem());
 		event.getRegistry().register(new SpaceSuitShoesItem());

@@ -27,9 +27,15 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class GundamItems {
+	
+	@GameRegistry.ObjectHolder("gundam:music_ai_senshi")
+	public static GundamMusicItem aiSenshiMusic;
 
 	@GameRegistry.ObjectHolder("gundam:music_anime_ja_nai")
 	public static GundamMusicItem animeJaNaiMusic;
+
+	@GameRegistry.ObjectHolder("gundam:music_beleive")
+	public static GundamMusicItem beleiveMusic;
 
 	@GameRegistry.ObjectHolder("gundam:music_beyond_the_time")
 	public static GundamMusicItem beyondTheTimeMusic;
@@ -64,6 +70,9 @@ public class GundamItems {
 	@GameRegistry.ObjectHolder("gundam:gundarium_gamma_ingot")
 	public static GundariumGammaIngotItem gundariumGammaIngot;
 	
+	@GameRegistry.ObjectHolder("gundam:music_invoke")
+	public static GundamMusicItem invokeMusic;
+	
 	@GameRegistry.ObjectHolder("gundam:music_just_communication")
 	public static GundamMusicItem justCommunicationMusic;
 	
@@ -72,6 +81,9 @@ public class GundamItems {
 	
 	@GameRegistry.ObjectHolder("gundam:luna_titanium_ingot")
 	public static LunaTitaniumIngotItem lunaTitaniumIngot;
+	
+	@GameRegistry.ObjectHolder("gundam:music_moment")
+	public static GundamMusicItem momentMusic;
 	
 	@GameRegistry.ObjectHolder("gundam:nanolaminate_armor")
 	public static NanolaminateArmorItem nanolaminateArmor;
@@ -82,17 +94,26 @@ public class GundamItems {
 	@GameRegistry.ObjectHolder("gundam:portable_vernier")
 	public static PortableVernierItem portableVernier;
 	
+	@GameRegistry.ObjectHolder("gundam:music_realize")
+	public static GundamMusicItem realizeMusic;
+	
 	@GameRegistry.ObjectHolder("gundam:music_rhythm_emotion")
 	public static GundamMusicItem rhythmEmotionMusic;
 	
 	@GameRegistry.ObjectHolder("gundam:music_shine_through_the_storm")
 	public static GundamMusicItem shineThroughTheStormMusic;
 	
+	@GameRegistry.ObjectHolder("gundam:music_stand_up_to_the_victory")
+	public static GundamMusicItem standUpToTheVictoryMusic;
+	
 	@GameRegistry.ObjectHolder("gundam:music_the_wings_of_a_boy_that_killed_adolescence")
 	public static GundamMusicItem theWingsOfABoyThatKilledAdolescenceMusic;
 	
 	@GameRegistry.ObjectHolder("gundam:music_the_winner")
 	public static GundamMusicItem theWinnerMusic;
+	
+	@GameRegistry.ObjectHolder("gundam:music_turn_a_turn")
+	public static GundamMusicItem turnATurnMusic;
 	
 	@GameRegistry.ObjectHolder("gundam:spacesuit_helmet")
 	public static SpaceSuitHelmetItem spacesuitHelmet;
@@ -132,7 +153,9 @@ public class GundamItems {
 	
 	@SideOnly(Side.CLIENT)
 	public static void initModels() {
+		GundamItems.aiSenshiMusic.initModel();
 		GundamItems.animeJaNaiMusic.initModel();
+		GundamItems.beleiveMusic.initModel();
 		GundamItems.beyondTheTimeMusic.initModel();
 		GundamItems.charAznableMask.initModel();
 		GundamItems.dreamsMusic.initModel();
@@ -144,16 +167,21 @@ public class GundamItems {
 		GundamItems.gundariumBetaIngot.initModel();
 		GundamItems.gundariumEpsilonIngot.initModel();
 		GundamItems.gundariumGammaIngot.initModel();
+		GundamItems.invokeMusic.initModel();
 		GundamItems.justCommunicationMusic.initModel();
 		GundamItems.lastImpressionMusic.initModel();
 		GundamItems.lunaTitaniumIngot.initModel();
+		GundamItems.momentMusic.initModel();
 		GundamItems.nanolaminateArmor.initModel();
 		GundamItems.phaseShiftArmor.initModel();
 		GundamItems.portableVernier.initModel();
+		GundamItems.realizeMusic.initModel();
 		GundamItems.rhythmEmotionMusic.initModel();
 		GundamItems.shineThroughTheStormMusic.initModel();
+		GundamItems.standUpToTheVictoryMusic.initModel();
 		GundamItems.theWingsOfABoyThatKilledAdolescenceMusic.initModel();
 		GundamItems.theWinnerMusic.initModel();
+		GundamItems.turnATurnMusic.initModel();
 		GundamItems.spacesuitHelmet.initModel();
 		GundamItems.spacesuitPants.initModel();
 		GundamItems.spacesuitShoes.initModel();

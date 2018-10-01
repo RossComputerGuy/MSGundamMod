@@ -1,7 +1,15 @@
 {
+    "ai_senshi": {
+        "category": "record",
+        "sounds": [{ "name": "gundam:music/ai_senshi", "stream": true }]
+    },
 	"anime_ja_nai": {
 		"category": "record",
 		"sounds": [{ "name": "gundam:music/anime_ja_nai", "stream": true }]
+	},
+	"beleive": {
+		"category": "record",
+		"sounds": [{ "name": "gundam:music/beleive", "stream": true }]
 	},
 	"beyond_the_time": {
 		"category": "record",
@@ -19,6 +27,10 @@
        "category": "record",
        "sounds": [{ "name": "gundam:music/godfinger", "stream": true }]
     },
+    "invoke": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/invoke", "stream": true }]
+    },
 	"just_communication": {
        "category": "record",
        "sounds": [{ "name": "gundam:music/just_communication", "stream": true }]
@@ -27,6 +39,14 @@
        "category": "record",
        "sounds": [{ "name": "gundam:music/last_impression", "stream": true }]
     },
+    "moment": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/moment", "stream": true }]
+    },
+    "realize": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/realize", "stream": true }]
+    },
     "rhythm_emotion": {
        "category": "record",
        "sounds": [{ "name": "gundam:music/rhythm_emotion", "stream": true }]
@@ -34,6 +54,10 @@
     "shine_through_the_storm": {
        "category": "record",
        "sounds": [{ "name": "gundam:music/shine_through_the_storm", "stream": true }]
+    },
+    "stand_up_to_the_victory": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/stand_up_to_the_victory", "stream": true }]
     },
     "the_wings_of_a_boy_that_killed_adolescence": {
        "category": "record",
@@ -46,6 +70,10 @@
     "tobe_gundam": {
        "category": "record",
        "sounds": [{ "name": "gundam:music/tobe_gundam", "stream": true }]
+    },
+    "turn_a_turn": {
+       "category": "record",
+       "sounds": [{ "name": "gundam:music/turn_a_turn", "stream": true }]
     },
     "white_reflection": {
        "category": "record",
