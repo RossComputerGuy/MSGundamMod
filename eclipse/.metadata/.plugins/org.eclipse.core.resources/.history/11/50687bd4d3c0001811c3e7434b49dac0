@@ -1,8 +1,0 @@
-package com.spaceboyross.gundam.world.structures.piece;
-
-import net.minecraft.world.gen.structure.StructureMineshaftPieces;
-
-public class ColonyMaintenanceTunnelCorridorPiece extends StructureMineshaftPieces.Corridor {
-	
-	public ColonyMaintenanceTunnelCorridorPiece() {}
-}

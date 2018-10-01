@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.events;
-
-import net.minecraftforge.event.world.BlockEvent;
-
-public class BlockHandler {
-
-}
