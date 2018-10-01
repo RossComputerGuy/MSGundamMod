@@ -24,8 +24,8 @@ public class GX9901DXGundamDoubleXMobileSuit extends MobileSuit {
 	}
 	
 	@Override
-	public MSMob createEntity(World worldIn,Vec3d pos) {
-		MSMob mob = new GX9901DXGundamDoubleXMobileSuit.MSMob(worldIn);
+	public MSEntity createEntity(World worldIn,Vec3d pos) {
+		MSEntity mob = new GX9901DXGundamDoubleXMobileSuit.MSEntity(worldIn);
 		mob.setPosition(pos.x,pos.y,pos.z);
 		return mob;
 	}
@@ -35,8 +35,8 @@ public class GX9901DXGundamDoubleXMobileSuit extends MobileSuit {
 		return GundamItems.gController.getDefaultInstance();
 	}
 	
-	public static class MSMob extends MobileSuit.MSMob {
-		public MSMob(World worldIn) {
+	public static class MSEntity extends MobileSuit.MSEntity {
+		public MSEntity(World worldIn) {
 			super(worldIn);
 			this.scale = 6.55f;
 			this.setSize(1.0f*this.scale,2.0f*this.scale);

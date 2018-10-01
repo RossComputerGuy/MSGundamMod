@@ -1,5 +1,0 @@
-package com.spaceboyross.gundam.net.server;
-
-public class PacketDimensionServer {
-
-}

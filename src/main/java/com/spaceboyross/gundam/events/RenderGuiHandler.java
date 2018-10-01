@@ -18,13 +18,13 @@ public class RenderGuiHandler {
 	@SubscribeEvent
 	public static void pre(RenderGameOverlayEvent.Pre event) {
 		IHumanCapability human = Human.getHuman(Minecraft.getMinecraft().player);
-		if(human.getPlayer().getRidingEntity() != null && human.getPlayer().getRidingEntity() instanceof MobileSuit.MSMob && event.getType() == ElementType.CHAT) event.setCanceled(true);
+		if(human.getPlayer().getRidingEntity() != null && human.getPlayer().getRidingEntity() instanceof MobileSuit.MSEntity && event.getType() == ElementType.CHAT) event.setCanceled(true);
 	}
 	
 	@SubscribeEvent
 	public static void post(RenderGameOverlayEvent.Post event) {
 		IHumanCapability human = Human.getHuman(Minecraft.getMinecraft().player);
 		if(human.getHumantype() == EnumHumantypes.NEWTYPE) new NewtypeHUD(Minecraft.getMinecraft(),human);
-		if(human.getPlayer().getRidingEntity() != null && human.getPlayer().getRidingEntity() instanceof MobileSuit.MSMob) new MobileSuitHUD(Minecraft.getMinecraft(),human);
+		if(human.getPlayer().getRidingEntity() != null && human.getPlayer().getRidingEntity() instanceof MobileSuit.MSEntity) new MobileSuitHUD(Minecraft.getMinecraft(),human);
 	}
 }

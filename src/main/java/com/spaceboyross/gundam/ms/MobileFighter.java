@@ -14,11 +14,11 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 
 public abstract class MobileFighter extends MobileSuit {
-	public static class MSMob extends MobileSuit.MSMob {
+	public static class MSEntity extends MobileSuit.MSEntity {
 		
 		private UUID ownerUUID = null;
 		
-		public MSMob(World worldIn) {
+		public MSEntity(World worldIn) {
 			super(worldIn);
 		}
 		
@@ -41,13 +41,13 @@ public abstract class MobileFighter extends MobileSuit {
 		}
 		
 		@Override
-		public boolean processInteract(EntityPlayer player,EnumHand hand) {
+		public boolean processInitialInteract(EntityPlayer player,EnumHand hand) {
 			if(player.inventory.getStackInSlot(player.inventory.currentItem).getItem() != GundamItems.wrench) {
 				if(this.ownerUUID == null) this.ownerUUID = player.getPersistentID();
 				IHumanCapability human = Human.getHuman(player);
 				human.setMobileFighterID(this.getEntityId());
 			}
-			return super.processInteract(player, hand);
+			return super.processInitialInteract(player, hand);
 		}
 	}
 }

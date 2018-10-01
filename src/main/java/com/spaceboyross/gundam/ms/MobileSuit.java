@@ -17,22 +17,29 @@ import com.spaceboyross.gundam.gui.hud.MobileSuitHUD;
 import com.spaceboyross.gundam.utils.PlayerUtils;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelPlayer;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.MoverType;
-import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.datasync.DataParameter;
+import net.minecraft.network.datasync.DataSerializers;
+import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public abstract class MobileSuit {
 
@@ -55,7 +62,7 @@ public abstract class MobileSuit {
 	}
 	
 	public void drawHUD(MobileSuitHUD hud) {
-		MobileSuit.MSMob mob = (MSMob)hud.human.getPlayer().getRidingEntity();
+		MobileSuit.MSEntity mob = (MSEntity)hud.human.getPlayer().getRidingEntity();
 		Minecraft.getMinecraft().setRenderViewEntity(mob);
 	}
 	
@@ -71,8 +78,8 @@ public abstract class MobileSuit {
 		return new ResourceLocation(GundamMod.MODID,"textures/entity/"+(this.model+"_"+this.name).replaceAll(" ","_"));
 	}
 	
-	public MSMob createEntity(World worldIn,Vec3d pos) {
-		MSMob mob = new MSMob(worldIn);
+	public MSEntity createEntity(World worldIn,Vec3d pos) {
+		MSEntity mob = new MSEntity(worldIn);
 		mob.setPosition(pos.x,pos.y,pos.z);
 		return mob;
 	}
@@ -119,6 +126,10 @@ public abstract class MobileSuit {
 		return this.name;
 	}
 	
+	public ModelBase createModel() {
+		return null;
+	}
+	
 	public void setModel(String model) {
 		this.model = model;
 	}
@@ -131,54 +142,60 @@ public abstract class MobileSuit {
 		return null;
 	}
 	
-	public static class MSMob extends EntityMob {
+	public static class MSEntity extends Entity {
 		
 		public float scale = 1.0f;
 		private EntityPlayer pilot;
 		
-		private boolean leftInputDown = false;
-		private boolean rightInputDown = false;
-		private boolean forwardInputDown = false;
-		private boolean backInputDown = false;
+		private static final DataParameter<Float> ACCELERATION_SPEED = EntityDataManager.createKey(MSEntity.class,DataSerializers.FLOAT);
 		
-		public MSMob(World worldIn) {
+		private double driveMotionX = 0.0;
+		private double driveMotionY = 0.0;
+		private double driveMotionZ = 0.0;
+		
+		public float headYaw = 0.0f;
+		public float headPitch = 0.0f;
+		
+		public MSEntity(World worldIn) {
 			super(worldIn);
-			this.heal(Float.MAX_VALUE);
 		}
 		
 		@Override
-		public boolean canBreatheUnderwater() {
-			return true;
+		public void entityInit() {
+			this.dataManager.register(ACCELERATION_SPEED,0.5f);
 		}
 		
 		@Override
-		public NBTTagCompound writeToNBT(NBTTagCompound root) {
-			root = super.writeToNBT(root);
+		public void writeEntityToNBT(NBTTagCompound root) {
 			NBTTagCompound ms = new NBTTagCompound();
 			root.setTag("mobileSuit",ms);
-			return root;
+			root.setFloat("headPitch",this.headPitch);
+			root.setFloat("headYaw",this.headYaw);
 		}
 		
 		@Override
-		public void readFromNBT(NBTTagCompound root) {
-			super.readFromNBT(root);
+		public void readEntityFromNBT(NBTTagCompound root) {
 			if(root.hasKey("mobileSuit")) {
 				NBTTagCompound ms = root.getCompoundTag("mobileSuit");
 			}
+			this.headPitch = root.getFloat("headPitch");
+			this.headYaw = root.getFloat("headYaw");
 		}
 		
 		@Override
-		public void onEntityUpdate() {
-			super.onEntityUpdate();
+		public void onUpdate() {
+			super.onUpdate();
 			if(this.isBeingRidden() && this.canBeSteered() && this.getControllingPassenger() instanceof EntityLivingBase) {
 				EntityLivingBase driver = (EntityLivingBase)this.getControllingPassenger();
 				this.rotationYaw = driver.rotationYaw;
 				this.rotationPitch = driver.rotationPitch;
 				this.setRotation(this.rotationYaw,this.rotationPitch);
-				this.renderYawOffset = this.rotationYaw;
-	            this.rotationYawHead = this.renderYawOffset;
-	            //System.out.println(driver.motionX+", "+driver.motionY+", "+driver.motionZ);
-				this.move(MoverType.SELF,driver.motionX,driver.motionY,driver.motionZ);
+				this.headYaw = driver.rotationYawHead;
+				this.headPitch = driver.cameraPitch;
+				this.driveMotionX = driver.motionX;
+				this.driveMotionY = driver.motionY;
+				this.driveMotionZ = driver.motionZ;
+				this.move(MoverType.SELF,this.motionX+this.driveMotionX,this.motionY+this.driveMotionY,this.motionZ+this.driveMotionZ);
 			}
 		}
 		
@@ -188,11 +205,13 @@ public abstract class MobileSuit {
 	    }
 		
 		@Override
-		public boolean processInteract(EntityPlayer player,EnumHand hand) {
+		public boolean processInitialInteract(EntityPlayer player,EnumHand hand) {
 			if(player.inventory.getStackInSlot(player.inventory.currentItem).getItem() == GundamItems.wrench) {
 				// TODO: show customization interface
 			} else {
-				if(this.getMSRegistryEntry().getRequiredItemToPilot() != null && !player.inventory.hasItemStack(this.getMSRegistryEntry().getRequiredItemToPilot())) return false;
+				if(this.getMSRegistryEntry().getRequiredItemToPilot() != null) {
+					if(!player.inventory.hasItemStack(this.getMSRegistryEntry().getRequiredItemToPilot())) return false;
+				}
 				if(this.pilot != null) return false;
 				this.pilot = player;
 				this.pilot.startRiding(this);
@@ -216,6 +235,11 @@ public abstract class MobileSuit {
 		}
 		
 		@Override
+		public boolean canBeAttackedWithItem() {
+			return false;
+		}
+		
+		@Override
 		public boolean canPassengerSteer() {
 			return true;
 		}
@@ -226,13 +250,17 @@ public abstract class MobileSuit {
 		}
 		
 		@Override
+		public boolean canBeCollidedWith() {
+			return true;
+		}
+		
 		public boolean canBeSteered() {
 			return this.getControllingPassenger() instanceof EntityLivingBase;
 		}
 		
 		private void updateRiderPosition(Entity entity) {
 			if(entity != null) {
-				entity.setPosition(this.posX,this.posY+(getMountedYOffset()+entity.getYOffset())/2,this.posZ);
+				entity.setPosition(this.posX,this.posY+(this.getMountedYOffset()+entity.getYOffset())/2,this.posZ);
 			}
 		}
 		
@@ -261,31 +289,51 @@ public abstract class MobileSuit {
 		}
 	}
 	
-	public static class MSRender extends RenderLiving<MSMob> {
+	public static class MSRender extends Render<MSEntity> {
 		
 		private MobileSuit ms;
+		private ModelBase model;
 		
 		public MSRender(RenderManager rendermanagerIn,MobileSuit ms) {
-			super(rendermanagerIn,new ModelPlayer(1.0f,false),0.5f);
+			super(rendermanagerIn);
+			this.model = ms.createModel() == null ? new ModelPlayer(1.0f,false) : ms.createModel();
+			this.model.isChild = false;
 			this.ms = ms;
 		}
 		
+		protected float handleRotationFloat(MSEntity entity,float partialTicks) {
+	        return (float)entity.ticksExisted + partialTicks;
+	    }
+		
+		protected float interpolateRotation(float prevYawOffset,float yawOffset,float partialTicks) {
+	        float f;
+	        for(f = yawOffset-prevYawOffset;f < -180.0F;f += 360.0F);
+	        while(f >= 180.0F) f -= 360.0F;
+	        return prevYawOffset+partialTicks*f;
+	    }
+		
 		@Override
-		public void preRenderCallback(MSMob mob,float par2) {
-			this.scale(mob,par2);
+		public void doRender(MSEntity entity,double x,double y,double z,float entityYaw,float partialTicks) {
+			GlStateManager.pushMatrix();
+			this.scale(entity,partialTicks);
+			GlStateManager.translate(x,y,z);
+			GlStateManager.rotate(-entityYaw,0,1,0);
+			this.bindTexture(this.getEntityTexture(entity));
+			this.model.render(entity,0,0,entity.ticksExisted+partialTicks,entity.headYaw,entity.headPitch,entity.scale);
+			super.doRender(entity,x,y,z,entityYaw,partialTicks);
+			GlStateManager.popMatrix();
 		}
 		
-		protected void scale(MSMob mob,float par2) {
+		protected void scale(MSEntity mob,float par2) {
 			this.shadowSize = mob.scale/2.0f;
-			GL11.glScalef(mob.scale,mob.scale,mob.scale);
 		}
 
 		@Override
-		protected ResourceLocation getEntityTexture(MSMob entity) {
+		protected ResourceLocation getEntityTexture(MSEntity entity) {
 			return new ResourceLocation(this.ms.getBaseResourceLocation()+".png");
 		}
 		
-		public static class Factory implements IRenderFactory<MSMob> {
+		public static class Factory implements IRenderFactory<MSEntity> {
 			
 			private MobileSuit ms;
 			
@@ -294,7 +342,7 @@ public abstract class MobileSuit {
 			}
 			
 			@Override
-			public Render<? super MSMob> createRenderFor(RenderManager manager) {
+			public Render<? super MSEntity> createRenderFor(RenderManager manager) {
 				return new MSRender(manager,this.ms);
 			}
 		}

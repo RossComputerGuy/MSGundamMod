@@ -44,13 +44,11 @@ public class EntityHandler {
 	public static void onLivingEntityUpdate(LivingEvent.LivingUpdateEvent event) {
 		if(event.getEntity().ticksExisted % 1 == 0) {
 			if(event.getEntity().dimension == GundamDimensions.moonID) {
-				if(!(event.getEntityLiving() instanceof MobileSuit.MSMob)) {
-					if(event.getEntityLiving().getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() != GundamItems.spacesuitHelmet
-							&& event.getEntityLiving().getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() != GundamItems.spacesuitTorso
-							&& event.getEntityLiving().getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() != GundamItems.spacesuitPants
-							&& event.getEntityLiving().getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() != GundamItems.spacesuitShoes) {
-						event.getEntity().attackEntityFrom(DamageSource.DROWN,2.0f);
-					}
+				if(event.getEntityLiving().getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() != GundamItems.spacesuitHelmet
+						&& event.getEntityLiving().getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() != GundamItems.spacesuitTorso
+						&& event.getEntityLiving().getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() != GundamItems.spacesuitPants
+						&& event.getEntityLiving().getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() != GundamItems.spacesuitShoes) {
+					event.getEntity().attackEntityFrom(DamageSource.DROWN,2.0f);
 				}
 			}
 		}

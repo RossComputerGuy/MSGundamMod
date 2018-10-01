@@ -53,6 +53,7 @@ itemGroup.gundam=MS Gundam Mod
 item.gundam.char_aznable_mask.name=Char Aznable's Mask
 item.gundam.ecarbon_ingot.name=ECarbon Ingot
 item.gundam.g_controller.name=G-Controller
+item.gundam.g_controller.tooltip=Required for using the GX-9900 and GX-9901-DX
 item.gundam.gundarium_alpha_ingot.name=Gundarium α
 item.gundam.gundarium_beta_ingot.name=Gundarium β
 item.gundam.gundarium_epsilon_ingot.name=Gundarium ε

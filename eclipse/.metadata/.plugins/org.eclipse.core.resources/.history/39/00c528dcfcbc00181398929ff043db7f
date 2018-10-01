@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.ms.eff;
-
-import com.spaceboyross.gundam.ms.MobileSuit;
-
-public class RGM79GGMGroundTypeMobileSuit extends MobileSuit {
-
-}

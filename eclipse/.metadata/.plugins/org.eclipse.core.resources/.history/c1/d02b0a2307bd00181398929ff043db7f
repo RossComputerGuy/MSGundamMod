@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.entities;
-
-import net.minecraft.entity.monster.EntityMob;
-
-public class EntityZechsMarquise extends EntityMob {
-
-}

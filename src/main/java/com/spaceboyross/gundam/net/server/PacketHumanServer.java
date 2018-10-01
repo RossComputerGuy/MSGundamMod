@@ -61,7 +61,7 @@ public class PacketHumanServer implements IMessage {
             IHumanCapability nt = Human.getHuman(playerEntity);
             nt.setHasShownHumantypeMenu(message.shownHumantypeMenu);
             nt.setHumantype(EnumHumantypes.values()[message.humantype]);
-            if(message.msID != -1) nt.setMS((MobileSuit.MSMob)world.getEntityByID(message.msID));
+            if(message.msID != -1) nt.setMS((MobileSuit.MSEntity)world.getEntityByID(message.msID));
             nt.setMobileFighterID(message.mobileFighterID);
         }
     }

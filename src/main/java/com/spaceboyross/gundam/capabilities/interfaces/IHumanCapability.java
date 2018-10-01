@@ -14,8 +14,8 @@ public interface IHumanCapability {
 	int getMobileFighterID();
 	
 	// MS Pilot
-	void setMS(MobileSuit.MSMob ms);
-	MobileSuit.MSMob getMS();
+	void setMS(MobileSuit.MSEntity ms);
+	MobileSuit.MSEntity getMS();
 	
 	// Newtype
 	// TODO: add newtype events

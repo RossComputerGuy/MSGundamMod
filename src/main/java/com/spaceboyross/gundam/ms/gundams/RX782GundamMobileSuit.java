@@ -1,16 +1,12 @@
 package com.spaceboyross.gundam.ms.gundams;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.spaceboyross.gundam.models.ms.gundams.RX782GundamMobileSuitModel;
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.MobileSuit.MSMob;
 import com.spaceboyross.gundam.ms.armaments.BeamSaberMSArmament;
 import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
 
-import net.minecraft.client.shader.Framebuffer;
-import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.client.model.ModelBase;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
@@ -28,22 +24,27 @@ public class RX782GundamMobileSuit extends MobileSuit {
 	}
 	
 	@Override
+	public ModelBase createModel() {
+		return new RX782GundamMobileSuitModel();
+	}
+	
+	@Override
 	public int getCameraCount() {
 		return 12;
 	}
 	
 	@Override
-	public MSMob createEntity(World worldIn,Vec3d pos) {
-		MSMob mob = new RX782GundamMobileSuit.MSMob(worldIn);
+	public MSEntity createEntity(World worldIn,Vec3d pos) {
+		MSEntity mob = new RX782GundamMobileSuit.MSEntity(worldIn);
 		mob.setPosition(pos.x,pos.y,pos.z);
 		return mob;
 	}
 	
-	public static class MSMob extends MobileSuit.MSMob {
-		public MSMob(World worldIn) {
+	public static class MSEntity extends MobileSuit.MSEntity {
+		public MSEntity(World worldIn) {
 			super(worldIn);
-			this.scale = 6.66666666667f;
-			this.setSize(1.0f*this.scale,2.0f*this.scale);
+			this.scale = 1.0f;
+			this.setSize(10.0f*this.scale,30.0f);
 		}
 		
 		@Override

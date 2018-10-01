@@ -1,5 +1,0 @@
-package com.spaceboyross.gundam.ms;
-
-public abstract class MobileFighter extends MobileSuit {
-
-}

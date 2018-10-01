@@ -23,12 +23,14 @@ public class InputHandler {
 			if(Minecraft.getMinecraft().player.dimension != GundamDimensions.side2IslandIffishID) PacketHandler.INSTANCE.sendToServer(new PacketDimensionServer(GundamDimensions.side2IslandIffishID));
 			else PacketHandler.INSTANCE.sendToServer(new PacketDimensionServer(0));
 		}
-		if(KeyBindings.callMobileFighter.isPressed()) {
+		if(KeyBindings.callMobileFighter.isPressed() && !Minecraft.getMinecraft().player.isRiding()) {
 			IHumanCapability human = Human.getHuman(Minecraft.getMinecraft().player);
-			if(human.getMobileFighterID() >= 0) {
-				MobileFighter.MSMob mobileFighter = (MobileFighter.MSMob)human.getPlayer().getEntityWorld().getEntityByID(human.getMobileFighterID());
-				mobileFighter.setPosition(human.getPlayer().posX,human.getPlayer().posY,human.getPlayer().posZ);
-				mobileFighter.applyPlayerInteraction(human.getPlayer(),new Vec3d(human.getPlayer().posX,human.getPlayer().posY,human.getPlayer().posZ),EnumHand.MAIN_HAND);
+			if(human.getMobileFighterID() >= 0 && human.getPlayer().getEntityWorld().getEntityByID(human.getMobileFighterID()) instanceof MobileFighter.MSEntity) {
+				MobileFighter.MSEntity mobileFighter = (MobileFighter.MSEntity)human.getPlayer().getEntityWorld().getEntityByID(human.getMobileFighterID());
+				if(mobileFighter != null) {
+					mobileFighter.setPosition(human.getPlayer().posX,human.getPlayer().posY,human.getPlayer().posZ);
+					mobileFighter.applyPlayerInteraction(human.getPlayer(),new Vec3d(human.getPlayer().posX,human.getPlayer().posY,human.getPlayer().posZ),EnumHand.MAIN_HAND);
+				}
 			}
 		}
 		if(KeyBindings.useVernier.isPressed() && Minecraft.getMinecraft().player.inventory.armorItemInSlot(2).getItem() == GundamItems.portableVernier && !Minecraft.getMinecraft().player.isRiding()) Minecraft.getMinecraft().player.addVelocity(0.0,0.5,0.0);

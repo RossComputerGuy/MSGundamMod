@@ -3,7 +3,7 @@ package com.spaceboyross.gundam.ms.gundams;
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
 import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
-import com.spaceboyross.gundam.ms.gundams.ZGMFX10AFreedomGundamMobileSuit.MSMob;
+import com.spaceboyross.gundam.ms.gundams.ZGMFX10AFreedomGundamMobileSuit.MSEntity;
 
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -26,14 +26,14 @@ public class ZGMFX20AStrikeFreedomGundamMobileSuit extends MobileSuit {
 	}
 	
 	@Override
-	public MSMob createEntity(World worldIn,Vec3d pos) {
-		MSMob mob = new ZGMFX20AStrikeFreedomGundamMobileSuit.MSMob(worldIn);
+	public MSEntity createEntity(World worldIn,Vec3d pos) {
+		MSEntity mob = new ZGMFX20AStrikeFreedomGundamMobileSuit.MSEntity(worldIn);
 		mob.setPosition(pos.x,pos.y,pos.z);
 		return mob;
 	}
 	
-	public static class MSMob extends MobileSuit.MSMob {
-		public MSMob(World worldIn) {
+	public static class MSEntity extends MobileSuit.MSEntity {
+		public MSEntity(World worldIn) {
 			super(worldIn);
 			this.scale = 6.87f;
 			this.setSize(1.0f*this.scale,2.0f*this.scale);
