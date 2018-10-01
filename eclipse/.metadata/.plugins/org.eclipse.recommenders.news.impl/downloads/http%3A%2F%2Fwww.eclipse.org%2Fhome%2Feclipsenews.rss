@@ -10,6 +10,22 @@
       <link>http://www.eclipse.org</link>
     </image>
     <item>
+      <title><![CDATA[Eclipse CBI - Common Build Infrastructure changes]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/denis-roy/eclipse-cbi-common-build-infrastructure-changes]]></link>
+      <description><![CDATA[The Eclipse CBI, which traces its roots back to 2006, has undergone some important changes recently, including a new Kubernetes+Docker-powered environment at https://jenkins.eclipse.org that re announced previously.]]></description>
+      <pubDate>Thu, 28 Sep 2018 15:00:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+     <title><![CDATA[Eclipse Foundation and Cloud Native Computing Foundation Collaborate to Grow Kubernetes Use Cases in Trillion Dollar IoT Market]]></title>
+      <link><![CDATA[https://globenewswire.com/news-release/2018/09/26/1576651/0/en/Eclipse-Foundation-and-Cloud-Native-Computing-Foundation-Collaborate-to-Grow-Kubernetes-Use-Cases-in-Trillion-Dollar-IoT-Market.html]]></link>
+      <description><![CDATA[Red Hat and other Eclipse IoT members will collaborate in working group to extend capabilities of Kubernetes for IoT Edge use cases.]]></description>
+      <pubDate>Thu, 27 Sep 2018 09:00:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
     <title><![CDATA[K8s at the Edge - Some Context on the New Kubernetes IoT Working Group]]></title>
       <link><![CDATA[http://bit.ly/2Du9i4p]]></link>
       <description><![CDATA[The Eclipse Foundation is excited to be part of today's announcement of a new Kubernetes IoT Edge Working Group.]]></description>

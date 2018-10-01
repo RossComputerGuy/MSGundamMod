@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.ms.gundams;
-
-import com.spaceboyross.gundam.ms.MobileSuit;
-
-public class ZGMFX09AJusticeGundamMobileSuit extends MobileSuit {
-
-}

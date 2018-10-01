@@ -1,7 +1,0 @@
-package com.spaceboyross.gundam.enums;
-
-public enum EnumColonyMaintenanceTunnelType {
-	X_TUNNEL,
-	AIRLOCK,
-	STORAGE
-}

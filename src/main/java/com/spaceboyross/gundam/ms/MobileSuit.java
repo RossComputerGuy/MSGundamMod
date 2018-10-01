@@ -317,9 +317,8 @@ public abstract class MobileSuit {
 			GlStateManager.pushMatrix();
 			this.scale(entity,partialTicks);
 			GlStateManager.translate(x,y,z);
-			GlStateManager.rotate(-entityYaw,0,1,0);
 			this.bindTexture(this.getEntityTexture(entity));
-			this.model.render(entity,0,0,entity.ticksExisted+partialTicks,entity.headYaw,entity.headPitch,entity.scale);
+			this.model.render(entity,0,0,entity.ticksExisted+partialTicks,entity.headYaw,entity.headPitch,1.0f);
 			super.doRender(entity,x,y,z,entityYaw,partialTicks);
 			GlStateManager.popMatrix();
 		}
