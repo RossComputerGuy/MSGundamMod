@@ -1,14 +1,16 @@
 package com.spaceboyross.gundam.ms.gundams;
 
+import com.spaceboyross.gundam.GundamItems;
 import com.spaceboyross.gundam.models.ms.gundams.RX782GundamMobileSuitModel;
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.armaments.BeamSaberMSArmament;
-import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
 
 import net.minecraft.client.model.ModelBase;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTUtil;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class RX782GundamMobileSuit extends MobileSuit {
 	
@@ -17,10 +19,13 @@ public class RX782GundamMobileSuit extends MobileSuit {
 		this.setModel("RX-78-2");
 		this.setName("Gundam");
 		
-		this.addArmament(new VulcanGunMSArmament(2,60));
-		this.addArmament(new BeamSaberMSArmament(2));
-		
 		this.addRecipeItem("gundam:luna_titanium_ingot",20);
+	}
+	
+	@Override
+	public void init() {
+		this.addArmament(GameRegistry.makeItemStack("gundam:ms_armament_vulcans",0,2,"{size:60}"));
+		this.addArmament(GameRegistry.makeItemStack("gundam:ms_armament_beam_saber",0,2,""));
 	}
 	
 	@Override

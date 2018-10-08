@@ -148,7 +148,7 @@ public class RX782GundamMobileSuitModel extends ModelBase {
         this.e28.render(scale);
     }
 
-    public void setRotateAngle(ModelRenderer modelRenderer, float x, float y, float z) {
+    public void setRotateAngle(ModelRenderer modelRenderer,float x,float y,float z) {
         modelRenderer.rotateAngleX = x;
         modelRenderer.rotateAngleY = y;
         modelRenderer.rotateAngleZ = z;

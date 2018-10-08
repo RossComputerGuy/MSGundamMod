@@ -2,9 +2,6 @@ package com.spaceboyross.gundam.ms.gundams;
 
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.armaments.BeamSaberMSArmament;
-import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
-import com.spaceboyross.gundam.ms.gundams.RX782GundamMobileSuit.MSEntity;
 
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -15,9 +12,6 @@ public class MSZ006ZetaGundamMobileSuit extends MobileSuit {
 		this.setHeight(65.125f);
 		this.setModel("MSZ-006");
 		this.setName("Zeta Gundam");
-		
-		this.addArmament(new VulcanGunMSArmament(2,60));
-		this.addArmament(new BeamSaberMSArmament(2));
 		
 		this.addRecipeItem("gundam:gundarium_gamma_ingot",20);
 	}

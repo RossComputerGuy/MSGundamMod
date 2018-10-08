@@ -5,6 +5,7 @@ import com.spaceboyross.gundam.GundamItems;
 import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.capabilities.human.Human;
 import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
+import com.spaceboyross.gundam.gui.GUIMobileSuitInventory;
 import com.spaceboyross.gundam.ms.MobileFighter;
 import com.spaceboyross.gundam.ms.MobileSuit;
 import com.spaceboyross.gundam.net.PacketHandler;
@@ -32,6 +33,10 @@ public class InputHandler {
 					mobileFighter.applyPlayerInteraction(human.getPlayer(),new Vec3d(human.getPlayer().posX,human.getPlayer().posY,human.getPlayer().posZ),EnumHand.MAIN_HAND);
 				}
 			}
+		}
+		if(KeyBindings.openMSInv.isPressed() && Minecraft.getMinecraft().player.isRiding() && Minecraft.getMinecraft().player.getRidingEntity() instanceof MobileSuit.MSEntity) {
+			//Minecraft.getMinecraft().player.openGui(GundamMod.instance,GUIMobileSuitInventory.GUI_ID,Minecraft.getMinecraft().player.getEntityWorld(),Minecraft.getMinecraft().player.chunkCoordX,Minecraft.getMinecraft().player.chunkCoordY,Minecraft.getMinecraft().player.chunkCoordZ);
+			Minecraft.getMinecraft().player.displayGUIChest(((MobileSuit.MSEntity)Minecraft.getMinecraft().player.getRidingEntity()).inventory);
 		}
 		if(KeyBindings.useVernier.isPressed() && Minecraft.getMinecraft().player.inventory.armorItemInSlot(2).getItem() == GundamItems.portableVernier && !Minecraft.getMinecraft().player.isRiding()) Minecraft.getMinecraft().player.addVelocity(0.0,0.5,0.0);
 	}

@@ -2,8 +2,6 @@ package com.spaceboyross.gundam.ms.gundams;
 
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.armaments.BeamSaberMSArmament;
-import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
 import com.spaceboyross.gundam.ms.gundams.GN001GundamExiaMobileSuit.MSEntity;
 
 import net.minecraft.util.math.Vec3d;

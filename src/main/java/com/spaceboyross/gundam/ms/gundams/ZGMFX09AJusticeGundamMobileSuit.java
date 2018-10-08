@@ -2,9 +2,6 @@ package com.spaceboyross.gundam.ms.gundams;
 
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.armaments.BeamSaberMSArmament;
-import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
-import com.spaceboyross.gundam.ms.gundams.RX178GundamMkIIMobileSuit.MSEntity;
 
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -15,8 +12,6 @@ public class ZGMFX09AJusticeGundamMobileSuit extends MobileSuit {
 		this.setHeight(60.892f);
 		this.setModel("ZGMF-X09A");
 		this.setName("Justice Gundam");
-		
-		this.addArmament(new VulcanGunMSArmament(2,60));
 		
 		this.addRecipeItem("gundam:phase_shift_armor",20);
 	}

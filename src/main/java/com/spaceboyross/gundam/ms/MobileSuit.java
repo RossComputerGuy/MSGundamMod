@@ -7,43 +7,49 @@ import java.util.Map;
 
 import javax.annotation.Nullable;
 
-import org.lwjgl.opengl.GL11;
-
 import com.spaceboyross.gundam.GundamItems;
 import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.capabilities.human.Human;
 import com.spaceboyross.gundam.capabilities.interfaces.IHumanCapability;
+import com.spaceboyross.gundam.containers.ContainerMobileSuitInventory;
 import com.spaceboyross.gundam.gui.hud.MobileSuitHUD;
+import com.spaceboyross.gundam.utils.InventoryUtils;
 import com.spaceboyross.gundam.utils.PlayerUtils;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.Render;
-import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.MoverType;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.InventoryBasic;
+import net.minecraft.inventory.InventoryLargeChest;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.IItemHandler;
 
 public abstract class MobileSuit {
 
-	private List<MobileSuitArmament> armaments;
+	private List<ItemStack> armaments;
 	private String name;
 	private String model;
 	private Map<String,Integer> recipeIDs;
@@ -55,6 +61,20 @@ public abstract class MobileSuit {
 		this.armaments = new ArrayList<>();
 		this.recipeIDs = new HashMap<>();
 		this.height = 0.0f;
+	}
+	
+	public void init() {}
+	
+	public int getArmamentCount() {
+		return this.armaments.size();
+	}
+	
+	public void addArmament(ItemStack armament) {
+		this.armaments.add(armament);
+	}
+	
+	public ItemStack getArmament(int i) {
+		return this.armaments.get(i);
 	}
 	
 	public int getCameraCount() {
@@ -106,18 +126,6 @@ public abstract class MobileSuit {
 		return this.getRecipeItemCount(this.getRecipeItemID(i));
 	}
 	
-	public void addArmament(MobileSuitArmament armament) {
-		this.armaments.add(armament);
-	}
-	
-	public MobileSuitArmament getArmament(int i) {
-		return this.armaments.get(i);
-	}
-	
-	public int getArmamentCount() {
-		return this.armaments.size();
-	}
-	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -139,10 +147,13 @@ public abstract class MobileSuit {
 	}
 	
 	public ItemStack getRequiredItemToPilot() {
-		return null;
+		return ItemStack.EMPTY;
 	}
 	
 	public static class MSEntity extends Entity {
+		
+		@CapabilityInject(IItemHandler.class)
+		public static Capability<IItemHandler> ITEM_HANDLER_CAPABILITY = null;
 		
 		public float scale = 1.0f;
 		private EntityPlayer pilot;
@@ -156,8 +167,33 @@ public abstract class MobileSuit {
 		public float headYaw = 0.0f;
 		public float headPitch = 0.0f;
 		
+		public InventoryBasic inventory;
+		public Container inventoryContainer;
+		
 		public MSEntity(World worldIn) {
 			super(worldIn);
+			int slots = 9;
+			if((this.getMSRegistryEntry().getArmamentCount() % 9) == 0) {
+				slots += this.getMSRegistryEntry().getArmamentCount();
+				if(this.getMSRegistryEntry().getArmamentCount()-9 > -1) slots += this.getMSRegistryEntry().getArmamentCount()-9;
+				else slots += 9-this.getMSRegistryEntry().getArmamentCount();
+			} else slots += this.getMSRegistryEntry().getArmamentCount();
+			this.inventory = new InventoryBasic(this.getCachedUniqueIdString(),true,slots);
+			this.inventory.setCustomName(I18n.format("gui.gundam.ms.inventory.name",this.getName()));
+			for(int i = 0;i < this.getMSRegistryEntry().getArmamentCount();i++) this.inventory.addItem(this.getMSRegistryEntry().getArmament(i));
+			this.inventoryContainer = new ContainerMobileSuitInventory(this);
+		}
+		
+		@Override
+		public boolean hasCapability(Capability<?> capability,EnumFacing facing) {
+			if(capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) return true;
+			return super.hasCapability(capability,facing);
+		}
+		
+		@Override
+		public <T> T getCapability(Capability<T> capability,EnumFacing facing) {
+			if(capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) return (T)this.inventory;
+			return super.getCapability(capability,facing);
 		}
 		
 		@Override
@@ -171,6 +207,7 @@ public abstract class MobileSuit {
 			root.setTag("mobileSuit",ms);
 			root.setFloat("headPitch",this.headPitch);
 			root.setFloat("headYaw",this.headYaw);
+			root.setTag("inventory",InventoryUtils.save(this.inventory));
 		}
 		
 		@Override
@@ -180,6 +217,7 @@ public abstract class MobileSuit {
 			}
 			this.headPitch = root.getFloat("headPitch");
 			this.headYaw = root.getFloat("headYaw");
+			this.inventory = (InventoryBasic)InventoryUtils.load(root.getTagList("inventory",10),this.inventory);
 		}
 		
 		@Override
@@ -209,7 +247,7 @@ public abstract class MobileSuit {
 			if(player.inventory.getStackInSlot(player.inventory.currentItem).getItem() == GundamItems.wrench) {
 				// TODO: show customization interface
 			} else {
-				if(this.getMSRegistryEntry().getRequiredItemToPilot() != null) {
+				if(this.getMSRegistryEntry().getRequiredItemToPilot() != ItemStack.EMPTY) {
 					if(!player.inventory.hasItemStack(this.getMSRegistryEntry().getRequiredItemToPilot())) return false;
 				}
 				if(this.pilot != null) return false;
@@ -217,10 +255,6 @@ public abstract class MobileSuit {
 				this.pilot.startRiding(this);
 				IHumanCapability human = Human.getHuman(this.pilot);
 				human.setMS(this);
-				for(int i = 0;i < this.getMSRegistryEntry().getArmamentCount();i++) {
-					if(this.getMSRegistryEntry().getArmament(i).createItem() == null) continue;
-					player.addItemStackToInventory(this.getMSRegistryEntry().getArmament(i).createItem());
-				}
 				if(PlayerUtils.isSinglePlayer(player)) Minecraft.getMinecraft().setRenderViewEntity(this);
 			}
 			return true;
@@ -280,10 +314,6 @@ public abstract class MobileSuit {
 				human.setMS(null);
 				this.pilot = null;
 				human.syncToServer();
-				for(int i = 0;i < this.getMSRegistryEntry().getArmamentCount();i++) {
-					if(this.getMSRegistryEntry().getArmament(i).createItem() == null) continue;
-					((EntityPlayer)passenger).inventory.removeStackFromSlot(((EntityPlayer)passenger).inventory.getSlotFor(this.getMSRegistryEntry().getArmament(i).createItem()));
-				}
 				Minecraft.getMinecraft().setRenderViewEntity(passenger);
 			}
 		}

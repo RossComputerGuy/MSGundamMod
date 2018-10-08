@@ -2,8 +2,6 @@ package com.spaceboyross.gundam.ms.eff;
 
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.armaments.BeamSaberMSArmament;
-import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
 import com.spaceboyross.gundam.ms.gundams.RX782GundamMobileSuit;
 
 import net.minecraft.util.math.Vec3d;
@@ -15,8 +13,6 @@ public class RGM79GGMGroundTypeMobileSuit extends MobileSuit {
 		this.setHeight(59.055f);
 		this.setModel("RGM-79 [G]");
 		this.setName("GM Ground Type");
-		
-		this.addArmament(new BeamSaberMSArmament(2));
 		
 		this.addRecipeItem("gundam:luna_titanium_ingot",20);
 	}

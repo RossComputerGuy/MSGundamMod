@@ -17,6 +17,7 @@ import com.spaceboyross.gundam.blocks.tile.MSCraftingStationTileEntity;
 import com.spaceboyross.gundam.capabilities.human.Human;
 import com.spaceboyross.gundam.events.BlockHandler;
 import com.spaceboyross.gundam.events.EntityHandler;
+import com.spaceboyross.gundam.events.PlayerHandler;
 import com.spaceboyross.gundam.events.RenderGuiHandler;
 import com.spaceboyross.gundam.items.armor.CharAznableMaskItem;
 import com.spaceboyross.gundam.items.armor.SpaceSuitHelmetItem;
@@ -39,6 +40,7 @@ import com.spaceboyross.gundam.items.materials.VariablePhaseShiftArmorItem;
 import com.spaceboyross.gundam.items.music.GundamMusicItem;
 import com.spaceboyross.gundam.items.tools.GControllerItem;
 import com.spaceboyross.gundam.items.tools.WrenchItem;
+import com.spaceboyross.gundam.items.weapons.MobileSuitArmamentItem;
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.eff.RGM79GGMGroundTypeMobileSuit;
 import com.spaceboyross.gundam.ms.eff.RGM79GMMobileSuit;
@@ -72,6 +74,7 @@ import com.spaceboyross.gundam.world.gen.OreGen;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
@@ -133,12 +136,14 @@ public class CommonProxy {
 		GameRegistry.registerWorldGenerator(new GundamWorldGenerator(),0);
 		GameRegistry.registerWorldGenerator(new OreGen(),0);
 		GundamRecipes.init();
+		MSRegistry.init();
 	}
 	
 	public void postInit(FMLPostInitializationEvent e) {
 		if(CommonProxy.config.hasChanged()) CommonProxy.config.save();
 		MinecraftForge.EVENT_BUS.register(new BlockHandler());
 		MinecraftForge.EVENT_BUS.register(new EntityHandler());
+		MinecraftForge.EVENT_BUS.register(new PlayerHandler());
 		MinecraftForge.EVENT_BUS.register(new RenderGuiHandler());
 	}
 	
@@ -150,13 +155,14 @@ public class CommonProxy {
 		event.getRegistry().register(new MSCraftingStationBlock());
 		event.getRegistry().register(new TitaniumBlock());
 		
-		GameRegistry.registerTileEntity(MSCraftingStationTileEntity.class,GundamMod.MODID+"_ms_crafting_station");
+		GameRegistry.registerTileEntity(MSCraftingStationTileEntity.class,new ResourceLocation(GundamMod.MODID,"ms_crafting_station"));
 	}
 	
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
 		event.getRegistry().register(new GundamMusicItem("ai_senshi"));
 		event.getRegistry().register(new GundamMusicItem("anime_ja_nai"));
+		event.getRegistry().register(new MobileSuitArmamentItem("beam_saber"));
 		event.getRegistry().register(new GundamMusicItem("beleive"));
 		event.getRegistry().register(new GundamMusicItem("beyond_the_time"));
 		event.getRegistry().register(new CharAznableMaskItem());
@@ -195,6 +201,7 @@ public class CommonProxy {
 		event.getRegistry().register(new GundamMusicItem("white_reflection"));
 		event.getRegistry().register(new WrenchItem());
 		event.getRegistry().register(new VariablePhaseShiftArmorItem());
+		event.getRegistry().register(new MobileSuitArmamentItem("vulcans"));
 		event.getRegistry().register(new GundamMusicItem("z_toki_wo_koete"));
 		
 		event.getRegistry().register(new ItemBlock(GundamBlocks.lunaTitaniumBlock).setRegistryName(GundamBlocks.lunaTitaniumBlock.getRegistryName()));

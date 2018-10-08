@@ -3,8 +3,6 @@ package com.spaceboyross.gundam.ms.fighters;
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileFighter;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
-import com.spaceboyross.gundam.ms.fighters.GF13017NJIIGodGundamMobileFighter.MSEntity;
 
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -15,8 +13,6 @@ public class GF13017NJShiningGundamMobileFighter  extends MobileFighter {
 		this.setHeight(54.462f);
 		this.setModel("GF13-017NJ");
 		this.setName("Shining Gundam");
-		
-		this.addArmament(new VulcanGunMSArmament(2,60));
 		
 		this.addRecipeItem("gundam:gundarium_beta_ingot",20);
 	}

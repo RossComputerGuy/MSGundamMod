@@ -6,7 +6,6 @@ import com.spaceboyross.gundam.GundamMod;
 import com.spaceboyross.gundam.blocks.tile.MSCraftingStationTileEntity;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -25,7 +24,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class MSCraftingStationBlock extends Block implements ITileEntityProvider {
+public class MSCraftingStationBlock extends Block {
 	
 	public static final int GUI_ID = 1;
 
@@ -45,9 +44,14 @@ public class MSCraftingStationBlock extends Block implements ITileEntityProvider
 	public void initModel() {
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this),0,new ModelResourceLocation(this.getRegistryName(),"inventory"));
 	}
+	
+	@Override
+	public boolean hasTileEntity(IBlockState state) {
+		return true;
+	}
 
 	@Override
-	public TileEntity createNewTileEntity(World worldIn,int meta) {
+	public TileEntity createTileEntity(World worldIn,IBlockState state) {
 		return new MSCraftingStationTileEntity();
 	}
 	

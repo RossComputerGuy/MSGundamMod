@@ -2,9 +2,6 @@ package com.spaceboyross.gundam.ms.gundams;
 
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.armaments.BeamSaberMSArmament;
-import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
-import com.spaceboyross.gundam.ms.gundams.RX78NT1GundamAlexMobileSuit.MSEntity;
 
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -15,9 +12,6 @@ public class GN001GundamExiaMobileSuit extends MobileSuit {
 		this.setHeight(60.039f);
 		this.setModel("GN-001");
 		this.setName("Gundam Exia");
-		
-		this.addArmament(new VulcanGunMSArmament(2,60));
-		this.addArmament(new BeamSaberMSArmament(2));
 		
 		this.addRecipeItem("gundam:ecarbon_ingot",20);
 	}

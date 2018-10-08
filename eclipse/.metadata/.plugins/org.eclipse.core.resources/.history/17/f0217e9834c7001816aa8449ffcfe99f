@@ -1,0 +1,32 @@
+package com.spaceboyross.gundam.utils;
+
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+
+public class InventoryUtils {
+	public static IInventory load(NBTTagList list,IInventory inv) {
+		for(int i = 0;i < inv.getSizeInventory();i++) inv.setInventorySlotContents(i,ItemStack.EMPTY);
+		for(int i = 0;i < list.tagCount();i++) {
+			NBTTagCompound item = list.getCompoundTagAt(i);
+			int slot = item.getByte("Slot") & 255; // Uses Slot instead of slot for compatibility
+			if(slot >= 0 && slot < inv.getSizeInventory()) inv.setInventorySlotContents(slot,new ItemStack(item));
+		}
+		return inv;
+	}
+	
+	public static NBTTagList save(IInventory inv) {
+		NBTTagList list = new NBTTagList();
+		for(int i = 0;i < inv.getSizeInventory();i++) {
+			ItemStack stack = inv.getStackInSlot(i);
+			if(stack != null) {
+				NBTTagCompound item = new NBTTagCompound();
+				item.setByte("Slot",(byte)i); // Uses Slot instead of slot for compatibility
+				stack.writeToNBT(item);
+				list.appendTag(item);
+			}
+		}
+		return list;
+	}
+}

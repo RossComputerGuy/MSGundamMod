@@ -2,8 +2,6 @@ package com.spaceboyross.gundam.ms.gundams;
 
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.armaments.BeamSaberMSArmament;
-import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
 
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -14,8 +12,6 @@ public class AGE1GundamAGE1NormalMobileSuit extends MobileSuit {
 		this.setHeight(59.055f);
 		this.setModel("AGE-1");
 		this.setName("Gundam AGE-1 Normal");
-		
-		this.addArmament(new BeamSaberMSArmament(2));
 		
 		this.addRecipeItem("gundam:luna_titanium_ingot",20);
 	}

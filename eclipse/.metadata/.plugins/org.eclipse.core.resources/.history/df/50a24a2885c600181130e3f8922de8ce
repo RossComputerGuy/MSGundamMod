@@ -1,0 +1,41 @@
+package com.spaceboyross.gundam.containers;
+
+import com.spaceboyross.gundam.ms.MobileSuit;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.ContainerChest;
+import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
+
+public class ContainerMobileSuitInventory extends Container {
+	
+	private MobileSuit.MSEntity msEntity;
+    private final int numRows;
+	
+	public ContainerMobileSuitInventory(MobileSuit.MSEntity msEntity) {
+		this.msEntity = msEntity;
+		this.numRows = this.msEntity.inventory.getSizeInventory()/9;
+		int i = (this.numRows-4)*18;
+		
+		for(int j = 0;j < this.numRows;j++) {
+            for(int k = 0;k < 9;k++) {
+                this.addSlotToContainer(new Slot(this.msEntity.inventory,k+j*9,8+k*18,18+j*18));
+            }
+        }
+	}
+
+	@Override
+	public boolean canInteractWith(EntityPlayer playerIn) {
+		return playerIn.isRiding() ? playerIn.getRidingEntity() instanceof MobileSuit.MSEntity : false;
+	}
+	
+	@Override
+    public ItemStack transferStackInSlot(EntityPlayer playerIn,int slotIndex) {
+		if(slotIndex >= 0 && slotIndex < this.msEntity.getMSRegistryEntry().getArmamentCount()) return null;
+		Slot slot = (Slot)inventorySlots.get(slotIndex);
+		return slot.getStack();
+	}
+
+}

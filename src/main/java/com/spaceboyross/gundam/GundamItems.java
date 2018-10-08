@@ -21,6 +21,7 @@ import com.spaceboyross.gundam.items.materials.VariablePhaseShiftArmorItem;
 import com.spaceboyross.gundam.items.music.GundamMusicItem;
 import com.spaceboyross.gundam.items.tools.GControllerItem;
 import com.spaceboyross.gundam.items.tools.WrenchItem;
+import com.spaceboyross.gundam.items.weapons.MobileSuitArmamentItem;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -33,6 +34,9 @@ public class GundamItems {
 
 	@GameRegistry.ObjectHolder("gundam:music_anime_ja_nai")
 	public static GundamMusicItem animeJaNaiMusic;
+	
+	@GameRegistry.ObjectHolder("gundam:ms_armament_beam_saber")
+	public static MobileSuitArmamentItem beamSaberArmament;
 
 	@GameRegistry.ObjectHolder("gundam:music_beleive")
 	public static GundamMusicItem beleiveMusic;
@@ -148,6 +152,9 @@ public class GundamItems {
 	@GameRegistry.ObjectHolder("gundam:variable_phase_shift_armor")
 	public static VariablePhaseShiftArmorItem variablePhaseShiftArmor;
 	
+	@GameRegistry.ObjectHolder("gundam:ms_armament_vulcans")
+	public static MobileSuitArmamentItem vulcanGunArmament;
+	
 	@GameRegistry.ObjectHolder("gundam:music_z_toki_wo_koete")
 	public static GundamMusicItem zTokiWoKoeteMusic;
 	
@@ -155,6 +162,7 @@ public class GundamItems {
 	public static void initModels() {
 		GundamItems.aiSenshiMusic.initModel();
 		GundamItems.animeJaNaiMusic.initModel();
+		GundamItems.beamSaberArmament.initModel();
 		GundamItems.beleiveMusic.initModel();
 		GundamItems.beyondTheTimeMusic.initModel();
 		GundamItems.charAznableMask.initModel();
@@ -193,6 +201,7 @@ public class GundamItems {
 		GundamItems.whiteReflectionMusic.initModel();
 		GundamItems.wrench.initModel();
 		GundamItems.variablePhaseShiftArmor.initModel();
+		GundamItems.vulcanGunArmament.initModel();
 		GundamItems.zTokiWoKoeteMusic.initModel();
 	}
 }

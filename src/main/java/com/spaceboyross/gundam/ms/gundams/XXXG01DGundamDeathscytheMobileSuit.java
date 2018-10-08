@@ -2,9 +2,6 @@ package com.spaceboyross.gundam.ms.gundams;
 
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.armaments.BeamSaberMSArmament;
-import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
-import com.spaceboyross.gundam.ms.gundams.XXXG01HGundamHeavyarmsMobileSuit.MSEntity;
 
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -15,8 +12,6 @@ public class XXXG01DGundamDeathscytheMobileSuit extends MobileSuit {
 		this.setHeight(54.79f);
 		this.setModel("XXXG-01D");
 		this.setName("Gundam Deathsycthe");
-		
-		this.addArmament(new VulcanGunMSArmament(2,60));
 		
 		this.addRecipeItem("gundam:gundarium_beta_ingot",20);
 	}

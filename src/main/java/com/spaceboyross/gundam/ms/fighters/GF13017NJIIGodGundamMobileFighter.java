@@ -3,9 +3,6 @@ package com.spaceboyross.gundam.ms.fighters;
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileFighter;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.armaments.BeamSaberMSArmament;
-import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
-import com.spaceboyross.gundam.ms.gundams.RX782GundamMobileSuit;
 
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -16,8 +13,6 @@ public class GF13017NJIIGodGundamMobileFighter extends MobileFighter {
 		this.setHeight(54.462f);
 		this.setModel("GF13-017NJII");
 		this.setName("God Gundam");
-		
-		this.addArmament(new VulcanGunMSArmament(4,60));
 		
 		this.addRecipeItem("gundam:gundarium_beta_ingot",20);
 	}

@@ -37,6 +37,7 @@ entity.gundam.ZGMF-X09A_Justice_Gundam.name=ZGMF-X09A Justice Gundam
 entity.gundam.ZGMF-X10A_Freedom_Gundam.name=ZGMF-X10A Freedom Gundam
 entity.gundam.ZGMF-X20A_Strike_Freedom_Gundam.name=ZGMF-X20A Strike Freedom Gundam
 
+gui.gundam.ms.inventory.name=%s Inventory
 gui.gundam.ms_crafting_station.craft=Craft
 gui.gundam.ms_crafting_station.prev=Prev
 gui.gundam.ms_crafting_station.next=Next
@@ -61,6 +62,9 @@ item.gundam.gundarium_epsilon_ingot.name=Gundarium ε
 item.gundam.gundarium_gamma_ingot.name=Gundarium γ
 item.gundam.luna_titanium_ingot.name=Luna Titanium Ingot
 item.gundam.nanolaminate_armor.name=Nanolaminate Armor
+item.gundam.ms_armament_beam_saber.name=Beam Saber
+item.gundam.ms_armament_vulcans.name=Vulcan Gun
+item.gundam.ms_armament_vulcans.desc=Size: %smm
 item.gundam.music_ai_senshi.name=Music Disc
 item.gundam.music_anime_ja_nai.name=Music Disc
 item.gundam.music_beleive.name=Music Disc
@@ -119,6 +123,7 @@ item.record.z_toki_wo_koete.desc=Go Beyond The Time
 
 key.categories.gundam=MS Gundam Mod
 key.call_mobile_fighter=Call Mobile Fighter
+key.open_ms_inv=Open Mobile Suit Inventory
 key.use_vernier=Use Vernier
 
 tile.gundam.luna_titanium_block.name=Luna Titanium Block

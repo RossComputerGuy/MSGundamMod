@@ -1,0 +1,12 @@
+package com.spaceboyross.gundam.utils;
+
+import net.minecraft.inventory.IInventory;
+import net.minecraft.nbt.NBTTagList;
+
+public class InventoryUtils {
+	
+	public static NBTTagList save(IInventory inv) {
+		NBTTagList list = new NBTTagList();
+		return list;
+	}
+}

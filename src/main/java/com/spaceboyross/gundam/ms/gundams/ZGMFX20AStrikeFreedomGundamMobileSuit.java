@@ -2,8 +2,6 @@ package com.spaceboyross.gundam.ms.gundams;
 
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
-import com.spaceboyross.gundam.ms.gundams.ZGMFX10AFreedomGundamMobileSuit.MSEntity;
 
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -14,8 +12,6 @@ public class ZGMFX20AStrikeFreedomGundamMobileSuit extends MobileSuit {
 		this.setHeight(61.942f);
 		this.setModel("ZGMF-X20A");
 		this.setName("Strike Freedom Gundam");
-		
-		this.addArmament(new VulcanGunMSArmament(2,60));
 		
 		this.addRecipeItem("gundam:variable_phase_shift_armor",20);
 	}

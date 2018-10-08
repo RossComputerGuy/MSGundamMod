@@ -1,0 +1,11 @@
+package com.spaceboyross.gundam.utils;
+
+import net.minecraft.nbt.NBTTagCompound;
+
+public class NBTUtilities {
+	
+	public static Object[] nbtToObjectArray(NBTTagCompound nbt) {
+		Object[] obj = new Object[nbt.getKeySet().size()];
+		return obj;
+	}
+}

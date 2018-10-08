@@ -5,7 +5,6 @@ import com.spaceboyross.gundam.blocks.container.MSCraftingStationContainer;
 import com.spaceboyross.gundam.blocks.tile.MSCraftingStationTileEntity;
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.MobileSuitArmament;
 import com.spaceboyross.gundam.net.PacketHandler;
 import com.spaceboyross.gundam.net.server.PacketMobileSuit;
 import com.spaceboyross.gundam.utils.UIUtils;
@@ -116,19 +115,8 @@ public class MSCraftingStationGUIContainer extends GuiContainer {
 		
 		this.drawString(this.fontRenderer,I18n.format("entity."+GundamMod.MODID+"."+(ms.getModel()+"_"+ms.getName()).replaceAll(" ","_")+".name"),name_x,name_y,0xFFFFFF);
 		
-		int armaments_x = (this.xSize/10);
-		int armaments_y = name_y+(this.ySize/20)+this.fontRenderer.FONT_HEIGHT;
-		
-		this.drawString(this.fontRenderer,"Armaments:",armaments_x,armaments_y,0xFFFFFF);
-		
-		for(int i = 0;i < ms.getArmamentCount();i++) {
-			MobileSuitArmament armament = ms.getArmament(i);
-			armaments_y += (this.ySize/20)+this.fontRenderer.FONT_HEIGHT;
-			this.drawString(this.fontRenderer,(i+1)+". "+armament.toString(),armaments_x,armaments_y,0xFFFFFF);
-		}
-		
 		int recipe_x = (this.xSize/10);
-		int recipe_y = armaments_y+(this.ySize/10)+this.fontRenderer.FONT_HEIGHT;
+		int recipe_y = name_y+(this.ySize/10)+this.fontRenderer.FONT_HEIGHT;
 		
 		this.drawString(this.fontRenderer,"Required Items:",recipe_x,recipe_y,0xFFFFFF);
 		
@@ -180,9 +168,6 @@ public class MSCraftingStationGUIContainer extends GuiContainer {
 		
 		this.partialTicks = partialTicks;
 		this.updateUIElements();
-		/*this.btnCraft.drawButtonForegroundLayer(mouseX,mouseY);
-		this.btnPrev.drawButtonForegroundLayer(mouseX,mouseY);
-		this.btnNext.drawButtonForegroundLayer(mouseX,mouseY);*/
 	}
 	
 	@Override

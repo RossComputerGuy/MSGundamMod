@@ -2,9 +2,6 @@ package com.spaceboyross.gundam.ms.gundams;
 
 import com.spaceboyross.gundam.ms.MSRegistry;
 import com.spaceboyross.gundam.ms.MobileSuit;
-import com.spaceboyross.gundam.ms.armaments.BeamSaberMSArmament;
-import com.spaceboyross.gundam.ms.armaments.VulcanGunMSArmament;
-import com.spaceboyross.gundam.ms.gundams.RX782GundamMobileSuit.MSEntity;
 
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -15,9 +12,6 @@ public class RX178GundamMkIIMobileSuit extends MobileSuit {
 		this.setHeight(60.696f);
 		this.setModel("RX-178-2");
 		this.setName("Gundam Mk-II");
-		
-		this.addArmament(new VulcanGunMSArmament(2,60));
-		this.addArmament(new BeamSaberMSArmament(2));
 		
 		this.addRecipeItem("gundam:luna_titanium_ingot",20);
 	}

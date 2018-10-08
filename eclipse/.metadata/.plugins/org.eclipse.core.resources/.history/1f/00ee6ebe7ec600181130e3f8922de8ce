@@ -1,0 +1,31 @@
+package com.spaceboyross.gundam.events;
+
+import com.spaceboyross.gundam.ms.MobileSuit;
+
+import net.minecraftforge.event.entity.player.PlayerContainerEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+@Mod.EventBusSubscriber
+public class PlayerHandler {
+	@SubscribeEvent
+	public static void onContainerOpen(PlayerContainerEvent.Open event) {
+		if(event.getContainer() == event.getEntityPlayer().inventoryContainer) {
+			if(event.getEntityPlayer().isRiding() && event.getEntityPlayer().getRidingEntity() instanceof MobileSuit.MSEntity) {
+				event.setCanceled(true);
+				event.getEntityPlayer().openContainer = ((MobileSuit.MSEntity)event.getEntityPlayer().getRidingEntity()).inventoryContainer;
+				((MobileSuit.MSEntity)event.getEntityPlayer().getRidingEntity()).inventory.openInventory(event.getEntityPlayer());
+			}
+		}
+	}
+	
+	@SubscribeEvent
+	public static void onContainerClose(PlayerContainerEvent.Close event) {
+		if(event.getContainer() == event.getEntityPlayer().inventoryContainer) {
+			if(event.getEntityPlayer().isRiding() && event.getEntityPlayer().getRidingEntity() instanceof MobileSuit.MSEntity) {
+				event.getEntityPlayer().openContainer = event.getEntityPlayer().inventoryContainer;
+				((MobileSuit.MSEntity)event.getEntityPlayer().getRidingEntity()).inventory.closeInventory(event.getEntityPlayer());
+			}
+		}
+	}
+}

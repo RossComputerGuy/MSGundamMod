@@ -1,0 +1,7 @@
+package com.spaceboyross.gundam.items.weapons;
+
+import net.minecraft.item.Item;
+
+public class MobileSuitArmamentItem extends Item {
+
+}
