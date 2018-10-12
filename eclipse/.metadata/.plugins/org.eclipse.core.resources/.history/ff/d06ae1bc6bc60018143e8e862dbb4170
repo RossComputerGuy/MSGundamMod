@@ -1,9 +1,0 @@
-package com.spaceboyross.gundam.events;
-
-import net.minecraftforge.fml.common.Mod;
-
-@Mod.EventBusSubscriber
-public class PlayerHandler {
-
-}
-]
